@@ -35,10 +35,10 @@ public class Login {
 				if(rs.getString("passwd").equals(passwd))
 				{
 					System.out.println("¼º°ø");
-					user.setId(rs.getString("id"));
-					user.setPasswd(rs.getString("passwd"));
-					user.setName(rs.getString("name"));
-					user.setGender(rs.getString("gender"));
+					CurrentUser.setId(rs.getString("id"));
+					CurrentUser.setPasswd(rs.getString("passwd"));
+					CurrentUser.setName(rs.getString("name"));
+					
 					
 				}
 				else

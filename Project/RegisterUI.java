@@ -122,7 +122,7 @@ public class RegisterUI extends JFrame {
 				}
 				Register r=new Register();
 				try {
-					r.reg(idField.getText(), passwordField.getText());
+					r.reg(idField.getText(), passwordField.getText(),nicknameField.getText());
 					
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
