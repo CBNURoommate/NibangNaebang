@@ -19,7 +19,7 @@ class ModifyUser {
 		}
 		try
 		{
-			String sql="update Test.users set name=?, gender=?, hakbun=?, age=?, dom=?, department=?, shower=?, sensitive=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?";
+			String sql="update Test.users set name=?, gender=?, hakbun=?, age=?, dom=?, department=?, showertime=?, sensitive=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?,whenshower=?,sleep=?,wake=?";
 			PreparedStatement pstmt=con.prepareStatement(sql);
 		 
 			pstmt.setString(1,CurrentUser.getName());
@@ -28,7 +28,7 @@ class ModifyUser {
 			pstmt.setInt(4, CurrentUser.getAge());
 			pstmt.setInt(5, CurrentUser.getDom());
 			pstmt.setInt(6, CurrentUser.getDepartment());	
-			pstmt.setInt(7, CurrentUser.getShower());	
+			pstmt.setInt(7, CurrentUser.getShowertime());	
 			pstmt.setInt(8, CurrentUser.getSensitive());	
 			pstmt.setInt(9, CurrentUser.getJamb1());
 			pstmt.setInt(10, CurrentUser.getJamb2());	
@@ -52,6 +52,9 @@ class ModifyUser {
 			pstmt.setInt(27, CurrentUser.getSool());	
 			pstmt.setInt(28, CurrentUser.getSilnaeeat());	
 			pstmt.setInt(29, CurrentUser.getInsect());	
+			pstmt.setInt(30, CurrentUser.getWhenshower());
+			pstmt.setInt(31, CurrentUser.getSleep());
+			pstmt.setInt(32, CurrentUser.getWake());
 				
 			pstmt.executeUpdate();
 			System.out.println("변경성공");

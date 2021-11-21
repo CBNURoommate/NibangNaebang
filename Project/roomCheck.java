@@ -61,7 +61,41 @@ public class roomCheck extends JFrame {
 	private final ButtonGroup buttonGroup24 = new ButtonGroup();
 	private final ButtonGroup buttonGroup25 = new ButtonGroup();
 	private final ButtonGroup buttonGroup26 = new ButtonGroup();
-
+	
+	private int gender;
+	private int dom;
+	private int hakbun;
+	private int age;
+	private int department;
+	private int sleep;
+	private int wake;
+	
+	private int showertime;
+	private int whenshower;
+	private int sensitive;
+	private int jamb1;
+	private int jamb2;
+	private int jamb3;
+	private int sleeplight;
+	private int alarmhear;
+	private int clean;
+	private int heat;
+	private int cold;
+	private int soundgigi;
+	private int smoking;
+	private int silnaecall;
+	private int friendinvite;
+	private int eatbob;
+	private int studytype;
+	private int perfume;
+	private int smellwell;
+	private int game;
+	private int yasick;
+	private int sool;
+	private int silnaeeat;
+	private int insect;
+	
+	ModFunctions m=new ModFunctions();
 	/**
 	 * Launch the application.
 	 */
@@ -204,12 +238,7 @@ public class roomCheck extends JFrame {
 		panel.setLayout(null);
 		
 		JButton btn1_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn1_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel.setVisible(false); 
-				panel2.setVisible(true); 
-			}
-		});
+		
 		btn1_1.setBounds(386, 221, 97, 23);
 		panel.add(btn1_1);
 		
@@ -237,13 +266,23 @@ public class roomCheck extends JFrame {
 		panel2.setBounds(555, 107, 1000, 600);
 		contentPane.add(panel2);
 		
-		JButton btn2_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn2_1.addActionListener(new ActionListener() {
+		btn1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel2.setVisible(false); 
-				panel3.setVisible(true); 
+				
+				if(rdbtn1_1.isSelected())
+				{
+					gender=1;
+				}
+				else if(rdbtn1_2.isSelected())
+				{
+					gender=2;
+				}
+				panel.setVisible(false); 
+				panel2.setVisible(true); 
 			}
 		});
+		JButton btn2_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
+		
 		btn2_1.setBounds(386, 221, 97, 23);
 		panel2.add(btn2_1);
 		
@@ -286,13 +325,38 @@ public class roomCheck extends JFrame {
 		panel3.setBounds(540, 117, 1000, 600);
 		contentPane.add(panel3);
 		
-		JButton btn3_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn3_1.addActionListener(new ActionListener() {
+		btn2_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				panel3.setVisible(false); 
-				panel4.setVisible(true); 
+				if(rdbtn2_1.isSelected())
+				{
+					dom=1;
+				}
+				else if(rdbtn2_2.isSelected())
+				{
+					dom=2;
+				}
+				else if(rdbtn2_3.isSelected())
+				{
+					dom=3;
+				}
+				else if(rdbtn2_4.isSelected())
+				{
+					dom=4;
+				}
+				else if(rdbtn2_5.isSelected())
+				{
+					dom=5;
+				}
+				else
+				{
+					
+				}
+				panel2.setVisible(false); 
+				panel3.setVisible(true); 
 			}
 		});
+		JButton btn3_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
+		
 		btn3_1.setBounds(386, 221, 97, 23);
 		panel3.add(btn3_1);
 		
@@ -308,12 +372,12 @@ public class roomCheck extends JFrame {
 		
 		JLabel Label3_3 = new JLabel("\uC0DD\uB144");
 		Label3_3.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 30));
-		Label3_3.setBounds(163, 88, 51, 49);
+		Label3_3.setBounds(163, 131, 51, 49);
 		panel3.add(Label3_3);
 		
 		JLabel Label3_4 = new JLabel("\uD559\uBC88");
 		Label3_4.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 30));
-		Label3_4.setBounds(163, 131, 51, 49);
+		Label3_4.setBounds(163, 88, 51, 49);
 		panel3.add(Label3_4);
 		
 		textField3_1 = new JTextField();
@@ -326,17 +390,21 @@ public class roomCheck extends JFrame {
 		panel3.add(textField3_2);
 		textField3_2.setColumns(10);
 		
+		btn3_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				hakbun=Integer.parseInt(textField3_1.getText());
+				age=Integer.parseInt(textField3_2.getText());
+				
+				panel3.setVisible(false); 
+				panel4.setVisible(true); 
+			}
+		});
 		panel4.setLayout(null);
 		panel4.setBounds(526, 127, 1000, 600);
 		contentPane.add(panel4);
 		
 		JButton btn4_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn4_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel4.setVisible(false); 
-				panel5.setVisible(true); 
-			}
-		});
+		
 		btn4_1.setBounds(381, 243, 97, 23);
 		panel4.add(btn4_1);
 		
@@ -410,17 +478,70 @@ public class roomCheck extends JFrame {
 		rdbtn4_12.setBounds(233, 208, 121, 23);
 		panel4.add(rdbtn4_12);
 		
+		btn4_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn4_1.isSelected())
+				{
+					department=1;
+				}
+				else if(rdbtn4_2.isSelected())
+				{
+					department=2;
+				}
+				else if(rdbtn4_3.isSelected())
+				{
+					department=3;
+				}
+				else if(rdbtn4_4.isSelected())
+				{
+					department=4;
+				}
+				else if(rdbtn4_5.isSelected())
+				{
+					department=5;
+				}
+				else if(rdbtn4_6.isSelected())
+				{
+					department=6;
+				}
+				else if(rdbtn4_7.isSelected())
+				{
+					department=7;
+				}
+				else if(rdbtn4_8.isSelected())
+				{
+					department=8;
+				}
+				else if(rdbtn4_9.isSelected())
+				{
+					department=9;
+				}
+				else if(rdbtn4_10.isSelected())
+				{
+					department=10;
+				}
+				else if(rdbtn4_11.isSelected())
+				{
+					department=11;
+				}
+				else if(rdbtn4_12.isSelected())
+				{
+					department=12;
+				}
+				else
+				{
+					
+				}
+				panel4.setVisible(false); 
+				panel5.setVisible(true); 
+			}
+		});
 		panel5.setLayout(null);
 		panel5.setBounds(515, 137, 1000, 600);
 		contentPane.add(panel5);
 		
 		JButton btn5_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn5_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel5.setVisible(false); 
-				panel6.setVisible(true); 
-			}
-		});
+		
 		btn5_1.setBounds(386, 221, 97, 23);
 		panel5.add(btn5_1);
 		
@@ -464,6 +585,14 @@ public class roomCheck extends JFrame {
 		rdbtn5_6.setBounds(94, 208, 121, 23);
 		panel5.add(rdbtn5_6);
 		
+		btn5_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				
+				panel5.setVisible(false); 
+				panel6.setVisible(true); 
+			}
+		});
 		panel6.setLayout(null);
 		panel6.setBounds(501, 147, 1000, 600);
 		contentPane.add(panel6);

@@ -6,11 +6,16 @@ public class CurrentUser{
 	private static String passwd;
 	private static String name;
 	private static int gender;
+	private static int dom;
 	private static int hakbun;
 	private static int age;
-	private static int dom;
+	
 	private static int department;
-	private static int shower;
+	private static int sleep;
+	private static int wake;
+	private static int showertime;
+	private static int whenshower;
+	
 	private static int sensitive;
 	private static int jamb1;
 	private static int jamb2;
@@ -35,6 +40,38 @@ public class CurrentUser{
 	private static int insect;
 
 	
+	public static int getSleep() {
+		return sleep;
+	}
+
+	public static void setSleep(int sleep) {
+		CurrentUser.sleep = sleep;
+	}
+
+	public static int getWake() {
+		return wake;
+	}
+
+	public static void setWake(int wake) {
+		CurrentUser.wake = wake;
+	}
+
+	public static int getShowertime() {
+		return showertime;
+	}
+
+	public static void setShowertime(int showertime) {
+		CurrentUser.showertime = showertime;
+	}
+
+	public static int getWhenshower() {
+		return whenshower;
+	}
+
+	public static void setWhenshower(int whenshower) {
+		CurrentUser.whenshower = whenshower;
+	}
+
 	public static int getHakbun() {
 		return hakbun;
 	}
@@ -67,13 +104,6 @@ public class CurrentUser{
 		CurrentUser.department = department;
 	}
 
-	public static int getShower() {
-		return shower;
-	}
-
-	public static void setShower(int shower) {
-		CurrentUser.shower = shower;
-	}
 
 	public static int getSensitive() {
 		return sensitive;

@@ -6,7 +6,14 @@ class ModFunctions {
 	{
 		CurrentUser.setName(name);
 	}
-	
+	public void ModSleep(int sleep)
+	{
+		CurrentUser.setSleep(sleep);
+	}
+	public void ModWake(int wake)
+	{
+		CurrentUser.setWake(wake);
+	}
 	public void ModGender(int gender)
 	{
 		CurrentUser.setGender(gender);
@@ -28,9 +35,13 @@ class ModFunctions {
 	{
 		CurrentUser.setDepartment(department);
 	}
-	public void ModShower(int shower)
+	public void ModShowertime(int showertime)
 	{
-		CurrentUser.setShower(shower);
+		CurrentUser.setShowertime(showertime);
+	}
+	public void ModWhenshowertime(int whenshowertime)
+	{
+		CurrentUser.setWhenshower(whenshowertime);
 	}
 	public void ModSensitive(int sensitive)
 	{

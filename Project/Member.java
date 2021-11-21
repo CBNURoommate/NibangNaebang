@@ -6,11 +6,15 @@ public class Member {
 	private String passwd;
 	private String name;
 	private int gender;
+	private int dom;
 	private int hakbun;
 	private int age;
-	private int dom;
 	private int department;
-	private int shower;
+	private int sleep;
+	private int wake;
+	
+	private int showertime;
+	private int whenshower;
 	private int sensitive;
 	private int jamb1;
 	private int jamb2;
@@ -34,6 +38,31 @@ public class Member {
 	private int silnaeeat;
 	private int insect;
 	
+	
+	public int getSleep() {
+		return sleep;
+	}
+	public void setSleep(int sleep) {
+		this.sleep = sleep;
+	}
+	public int getWake() {
+		return wake;
+	}
+	public void setWake(int wake) {
+		this.wake = wake;
+	}
+	public int getShowertime() {
+		return showertime;
+	}
+	public void setShowertime(int showertime) {
+		this.showertime = showertime;
+	}
+	public int getWhenshower() {
+		return whenshower;
+	}
+	public void setWhenshower(int whenshower) {
+		this.whenshower = whenshower;
+	}
 	public int getHakbun() {
 		return hakbun;
 	}
@@ -58,12 +87,7 @@ public class Member {
 	public void setDepartment(int department) {
 		this.department = department;
 	}
-	public int getShower() {
-		return shower;
-	}
-	public void setShower(int shower) {
-		this.shower = shower;
-	}
+	
 	public int getSensitive() {
 		return sensitive;
 	}
