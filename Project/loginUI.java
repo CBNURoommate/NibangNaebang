@@ -33,7 +33,6 @@ import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 
 public class loginUI extends JFrame {
-
 	private JPanel contentPane;
 	private JPasswordField passwordField;
 	private JTextField idField;
@@ -109,7 +108,6 @@ public class loginUI extends JFrame {
 		JButton loginButton = new JButton("\uB85C\uADF8\uC778");
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				Login l=new Login();
 				try {
 					int k=l.login(idField.getText(),passwordField.getText());
