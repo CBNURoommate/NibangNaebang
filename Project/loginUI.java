@@ -94,11 +94,13 @@ public class loginUI extends JFrame {
 		JLabel iderrorLabel = new JLabel("\uC544\uC774\uB514\uAC00 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.");
 		iderrorLabel.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 50));
 		iderrorLabel.setBounds(600, 679, 430, 60);
+		iderrorLabel.setVisible(false);
 		contentPane.add(iderrorLabel);
 		
 		JLabel pwerrorLabel = new JLabel("\uBE44\uBC00\uBC88\uD638\uAC00 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.");
 		pwerrorLabel.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 50));
 		pwerrorLabel.setBounds(630, 679, 340, 60);
+		pwerrorLabel.setVisible(false);
 		contentPane.add(pwerrorLabel);
 		
 		JButton loginButton = new JButton("\uB85C\uADF8\uC778");
