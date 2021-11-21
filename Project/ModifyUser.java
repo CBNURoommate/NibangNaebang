@@ -19,49 +19,49 @@ class ModifyUser {
 		}
 		try
 		{
-			String sql="update Test.users set name=?, gender=?, hakbun=?, age=?, dom=?, department=?, showertime=?, sensitive=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?,whenshower=?,sleep=?,wake=?";
+			String sql="update Test.users set name=?, gender=?, dom=?,h akbun=?, age=?, department=?, sleep=?, wake=?, showertime=?, whenshower=?, sensitive=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?";
 			PreparedStatement pstmt=con.prepareStatement(sql);
 		 
 			pstmt.setString(1,CurrentUser.getName());
 			pstmt.setInt(2,CurrentUser.getGender());
-			pstmt.setInt(3,CurrentUser.getHakbun() );
-			pstmt.setInt(4, CurrentUser.getAge());
-			pstmt.setInt(5, CurrentUser.getDom());
+			pstmt.setInt(3, CurrentUser.getDom());
+			pstmt.setInt(4,CurrentUser.getHakbun() );
+			pstmt.setInt(5, CurrentUser.getAge());
 			pstmt.setInt(6, CurrentUser.getDepartment());	
-			pstmt.setInt(7, CurrentUser.getShowertime());	
-			pstmt.setInt(8, CurrentUser.getSensitive());	
-			pstmt.setInt(9, CurrentUser.getJamb1());
-			pstmt.setInt(10, CurrentUser.getJamb2());	
-			pstmt.setInt(11, CurrentUser.getJamb3());	
-			pstmt.setInt(12, CurrentUser.getSleeplight());	
-			pstmt.setInt(13, CurrentUser.getAlarmhear());
-			pstmt.setInt(14, CurrentUser.getClean());	
-			pstmt.setInt(15, CurrentUser.getHeat());	
-			pstmt.setInt(16, CurrentUser.getCold());	
-			pstmt.setInt(17, CurrentUser.getSoundgigi());	
-			pstmt.setInt(18, CurrentUser.getSmoking());	
-			pstmt.setInt(19, CurrentUser.getSilnaecall());	
-			pstmt.setInt(20, CurrentUser.getFriendinvite());	
-			pstmt.setInt(21, CurrentUser.getEatbob());	
-			pstmt.setInt(22, CurrentUser.getStudytype());	
-			pstmt.setInt(23, CurrentUser.getPerfume());	
-			pstmt.setInt(24, CurrentUser.getSmellwell());	
-			pstmt.setInt(25, CurrentUser.getGame());
+			pstmt.setInt(7, CurrentUser.getSleep());
+			pstmt.setInt(8, CurrentUser.getWake());
+			pstmt.setInt(9, CurrentUser.getShowertime());	
+			pstmt.setInt(10, CurrentUser.getWhenshower());
+			pstmt.setInt(11, CurrentUser.getSensitive());	
+			pstmt.setInt(12, CurrentUser.getJamb1());
+			pstmt.setInt(13, CurrentUser.getJamb2());	
+			pstmt.setInt(14, CurrentUser.getJamb3());	
+			pstmt.setInt(15, CurrentUser.getSleeplight());	
+			pstmt.setInt(16, CurrentUser.getAlarmhear());
+			pstmt.setInt(17, CurrentUser.getClean());	
+			pstmt.setInt(18, CurrentUser.getHeat());	
+			pstmt.setInt(19, CurrentUser.getCold());	
+			pstmt.setInt(20, CurrentUser.getSoundgigi());	
+			pstmt.setInt(21, CurrentUser.getSmoking());	
+			pstmt.setInt(22, CurrentUser.getSilnaecall());	
+			pstmt.setInt(23, CurrentUser.getFriendinvite());	
+			pstmt.setInt(24, CurrentUser.getEatbob());	
+			pstmt.setInt(25, CurrentUser.getStudytype());	
+			pstmt.setInt(26, CurrentUser.getPerfume());	
+			pstmt.setInt(27, CurrentUser.getSmellwell());	
+			pstmt.setInt(28, CurrentUser.getGame());
 			
-			pstmt.setInt(26, CurrentUser.getYasick());	
-			pstmt.setInt(27, CurrentUser.getSool());	
-			pstmt.setInt(28, CurrentUser.getSilnaeeat());	
-			pstmt.setInt(29, CurrentUser.getInsect());	
-			pstmt.setInt(30, CurrentUser.getWhenshower());
-			pstmt.setInt(31, CurrentUser.getSleep());
-			pstmt.setInt(32, CurrentUser.getWake());
+			pstmt.setInt(29, CurrentUser.getYasick());	
+			pstmt.setInt(30, CurrentUser.getSool());	
+			pstmt.setInt(31, CurrentUser.getSilnaeeat());	
+			pstmt.setInt(32, CurrentUser.getInsect());	
 				
 			pstmt.executeUpdate();
-			System.out.println("º¯°æ¼º°ø");
+			System.out.println("ë³€ê²½ì„±ê³µ");
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("½ÇÆÐ");
+			System.out.println("ì‹¤íŒ¨");
 		}
 		 
 	}
