@@ -19,7 +19,7 @@ class ModifyUser {
 		}
 		try
 		{
-			String sql="update Test.users set name=?, gender=?, dom=?,h akbun=?, age=?, department=?, sleep=?, wake=?, showertime=?, whenshower=?, sensitive=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?";
+			String sql="update Test.users set name=?, gender=?, dom=?, hakbun=?, age=?, department=?, sleep=?, wake=?, showertime=?, whenshower=?, sensitive=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alarmhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?";
 			PreparedStatement pstmt=con.prepareStatement(sql);
 		 
 			pstmt.setString(1,CurrentUser.getName());
