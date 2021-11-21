@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class Register{
 
 	
-	public int reg(String ID, String PASSWD,String NAME) throws SQLException {
+	public void reg(String ID, String PASSWD,String NAME) throws SQLException {
 		 Connection con=null;
 		 Member member =new Member();
 		 member.setId(ID);
@@ -21,11 +21,10 @@ public class Register{
 			
 		} catch (ClassNotFoundException e) {
 			System.out.println("fail");
-			return -1;
 		}
 		try
 		{
-			String sql="insert into Test.user values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql="insert into Test.user values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement pstmt=con.prepareStatement(sql);
 		 
 			pstmt.setString(1,id);
@@ -59,15 +58,15 @@ public class Register{
 			pstmt.setInt(29, -1);	
 			pstmt.setInt(30, -1);	
 			pstmt.setInt(31, -1);	
+			pstmt.setInt(32, -1);	
+			pstmt.setInt(33, -1);	
+			pstmt.setInt(34, -1);	
 			pstmt.executeUpdate();
-			System.out.println("°¡ÀÔ¼º°ø");
-			return 0;
+			System.out.println("ê°€ì…ì„±ê³µ");
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("Áßº¹µÈ id°¡ ÀÖ½À´Ï´Ù");
-			return 1;
-			
+			System.out.println("ì¤‘ë³µëœ idê°€ ìˆìŠµë‹ˆë‹¤");
 		}
 		 
 	}
