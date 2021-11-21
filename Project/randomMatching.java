@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Project.randomMatching;
+import Project.roomCheck;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
@@ -14,6 +18,8 @@ import javax.swing.JTextPane;
 import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -84,6 +90,13 @@ public class randomMatching extends JFrame {
 		contentPane.add(line1);
 		
 		JButton movePage1 = new JButton("\uB0B4\uBC29 \uC810\uAC80\uD558\uAE30");
+		movePage1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				roomCheck r = new roomCheck();
+				r.setVisible(true);
+				setVisible(false); 
+			}
+		});
 		movePage1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
 		movePage1.setFocusPainted(false);
 		movePage1.setContentAreaFilled(false);
@@ -118,6 +131,15 @@ public class randomMatching extends JFrame {
 		movePage3.setBackground(Color.LIGHT_GRAY);
 		movePage3.setBounds(794, 30, 195, 72);
 		contentPane.add(movePage3);
+		
+		JButton moveMail = new JButton("");
+		moveMail.setBackground(Color.LIGHT_GRAY);
+		moveMail.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/mail.png")));
+		moveMail.setFocusPainted(false);
+		moveMail.setContentAreaFilled(false);
+		moveMail.setBorderPainted(false);
+		moveMail.setBounds(1474, 26, 70, 70);
+		contentPane.add(moveMail);
 		
 		panel0.setLayout(null);
 		panel0.setBounds(138, 123, 1000, 600);
