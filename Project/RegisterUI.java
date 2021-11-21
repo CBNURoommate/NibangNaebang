@@ -100,16 +100,15 @@ public class RegisterUI extends JFrame {
 		idErrorLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
 		idErrorLabel.setBounds(944, 206, 230, 55);
 		contentPane.add(idErrorLabel);
+		idErrorLabel.setVisible(false);
 		
 		JLabel pwErrorLabel = new JLabel("\uBE44\uBC00\uBC88\uD638\uAC00 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.");
 		pwErrorLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
 		pwErrorLabel.setBounds(944, 396, 463, 63);
 		contentPane.add(pwErrorLabel);
+		pwErrorLabel.setVisible(false);
 		
-		JLabel nickErrorLabel = new JLabel("\uC874\uC7AC\uD558\uB294 \uB2C9\uB124\uC784\uC785\uB2C8\uB2E4.");
-		nickErrorLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
-		nickErrorLabel.setBounds(944, 476, 272, 63);
-		contentPane.add(nickErrorLabel);
+		loginUI l=new loginUI();
 		
 		JButton registerButton = new JButton("\uD68C\uC6D0\uAC00\uC785");
 		registerButton.addActionListener(new ActionListener() {
@@ -118,12 +117,24 @@ public class RegisterUI extends JFrame {
 				if(!(passwordField.getText().equals(password2Field.getText())))
 				{
 					System.out.println("비밀번호 확인 틀림");
+					pwErrorLabel.setVisible(true);
 					return;
+				
 				}
 				Register r=new Register();
 				try {
-					r.reg(idField.getText(), passwordField.getText(),nicknameField.getText());
-					
+					idErrorLabel.setVisible(false);
+					pwErrorLabel.setVisible(false);
+					int k=r.reg(idField.getText(), passwordField.getText(),nicknameField.getText());
+					if(k==1)
+					{
+						idErrorLabel.setVisible(true);
+					}
+					else
+					{
+						l.setVisible(true);
+						setVisible(false);
+					}
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -143,7 +154,7 @@ public class RegisterUI extends JFrame {
 		cancelButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				loginUI l=new loginUI();
+				
 				l.setVisible(true);
 				setVisible(false);
 			}

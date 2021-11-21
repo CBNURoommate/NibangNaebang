@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class Register{
 
 	
-	public void reg(String ID, String PASSWD,String NAME) throws SQLException {
+	public int reg(String ID, String PASSWD,String NAME) throws SQLException {
 		 Connection con=null;
 		 Member member =new Member();
 		 member.setId(ID);
@@ -21,6 +21,7 @@ public class Register{
 			
 		} catch (ClassNotFoundException e) {
 			System.out.println("fail");
+			return -1;
 		}
 		try
 		{
@@ -60,10 +61,13 @@ public class Register{
 			pstmt.setInt(31, -1);	
 			pstmt.executeUpdate();
 			System.out.println("가입성공");
+			return 0;
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
 			System.out.println("중복된 id가 있습니다");
+			return 1;
+			
 		}
 		 
 	}

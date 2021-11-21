@@ -88,13 +88,45 @@ public class loginUI extends JFrame {
 		passwordField.setBounds(467, 405, 300, 40);
 		contentPane.add(passwordField);
 		
+		JLabel iderrorLabel = new JLabel("\uC544\uC774\uB514\uAC00 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.");
+        iderrorLabel.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 30));
+        iderrorLabel.setBounds(386, 530, 463, 63);
+        contentPane.add(iderrorLabel);
+        iderrorLabel.setVisible(false);
+
+        JLabel pwerrorLabel = new JLabel("\uBE44\uBC00\uBC88\uD638\uAC00 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.");
+        pwerrorLabel.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 30));
+        pwerrorLabel.setBounds(392, 528, 463, 63);
+        contentPane.add(pwerrorLabel);
+        pwerrorLabel.setVisible(false);
+		
 		JButton loginButton = new JButton("\uB85C\uADF8\uC778");
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				Login l=new Login();
 				try {
-					l.login(idField.getText(),passwordField.getText());
+					int k=l.login(idField.getText(),passwordField.getText());
+					if(k==0)
+					{
+						main m=new main();
+						m.setVisible(true);
+						setVisible(false);
+					}
+					else if(k==1)
+					{
+						iderrorLabel.setVisible(false);
+						pwerrorLabel.setVisible(true);
+					}
+					else if(k==2)
+					{
+						pwerrorLabel.setVisible(false);
+						iderrorLabel.setVisible(true);
+					}
+					else
+					{
+						
+					}
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
@@ -125,10 +157,7 @@ public class loginUI extends JFrame {
 		registerButton.setFocusPainted(false);
 		contentPane.add(registerButton);
 		
-		JLabel errorLabel = new JLabel("\uC544\uC774\uB514\uAC00 \uC874\uC7AC\uD558\uC9C0 \uC54A\uAC70\uB098 \uBE44\uBC00\uBC88\uD638\uAC00 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.");
-		errorLabel.setFont(new Font("具愁磊 具眉 Bold", Font.PLAIN, 30));
-		errorLabel.setBounds(410, 511, 463, 63);
-		contentPane.add(errorLabel);
+		
 		
 		JPanel logoPanel = new JPanel();
 		logoPanel.setBounds(192, 81, 216, 177);

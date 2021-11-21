@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.Scanner;
+
 public class Login {
 
-	public void login(String ID, String PASSWD) throws SQLException {
+	public int login(String ID, String PASSWD) throws SQLException {
 		 Connection con=null;
 		
 		 Member member =new Member();
@@ -24,6 +24,7 @@ public class Login {
 			
 		} catch (ClassNotFoundException e) {
 			System.out.println("fail");
+			
 		}
 		try
 		{
@@ -38,18 +39,25 @@ public class Login {
 					CurrentUser.setId(rs.getString("id"));
 					CurrentUser.setPasswd(rs.getString("passwd"));
 					CurrentUser.setName(rs.getString("name"));
-					
+					return 0;
 					
 				}
 				else
+				{
 					System.out.println("아이디는 맞는데 비밀번호 틀림");
+					return 1;
+				}
 			else
+			{
 				System.out.println("없는 아이디");
+				return 2;
+			}
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
 			System.out.println("실패");
 		}
+		return -1;
 		
 	}
 	
