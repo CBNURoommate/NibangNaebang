@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-// pushtest!! 33 풀용
+// pushtest!! 33 풀용121
 public class Login {
 
 	public int login(String ID, String PASSWD) throws SQLException {
