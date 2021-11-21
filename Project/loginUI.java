@@ -158,7 +158,7 @@ public class loginUI extends JFrame {
 		registerButton.setFocusPainted(false);
 		contentPane.add(registerButton);
 		
-		JLabel imageLabel = new JLabel(new ImageIcon(loginUI.class.getResource("/gui/logo.png")));
+		JLabel imageLabel = new JLabel(new ImageIcon(loginUI.class.getResource("/Project/logo.png")));
 		imageLabel.setSize(250, 250);
 		imageLabel.setLocation(445, 130);
 		contentPane.add(imageLabel);
