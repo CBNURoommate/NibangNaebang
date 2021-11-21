@@ -5,10 +5,10 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-// pushtest!! 22
+// pushtest!! 33
 public class Login {
 
-	public int login(String ID, String PASSWD) throws SQLException {
+	public int login(String ID, String PASSWD) throws SQLExceptåion {
 		 Connection con=null;
 		
 		 Member member =new Member();
