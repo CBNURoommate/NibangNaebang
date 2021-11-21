@@ -6,7 +6,7 @@ import java.sql.SQLException;
 public class Register{
 
 	
-	public void reg(String ID, String PASSWD,String NAME) throws SQLException {
+	public int reg(String ID, String PASSWD,String NAME) throws SQLException {
 		 Connection con=null;
 		 Member member =new Member();
 		 member.setId(ID);
@@ -68,6 +68,6 @@ public class Register{
 		{
 			System.out.println("중복된 id가 있습니다");
 		}
-		 
+		return 0;
 	}
 }
