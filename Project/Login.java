@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-
+// pull test
 public class Login {
 
 	public int login(String ID, String PASSWD) throws SQLException {
@@ -35,7 +35,7 @@ public class Login {
 			if(rs.next())
 				if(rs.getString("passwd").equals(passwd))
 				{
-					System.out.println("¼º°ø");
+					System.out.println("ì„±ê³µ");
 					CurrentUser.setId(rs.getString("id"));
 					CurrentUser.setPasswd(rs.getString("passwd"));
 					CurrentUser.setName(rs.getString("name"));
@@ -44,18 +44,18 @@ public class Login {
 				}
 				else
 				{
-					System.out.println("¾ÆÀÌµğ´Â ¸Â´Âµ¥ ºñ¹Ğ¹øÈ£ Æ²¸²");
+					System.out.println("ì•„ì´ë””ëŠ” ë§ëŠ”ë° ë¹„ë°€ë²ˆí˜¸ í‹€ë¦¼");
 					return 1;
 				}
 			else
 			{
-				System.out.println("¾ø´Â ¾ÆÀÌµğ");
+				System.out.println("ì—†ëŠ” ì•„ì´ë””");
 				return 2;
 			}
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("½ÇÆĞ");
+			System.out.println("ì‹¤íŒ¨");
 		}
 		return -1;
 		
