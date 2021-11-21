@@ -8,7 +8,7 @@ import java.sql.SQLException;
 // pushtest!! 33
 public class Login {
 
-	public int login(String ID, String PASSWD) throws SQLExceptåion {
+	public int login(String ID, String PASSWD) throws SQLExceptaion {
 		 Connection con=null;
 		
 		 Member member =new Member();
