@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Project.randomMatching;
+import Project.roomCheck;
+
 import java.awt.Color;
 import javax.swing.JLabel;
 import java.awt.Font;
@@ -23,6 +27,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JDesktopPane;
 import javax.swing.JRadioButton;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
 import javax.swing.JTextField;
@@ -197,6 +202,11 @@ public class roomCheck extends JFrame {
 		titleLabel.setFont(new Font("具愁磊 具眉 B", Font.BOLD, 50));
 		contentPane.add(titleLabel);
 		
+		JLabel Label = new JLabel("\uB0B4\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574\uBCFC\uAE4C\uC694?");
+		Label.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 45));
+		Label.setBounds(21, 120, 366, 63);
+		contentPane.add(Label);
+		
 		JButton movePage1 = new JButton("\uB0B4\uBC29 \uC810\uAC80\uD558\uAE30");
 		movePage1.setBounds(234, 20, 195, 72);
 		movePage1.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 40));
@@ -207,6 +217,13 @@ public class roomCheck extends JFrame {
 		contentPane.add(movePage1);
 		
 		JButton movePage2 = new JButton("\uB2C8\uBC29 \uB79C\uB364\uB9E4\uCE6D");
+		movePage2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				randomMatching r = new randomMatching();
+				r.setVisible(true);
+				setVisible(false); 
+			}
+		});
 		movePage2.setBounds(621, 13, 195, 72);
 		movePage2.setFont(new Font("具愁磊 具眉 B", Font.PLAIN, 40));
 		movePage2.setFocusPainted(false);
@@ -232,6 +249,15 @@ public class roomCheck extends JFrame {
 		movePage4.setBorderPainted(false);
 		movePage4.setBackground(Color.LIGHT_GRAY);
 		contentPane.add(movePage4);
+		
+		JButton moveMail = new JButton("");
+		moveMail.setIcon(new ImageIcon(roomCheck.class.getResource("/Project/mail.png")));
+		moveMail.setFocusPainted(false);
+		moveMail.setContentAreaFilled(false);
+		moveMail.setBorderPainted(false);
+		moveMail.setBackground(Color.LIGHT_GRAY);
+		moveMail.setBounds(1485, 20, 70, 70);
+		contentPane.add(moveMail);
 		
 		panel.setBounds(572, 104, 1000, 600);
 		contentPane.add(panel);
