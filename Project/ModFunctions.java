@@ -6,6 +6,26 @@ class ModFunctions {
 	{
 		CurrentUser.setName(name);
 	}
+	public void ModGender(int gender)
+	{
+		CurrentUser.setGender(gender);
+	}
+	public void ModDom(int dom)
+	{
+		CurrentUser.setDom(dom);
+	}
+	public void ModAge(int age)
+	{
+		CurrentUser.setAge(age);
+	}
+	public void ModHakbun(int hakbun)
+	{
+		CurrentUser.setHakbun(hakbun);
+	}
+	public void ModDepartment(int department)
+	{
+		CurrentUser.setDepartment(department);
+	}	
 	public void ModSleep(int sleep)
 	{
 		CurrentUser.setSleep(sleep);
@@ -13,27 +33,6 @@ class ModFunctions {
 	public void ModWake(int wake)
 	{
 		CurrentUser.setWake(wake);
-	}
-	public void ModGender(int gender)
-	{
-		CurrentUser.setGender(gender);
-	}
-	
-	public void ModHakbun(int hakbun)
-	{
-		CurrentUser.setHakbun(hakbun);
-	}
-	public void ModAge(int age)
-	{
-		CurrentUser.setAge(age);
-	}
-	public void ModDom(int dom)
-	{
-		CurrentUser.setDom(dom);
-	}
-	public void ModDepartment(int department)
-	{
-		CurrentUser.setDepartment(department);
 	}
 	public void ModShowertime(int showertime)
 	{
