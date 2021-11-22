@@ -5,8 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//쿼리연습?
-
+//쿼리연습? 풀용 
 public class empty{
 	
 	
