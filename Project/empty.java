@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//荑쇰━�뿰�뒿? ���슜  commit checksss
+//荑쇰━�뿰�뒿? ���슜  commit checksssas
 public class empty{
 	
 	
