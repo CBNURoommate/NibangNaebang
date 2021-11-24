@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//쿼리연습? 풀용 
+//荑쇰━�뿰�뒿? ���슜 
 public class empty{
 	
 	
@@ -35,5 +35,5 @@ public class empty{
 	 System.out.println(+count);
 	 
 	 
-	 // sangho babo 하하
+	 // 제갈도현 뽕뽕 
 }
