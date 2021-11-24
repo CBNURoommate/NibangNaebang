@@ -89,14 +89,14 @@ public class Matching {
 		int Silnaeeat = UserNeeds.getSilnaeeat();
 		int Insect = UserNeeds.getInsect();
 		
-		int acc = 0; // 정확도 측정용
-		int acc_cnt = 1; // 정확도 측정용
+		int acc = 0; 
+		int acc_cnt = 1;
 
 		String sql="matching userneeds and sequential objuser info";
 		PreparedStatement pstmt=con.prepareStatement(sql);
 		ResultSet rs=pstmt.executeQuery();
 		
-		while(acc_cnt > 0) // 적합도 높으면 해당 라인에서 탈출
+		while(acc_cnt > 0) 
 		{
 			{
 				for(acc = 34; acc > 0; acc-- )
