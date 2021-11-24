@@ -53,7 +53,7 @@ public class loginUI extends JFrame {
 		});
 	}
 
-	/**
+	/** ddss
 	 * Create the frame.
 	 */
 	public loginUI() {
@@ -67,7 +67,11 @@ public class loginUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
+<<<<<<< HEAD
 		titleLabel.setFont(new Font("ì•¼ë†€ìž ì•¼ì²´ B", Font.BOLD, 120));
+=======
+		titleLabel.setFont(new Font("³ª´®°íµñ", Font.BOLD, 120));
+>>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang.git
 		titleLabel.setBounds(770, 239, 320, 135);
 		contentPane.add(titleLabel);
 		
@@ -94,7 +98,11 @@ public class loginUI extends JFrame {
 		contentPane.add(passwordField);
 		
 		JLabel iderrorLabel = new JLabel("\uC544\uC774\uB514\uAC00 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.");
+<<<<<<< HEAD
 		iderrorLabel.setFont(new Font("ì•¼ë†€ìž ì•¼ì²´ B", Font.PLAIN, 50));
+=======
+		iderrorLabel.setFont(new Font("Dialog", Font.PLAIN, 50));
+>>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang.git
 		iderrorLabel.setBounds(600, 679, 430, 60);
 		contentPane.add(iderrorLabel);
         iderrorLabel.setVisible(false);
@@ -162,6 +170,7 @@ public class loginUI extends JFrame {
 		contentPane.add(registerButton);
 		
 		JLabel imageLabel = new JLabel(new ImageIcon(loginUI.class.getResource("/Project/logo.png")));
+		imageLabel.setFont(new Font("Cooper Black", Font.PLAIN, 12));
 		imageLabel.setSize(250, 250);
 		imageLabel.setLocation(445, 130);
 		contentPane.add(imageLabel);
