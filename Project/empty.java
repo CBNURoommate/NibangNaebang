@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-//荑쇰━�뿰�뒿? ���슜 
+
 public class empty{
 	
 	
@@ -34,10 +34,4 @@ public class empty{
 	 
 	 System.out.println(+count);
 	 
-	 
-<<<<<<< HEAD
-	 //  test
-=======
-	 // 제갈도현 뽕뽕 
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang.git
 }

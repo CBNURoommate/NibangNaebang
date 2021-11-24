@@ -321,27 +321,27 @@ public class roomCheck extends JFrame {
 		Label2_2.setBounds(242, 125, 115, 49);
 		panel2.add(Label2_2);
 		
-		JRadioButton rdbtn2_1 = new JRadioButton("������");
+		JRadioButton rdbtn2_1 = new JRadioButton("개성재");
 		buttonGroup2.add(rdbtn2_1);
 		rdbtn2_1.setBounds(38, 99, 121, 23);
 		panel2.add(rdbtn2_1);
 		
-		JRadioButton rdbtn2_2 = new JRadioButton("�迵��");
+		JRadioButton rdbtn2_2 = new JRadioButton("계영원");
 		buttonGroup2.add(rdbtn2_2);
 		rdbtn2_2.setBounds(48, 124, 121, 23);
 		panel2.add(rdbtn2_2);
 		
-		JRadioButton rdbtn2_3 = new JRadioButton("�缺��");
+		JRadioButton rdbtn2_3 = new JRadioButton("양성재");
 		buttonGroup2.add(rdbtn2_3);
 		rdbtn2_3.setBounds(58, 149, 121, 23);
 		panel2.add(rdbtn2_3);
 		
-		JRadioButton rdbtn2_4 = new JRadioButton("������");
+		JRadioButton rdbtn2_4 = new JRadioButton("양진재");
 		buttonGroup2.add(rdbtn2_4);
 		rdbtn2_4.setBounds(68, 174, 121, 23);
 		panel2.add(rdbtn2_4);
 		
-		JRadioButton rdbtn2_5 = new JRadioButton("������");
+		JRadioButton rdbtn2_5 = new JRadioButton("양현재");
 		buttonGroup2.add(rdbtn2_5);
 		rdbtn2_5.setBounds(78, 199, 121, 23);
 		panel2.add(rdbtn2_5);

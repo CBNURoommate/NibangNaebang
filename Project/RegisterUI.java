@@ -116,7 +116,7 @@ public class RegisterUI extends JFrame {
 				
 				if(!(passwordField.getText().equals(password2Field.getText())))
 				{
-					System.out.println("��й�ȣ Ȯ�� Ʋ��");
+					System.out.println("비밀번호 확인 틀림");
 					pwErrorLabel.setVisible(true);
 					return;
 				
