@@ -60,7 +60,7 @@ public class main extends JFrame {
 		line1.setLayout(null);
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
-		titleLabel.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.BOLD, 50));
+		titleLabel.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.BOLD, 50));
 		titleLabel.setBounds(69, 10, 167, 92);
 		contentPane.add(titleLabel);
 		
@@ -72,7 +72,7 @@ public class main extends JFrame {
 				setVisible(false); 
 			}
 		});
-		movePage1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
+		movePage1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
 		movePage1.setBackground(Color.BLUE);
 		movePage1.setBounds(284, 23, 195, 72);
 		movePage1.setBorderPainted(false);
@@ -88,7 +88,7 @@ public class main extends JFrame {
 				setVisible(false); 
 			}
 		});
-		movePage2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
+		movePage2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
 		movePage2.setBackground(Color.LIGHT_GRAY);
 		movePage2.setBounds(669, 23, 195, 72);
 		movePage2.setBorderPainted(false);
@@ -97,7 +97,7 @@ public class main extends JFrame {
 		contentPane.add(movePage2);
 		
 		JButton movePage3 = new JButton("\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30");
-		movePage3.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
+		movePage3.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
 		movePage3.setBackground(Color.LIGHT_GRAY);
 		movePage3.setBounds(864, 23, 195, 72);
 		movePage3.setBorderPainted(false);
@@ -110,13 +110,13 @@ public class main extends JFrame {
 		contentPane.add(line2);
 		
 		JTextPane textPane = new JTextPane();
-		textPane.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
+		textPane.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
 		textPane.setText("\uB2C8\uBC29\uB0B4\uBC29\uC758 \uAE30\uBCF8\uC124\uBA85\r\n\r\n\uB0B4\uBC29 \uC810\uAC80\uD558\uAE30\uC5D0\uC120 \uC790\uC2E0\uC758 \uC815\uBCF4\uB97C \uC785\uB825\uD560 \uC218 \uC788\uC5B4\uC694.\r\n\uB0B4\uBC29 \uC18C\uAC1C\uD558\uAE30\uC5D0\uC120 \uC790\uC2E0\uC758 \uC815\uBCF4\uB97C \uD64D\uBCF4\uD560 \uC218 \uC788\uC5B4\uC694.\r\n\uB2C8\uBC29 \uB79C\uB364\uB9E4\uCE6D\uC5D0\uC120 \uC0C1\uB300\uC758 \uC815\uBCF4\uB97C \uAE30\uBC18\uC73C\uB85C \uB9E4\uCE6D\uC744 \uD560 \uC218 \uC788\uC5B4\uC694.\r\n\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30\uC5D0\uC120 \uB2E4\uB978 \uC0AC\uB78C\uB4E4\uC774 \uC62C\uB9B0 \uB0B4\uBC29\uC744 \uBCFC \uC218 \uC788\uC5B4\uC694.");
 		textPane.setBounds(85, 155, 846, 393);
 		contentPane.add(textPane);
 		
 		JButton movePage4 = new JButton("\uB0B4\uBC29 \uC18C\uAC1C\uD558\uAE30");
-		movePage4.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
+		movePage4.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
 		movePage4.setFocusPainted(false);
 		movePage4.setContentAreaFilled(false);
 		movePage4.setBorderPainted(false);

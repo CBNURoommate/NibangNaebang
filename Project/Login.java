@@ -35,7 +35,7 @@ public class Login {
 			if(rs.next())
 				if(rs.getString("passwd").equals(passwd))
 				{
-					System.out.println("�꽦怨�");
+					System.out.println("");
 					CurrentUser.setId(rs.getString("id"));
 					CurrentUser.setPasswd(rs.getString("passwd"));
 					CurrentUser.setName(rs.getString("name"));
@@ -44,23 +44,20 @@ public class Login {
 				}
 				else
 				{
-					System.out.println("�븘�씠�뵒�뒗 留욌뒗�뜲 鍮꾨�踰덊샇 ��由�");
+					System.out.println("아이디는 맞는데 비밀번호 틀림");
 					return 1;
 				}
 			else
 			{
-				System.out.println("�뾾�뒗 �븘�씠�뵒");
+				System.out.println("없는 아이디");
 				return 2;
 			}
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("�떎�뙣");
+			System.out.println("실패");
 		}
 		return -1;
 		
 	}
-	
-	 
-
 }

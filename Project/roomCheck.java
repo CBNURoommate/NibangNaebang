@@ -199,17 +199,17 @@ public class roomCheck extends JFrame {
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
 		titleLabel.setBounds(47, 0, 167, 92);
-		titleLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.BOLD, 50));
+		titleLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.BOLD, 50));
 		contentPane.add(titleLabel);
 		
 		JLabel Label = new JLabel("\uB0B4\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574\uBCFC\uAE4C\uC694?");
-		Label.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 45));
+		Label.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 45));
 		Label.setBounds(21, 120, 366, 63);
 		contentPane.add(Label);
 		
 		JButton movePage1 = new JButton("\uB0B4\uBC29 \uC810\uAC80\uD558\uAE30");
 		movePage1.setBounds(234, 20, 195, 72);
-		movePage1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
+		movePage1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
 		movePage1.setFocusPainted(false);
 		movePage1.setContentAreaFilled(false);
 		movePage1.setBorderPainted(false);
@@ -225,7 +225,7 @@ public class roomCheck extends JFrame {
 			}
 		});
 		movePage2.setBounds(621, 13, 195, 72);
-		movePage2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
+		movePage2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
 		movePage2.setFocusPainted(false);
 		movePage2.setContentAreaFilled(false);
 		movePage2.setBorderPainted(false);
@@ -234,7 +234,7 @@ public class roomCheck extends JFrame {
 		
 		JButton movePage3 = new JButton("\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30");
 		movePage3.setBounds(815, 20, 195, 72);
-		movePage3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
+		movePage3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
 		movePage3.setFocusPainted(false);
 		movePage3.setContentAreaFilled(false);
 		movePage3.setBorderPainted(false);
@@ -243,7 +243,7 @@ public class roomCheck extends JFrame {
 		
 		JButton movePage4 = new JButton("\uB0B4\uBC29 \uC18C\uAC1C\uD558\uAE30");
 		movePage4.setBounds(430, 13, 195, 72);
-		movePage4.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
+		movePage4.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
 		movePage4.setFocusPainted(false);
 		movePage4.setContentAreaFilled(false);
 		movePage4.setBorderPainted(false);
@@ -269,12 +269,12 @@ public class roomCheck extends JFrame {
 		panel.add(btn1_1);
 		
 		JLabel Label1_1 = new JLabel("\uC131\uBCC4");
-		Label1_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label1_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label1_1.setBounds(38, 28, 115, 49);
 		panel.add(Label1_1);
 		
 		JLabel Label1_2 = new JLabel("1 / ?");
-		Label1_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label1_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label1_2.setBounds(163, 202, 115, 49);
 		panel.add(Label1_2);
 		
@@ -294,7 +294,6 @@ public class roomCheck extends JFrame {
 		
 		btn1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				if(rdbtn1_1.isSelected())
 				{
 					gender=1;
@@ -313,36 +312,36 @@ public class roomCheck extends JFrame {
 		panel2.add(btn2_1);
 		
 		JLabel Label2_1 = new JLabel("\uAE30\uC219\uC0AC");
-		Label2_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label2_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label2_1.setBounds(38, 28, 115, 49);
 		panel2.add(Label2_1);
 		
 		JLabel Label2_2 = new JLabel("2 / ?");
-		Label2_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label2_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label2_2.setBounds(242, 125, 115, 49);
 		panel2.add(Label2_2);
 		
-		JRadioButton rdbtn2_1 = new JRadioButton("°³¼ºÀç");
+		JRadioButton rdbtn2_1 = new JRadioButton("ê°œì„±ì¬");
 		buttonGroup2.add(rdbtn2_1);
 		rdbtn2_1.setBounds(38, 99, 121, 23);
 		panel2.add(rdbtn2_1);
 		
-		JRadioButton rdbtn2_2 = new JRadioButton("°è¿µ¿ø");
+		JRadioButton rdbtn2_2 = new JRadioButton("ê³„ì˜ì›");
 		buttonGroup2.add(rdbtn2_2);
 		rdbtn2_2.setBounds(48, 124, 121, 23);
 		panel2.add(rdbtn2_2);
 		
-		JRadioButton rdbtn2_3 = new JRadioButton("¾ç¼ºÀç");
+		JRadioButton rdbtn2_3 = new JRadioButton("ì–‘ì„±ì¬");
 		buttonGroup2.add(rdbtn2_3);
 		rdbtn2_3.setBounds(58, 149, 121, 23);
 		panel2.add(rdbtn2_3);
 		
-		JRadioButton rdbtn2_4 = new JRadioButton("¾çÁøÀç");
+		JRadioButton rdbtn2_4 = new JRadioButton("ì–‘ì§„ì¬");
 		buttonGroup2.add(rdbtn2_4);
 		rdbtn2_4.setBounds(68, 174, 121, 23);
 		panel2.add(rdbtn2_4);
 		
-		JRadioButton rdbtn2_5 = new JRadioButton("¾çÇöÀç");
+		JRadioButton rdbtn2_5 = new JRadioButton("ì–‘í˜„ì¬");
 		buttonGroup2.add(rdbtn2_5);
 		rdbtn2_5.setBounds(78, 199, 121, 23);
 		panel2.add(rdbtn2_5);
@@ -387,22 +386,22 @@ public class roomCheck extends JFrame {
 		panel3.add(btn3_1);
 		
 		JLabel Label3_1 = new JLabel("\uC0DD\uB144 & \uD559\uBC88");
-		Label3_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label3_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label3_1.setBounds(38, 28, 200, 49);
 		panel3.add(Label3_1);
 		
 		JLabel Label3_2 = new JLabel("3 / ?");
-		Label3_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label3_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label3_2.setBounds(163, 202, 115, 49);
 		panel3.add(Label3_2);
 		
 		JLabel Label3_3 = new JLabel("\uC0DD\uB144");
-		Label3_3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 30));
+		Label3_3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 30));
 		Label3_3.setBounds(163, 131, 51, 49);
 		panel3.add(Label3_3);
 		
 		JLabel Label3_4 = new JLabel("\uD559\uBC88");
-		Label3_4.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 30));
+		Label3_4.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 30));
 		Label3_4.setBounds(163, 88, 51, 49);
 		panel3.add(Label3_4);
 		
@@ -435,12 +434,12 @@ public class roomCheck extends JFrame {
 		panel4.add(btn4_1);
 		
 		JLabel Label4_1 = new JLabel("\uC131\uBCC4");
-		Label4_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label4_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label4_1.setBounds(38, 28, 115, 49);
 		panel4.add(Label4_1);
 		
 		JLabel Label4_2 = new JLabel("4 / ?");
-		Label4_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label4_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label4_2.setBounds(140, 239, 115, 49);
 		panel4.add(Label4_2);
 		
@@ -572,12 +571,12 @@ public class roomCheck extends JFrame {
 		panel5.add(btn5_1);
 		
 		JLabel Label5_1 = new JLabel("\uCDE8\uCE68\uC2DC\uAC04");
-		Label5_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label5_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label5_1.setBounds(38, 28, 137, 49);
 		panel5.add(Label5_1);
 		
 		JLabel Label5_2 = new JLabel("5 / ?");
-		Label5_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label5_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label5_2.setBounds(246, 108, 115, 49);
 		panel5.add(Label5_2);
 		
@@ -634,12 +633,12 @@ public class roomCheck extends JFrame {
 		panel6.add(btn6_1);
 		
 		JLabel Label6_1 = new JLabel("\uAE30\uC0C1\uC2DC\uAC04");
-		Label6_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label6_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label6_1.setBounds(38, 28, 137, 49);
 		panel6.add(Label6_1);
 		
 		JLabel Label6_2 = new JLabel("6 / ?");
-		Label6_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label6_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label6_2.setBounds(313, 147, 115, 49);
 		panel6.add(Label6_2);
 		
@@ -688,12 +687,12 @@ public class roomCheck extends JFrame {
 		panel7.add(btn7_1);
 		
 		JLabel Label7_1 = new JLabel("\uC0E4\uC6CC\uC18C\uC694\uC2DC\uAC04");
-		Label7_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label7_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label7_1.setBounds(38, 28, 196, 49);
 		panel7.add(Label7_1);
 		
 		JLabel Label7_2 = new JLabel("7 / ?");
-		Label7_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label7_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label7_2.setBounds(312, 162, 115, 49);
 		panel7.add(Label7_2);
 		
@@ -742,12 +741,12 @@ public class roomCheck extends JFrame {
 		panel8.add(btn8_1);
 		
 		JLabel Label8_1 = new JLabel("\uC0E4\uC6CC\uC2DC\uAC04");
-		Label8_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label8_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label8_1.setBounds(38, 28, 136, 49);
 		panel8.add(Label8_1);
 		
 		JLabel Label8_2 = new JLabel("8 / ?");
-		Label8_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label8_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label8_2.setBounds(178, 195, 115, 49);
 		panel8.add(Label8_2);
 		
@@ -781,12 +780,12 @@ public class roomCheck extends JFrame {
 		panel9.add(btn9_1);
 		
 		JLabel Label9_1 = new JLabel("\uC7A0\uADC0");
-		Label9_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label9_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label9_1.setBounds(38, 28, 136, 49);
 		panel9.add(Label9_1);
 		
 		JLabel Label9_2 = new JLabel("9 / ?");
-		Label9_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label9_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label9_2.setBounds(178, 195, 115, 49);
 		panel9.add(Label9_2);
 		
@@ -820,12 +819,12 @@ public class roomCheck extends JFrame {
 		panel10.add(btn10_1);
 		
 		JLabel Label10_1 = new JLabel("\uC7A0\uBC84\uB987");
-		Label10_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label10_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label10_1.setBounds(38, 28, 136, 49);
 		panel10.add(Label10_1);
 		
 		JLabel Label10_2 = new JLabel("10 / ?");
-		Label10_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label10_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label10_2.setBounds(178, 195, 115, 49);
 		panel10.add(Label10_2);
 		
@@ -860,12 +859,12 @@ public class roomCheck extends JFrame {
 		panel11.add(btn11_1);
 		
 		JLabel Label11_1 = new JLabel("\uC218\uBA74\uB4F1");
-		Label11_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label11_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label11_1.setBounds(38, 28, 136, 49);
 		panel11.add(Label11_1);
 		
 		JLabel Label11_2 = new JLabel("11 / ?");
-		Label11_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label11_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label11_2.setBounds(178, 195, 115, 49);
 		panel11.add(Label11_2);
 		
@@ -904,12 +903,12 @@ public class roomCheck extends JFrame {
 		panel12.add(btn12_1);
 		
 		JLabel Label12_1 = new JLabel("\uC54C\uB78C");
-		Label12_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label12_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label12_1.setBounds(38, 28, 136, 49);
 		panel12.add(Label12_1);
 		
 		JLabel Label12_2 = new JLabel("12 / ?");
-		Label12_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label12_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label12_2.setBounds(178, 195, 115, 49);
 		panel12.add(Label12_2);
 		
@@ -943,12 +942,12 @@ public class roomCheck extends JFrame {
 		panel13.add(btn13_1);
 		
 		JLabel Label13_1 = new JLabel("\uCCAD\uC18C");
-		Label13_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label13_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label13_1.setBounds(38, 28, 136, 49);
 		panel13.add(Label13_1);
 		
 		JLabel Label13_2 = new JLabel("13 / ?");
-		Label13_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label13_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label13_2.setBounds(178, 195, 115, 49);
 		panel13.add(Label13_2);
 		
@@ -982,12 +981,12 @@ public class roomCheck extends JFrame {
 		panel14.add(btn14_1);
 		
 		JLabel Label14_1 = new JLabel("\uB354\uC704");
-		Label14_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label14_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label14_1.setBounds(38, 28, 136, 49);
 		panel14.add(Label14_1);
 		
 		JLabel Label14_2 = new JLabel("14 / ?");
-		Label14_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label14_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label14_2.setBounds(178, 195, 115, 49);
 		panel14.add(Label14_2);
 		
@@ -1021,12 +1020,12 @@ public class roomCheck extends JFrame {
 		panel15.add(btn15_1);
 		
 		JLabel Label15_1 = new JLabel("\uCD94\uC704");
-		Label15_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label15_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label15_1.setBounds(38, 28, 136, 49);
 		panel15.add(Label15_1);
 		
 		JLabel Label15_2 = new JLabel("15 / ?");
-		Label15_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label15_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label15_2.setBounds(178, 195, 115, 49);
 		panel15.add(Label15_2);
 		
@@ -1060,12 +1059,12 @@ public class roomCheck extends JFrame {
 		panel16.add(btn16_1);
 		
 		JLabel Label16_1 = new JLabel("\uC18C\uB9AC");
-		Label16_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label16_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label16_1.setBounds(38, 28, 136, 49);
 		panel16.add(Label16_1);
 		
 		JLabel Label16_2 = new JLabel("16 / ?");
-		Label16_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label16_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label16_2.setBounds(178, 195, 115, 49);
 		panel16.add(Label16_2);
 		
@@ -1099,12 +1098,12 @@ public class roomCheck extends JFrame {
 		panel17.add(btn17_1);
 		
 		JLabel Label17_1 = new JLabel("\uD761\uC5F0\uC5EC\uBD80");
-		Label17_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label17_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label17_1.setBounds(38, 28, 136, 49);
 		panel17.add(Label17_1);
 		
 		JLabel Label17_2 = new JLabel("17 / ?");
-		Label17_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label17_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label17_2.setBounds(178, 195, 115, 49);
 		panel17.add(Label17_2);
 		
@@ -1133,12 +1132,12 @@ public class roomCheck extends JFrame {
 		panel18.add(btn18_1);
 		
 		JLabel Label18_1 = new JLabel("\uD761\uC5F0\uC5EC\uBD80");
-		Label18_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label18_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label18_1.setBounds(38, 28, 136, 49);
 		panel18.add(Label18_1);
 		
 		JLabel Label18_2 = new JLabel("18 / ?");
-		Label18_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label18_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label18_2.setBounds(178, 195, 115, 49);
 		panel18.add(Label18_2);
 		
@@ -1177,12 +1176,12 @@ public class roomCheck extends JFrame {
 		panel19.add(btn19_1);
 		
 		JLabel Label19_1 = new JLabel("\uCE5C\uAD6C\uCD08\uB300");
-		Label19_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label19_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label19_1.setBounds(38, 28, 136, 49);
 		panel19.add(Label19_1);
 		
 		JLabel Label19_2 = new JLabel("19 / ?");
-		Label19_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label19_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label19_2.setBounds(178, 195, 115, 49);
 		panel19.add(Label19_2);
 		
@@ -1211,12 +1210,12 @@ public class roomCheck extends JFrame {
 		panel20.add(btn20_1);
 		
 		JLabel Label20_1 = new JLabel("\uAE30\uC219\uC0AC\uC2DD");
-		Label20_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label20_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label20_1.setBounds(38, 28, 136, 49);
 		panel20.add(Label20_1);
 		
 		JLabel Label20_2 = new JLabel("20 / ?");
-		Label20_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label20_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label20_2.setBounds(178, 195, 115, 49);
 		panel20.add(Label20_2);
 		
@@ -1245,12 +1244,12 @@ public class roomCheck extends JFrame {
 		panel21.add(btn21_1);
 		
 		JLabel Label21_1 = new JLabel("\uACF5\uBD80");
-		Label21_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label21_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label21_1.setBounds(38, 28, 136, 49);
 		panel21.add(Label21_1);
 		
 		JLabel Label21_2 = new JLabel("21 / ?");
-		Label21_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label21_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label21_2.setBounds(178, 195, 115, 49);
 		panel21.add(Label21_2);
 		
@@ -1284,12 +1283,12 @@ public class roomCheck extends JFrame {
 		panel22.add(btn22_1);
 		
 		JLabel Label22_1 = new JLabel("\uD5A5\uC218");
-		Label22_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label22_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label22_1.setBounds(38, 28, 136, 49);
 		panel22.add(Label22_1);
 		
 		JLabel Label22_2 = new JLabel("22 / ?");
-		Label22_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label22_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label22_2.setBounds(178, 195, 115, 49);
 		panel22.add(Label22_2);
 		
@@ -1318,12 +1317,12 @@ public class roomCheck extends JFrame {
 		panel23.add(btn23_1);
 		
 		JLabel Label23_1 = new JLabel("\uD5A5 \uBBFC\uAC10\uB3C4");
-		Label23_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label23_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label23_1.setBounds(38, 28, 174, 49);
 		panel23.add(Label23_1);
 		
 		JLabel Label23_2 = new JLabel("23 / ?");
-		Label23_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label23_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label23_2.setBounds(178, 195, 115, 49);
 		panel23.add(Label23_2);
 		
@@ -1352,12 +1351,12 @@ public class roomCheck extends JFrame {
 		panel24.add(btn24_1);
 		
 		JLabel Label24_1 = new JLabel("\uCEF4\uD4E8\uD130 \uAC8C\uC784");
-		Label24_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label24_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label24_1.setBounds(38, 28, 188, 49);
 		panel24.add(Label24_1);
 		
 		JLabel Label24_2 = new JLabel("24 / ?");
-		Label24_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label24_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label24_2.setBounds(178, 195, 115, 49);
 		panel24.add(Label24_2);
 		
@@ -1391,12 +1390,12 @@ public class roomCheck extends JFrame {
 		panel25.add(btn25_1);
 		
 		JLabel Label25_1 = new JLabel("\uC57C\uC2DD");
-		Label25_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label25_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label25_1.setBounds(38, 28, 86, 49);
 		panel25.add(Label25_1);
 		
 		JLabel Label25_2 = new JLabel("25 / ?");
-		Label25_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label25_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label25_2.setBounds(178, 195, 115, 49);
 		panel25.add(Label25_2);
 		
@@ -1430,12 +1429,12 @@ public class roomCheck extends JFrame {
 		panel26.add(btn26_1);
 		
 		JLabel Label26_1 = new JLabel("\uC220");
-		Label26_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label26_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label26_1.setBounds(38, 28, 86, 49);
 		panel26.add(Label26_1);
 		
 		JLabel Label26_2 = new JLabel("26 / ?");
-		Label26_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label26_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label26_2.setBounds(178, 195, 115, 49);
 		panel26.add(Label26_2);
 		
@@ -1469,12 +1468,12 @@ public class roomCheck extends JFrame {
 		panel27.add(btn27_1);
 		
 		JLabel Label27_1 = new JLabel("\uC2E4\uB0B4\uCDE8\uC2DD");
-		Label27_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label27_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label27_1.setBounds(38, 28, 145, 49);
 		panel27.add(Label27_1);
 		
 		JLabel Label27_2 = new JLabel("27 / ?");
-		Label27_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label27_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label27_2.setBounds(178, 195, 115, 49);
 		panel27.add(Label27_2);
 		
@@ -1502,12 +1501,12 @@ public class roomCheck extends JFrame {
 		panel28.add(btn28_1);
 		
 		JLabel Label28_1 = new JLabel("\uBC8C\uB808");
-		Label28_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label28_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label28_1.setBounds(38, 28, 136, 49);
 		panel28.add(Label28_1);
 		
 		JLabel Label28_2 = new JLabel("28 / ?");
-		Label28_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label28_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label28_2.setBounds(248, 145, 115, 49);
 		panel28.add(Label28_2);
 		

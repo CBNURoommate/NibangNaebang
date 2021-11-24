@@ -5,7 +5,11 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+<<<<<<< HEAD
 //dsdaasd
+=======
+
+>>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 public class empty{
 	
 	
@@ -34,6 +38,4 @@ public class empty{
 	 
 	 System.out.println(+count);
 	 
-	 
-	 // 제갈도현 뽕뽕 
 }
