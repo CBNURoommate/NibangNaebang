@@ -5,7 +5,7 @@ import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-// pushtest!!
+// pushtest!!2
 public class Login {
 
 	public int login(String ID, String PASSWD) throws SQLException {
