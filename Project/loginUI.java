@@ -67,70 +67,40 @@ public class loginUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
-<<<<<<< HEAD
-		titleLabel.setFont(new Font("Dialog", Font.BOLD, 74));
-		titleLabel.setBounds(707, 244, 320, 135);
-=======
-<<<<<<< HEAD
-		titleLabel.setFont(new Font("야놀자 야체 B", Font.BOLD, 120));
-=======
 		titleLabel.setFont(new Font("야놀자 야체 Bold", Font.BOLD, 120));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang.git
 		titleLabel.setBounds(770, 239, 320, 135);
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		contentPane.add(titleLabel);
 		
 		idField = new JTextField();
-<<<<<<< HEAD
-		idField.setFont(new Font("�߳��� ��ü B", Font.PLAIN, 40));
-=======
 		idField.setFont(new Font("야놀자 야체 Bold", Font.PLAIN, 40));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		idField.setBounds(742, 399, 300, 50);
 		contentPane.add(idField);
 		idField.setColumns(10);
 		
 		JLabel idLabel = new JLabel("\uC544\uC774\uB514");
-<<<<<<< HEAD
-		idLabel.setFont(new Font("�߳��� ��ü B", Font.PLAIN, 60));
-=======
 		idLabel.setFont(new Font("야놀자 야체 Bold", Font.PLAIN, 60));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		idLabel.setBounds(570, 389, 160, 70);
 		contentPane.add(idLabel);
 		
 		JLabel passwordLabel = new JLabel("\uBE44\uBC00\uBC88\uD638");
-<<<<<<< HEAD
-		passwordLabel.setFont(new Font("�߳��� ��ü B", Font.PLAIN, 60));
-=======
 		passwordLabel.setFont(new Font("야놀자 야체 Bold", Font.PLAIN, 60));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		passwordLabel.setBounds(570, 479, 160, 70);
 		contentPane.add(passwordLabel);
 		
 		passwordField = new JPasswordField();
 		passwordField.setEchoChar('*');
-<<<<<<< HEAD
-		passwordField.setFont(new Font("�߳��� ��ü B", Font.PLAIN, 40));
-=======
 		passwordField.setFont(new Font("야놀자 야체 Bold", Font.PLAIN, 40));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		passwordField.setBounds(742, 489, 300, 50);
 		contentPane.add(passwordField);
 		
 		JLabel iderrorLabel = new JLabel("\uC544\uC774\uB514\uAC00 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.");
 		iderrorLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang.git
 		iderrorLabel.setBounds(600, 679, 430, 60);
 		contentPane.add(iderrorLabel);
         iderrorLabel.setVisible(false);
 
         JLabel pwerrorLabel = new JLabel("\uBE44\uBC00\uBC88\uD638\uAC00 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.");
-<<<<<<< HEAD
-		pwerrorLabel.setFont(new Font("�߳��� ��ü B", Font.PLAIN, 50));
-=======
 		pwerrorLabel.setFont(new Font("야놀자 야체 Bold", Font.PLAIN, 50));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		pwerrorLabel.setBounds(630, 679, 340, 60);
 		contentPane.add(pwerrorLabel);
         pwerrorLabel.setVisible(false);
@@ -167,11 +137,8 @@ public class loginUI extends JFrame {
 				}
 			}
 		});
-<<<<<<< HEAD
-		loginButton.setFont(new Font("Dialog", Font.PLAIN, 50));
-=======
+
 		loginButton.setFont(new Font("야놀자 야체 Bold", Font.PLAIN, 50));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		loginButton.setBounds(620, 582, 160, 50);
 		loginButton.setBorderPainted(false);
 		loginButton.setContentAreaFilled(false);
@@ -188,11 +155,7 @@ public class loginUI extends JFrame {
 				
 			}
 		});
-<<<<<<< HEAD
-		registerButton.setFont(new Font("�߳��� ��ü B", Font.PLAIN, 50));
-=======
 		registerButton.setFont(new Font("야놀자 야체 Bold", Font.PLAIN, 50));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		registerButton.setBounds(821, 582, 160, 50);
 		registerButton.setBorderPainted(false);
 		registerButton.setContentAreaFilled(false);
@@ -205,11 +168,7 @@ public class loginUI extends JFrame {
 		contentPane.add(imageLabel);
 		
 		JLabel lblNewLabel = new JLabel("\uCDA9\uBD81\uB300 \uB8F8\uBA54\uC774\uD2B8 \uAC80\uC0C9 \uD504\uB85C\uADF8\uB7A8");
-<<<<<<< HEAD
-		lblNewLabel.setFont(new Font("�߳��� ��ü B", Font.PLAIN, 50));
-=======
 		lblNewLabel.setFont(new Font("야놀자 야체 Bold", Font.PLAIN, 50));
->>>>>>> branch 'main' of https://github.com/CBNURoommate/NibangNaebang
 		lblNewLabel.setBounds(707, 178, 460, 70);
 		contentPane.add(lblNewLabel);
 	}
