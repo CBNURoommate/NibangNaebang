@@ -40,15 +40,15 @@ public class Login {
 					return 0;
 
 				} else {
-					System.out.println("¾ÆÀÌµğ´Â ¸Â´Âµ¥, ºñ¹Ğ¹øÈ£°¡ Æ²·È½À´Ï´Ù.");
+					System.out.println("ì•„ì´ë””ëŠ” ë§ëŠ”ë° ë¹„ë°€ë²ˆí˜¸ í‹€ë¦¼.");
 					return 1;
 				}
 			else {
-				System.out.println("¾ø´Â ¾ÆÀÌµğ ÀÔ´Ï´Ù.");
+				System.out.println("ì—†ëŠ” ì•„ì´ë””");
 				return 2;
 			}
 		} catch (java.sql.SQLIntegrityConstraintViolationException d) {
-			System.out.println("½ÇÆĞ");
+			System.out.println("ì‹¤íŒ¨");
 		}
 		return -1;
 

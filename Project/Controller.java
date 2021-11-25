@@ -22,7 +22,7 @@ public class Controller {
     }
 
 
-    // È¸¿ø Ãß°¡
+    // È¸ï¿½ï¿½ ï¿½ß°ï¿½
     public void insertMember(Model model) {
         try {
             st = conn.createStatement();
@@ -39,7 +39,7 @@ public class Controller {
         }
     }
 
-    // È¸¿ø ¸ñ·Ï Ãâ·Â
+    // È¸ï¿½ï¿½ ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½
     public ArrayList<Model> readMember() {
         ArrayList<Model> arr = new ArrayList<Model>();
         System.out.println(arr);
@@ -61,7 +61,7 @@ public class Controller {
         return arr;
     }
 
-    // È¸¿ø¼öÁ¤
+    // È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void updateMember(String name, String tel) {
         try {
             st = conn.createStatement();
@@ -78,7 +78,7 @@ public class Controller {
         }
     }
 
-    // È¸¿ø»èÁ¦
+    // È¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     public void deleteMember(String name) {
         try {
             st = conn.createStatement();
@@ -94,7 +94,7 @@ public class Controller {
         }
     }
 
-    // È¸¿ø °Ë»ö
+    // È¸ï¿½ï¿½ ï¿½Ë»ï¿½
     public ArrayList<Model> searchMember(String content) {
         ArrayList<Model> arr = new ArrayList<Model>();
         System.out.println(arr);

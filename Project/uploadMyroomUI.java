@@ -1,3 +1,4 @@
+
 package Project;
 
 import java.awt.BorderLayout;
@@ -325,11 +326,11 @@ public class uploadMyroomUI extends JFrame {
 		
 		JLabel myLable_13 = new JLabel();
 		if(CurrentUser.getAlarmhear() == 1)
-			 myLable_13.setText("못들어요");
+			myLable_13.setText("못들어요");
 		else if(CurrentUser.getAlarmhear() == 2)
-			 myLable_13.setText("중간");
+			myLable_13.setText("중간");
 		else if(CurrentUser.getAlarmhear() == 3)
-			 myLable_13.setText("잘들어요");
+			myLable_13.setText("잘들어요");
 		else
 			myLable_13.setText("정보 없음");
 		myLable_13.setBounds(331, 272, 57, 15);
@@ -337,11 +338,11 @@ public class uploadMyroomUI extends JFrame {
 		
 		JLabel myLable_14 = new JLabel();
 		if(CurrentUser.getClean() == 1)
-			 myLable_14.setText("자주");
+			myLable_14.setText("자주");
 		else if(CurrentUser.getClean() == 2)
-			 myLable_14.setText("보통");
+			myLable_14.setText("보통");
 		else if(CurrentUser.getClean() == 3)
-			 myLable_14.setText("한번에");
+			myLable_14.setText("한번에");
 		else
 			myLable_14.setText("정보 없음");
 		myLable_14.setBounds(331, 297, 57, 15);
@@ -349,45 +350,105 @@ public class uploadMyroomUI extends JFrame {
 		
 		JLabel myLable_15 = new JLabel();
 		if(CurrentUser.getClean() == 1)
-			 myLable_14.setText("자주");
+			myLable_15.setText("자주");
 		else if(CurrentUser.getClean() == 2)
-			 myLable_14.setText("보통");
+			myLable_15.setText("보통");
 		else if(CurrentUser.getClean() == 3)
-			 myLable_14.setText("한번에");
+			myLable_15.setText("한번에");
 		else
-			myLable_14.setText("정보 없음");
+			myLable_15.setText("정보 없음");
 		myLable_15.setBounds(331, 322, 57, 15);
 		contentPane.add(myLable_15);
 		
 		JLabel myLable_16 = new JLabel("New label");
+		if(CurrentUser.getHeat() == 1)
+			myLable_16.setText("적게탐");
+		else if(CurrentUser.getHeat() == 2)
+			myLable_16.setText("보통");
+		else if(CurrentUser.getHeat() == 3)
+			myLable_16.setText("많이탐");
+		else
+			myLable_16.setText("정보 없음");
 		myLable_16.setBounds(331, 347, 57, 15);
 		contentPane.add(myLable_16);
 		
 		JLabel myLable_17 = new JLabel("New label");
+		if(CurrentUser.getCold() == 1)
+			myLable_17.setText("적게탐");
+		else if(CurrentUser.getCold() == 2)
+			myLable_17.setText("보통");
+		else if(CurrentUser.getCold() == 3)
+			myLable_17.setText("많이탐");
+		else
+			myLable_17.setText("정보 없음");
 		myLable_17.setBounds(331, 376, 57, 15);
 		contentPane.add(myLable_17);
 		
 		JLabel myLable_18 = new JLabel("New label");
+		if(CurrentUser.getCold() == 1)
+			myLable_18.setText("이어폰");
+		else if(CurrentUser.getCold() == 2)
+			myLable_18.setText("스피커");
+		else if(CurrentUser.getCold() == 3)
+			myLable_18.setText("유동적");
+		else
+			myLable_18.setText("정보 없음");
 		myLable_18.setBounds(331, 401, 57, 15);
 		contentPane.add(myLable_18);
 		
 		JLabel myLable_19 = new JLabel("New label");
+		if(CurrentUser.getSmoking() == 1)
+			 myLable_19.setText("흡연");
+		else if(CurrentUser.getSmoking() == 2)
+			 myLable_19.setText("비흡연");
+		else
+			myLable_19.setText("정보 없음");
 		myLable_19.setBounds(331, 426, 57, 15);
 		contentPane.add(myLable_19);
 		
 		JLabel myLable_20 = new JLabel("New label");
+		if(CurrentUser.getSilnaecall() == 1)
+			myLable_20.setText("반대");
+		else if(CurrentUser.getSilnaecall() == 2)
+			myLable_20.setText("상관없음");
+		else if(CurrentUser.getSilnaecall() == 3)
+			myLable_20.setText("찬성");
+		else if(CurrentUser.getSilnaecall() == 4)
+			myLable_20.setText("간단한 용무만");
+		else
+			myLable_20.setText("정보 없음");
 		myLable_20.setBounds(331, 451, 57, 15);
 		contentPane.add(myLable_20);
 		
 		JLabel myLable_21 = new JLabel("New label");
+		if(CurrentUser.getFriendinvite() == 1)
+			 myLable_21.setText("찬성");
+		else if(CurrentUser.getFriendinvite() == 2)
+			 myLable_21.setText("반대");
+		else
+			myLable_21.setText("정보 없음");
 		myLable_21.setBounds(430, 222, 57, 15);
 		contentPane.add(myLable_21);
 		
 		JLabel myLable_22 = new JLabel("New label");
+		if(CurrentUser.getEatbob() == 1)
+			 myLable_22.setText("같이");
+		else if(CurrentUser.getEatbob() == 2)
+			 myLable_22.setText("따로");
+		else
+			myLable_22.setText("정보 없음");
 		myLable_22.setBounds(430, 247, 57, 15);
 		contentPane.add(myLable_22);
 		
 		JLabel myLable_23 = new JLabel("New label");
+		if(CurrentUser.getStudytype() == 1)
+			myLable_23.setText("기숙사");
+		else if(CurrentUser.getStudytype() == 2)
+			myLable_23.setText("도서관");
+		else if(CurrentUser.getStudytype() == 3)
+			myLable_23.setText("유동적");
+		else
+			myLable_23.setText("정보 없음");
 		myLable_23.setBounds(430, 272, 57, 15);
 		contentPane.add(myLable_23);
 		
@@ -436,3 +497,4 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_34);
 	}
 }
+
