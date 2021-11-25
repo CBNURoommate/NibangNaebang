@@ -36,7 +36,15 @@ public class Member {
 	private int sool;
 	private int silnaeeat;
 	private int insect;
-
+	private int roomagehigh;
+	private int roomagelow;
+	private int roomhakbunhigh;
+	private int roomhakbunlow;
+	private int roomsmoking;
+	private int roomdepartment;
+	private int roomsoundgigi;
+	private int roomperfume;
+	
 	public String getId() {
 		return id;
 	}
@@ -240,6 +248,69 @@ public class Member {
 	}
 	public void setInsect(int insect) {
 		this.insect = insect;
+	}
+	public int getRoomagehigh() {
+		return roomagehigh;
+	}
+
+	public void setRoomagehigh(int roomagehigh) {
+		this.roomagehigh = roomagehigh;
+	}
+	
+	public int getRoomagelow() {
+		return roomagelow;
+	}
+
+	public void setRoomagelow(int roomagelow) {
+		this.roomagelow = roomagelow;
+	}
+	
+	public int getRoomhakbunhigh() {
+		return roomhakbunhigh;
+	}
+
+	public void setRoomhakbunhigh(int roomhakbunhigh) {
+		this.roomhakbunhigh = roomhakbunhigh;
+	}
+
+	public int getRoomhakbunlow() {
+		return roomhakbunlow;
+	}
+	
+	public void setRoomhakbunlow(int roomhakbunlow) {
+		this.roomhakbunlow = roomhakbunlow;
+	}
+
+	public int getRoomsmoking() {
+		return roomsmoking;
+	}
+	
+	public void setRoomsmoking(int roomsmoking) {
+		this.roomsmoking = roomsmoking;
+	}
+
+	public int getRoomdepartment() {
+		return roomdepartment;
+	}
+	
+	public void setRoomdepartment(int roomdepartment) {
+		this.roomdepartment = roomdepartment;
+	}
+
+	public int getRoomsoundgigi() {
+		return roomsoundgigi;
+	}
+	
+	public void setRoomsoundgigi(int roomsoundgigi) {
+		this.roomsoundgigi = roomsoundgigi;
+	}
+	
+	public int getRoomperfume() {
+		return roomperfume;
+	}
+	
+	public void setRoomperfume(int roomperfume) {
+		this.roomperfume = roomperfume;
 	}
 	
 }
