@@ -26,7 +26,7 @@
 기숙사식		eatbob		같이 따로	
 공부		studytype	기숙사 도서관 유동적	
 향수		perfume		미사용 사용	
-향민감도		smellwell		민감 상관없음	
+향민감도		smellwell	민감 상관없음	
 컴퓨터게임	game		안함 가끔 자주	
 야식		yasick		안먹음 가끔 자주 	
 술		sool		안마심 가끔 자주	
