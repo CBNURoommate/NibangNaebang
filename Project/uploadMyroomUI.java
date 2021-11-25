@@ -1,4 +1,3 @@
-
 package Project;
 
 import java.awt.BorderLayout;
@@ -453,30 +452,86 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_23);
 		
 		JLabel myLable_24 = new JLabel("New label");
+		if(CurrentUser.getPerfume() == 1)
+			 myLable_24.setText("미사용");
+		else if(CurrentUser.getPerfume() == 2)
+			 myLable_24.setText("사용");
+		else
+			myLable_24.setText("정보 없음");
 		myLable_24.setBounds(430, 297, 57, 15);
 		contentPane.add(myLable_24);
 		
 		JLabel myLable_25 = new JLabel("New label");
+		if(CurrentUser.getSmellwell() == 1)
+			 myLable_25.setText("민감");
+		else if(CurrentUser.getSmellwell() == 2)
+			 myLable_25.setText("상관없음");
+		else
+			myLable_25.setText("정보 없음");
 		myLable_25.setBounds(430, 322, 57, 15);
 		contentPane.add(myLable_25);
 		
 		JLabel myLable_26 = new JLabel("New label");
+		if(CurrentUser.getGame() == 1)
+			 myLable_26.setText("안함");
+		else if(CurrentUser.getGame() == 2)
+			 myLable_26.setText("가끔");
+		else if(CurrentUser.getGame() == 3)
+			 myLable_26.setText("자주");
+		else
+			myLable_26.setText("정보 없음");
 		myLable_26.setBounds(430, 347, 57, 15);
 		contentPane.add(myLable_26);
 		
 		JLabel myLable_27 = new JLabel("New label");
+		if(CurrentUser.getYasick() == 1)
+			 myLable_27.setText("안먹음");
+		else if(CurrentUser.getYasick() == 2)
+			 myLable_27.setText("가끔먹음");
+		else if(CurrentUser.getYasick() == 3)
+			 myLable_27.setText("자주먹음");
+		else
+			myLable_27.setText("정보 없음");
 		myLable_27.setBounds(554, 197, 57, 15);
 		contentPane.add(myLable_27);
 		
 		JLabel myLable_28 = new JLabel("New label");
+		if(CurrentUser.getSool() == 1)
+			 myLable_28.setText("안마심");
+		else if(CurrentUser.getSool() == 2)
+			 myLable_28.setText("가끔마심");
+		else if(CurrentUser.getSool() == 3)
+			 myLable_28.setText("자주마심");
+		else
+			myLable_28.setText("정보 없음");
 		myLable_28.setBounds(554, 222, 57, 15);
 		contentPane.add(myLable_28);
 		
 		JLabel myLable_29 = new JLabel("New label");
+		if(CurrentUser.getSilnaeeat() == 1)
+			 myLable_29.setText("불가");
+		else if(CurrentUser.getSilnaeeat() == 2)
+			 myLable_29.setText("냄새 안나는 음식만");
+		else if(CurrentUser.getSilnaeeat() == 3)
+			 myLable_29.setText("가능");
+		else
+			myLable_29.setText("정보 없음");
 		myLable_29.setBounds(554, 247, 57, 15);
 		contentPane.add(myLable_29);
 		
 		JLabel myLable_30 = new JLabel("New label");
+		if(CurrentUser.getInsect() == 1)
+			 myLable_30.setText("혐오");
+		else if(CurrentUser.getInsect() == 2)
+			 myLable_30.setText("못잡음");
+		else if(CurrentUser.getInsect() == 3)
+			 myLable_30.setText("중간");
+		else if(CurrentUser.getInsect() == 4)
+			 myLable_30.setText("잡음");
+		else if(CurrentUser.getInsect() == 5)
+			 myLable_30.setText("귀여움");
+		else
+			myLable_30.setText("정보 없음");
 		myLable_30.setBounds(554, 272, 57, 15);
 		contentPane.add(myLable_30);
 		
