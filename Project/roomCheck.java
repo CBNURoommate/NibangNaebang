@@ -19,6 +19,7 @@ import java.awt.ScrollPane;
 import javax.swing.JLayeredPane;
 import javax.swing.JTabbedPane;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 import javax.swing.JDesktopPane;
 import javax.swing.JRadioButton;
@@ -72,7 +73,7 @@ public class roomCheck extends JFrame {
 	
 	private int showertime;
 	private int whenshower;
-	private int sensitive;
+	private int sensitives;
 	private int jamb1;
 	private int jamb2;
 	private int jamb3;
@@ -194,12 +195,12 @@ public class roomCheck extends JFrame {
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
 		titleLabel.setBounds(47, 0, 167, 92);
-		titleLabel.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.BOLD, 50));
+		titleLabel.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.BOLD, 50));
 		contentPane.add(titleLabel);
 		
 		JButton movePage1 = new JButton("\uB0B4\uBC29 \uC810\uAC80\uD558\uAE30");
 		movePage1.setBounds(234, 20, 195, 72);
-		movePage1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
+		movePage1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
 		movePage1.setFocusPainted(false);
 		movePage1.setContentAreaFilled(false);
 		movePage1.setBorderPainted(false);
@@ -207,8 +208,15 @@ public class roomCheck extends JFrame {
 		contentPane.add(movePage1);
 		
 		JButton movePage2 = new JButton("\uB2C8\uBC29 \uB79C\uB364\uB9E4\uCE6D");
+		movePage2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				randomMatching r = new randomMatching();
+				r.setVisible(true);
+				setVisible(false);
+			}
+		});
 		movePage2.setBounds(621, 13, 195, 72);
-		movePage2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
+		movePage2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
 		movePage2.setFocusPainted(false);
 		movePage2.setContentAreaFilled(false);
 		movePage2.setBorderPainted(false);
@@ -217,7 +225,7 @@ public class roomCheck extends JFrame {
 		
 		JButton movePage3 = new JButton("\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30");
 		movePage3.setBounds(815, 20, 195, 72);
-		movePage3.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
+		movePage3.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
 		movePage3.setFocusPainted(false);
 		movePage3.setContentAreaFilled(false);
 		movePage3.setBorderPainted(false);
@@ -226,7 +234,7 @@ public class roomCheck extends JFrame {
 		
 		JButton movePage4 = new JButton("\uB0B4\uBC29 \uC18C\uAC1C\uD558\uAE30");
 		movePage4.setBounds(430, 13, 195, 72);
-		movePage4.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 40));
+		movePage4.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 40));
 		movePage4.setFocusPainted(false);
 		movePage4.setContentAreaFilled(false);
 		movePage4.setBorderPainted(false);
@@ -243,12 +251,12 @@ public class roomCheck extends JFrame {
 		panel.add(btn1_1);
 		
 		JLabel Label1_1 = new JLabel("\uC131\uBCC4");
-		Label1_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label1_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label1_1.setBounds(38, 28, 115, 49);
 		panel.add(Label1_1);
 		
 		JLabel Label1_2 = new JLabel("1 / ?");
-		Label1_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label1_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label1_2.setBounds(163, 202, 115, 49);
 		panel.add(Label1_2);
 		
@@ -277,6 +285,10 @@ public class roomCheck extends JFrame {
 				{
 					gender=2;
 				}
+				else
+				{
+					gender=-1;
+				}
 				panel.setVisible(false); 
 				panel2.setVisible(true); 
 			}
@@ -287,36 +299,36 @@ public class roomCheck extends JFrame {
 		panel2.add(btn2_1);
 		
 		JLabel Label2_1 = new JLabel("\uAE30\uC219\uC0AC");
-		Label2_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label2_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label2_1.setBounds(38, 28, 115, 49);
 		panel2.add(Label2_1);
 		
 		JLabel Label2_2 = new JLabel("2 / ?");
-		Label2_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label2_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label2_2.setBounds(242, 125, 115, 49);
 		panel2.add(Label2_2);
 		
-		JRadioButton rdbtn2_1 = new JRadioButton("Í∞úÏÑ±Ïû¨");
+		JRadioButton rdbtn2_1 = new JRadioButton("∞≥º∫¿Á");
 		buttonGroup2.add(rdbtn2_1);
 		rdbtn2_1.setBounds(38, 99, 121, 23);
 		panel2.add(rdbtn2_1);
 		
-		JRadioButton rdbtn2_2 = new JRadioButton("Í≥ÑÏòÅÏõê");
+		JRadioButton rdbtn2_2 = new JRadioButton("∞Ëøµø¯");
 		buttonGroup2.add(rdbtn2_2);
 		rdbtn2_2.setBounds(48, 124, 121, 23);
 		panel2.add(rdbtn2_2);
 		
-		JRadioButton rdbtn2_3 = new JRadioButton("ÏñëÏÑ±Ïû¨");
+		JRadioButton rdbtn2_3 = new JRadioButton("æÁº∫¿Á");
 		buttonGroup2.add(rdbtn2_3);
 		rdbtn2_3.setBounds(58, 149, 121, 23);
 		panel2.add(rdbtn2_3);
 		
-		JRadioButton rdbtn2_4 = new JRadioButton("ÏñëÏßÑÏû¨");
+		JRadioButton rdbtn2_4 = new JRadioButton("æÁ¡¯¿Á");
 		buttonGroup2.add(rdbtn2_4);
 		rdbtn2_4.setBounds(68, 174, 121, 23);
 		panel2.add(rdbtn2_4);
 		
-		JRadioButton rdbtn2_5 = new JRadioButton("ÏñëÌòÑÏû¨");
+		JRadioButton rdbtn2_5 = new JRadioButton("æÁ«ˆ¿Á");
 		buttonGroup2.add(rdbtn2_5);
 		rdbtn2_5.setBounds(78, 199, 121, 23);
 		panel2.add(rdbtn2_5);
@@ -349,7 +361,7 @@ public class roomCheck extends JFrame {
 				}
 				else
 				{
-					
+					dom=-1;
 				}
 				panel2.setVisible(false); 
 				panel3.setVisible(true); 
@@ -361,22 +373,22 @@ public class roomCheck extends JFrame {
 		panel3.add(btn3_1);
 		
 		JLabel Label3_1 = new JLabel("\uC0DD\uB144 & \uD559\uBC88");
-		Label3_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label3_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label3_1.setBounds(38, 28, 200, 49);
 		panel3.add(Label3_1);
 		
 		JLabel Label3_2 = new JLabel("3 / ?");
-		Label3_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label3_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label3_2.setBounds(163, 202, 115, 49);
 		panel3.add(Label3_2);
 		
 		JLabel Label3_3 = new JLabel("\uC0DD\uB144");
-		Label3_3.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 30));
+		Label3_3.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 30));
 		Label3_3.setBounds(163, 131, 51, 49);
 		panel3.add(Label3_3);
 		
 		JLabel Label3_4 = new JLabel("\uD559\uBC88");
-		Label3_4.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 30));
+		Label3_4.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 30));
 		Label3_4.setBounds(163, 88, 51, 49);
 		panel3.add(Label3_4);
 		
@@ -409,12 +421,12 @@ public class roomCheck extends JFrame {
 		panel4.add(btn4_1);
 		
 		JLabel Label4_1 = new JLabel("\uC131\uBCC4");
-		Label4_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label4_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label4_1.setBounds(38, 28, 115, 49);
 		panel4.add(Label4_1);
 		
 		JLabel Label4_2 = new JLabel("4 / ?");
-		Label4_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label4_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label4_2.setBounds(140, 239, 115, 49);
 		panel4.add(Label4_2);
 		
@@ -530,7 +542,7 @@ public class roomCheck extends JFrame {
 				}
 				else
 				{
-					
+					department=-1;
 				}
 				panel4.setVisible(false); 
 				panel5.setVisible(true); 
@@ -546,12 +558,12 @@ public class roomCheck extends JFrame {
 		panel5.add(btn5_1);
 		
 		JLabel Label5_1 = new JLabel("\uCDE8\uCE68\uC2DC\uAC04");
-		Label5_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label5_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label5_1.setBounds(38, 28, 137, 49);
 		panel5.add(Label5_1);
 		
 		JLabel Label5_2 = new JLabel("5 / ?");
-		Label5_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label5_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label5_2.setBounds(246, 108, 115, 49);
 		panel5.add(Label5_2);
 		
@@ -588,7 +600,28 @@ public class roomCheck extends JFrame {
 		btn5_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
-				
+				if(rdbtn5_1.isSelected())
+				{
+					sleep=1;
+				}
+				else if(rdbtn5_2.isSelected())
+				{
+					sleep=2;
+				}
+				else if(rdbtn5_3.isSelected())
+				{
+					sleep=3;
+				}
+				else if(rdbtn5_4.isSelected())
+					sleep=4;
+				else if(rdbtn5_5.isSelected())
+					sleep=5;
+				else if(rdbtn5_6.isSelected())
+					sleep=6;
+				else
+				{
+					sleep=-1;
+				}
 				panel5.setVisible(false); 
 				panel6.setVisible(true); 
 			}
@@ -598,22 +631,17 @@ public class roomCheck extends JFrame {
 		contentPane.add(panel6);
 		
 		JButton btn6_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn6_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel6.setVisible(false); 
-				panel7.setVisible(true); 
-			}
-		});
+		
 		btn6_1.setBounds(386, 221, 97, 23);
 		panel6.add(btn6_1);
 		
 		JLabel Label6_1 = new JLabel("\uAE30\uC0C1\uC2DC\uAC04");
-		Label6_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label6_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label6_1.setBounds(38, 28, 137, 49);
 		panel6.add(Label6_1);
 		
 		JLabel Label6_2 = new JLabel("6 / ?");
-		Label6_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label6_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label6_2.setBounds(313, 147, 115, 49);
 		panel6.add(Label6_2);
 		
@@ -647,27 +675,42 @@ public class roomCheck extends JFrame {
 		rdbtn6_6.setBounds(94, 221, 121, 23);
 		panel6.add(rdbtn6_6);
 		
+		btn6_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn6_1.isSelected())
+					wake=1;
+				else if(rdbtn6_2.isSelected())
+					wake=2;
+				else if(rdbtn6_3.isSelected())
+					wake=3;
+				else if(rdbtn6_4.isSelected())
+					wake=4;
+				else if(rdbtn6_5.isSelected())
+					wake=5;
+				else if(rdbtn6_6.isSelected())
+					wake=6;
+				else
+					wake=-1;
+				panel6.setVisible(false); 
+				panel7.setVisible(true); 
+			}
+		});
 		panel7.setLayout(null);
 		panel7.setBounds(486, 158, 1000, 600);
 		contentPane.add(panel7);
 		
 		JButton btn7_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn7_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel7.setVisible(false); 
-				panel8.setVisible(true); 
-			}
-		});
+		
 		btn7_1.setBounds(386, 221, 97, 23);
 		panel7.add(btn7_1);
 		
 		JLabel Label7_1 = new JLabel("\uC0E4\uC6CC\uC18C\uC694\uC2DC\uAC04");
-		Label7_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label7_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label7_1.setBounds(38, 28, 196, 49);
 		panel7.add(Label7_1);
 		
 		JLabel Label7_2 = new JLabel("7 / ?");
-		Label7_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label7_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label7_2.setBounds(312, 162, 115, 49);
 		panel7.add(Label7_2);
 		
@@ -701,27 +744,42 @@ public class roomCheck extends JFrame {
 		rdbtn7_6.setBounds(114, 221, 121, 23);
 		panel7.add(rdbtn7_6);
 		
+		btn7_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn7_1.isSelected())
+					showertime=1;
+				else if(rdbtn7_2.isSelected())
+					showertime=2;
+				else if(rdbtn7_3.isSelected())
+					showertime=3;
+				else if(rdbtn7_4.isSelected())
+					showertime=4;
+				else if(rdbtn7_5.isSelected())
+					showertime=5;
+				else if(rdbtn7_5.isSelected())
+					showertime=6;
+				else
+					showertime=-1;
+				panel7.setVisible(false); 
+				panel8.setVisible(true); 
+			}
+		});
 		panel8.setLayout(null);
 		panel8.setBounds(469, 168, 1000, 600);
 		contentPane.add(panel8);
 		
 		JButton btn8_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn8_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel8.setVisible(false); 
-				panel9.setVisible(true); 
-			}
-		});
+		
 		btn8_1.setBounds(386, 221, 97, 23);
 		panel8.add(btn8_1);
 		
 		JLabel Label8_1 = new JLabel("\uC0E4\uC6CC\uC2DC\uAC04");
-		Label8_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label8_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label8_1.setBounds(38, 28, 136, 49);
 		panel8.add(Label8_1);
 		
 		JLabel Label8_2 = new JLabel("8 / ?");
-		Label8_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label8_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label8_2.setBounds(178, 195, 115, 49);
 		panel8.add(Label8_2);
 		
@@ -739,28 +797,37 @@ public class roomCheck extends JFrame {
 		buttonGroup7.add(rdbtn8_3);
 		rdbtn8_3.setBounds(84, 145, 121, 23);
 		panel8.add(rdbtn8_3);
-		
+		btn8_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn8_1.isSelected())
+					whenshower=1;
+				else if(rdbtn8_2.isSelected())
+					whenshower=2;
+				else if(rdbtn8_3.isSelected())
+					whenshower=3;
+				else
+					whenshower=-1;
+				
+				panel8.setVisible(false); 
+				panel9.setVisible(true); 
+			}
+		});
 		panel9.setLayout(null);
 		panel9.setBounds(451, 179, 1000, 600);
 		contentPane.add(panel9);
 		
 		JButton btn9_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn9_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel9.setVisible(false); 
-				panel10.setVisible(true); 
-			}
-		});
+		
 		btn9_1.setBounds(386, 221, 97, 23);
 		panel9.add(btn9_1);
 		
 		JLabel Label9_1 = new JLabel("\uC7A0\uADC0");
-		Label9_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label9_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label9_1.setBounds(38, 28, 136, 49);
 		panel9.add(Label9_1);
 		
 		JLabel Label9_2 = new JLabel("9 / ?");
-		Label9_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label9_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label9_2.setBounds(178, 195, 115, 49);
 		panel9.add(Label9_2);
 		
@@ -779,27 +846,37 @@ public class roomCheck extends JFrame {
 		rdbtn9_3.setBounds(84, 145, 121, 23);
 		panel9.add(rdbtn9_3);
 		
+		btn9_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn9_1.isSelected())
+					sensitives=1;
+				else if(rdbtn9_2.isSelected())
+					sensitives=2;
+				else if(rdbtn9_3.isSelected())
+					sensitives=3;
+				else
+					sensitives=-1;
+				
+				panel9.setVisible(false); 
+				panel10.setVisible(true); 
+			}
+		});
 		panel10.setLayout(null);
 		panel10.setBounds(438, 190, 1000, 600);
 		contentPane.add(panel10);
 		
 		JButton btn10_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn10_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel10.setVisible(false); 
-				panel11.setVisible(true); 
-			}
-		});
+		
 		btn10_1.setBounds(386, 221, 97, 23);
 		panel10.add(btn10_1);
 		
 		JLabel Label10_1 = new JLabel("\uC7A0\uBC84\uB987");
-		Label10_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label10_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label10_1.setBounds(38, 28, 136, 49);
 		panel10.add(Label10_1);
 		
 		JLabel Label10_2 = new JLabel("10 / ?");
-		Label10_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label10_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label10_2.setBounds(178, 195, 115, 49);
 		panel10.add(Label10_2);
 		
@@ -818,28 +895,43 @@ public class roomCheck extends JFrame {
 		JCheckBox checkbtn10_4 = new JCheckBox("\uCF54\uACE8\uC774");
 		checkbtn10_4.setBounds(210, 144, 115, 23);
 		panel10.add(checkbtn10_4);
-		
+		btn10_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(checkbtn10_1.isSelected())
+					jamb1=1;
+				else
+					jamb1=0;
+				
+				if(checkbtn10_2.isSelected())
+					jamb2=1;
+				else
+					jamb2=0;
+				
+				if(checkbtn10_3.isSelected())
+					jamb3=1;
+				else
+					jamb3=0;
+				panel10.setVisible(false); 
+				panel11.setVisible(true); 
+			}
+		});
 		panel11.setLayout(null);
 		panel11.setBounds(430, 200, 1000, 600);
 		contentPane.add(panel11);
 		
 		JButton btn11_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn11_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel11.setVisible(false); 
-				panel12.setVisible(true); 
-			}
-		});
+		
 		btn11_1.setBounds(386, 221, 97, 23);
 		panel11.add(btn11_1);
 		
 		JLabel Label11_1 = new JLabel("\uC218\uBA74\uB4F1");
-		Label11_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label11_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label11_1.setBounds(38, 28, 136, 49);
 		panel11.add(Label11_1);
 		
 		JLabel Label11_2 = new JLabel("11 / ?");
-		Label11_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label11_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label11_2.setBounds(178, 195, 115, 49);
 		panel11.add(Label11_2);
 		
@@ -862,28 +954,39 @@ public class roomCheck extends JFrame {
 		buttonGroup9.add(rdbtn11_4);
 		rdbtn11_4.setBounds(94, 170, 121, 23);
 		panel11.add(rdbtn11_4);
-		
+		btn11_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(rdbtn11_1.isSelected())
+					sleeplight=1;
+				else if(rdbtn11_2.isSelected())
+					sleeplight=2;
+				else if(rdbtn11_3.isSelected())
+					sleeplight=3;
+				else if(rdbtn11_4.isSelected())
+					sleeplight=4;
+				else
+					sleeplight=-1;
+				panel11.setVisible(false); 
+				panel12.setVisible(true); 
+			}
+		});
 		panel12.setLayout(null);
 		panel12.setBounds(409, 212, 1000, 600);
 		contentPane.add(panel12);
 		
 		JButton btn12_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn12_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel12.setVisible(false); 
-				panel13.setVisible(true); 
-			}
-		});
+		
 		btn12_1.setBounds(386, 221, 97, 23);
 		panel12.add(btn12_1);
 		
 		JLabel Label12_1 = new JLabel("\uC54C\uB78C");
-		Label12_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label12_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label12_1.setBounds(38, 28, 136, 49);
 		panel12.add(Label12_1);
 		
 		JLabel Label12_2 = new JLabel("12 / ?");
-		Label12_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label12_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label12_2.setBounds(178, 195, 115, 49);
 		panel12.add(Label12_2);
 		
@@ -901,28 +1004,36 @@ public class roomCheck extends JFrame {
 		buttonGroup10.add(rdbtn12_3);
 		rdbtn12_3.setBounds(84, 145, 121, 23);
 		panel12.add(rdbtn12_3);
-		
+		btn12_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn12_1.isSelected())
+					alarmhear=1;
+				else if(rdbtn12_2.isSelected())
+					alarmhear=2;
+				else if(rdbtn12_3.isSelected())
+					alarmhear=3;
+				else
+					alarmhear=-1;
+				panel12.setVisible(false); 
+				panel13.setVisible(true); 
+			}
+		});
 		panel13.setLayout(null);
 		panel13.setBounds(393, 216, 1000, 600);
 		contentPane.add(panel13);
 		
 		JButton btn13_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn13_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel13.setVisible(false); 
-				panel14.setVisible(true); 
-			}
-		});
+		
 		btn13_1.setBounds(386, 221, 97, 23);
 		panel13.add(btn13_1);
 		
 		JLabel Label13_1 = new JLabel("\uCCAD\uC18C");
-		Label13_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label13_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label13_1.setBounds(38, 28, 136, 49);
 		panel13.add(Label13_1);
 		
 		JLabel Label13_2 = new JLabel("13 / ?");
-		Label13_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label13_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label13_2.setBounds(178, 195, 115, 49);
 		panel13.add(Label13_2);
 		
@@ -940,28 +1051,37 @@ public class roomCheck extends JFrame {
 		buttonGroup11.add(rdbtn13_3);
 		rdbtn13_3.setBounds(84, 145, 121, 23);
 		panel13.add(rdbtn13_3);
-		
+		btn13_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(rdbtn13_1.isSelected())
+					clean=1;
+				else if(rdbtn13_2.isSelected())
+					clean=2;
+				else if(rdbtn13_3.isSelected())
+					clean=3;
+				else 
+					clean=-1;
+				panel13.setVisible(false); 
+				panel14.setVisible(true); 
+			}
+		});
 		panel14.setLayout(null);
 		panel14.setBounds(378, 221, 1000, 600);
 		contentPane.add(panel14);
 		
 		JButton btn14_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn14_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel14.setVisible(false); 
-				panel15.setVisible(true); 
-			}
-		});
+		
 		btn14_1.setBounds(386, 221, 97, 23);
 		panel14.add(btn14_1);
 		
 		JLabel Label14_1 = new JLabel("\uB354\uC704");
-		Label14_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label14_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label14_1.setBounds(38, 28, 136, 49);
 		panel14.add(Label14_1);
 		
 		JLabel Label14_2 = new JLabel("14 / ?");
-		Label14_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label14_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label14_2.setBounds(178, 195, 115, 49);
 		panel14.add(Label14_2);
 		
@@ -979,28 +1099,36 @@ public class roomCheck extends JFrame {
 		buttonGroup12.add(rdbtn14_3);
 		rdbtn14_3.setBounds(84, 145, 121, 23);
 		panel14.add(rdbtn14_3);
-		
+		btn14_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn14_1.isSelected())
+					heat=1;
+				else if(rdbtn14_2.isSelected())
+					heat=2;
+				else if(rdbtn14_3.isSelected())
+					heat=3;
+				else
+					heat=-1;
+				panel14.setVisible(false); 
+				panel15.setVisible(true); 
+			}
+		});
 		panel15.setLayout(null);
 		panel15.setBounds(362, 225, 1000, 600);
 		contentPane.add(panel15);
 		
 		JButton btn15_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn15_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel15.setVisible(false); 
-				panel16.setVisible(true); 
-			}
-		});
+		
 		btn15_1.setBounds(386, 221, 97, 23);
 		panel15.add(btn15_1);
 		
 		JLabel Label15_1 = new JLabel("\uCD94\uC704");
-		Label15_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label15_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label15_1.setBounds(38, 28, 136, 49);
 		panel15.add(Label15_1);
 		
 		JLabel Label15_2 = new JLabel("15 / ?");
-		Label15_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label15_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label15_2.setBounds(178, 195, 115, 49);
 		panel15.add(Label15_2);
 		
@@ -1018,28 +1146,36 @@ public class roomCheck extends JFrame {
 		buttonGroup13.add(rdbtn15_3);
 		rdbtn15_3.setBounds(84, 145, 121, 23);
 		panel15.add(rdbtn15_3);
-		
+		btn15_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn15_1.isSelected())
+					cold=1;
+				else if(rdbtn15_2.isSelected())
+					cold=2;
+				else if(rdbtn15_3.isSelected())
+					cold=3;
+				else
+					cold=-1;
+				panel15.setVisible(false); 
+				panel16.setVisible(true); 
+			}
+		});
 		panel16.setLayout(null);
 		panel16.setBounds(350, 230, 1000, 600);
 		contentPane.add(panel16);
 		
 		JButton btn16_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn16_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel16.setVisible(false); 
-				panel17.setVisible(true); 
-			}
-		});
+		
 		btn16_1.setBounds(386, 221, 97, 23);
 		panel16.add(btn16_1);
 		
 		JLabel Label16_1 = new JLabel("\uC18C\uB9AC");
-		Label16_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label16_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label16_1.setBounds(38, 28, 136, 49);
 		panel16.add(Label16_1);
 		
 		JLabel Label16_2 = new JLabel("16 / ?");
-		Label16_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label16_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label16_2.setBounds(178, 195, 115, 49);
 		panel16.add(Label16_2);
 		
@@ -1057,28 +1193,36 @@ public class roomCheck extends JFrame {
 		buttonGroup14.add(rdbtn16_3);
 		rdbtn16_3.setBounds(84, 145, 121, 23);
 		panel16.add(rdbtn16_3);
-		
+		btn16_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn16_1.isSelected())
+					soundgigi=1;
+				else if(rdbtn16_2.isSelected())
+					soundgigi=2;
+				else if(rdbtn16_3.isSelected())
+					soundgigi=3;
+				else
+					soundgigi=-1;
+				panel16.setVisible(false); 
+				panel17.setVisible(true); 
+			}
+		});
 		panel17.setLayout(null);
 		panel17.setBounds(330, 238, 1000, 600);
 		contentPane.add(panel17);
 		
 		JButton btn17_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn17_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel17.setVisible(false); 
-				panel18.setVisible(true); 
-			}
-		});
+		
 		btn17_1.setBounds(386, 221, 97, 23);
 		panel17.add(btn17_1);
 		
 		JLabel Label17_1 = new JLabel("\uD761\uC5F0\uC5EC\uBD80");
-		Label17_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label17_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label17_1.setBounds(38, 28, 136, 49);
 		panel17.add(Label17_1);
 		
 		JLabel Label17_2 = new JLabel("17 / ?");
-		Label17_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label17_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label17_2.setBounds(178, 195, 115, 49);
 		panel17.add(Label17_2);
 		
@@ -1091,28 +1235,35 @@ public class roomCheck extends JFrame {
 		buttonGroup15.add(rdbtn17_2);
 		rdbtn17_2.setBounds(74, 120, 121, 23);
 		panel17.add(rdbtn17_2);
-		
+		btn17_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			
+				if(rdbtn17_1.isSelected())
+					smoking=1;
+				else if(rdbtn17_2.isSelected())
+					smoking=2;
+				else
+					smoking=-1;
+				panel17.setVisible(false); 
+				panel18.setVisible(true); 
+			}
+		});
 		panel18.setLayout(null);
 		panel18.setBounds(311, 240, 1000, 600);
 		contentPane.add(panel18);
 		
 		JButton btn18_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn18_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel18.setVisible(false); 
-				panel19.setVisible(true); 
-			}
-		});
+		
 		btn18_1.setBounds(386, 221, 97, 23);
 		panel18.add(btn18_1);
 		
 		JLabel Label18_1 = new JLabel("\uD761\uC5F0\uC5EC\uBD80");
-		Label18_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label18_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label18_1.setBounds(38, 28, 136, 49);
 		panel18.add(Label18_1);
 		
 		JLabel Label18_2 = new JLabel("18 / ?");
-		Label18_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label18_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label18_2.setBounds(178, 195, 115, 49);
 		panel18.add(Label18_2);
 		
@@ -1135,28 +1286,38 @@ public class roomCheck extends JFrame {
 		buttonGroup16.add(rdbtn18_4);
 		rdbtn18_4.setBounds(94, 170, 121, 23);
 		panel18.add(rdbtn18_4);
-		
+		btn18_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn18_1.isSelected())
+					silnaecall=1;
+				else if(rdbtn18_2.isSelected())
+					silnaecall=2;
+				else if(rdbtn18_3.isSelected())
+					silnaecall=3;
+				else if(rdbtn18_4.isSelected())
+					silnaecall=4;
+				else
+					silnaecall=-1;
+				panel18.setVisible(false); 
+				panel19.setVisible(true); 
+			}
+		});
 		panel19.setLayout(null);
 		panel19.setBounds(301, 251, 1000, 600);
 		contentPane.add(panel19);
 		
 		JButton btn19_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn19_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel19.setVisible(false); 
-				panel20.setVisible(true); 
-			}
-		});
+		
 		btn19_1.setBounds(386, 221, 97, 23);
 		panel19.add(btn19_1);
 		
 		JLabel Label19_1 = new JLabel("\uCE5C\uAD6C\uCD08\uB300");
-		Label19_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label19_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label19_1.setBounds(38, 28, 136, 49);
 		panel19.add(Label19_1);
 		
 		JLabel Label19_2 = new JLabel("19 / ?");
-		Label19_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label19_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label19_2.setBounds(178, 195, 115, 49);
 		panel19.add(Label19_2);
 		
@@ -1169,28 +1330,34 @@ public class roomCheck extends JFrame {
 		buttonGroup17.add(rdbtn19_2);
 		rdbtn19_2.setBounds(74, 120, 121, 23);
 		panel19.add(rdbtn19_2);
-		
+		btn19_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn19_1.isSelected())
+					friendinvite=1;
+				else if(rdbtn19_2.isSelected())
+					friendinvite=2;
+				else 
+					friendinvite=-1;
+				panel19.setVisible(false); 
+				panel20.setVisible(true); 
+			}
+		});
 		panel20.setLayout(null);
 		panel20.setBounds(288, 261, 1000, 600);
 		contentPane.add(panel20);
 		
 		JButton btn20_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn20_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel20.setVisible(false); 
-				panel21.setVisible(true); 
-			}
-		});
+		
 		btn20_1.setBounds(386, 221, 97, 23);
 		panel20.add(btn20_1);
 		
 		JLabel Label20_1 = new JLabel("\uAE30\uC219\uC0AC\uC2DD");
-		Label20_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label20_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label20_1.setBounds(38, 28, 136, 49);
 		panel20.add(Label20_1);
 		
 		JLabel Label20_2 = new JLabel("20 / ?");
-		Label20_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label20_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label20_2.setBounds(178, 195, 115, 49);
 		panel20.add(Label20_2);
 		
@@ -1203,28 +1370,34 @@ public class roomCheck extends JFrame {
 		buttonGroup18.add(rdbtn20_2);
 		rdbtn20_2.setBounds(74, 120, 121, 23);
 		panel20.add(rdbtn20_2);
-		
+		btn20_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn20_1.isSelected())
+					eatbob=1;
+				else if(rdbtn20_2.isSelected())
+					eatbob=2;
+				else 
+					eatbob=-1;
+				panel20.setVisible(false); 
+				panel21.setVisible(true); 
+			}
+		});
 		panel21.setLayout(null);
 		panel21.setBounds(270, 272, 1000, 600);
 		contentPane.add(panel21);
 		
 		JButton btn21_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn21_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel21.setVisible(false); 
-				panel22.setVisible(true); 
-			}
-		});
+		
 		btn21_1.setBounds(386, 221, 97, 23);
 		panel21.add(btn21_1);
 		
 		JLabel Label21_1 = new JLabel("\uACF5\uBD80");
-		Label21_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label21_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label21_1.setBounds(38, 28, 136, 49);
 		panel21.add(Label21_1);
 		
 		JLabel Label21_2 = new JLabel("21 / ?");
-		Label21_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label21_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label21_2.setBounds(178, 195, 115, 49);
 		panel21.add(Label21_2);
 		
@@ -1242,28 +1415,36 @@ public class roomCheck extends JFrame {
 		buttonGroup19.add(rdbtn21_3);
 		rdbtn21_3.setBounds(84, 145, 121, 23);
 		panel21.add(rdbtn21_3);
-		
+		btn21_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn21_1.isSelected())
+					studytype=1;
+				else if(rdbtn21_2.isSelected())
+					studytype=2;
+				else if(rdbtn21_3.isSelected())
+					studytype=3;
+				else
+					studytype=-1;
+				panel21.setVisible(false); 
+				panel22.setVisible(true); 
+			}
+		});
 		panel22.setLayout(null);
 		panel22.setBounds(249, 283, 1000, 600);
 		contentPane.add(panel22);
 		
 		JButton btn22_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn22_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel22.setVisible(false); 
-				panel23.setVisible(true); 
-			}
-		});
+	
 		btn22_1.setBounds(386, 221, 97, 23);
 		panel22.add(btn22_1);
 		
 		JLabel Label22_1 = new JLabel("\uD5A5\uC218");
-		Label22_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label22_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label22_1.setBounds(38, 28, 136, 49);
 		panel22.add(Label22_1);
 		
 		JLabel Label22_2 = new JLabel("22 / ?");
-		Label22_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label22_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label22_2.setBounds(178, 195, 115, 49);
 		panel22.add(Label22_2);
 		
@@ -1276,28 +1457,34 @@ public class roomCheck extends JFrame {
 		buttonGroup20.add(rdbtn22_2);
 		rdbtn22_2.setBounds(74, 120, 121, 23);
 		panel22.add(rdbtn22_2);
-		
+		btn22_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn22_1.isSelected())
+					perfume=1;
+				else if(rdbtn22_2.isSelected())
+					perfume=2;
+				else
+					perfume=-1;
+				panel22.setVisible(false); 
+				panel23.setVisible(true); 
+			}
+		});
 		panel23.setLayout(null);
 		panel23.setBounds(234, 291, 1000, 600);
 		contentPane.add(panel23);
 		
 		JButton btn23_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn23_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel23.setVisible(false); 
-				panel24.setVisible(true); 
-			}
-		});
+		
 		btn23_1.setBounds(386, 221, 97, 23);
 		panel23.add(btn23_1);
 		
 		JLabel Label23_1 = new JLabel("\uD5A5 \uBBFC\uAC10\uB3C4");
-		Label23_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label23_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label23_1.setBounds(38, 28, 174, 49);
 		panel23.add(Label23_1);
 		
 		JLabel Label23_2 = new JLabel("23 / ?");
-		Label23_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label23_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label23_2.setBounds(178, 195, 115, 49);
 		panel23.add(Label23_2);
 		
@@ -1310,28 +1497,34 @@ public class roomCheck extends JFrame {
 		buttonGroup21.add(rdbtn23_2);
 		rdbtn23_2.setBounds(74, 120, 121, 23);
 		panel23.add(rdbtn23_2);
-		
+		btn23_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn23_1.isSelected())
+					smellwell=1;
+				else if(rdbtn23_2.isSelected())
+					smellwell=2;
+				else
+					smellwell=-1;
+				panel23.setVisible(false); 
+				panel24.setVisible(true); 
+			}
+		});
 		panel24.setLayout(null);
 		panel24.setBounds(223, 295, 1000, 600);
 		contentPane.add(panel24);
 		
 		JButton btn24_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn24_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel24.setVisible(false); 
-				panel25.setVisible(true); 
-			}
-		});
+		
 		btn24_1.setBounds(386, 221, 97, 23);
 		panel24.add(btn24_1);
 		
 		JLabel Label24_1 = new JLabel("\uCEF4\uD4E8\uD130 \uAC8C\uC784");
-		Label24_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label24_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label24_1.setBounds(38, 28, 188, 49);
 		panel24.add(Label24_1);
 		
 		JLabel Label24_2 = new JLabel("24 / ?");
-		Label24_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label24_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label24_2.setBounds(178, 195, 115, 49);
 		panel24.add(Label24_2);
 		
@@ -1349,28 +1542,36 @@ public class roomCheck extends JFrame {
 		buttonGroup22.add(rdbtn24_3);
 		rdbtn24_3.setBounds(84, 145, 121, 23);
 		panel24.add(rdbtn24_3);
-		
+		btn24_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn24_1.isSelected())
+					game=1;
+				else if(rdbtn24_2.isSelected())
+					game=2;
+				else if(rdbtn24_3.isSelected())
+					game=3;
+				else
+					game=-1;
+				panel24.setVisible(false); 
+				panel25.setVisible(true); 
+			}
+		});
 		panel25.setLayout(null);
 		panel25.setBounds(206, 298, 1000, 600);
 		contentPane.add(panel25);
 		
 		JButton btn25_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn25_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel25.setVisible(false); 
-				panel26.setVisible(true); 
-			}
-		});
+		
 		btn25_1.setBounds(386, 221, 97, 23);
 		panel25.add(btn25_1);
 		
 		JLabel Label25_1 = new JLabel("\uC57C\uC2DD");
-		Label25_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label25_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label25_1.setBounds(38, 28, 86, 49);
 		panel25.add(Label25_1);
 		
 		JLabel Label25_2 = new JLabel("25 / ?");
-		Label25_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label25_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label25_2.setBounds(178, 195, 115, 49);
 		panel25.add(Label25_2);
 		
@@ -1388,28 +1589,37 @@ public class roomCheck extends JFrame {
 		buttonGroup23.add(rdbtn25_3);
 		rdbtn25_3.setBounds(84, 145, 121, 23);
 		panel25.add(rdbtn25_3);
-		
+		btn25_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				if(rdbtn25_1.isSelected())
+					yasick=1;
+				else if(rdbtn25_2.isSelected())
+					yasick=2;
+				else if(rdbtn25_3.isSelected())
+					yasick=3;
+				else
+					yasick=-1;
+				panel25.setVisible(false); 
+				panel26.setVisible(true); 
+			}
+		});
 		panel26.setLayout(null);
 		panel26.setBounds(187, 302, 1000, 600);
 		contentPane.add(panel26);
 		
 		JButton btn26_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn26_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel26.setVisible(false); 
-				panel27.setVisible(true); 
-			}
-		});
+		
 		btn26_1.setBounds(386, 221, 97, 23);
 		panel26.add(btn26_1);
 		
 		JLabel Label26_1 = new JLabel("\uC220");
-		Label26_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label26_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label26_1.setBounds(38, 28, 86, 49);
 		panel26.add(Label26_1);
 		
 		JLabel Label26_2 = new JLabel("26 / ?");
-		Label26_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label26_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label26_2.setBounds(178, 195, 115, 49);
 		panel26.add(Label26_2);
 		
@@ -1427,28 +1637,36 @@ public class roomCheck extends JFrame {
 		buttonGroup24.add(rdbtn26_3);
 		rdbtn26_3.setBounds(84, 145, 121, 23);
 		panel26.add(rdbtn26_3);
-		
+		btn26_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn26_1.isSelected())
+					sool=1;
+				else if(rdbtn26_2.isSelected())
+					sool=2;
+				else if(rdbtn26_3.isSelected())
+					sool=3;
+				else
+					sool=-1;
+				panel26.setVisible(false); 
+				panel27.setVisible(true); 
+			}
+		});
 		panel27.setLayout(null);
 		panel27.setBounds(174, 306, 1000, 600);
 		contentPane.add(panel27);
 		
 		JButton btn27_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
-		btn27_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				panel27.setVisible(false); 
-				panel28.setVisible(true); 
-			}
-		});
+		
 		btn27_1.setBounds(386, 221, 97, 23);
 		panel27.add(btn27_1);
 		
 		JLabel Label27_1 = new JLabel("\uC2E4\uB0B4\uCDE8\uC2DD");
-		Label27_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label27_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label27_1.setBounds(38, 28, 145, 49);
 		panel27.add(Label27_1);
 		
 		JLabel Label27_2 = new JLabel("27 / ?");
-		Label27_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label27_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label27_2.setBounds(178, 195, 115, 49);
 		panel27.add(Label27_2);
 		
@@ -1466,22 +1684,36 @@ public class roomCheck extends JFrame {
 		buttonGroup25.add(rdbtn27_3);
 		rdbtn27_3.setBounds(84, 145, 121, 23);
 		panel27.add(rdbtn27_3);
-		
+		btn27_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn27_1.isSelected())
+					silnaeeat=1;
+				else if(rdbtn27_2.isSelected())
+					silnaeeat=2;
+				else if(rdbtn27_3.isSelected())
+					silnaeeat=3;
+				else
+					silnaeeat=-1;
+				panel27.setVisible(false); 
+				panel28.setVisible(true); 
+			}
+		});
 		panel28.setLayout(null);
 		panel28.setBounds(154, 317, 1000, 600);
 		contentPane.add(panel28);
 		
 		JButton btn28_1 = new JButton("\uC124\uBB38\uC644\uB8CC");
+		
 		btn28_1.setBounds(386, 221, 97, 23);
 		panel28.add(btn28_1);
 		
 		JLabel Label28_1 = new JLabel("\uBC8C\uB808");
-		Label28_1.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label28_1.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label28_1.setBounds(38, 28, 136, 49);
 		panel28.add(Label28_1);
 		
 		JLabel Label28_2 = new JLabel("28 / ?");
-		Label28_2.setFont(new Font("ÏïºÎÜÄÏûê ÏïºÏ≤¥ B", Font.PLAIN, 50));
+		Label28_2.setFont(new Font("æﬂ≥Ó¿⁄ æﬂ√º B", Font.PLAIN, 50));
 		Label28_2.setBounds(248, 145, 115, 49);
 		panel28.add(Label28_2);
 		
@@ -1509,5 +1741,68 @@ public class roomCheck extends JFrame {
 		buttonGroup26.add(rdbtn28_5);
 		rdbtn28_5.setBounds(104, 195, 121, 23);
 		panel28.add(rdbtn28_5);
+		
+		btn28_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(rdbtn28_1.isSelected())
+					insect=1;
+				else if(rdbtn28_2.isSelected())
+					insect=2;
+				else if(rdbtn28_3.isSelected())
+					insect=3;
+				else if(rdbtn28_4.isSelected())
+					insect=4;
+				else if(rdbtn28_5.isSelected())
+					insect=5;
+				else
+					insect=-1;
+				
+				main m=new main();
+				ModFunctions mf=new ModFunctions();
+				mf.ModGender(gender);
+				mf.ModDom(dom);
+				mf.ModHakbun(hakbun);
+				mf.ModAge(age);
+				mf.ModDepartment(department);
+				mf.ModSleep(sleep);
+				mf.ModWake(wake);
+				mf.ModShowertime(showertime);
+				mf.ModWhenshower(whenshower);
+				mf.ModSensitives(sensitives);
+				mf.ModJamb1(jamb1);
+				mf.ModJamb2(jamb2);
+				mf.ModJamb3(jamb3);
+				mf.ModSleeplight(sleeplight);
+				mf.ModAlarmhear(alarmhear);
+				mf.ModClean(clean);
+				mf.ModHeat(heat);
+				mf.ModCold(cold);
+				mf.ModSoundgigi(soundgigi);
+				mf.ModSmoking(smoking);
+				mf.ModSilnaecall(silnaecall);
+				mf.ModFriendinvite(friendinvite);
+				mf.ModEatbob(eatbob);
+				mf.ModStudytype(studytype);
+				mf.ModPerfume(perfume);
+				mf.ModSmellwell(smellwell);
+				mf.ModGame(game);
+				mf.ModYasick(yasick);
+				mf.ModSool(sool);
+				mf.ModSilnaeeat(silnaeeat);
+				mf.ModInsect(insect);
+				
+				ModifyUser mu=new ModifyUser();
+				try {
+					mu.Modify();
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				m.setVisible(true);
+				setVisible(false);
+				
+			}
+		});
 	}
 }
