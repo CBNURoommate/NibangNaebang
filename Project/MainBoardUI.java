@@ -50,7 +50,7 @@ public class MainBoardUI extends JFrame {
 		setContentPane(contentPane);
 		
 		JLabel mainLabel = new JLabel("\uD604\uC7AC \uC0AC\uC6A9\uC790 \uBAA9\uB85D");
-		mainLabel.setFont(new Font("³ª´®°íµñ", Font.BOLD, 50));
+		mainLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.BOLD, 50));
 		mainLabel.setBounds(707, 178, 460, 70);
 		
 		JTextPane textPane = new JTextPane();

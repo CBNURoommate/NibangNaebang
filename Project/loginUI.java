@@ -67,40 +67,40 @@ public class loginUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
-		titleLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.BOLD, 120));
+		titleLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.BOLD, 120));
 		titleLabel.setBounds(770, 239, 320, 135);
 		contentPane.add(titleLabel);
 		
 		idField = new JTextField();
-		idField.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 40));
+		idField.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 40));
 		idField.setBounds(742, 399, 300, 50);
 		contentPane.add(idField);
 		idField.setColumns(10);
 		
 		JLabel idLabel = new JLabel("\uC544\uC774\uB514");
-		idLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 60));
+		idLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 60));
 		idLabel.setBounds(570, 389, 160, 70);
 		contentPane.add(idLabel);
 		
 		JLabel passwordLabel = new JLabel("\uBE44\uBC00\uBC88\uD638");
-		passwordLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 60));
+		passwordLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 60));
 		passwordLabel.setBounds(570, 479, 160, 70);
 		contentPane.add(passwordLabel);
 		
 		passwordField = new JPasswordField();
 		passwordField.setEchoChar('*');
-		passwordField.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 40));
+		passwordField.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 40));
 		passwordField.setBounds(742, 489, 300, 50);
 		contentPane.add(passwordField);
 		
 		JLabel iderrorLabel = new JLabel("\uC544\uC774\uB514\uAC00 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.");
-		iderrorLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		iderrorLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		iderrorLabel.setBounds(600, 679, 430, 60);
 		contentPane.add(iderrorLabel);
         iderrorLabel.setVisible(false);
 
         JLabel pwerrorLabel = new JLabel("\uBE44\uBC00\uBC88\uD638\uAC00 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.");
-		pwerrorLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 50));
+		pwerrorLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 50));
 		pwerrorLabel.setBounds(630, 679, 340, 60);
 		contentPane.add(pwerrorLabel);
         pwerrorLabel.setVisible(false);
@@ -138,7 +138,7 @@ public class loginUI extends JFrame {
 			}
 		});
 
-		loginButton.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 50));
+		loginButton.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 50));
 		loginButton.setBounds(620, 582, 160, 50);
 		loginButton.setBorderPainted(false);
 		loginButton.setContentAreaFilled(false);
@@ -155,7 +155,7 @@ public class loginUI extends JFrame {
 				
 			}
 		});
-		registerButton.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 50));
+		registerButton.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 50));
 		registerButton.setBounds(821, 582, 160, 50);
 		registerButton.setBorderPainted(false);
 		registerButton.setContentAreaFilled(false);
@@ -168,7 +168,7 @@ public class loginUI extends JFrame {
 		contentPane.add(imageLabel);
 		
 		JLabel lblNewLabel = new JLabel("\uCDA9\uBD81\uB300 \uB8F8\uBA54\uC774\uD2B8 \uAC80\uC0C9 \uD504\uB85C\uADF8\uB7A8");
-		lblNewLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 50));
+		lblNewLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 50));
 		lblNewLabel.setBounds(707, 178, 460, 70);
 		contentPane.add(lblNewLabel);
 	}
