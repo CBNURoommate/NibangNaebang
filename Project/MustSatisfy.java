@@ -7,7 +7,7 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class MustSatisfy {
-	public void Satisfy(int roomagehigh, int roomagelow, int roomhakbunhigh, int roomhakbunlow, int roomsmoking, int roomdepartment, int roomsoundgigi, int roomperfume, int gender, int dom, int age, int hakbun, int smoking, int department, int soundgigi, int perfume) throws SQLException {
+	public void Satisfy(String name, int roomagehigh, int roomagelow, int roomhakbunhigh, int roomhakbunlow, int roomsmoking, int roomdepartment, int roomsoundgigi, int roomperfume, int gender, int dom, int age, int hakbun, int smoking, int department, int soundgigi, int perfume) throws SQLException {
 		Connection con = null;
 		final String URL = "jdbc:mysql://database-1.clbujp5dtees.ap-northeast-2.rds.amazonaws.com/";
 
@@ -15,54 +15,33 @@ public class MustSatisfy {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 			con = DriverManager.getConnection(URL, "admin", "singapore");
 
-		} catch (ClassNotFoundException e) {
+		} catch (ClassNotFoundException f) {
 			System.out.println("fail");
 		}
 		
-		RoommateInfo roommateinfo = new RoommateInfo();
-		
-		RoommateInfo.setRoomagehigh(roomagehigh);
-		RoommateInfo.setRoomagelow(roomagelow);
-		RoommateInfo.setRoomhakbunhigh(roomhakbunhigh);
-		RoommateInfo.setRoomhakbunlow(roomhakbunlow);
-		RoommateInfo.setRoomsmoking(roomsmoking);
-		RoommateInfo.setRoomdepartment(roomdepartment);
-		RoommateInfo.setRoomsoundgigi(roomsoundgigi);
-		RoommateInfo.setRoomperfume(roomperfume);
 
-
-		int Roomagehigh = RoommateInfo.getRoomagehigh();
-		int Roomagelow = RoommateInfo.getRoomagelow();
-		int Roomhakbunhigh = RoommateInfo.getRoomhakbunhigh();
-		int Roomhakbunlow = RoommateInfo.getRoomhakbunlow();
-		int Roomsmoking = RoommateInfo.getRoomsmoking();
-		int Roomdepartment = RoommateInfo.getRoomdepartment();
-		int Roomsoundgigi = RoommateInfo.getRoomsoundgigi();
-		int Roomperfume = RoommateInfo.getRoomperfume();
 
 		CurrentUser currentuser = new CurrentUser();
+
+		String Name = CurrentUser.getName();
+		int Gender = CurrentUser.getGender();
+		int Dom = CurrentUser.getDom();		
 		
-		int Curgender = CurrentUser.getGender();
-		int Curdom = CurrentUser.getDom();
+		int Age = CurrentUser.getAge();
+		int Hakbun = CurrentUser.getHakbun();
+		int Department = UserNeeds.getDepartment();
+		int Soundgigi = UserNeeds.getSoundgigi();
+		int Smoking = UserNeeds.getSmoking();
+		int Perfume = UserNeeds.getPerfume();
 		
-		Member member = new Member();
-		
-		int Memage = member.getAge();
-		int Memhakbun = member.getHakbun();
-		int Memsmoking = member.getDepartment();
-		int Memdepartment = member.getDepartment();
-		int Memsoundgigi = member.getSoundgigi();
-		int Memperfume = member.getPerfume();
-		int Memgender = member.getGender();
-		int Memdom = member.getDom();
-		int Memroomagehigh = member.getRoomagehigh();
-		int Memroomagelow = member.getRoomagelow();
-		int Memroomhakbunhigh = member.getRoomhakbunhigh();
-		int Memroomhakbunlow = member.getRoomhakbunlow();
-		int Memroomsmoking = member.getSmoking();
-		int Memroomdepartment = member.getDepartment();
-		int Memroomsoundgigi = member.getSoundgigi();
-		int Memroomperfume = member.getRoomperfume();
+		int Roomagehigh = CurrentUser.getRoomagehigh();
+		int Roomagelow = CurrentUser.getRoomagelow();
+		int Roomhakbunhigh = CurrentUser.getRoomhakbunhigh();
+		int Roomhakbunlow = CurrentUser.getRoomhakbunlow();
+		int Roomsmoking = CurrentUser.getRoomsmoking();
+		int Roomdepartment = CurrentUser.getRoomdepartment();
+		int Roomsoundgigi = CurrentUser.getRoomsoundgigi();
+		int Roomperfume = CurrentUser.getRoomperfume();
 		
 		
 		int acc = 0;
@@ -72,77 +51,152 @@ public class MustSatisfy {
 		PreparedStatement pstmt = con.prepareStatement(sql);
 		ResultSet rs = pstmt.executeQuery();
 
-		while (acc_cnt > 0) {
-			for (acc = 34; acc > 0; acc--) {
-				do {
-					acc_cnt = acc;
+		while(true)
+		{
+			
 
-					if ((rs.getInt(gender) != Gender) || (rs.getInt(dom) != Dom) || (rs.getInt(hakbun) == Hakbun))
+					if ((rs.getInt(gender) != Gender) || (rs.getInt(dom) != Dom))
 						break;
+					// 성별이나 기숙사 안맞으면 나가리
 
-					if (rs.getInt(age) == Age)
-						acc_cnt--;
-					if (rs.getInt(department) == Department)
-						acc_cnt--;
-					if (rs.getInt(sleep) == Sleep)
-						acc_cnt--;
-					if (rs.getInt(wake) == Wake)
-						acc_cnt--;
-					if (rs.getInt(showertime) == Showertime)
-						acc_cnt--;
-					if (rs.getInt(whenshower) == Whenshower)
-						acc_cnt--;
-					if (rs.getInt(sensitive) == Sensitive)
-						acc_cnt--;
-					if (rs.getInt(jamb1) == Jamb1)
-						acc_cnt--;
-					if (rs.getInt(jamb2) == Jamb2)
-						acc_cnt--;
-					if (rs.getInt(jamb3) == Jamb3)
-						acc_cnt--;
-					if (rs.getInt(sleeplight) == Sleeplight)
-						acc_cnt--;
-					if (rs.getInt(alarmhear) == Alarmhear)
-						acc_cnt--;
-					if (rs.getInt(clean) == Clean)
-						acc_cnt--;
-					if (rs.getInt(heat) == Heat)
-						acc_cnt--;
-					if (rs.getInt(cold) == Cold)
-						acc_cnt--;
-					if (rs.getInt(soundgigi) == Soundgigi)
-						acc_cnt--;
-					if (rs.getInt(smoking) == Smoking)
-						acc_cnt--;
-					if (rs.getInt(silnaecall) == Silnaecall)
-						acc_cnt--;
-					if (rs.getInt(friendinvite) == Friendinvite)
-						acc_cnt--;
-					if (rs.getInt(eatbob) == Eatbob)
-						acc_cnt--;
-					if (rs.getInt(studytype) == Studytype)
-						acc_cnt--;
-					if (rs.getInt(perfume) == Perfume)
-						acc_cnt--;
-					if (rs.getInt(smellwell) == Smellwell)
-						acc_cnt--;
-					if (rs.getInt(game) == Game)
-						acc_cnt--;
-					if (rs.getInt(yasick) == Yasick)
-						acc_cnt--;
-					if (rs.getInt(sool) == Sool)
-						acc_cnt--;
-					if (rs.getInt(silnaeeat) == Silnaeeat)
-						acc_cnt--;
-					if (rs.getInt(insect) == Insect)
-						acc_cnt--;
+					if ( !(rs.getInt(age) <= Roomagehigh) || !(rs.getInt(age) >= Roomagelow)  )
+						break;				
+					//obj의 나이가 user바운더리 밖이면 나가리
 
-					break;
-
-				} while (true);
-				rs.next();
-			}
-		}
+					if ( !(rs.getInt(roomagehigh) >= age) || !(rs.getInt(roomagelow) <= age)  )
+						break;
+					//user의 나이가 obj바운더리 밖이면 나가리
+					
+					if ( !(rs.getInt(hakbun) <= Roomhakbunhigh) || !(rs.getInt(hakbun) >= Roomhakbunlow)  )
+						break;
+					//obj의 학번이 user바운더리 밖이면 나가리
+					
+					if ( !(rs.getInt(roomhakbunhigh) >= hakbun) || !(rs.getInt(roomhakbunlow) <= hakbun)  )
+						break;
+					//user의 학번이 obj바운더리 밖이면 나가리
+					
+					if ( Roomsmoking != 3)
+					{
+						if(rs.getInt(smoking) != Roomsmoking)
+							break;	
+					}
+					// user의 obj흡연 체크
+					
+					if( rs.getInt(roomsmoking) != 3)
+					{
+						if(rs.getInt(Roomsmoking) != smoking)
+							break;
+					}
+					// obj의 user흡연 체크
+					
+					if ( Roomdepartment != 3)
+					{
+						// 같은과					
+						if(Roomdepartment == 1)
+						{	
+							if(rs.getInt(department) != Department)
+								break;	
+						}
+						// 다른과
+						else if(Roomdepartment == 2)
+						{
+							if(rs.getInt(department) == Department)
+								break;
+						}
+					}
+					// user의 obj 학과 체크
+					
+					if ( rs.getInt(roomdepartment) != 3)
+					{
+						// 같은과					
+						if(rs.getInt(roomdepartment) == 1)
+						{	
+							if(rs.getInt(department) != Department)
+								break;	
+						}
+						// 다른과
+						else if(rs.getInt(roomdepartment) == 2)
+						{
+							if(rs.getInt(department) == Department)
+								break;
+						}
+					}
+					// obj의 user 학과 체크
+					
+					if ( Roomsoundgigi != 3)
+					{
+						// 이어폰					
+						if(Roomsoundgigi == 1)
+						{	
+							if(rs.getInt(soundgigi) != Soundgigi)
+								break;	
+						}
+						// 스피커
+						else if(Roomsoundgigi == 1)
+						{
+							if(rs.getInt(soundgigi) == Soundgigi)
+								break;
+						}
+					}
+					// user의 obj 오디오기기 체크
+					
+					if ( rs.getInt(roomsoundgigi) != 3)
+					{
+						// 이어폰				
+						if(rs.getInt(roomsoundgigi) == 1)
+						{	
+							if(rs.getInt(soundgigi) != Soundgigi)
+								break;	
+						}
+						// 스피커
+						else if(rs.getInt(roomsoundgigi) == 2)
+						{
+							if(rs.getInt(soundgigi) == Soundgigi)
+								break;
+						}
+					}
+					// obj의 user 오디오기기 체크
+					
+					if ( Roomperfume != 3)
+					{
+						// 미사용				
+						if(Roomperfume == 1)
+						{	
+							if(rs.getInt(perfume) != Perfume)
+								break;	
+						}
+						// 사용
+						else if(Roomperfume == 1)
+						{
+							if(rs.getInt(perfume) == Perfume)
+								break;
+						}
+					}
+					// user의 obj 향수 체크
+					
+					if ( rs.getInt(roomperfume) != 3)
+					{
+						// 미사용		
+						if(rs.getInt(roomperfume) == 1)
+						{	
+							if(rs.getInt(perfume) != Perfume)
+								break;	
+						}
+						// 사용
+						else if(rs.getInt(roomperfume) == 2)
+						{
+							if(rs.getInt(perfume) == Perfume)
+								break;
+						}
+					}
+					// obj의 user 향수 체크
+					if ( rs.getString(name) == Name)
+						break;
+					// 본인 제외?
+					
+				
+					rs.next();
+		}	
 
 	}
 }
