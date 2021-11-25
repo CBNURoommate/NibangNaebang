@@ -8,14 +8,15 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.ArrayList;
 
+
 public class Controller {
-    Connection conn = null;
-    ResultSet rs = null;
-    Statement st = null;
+    Connection conn;
+    ResultSet rs;
+    Statement st;
 
     public Controller() {
         try {
-            conn = DriverManager.getConnection("jdbc:mysql://database-1.clbujp5dtees.ap-northeast-2.rds.amazonaws.com/", "admin",
+            conn = DriverManager.getConnection("jdbc:mysql://database-1.clbujp5dtees.ap-northeast-2.rds.amazonaws.com", "admin",
                     "singapore");
         } catch (Exception e) {
             e.printStackTrace(); 
@@ -23,38 +24,36 @@ public class Controller {
     }
 
 
-    // È¸¿ø Ãß°¡
+    // íšŒì› ì¶”ê°€
     public void insertMember(Model model) {
         try {
+        
+        	st = conn.createStatement();
+            rs = st.executeQuery("select * from Test.mainboard;");
         	
-        	String sql="insert into Test.mainboard values(?,?,?,?)";
-        	PreparedStatement pstmt=conn.prepareStatement(sql);
+            int stmt = st.executeUpdate(
+                "insert into member values ('" + model.name + "', '" + model.birth + "', '" + model.tel + "');");
         	
-            /*int stmt = st.executeUpdate(
-                    "insert into member values ('" + model.name + "', '" + model.birth + "', '" + model.tel + "');");*/
         	
-        	pstmt.setString(1,model.getName());
-			pstmt.setString(2,model.getBirth());
-			pstmt.setString(3,model.getTel());
 			
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
-            try {
+          /*  try {
                 st.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-            }
+            }*/
         }
     }
 
-    // È¸¿ø ¸ñ·Ï Ãâ·Â
+    // íšŒì› ëª©ë¡ ì¶œë ¥
     public ArrayList<Model> readMember() {
         ArrayList<Model> arr = new ArrayList<Model>();
         System.out.println(arr);
         try {
             st = conn.createStatement();
-            rs = st.executeQuery("select * from mainboard;");
+            rs = st.executeQuery("select * from Test.mainboard;");
             while (rs.next()) {
                 arr.add(new Model(rs.getString(1), rs.getString(2), rs.getString(3)));
             }
@@ -70,11 +69,12 @@ public class Controller {
         return arr;
     }
 
-    // È¸¿ø¼öÁ¤
+
+    // íšŒì›ìˆ˜ì •
     public void updateMember(String name, String tel) {
         try {
             st = conn.createStatement();
-            int stmt = st.executeUpdate("update mainboard set tel = '" + tel + "' where name = '" + name + "';");
+            int stmt = st.executeUpdate("update Test.mainboard set tel = '" + tel + "' where name = '" + name + "';");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -86,11 +86,11 @@ public class Controller {
         }
     }
 
-    // È¸¿ø»èÁ¦
+    // íšŒì›ì‚­ì œ
     public void deleteMember(String name) {
         try {
             st = conn.createStatement();
-            int stmt = st.executeUpdate("delete from mainboard where name = '" + name + "';");
+            int stmt = st.executeUpdate("delete from Test.mainboard where name = '" + name + "';");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -102,13 +102,13 @@ public class Controller {
         }
     }
 
-    // È¸¿ø °Ë»ö
+    // íšŒì› ê²€ìƒ‰
     public ArrayList<Model> searchMember(String content) {
         ArrayList<Model> arr = new ArrayList<Model>();
         System.out.println(arr);
         try {
             st = conn.createStatement();
-            rs = st.executeQuery("select * from mainboard where name like '%" + content + "%';");
+            rs = st.executeQuery("select * from Test.mainboard where name like '%" + content + "%';");
             while (rs.next()) {
                 arr.add(new Model(rs.getString(1), rs.getString(2), rs.getString(3)));
             }
@@ -123,4 +123,4 @@ public class Controller {
         }
         return arr;
     }
-}
+} 
