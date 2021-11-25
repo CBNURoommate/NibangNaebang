@@ -10,7 +10,7 @@
 기상시간		wake		7~12	
 샤워소요시간	showertime	5 10 15 20 25 30+	
 샤워시간		whenshower	아침 저녁 유동적	
-잠귀		sensitive	어두움 보통 밝음	
+잠귀		sensitives	어두움 보통 밝음	
 이갈이		jamb1		0 1	
 잠꼬대		jamb2		0 1	
 코골이		jamb2		0 1	
