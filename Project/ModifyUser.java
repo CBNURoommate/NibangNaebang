@@ -35,7 +35,7 @@ class ModifyUser {
 			pstmt.setInt(8, CurrentUser.getWake());
 			pstmt.setInt(9, CurrentUser.getShowertime());	
 			pstmt.setInt(10, CurrentUser.getWhenshower());
-			pstmt.setInt(11, CurrentUser.getSensitives());	
+			pstmt.setInt(11, CurrentUser.getSensitive());	
 			pstmt.setInt(12, CurrentUser.getJamb1());
 			pstmt.setInt(13, CurrentUser.getJamb2());	
 			pstmt.setInt(14, CurrentUser.getJamb3());	
@@ -55,19 +55,27 @@ class ModifyUser {
 			pstmt.setInt(28, CurrentUser.getGame());
 			
 
+			pstmt.setInt(26, CurrentUser.getYasick());	
+			pstmt.setInt(27, CurrentUser.getSool());	
+			pstmt.setInt(28, CurrentUser.getSilnaeeat());	
+			pstmt.setInt(29, CurrentUser.getInsect());	
+			pstmt.setInt(30, CurrentUser.getWhenshower());
+			pstmt.setInt(31, CurrentUser.getSleep());
+			pstmt.setInt(32, CurrentUser.getWake());
+			pstmt.setString(33, CurrentUser.getId());	
 
 			pstmt.setInt(29, CurrentUser.getYasick());	
 			pstmt.setInt(30, CurrentUser.getSool());	
 			pstmt.setInt(31, CurrentUser.getSilnaeeat());	
 			pstmt.setInt(32, CurrentUser.getInsect());	
 				
-			pstmt.setString(33, CurrentUser.getId());
+
 			pstmt.executeUpdate();
-			System.out.println("ê°€ì… ì„±ê³µ");
+			System.out.println("¼º°ø");
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("ì¤‘ë³µëœ id ì¡´ì¬");
+			System.out.println("½ÇÆĞ");
 		}
 		 
 	}
