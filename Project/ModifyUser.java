@@ -53,23 +53,12 @@ class ModifyUser {
 			pstmt.setInt(26, CurrentUser.getPerfume());	
 			pstmt.setInt(27, CurrentUser.getSmellwell());	
 			pstmt.setInt(28, CurrentUser.getGame());
-			
-
-			pstmt.setInt(26, CurrentUser.getYasick());	
-			pstmt.setInt(27, CurrentUser.getSool());	
-			pstmt.setInt(28, CurrentUser.getSilnaeeat());	
-			pstmt.setInt(29, CurrentUser.getInsect());	
-			pstmt.setInt(30, CurrentUser.getWhenshower());
-			pstmt.setInt(31, CurrentUser.getSleep());
-			pstmt.setInt(32, CurrentUser.getWake());
-			pstmt.setString(33, CurrentUser.getId());	
 
 			pstmt.setInt(29, CurrentUser.getYasick());	
 			pstmt.setInt(30, CurrentUser.getSool());	
 			pstmt.setInt(31, CurrentUser.getSilnaeeat());	
 			pstmt.setInt(32, CurrentUser.getInsect());	
-				
-
+			pstmt.setString(33, CurrentUser.getId());
 			pstmt.executeUpdate();
 			System.out.println("가입 성공");
 		}
