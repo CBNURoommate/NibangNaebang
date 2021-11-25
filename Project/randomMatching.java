@@ -72,29 +72,53 @@ public class randomMatching extends JFrame {
 		panel3.setVisible(false); 
 		panel4.setVisible(false); 
 		panel5.setVisible(false); 
-		panel6.setVisible(false); 
+		panel6.setVisible(false);
 		
-		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
+		JLabel titleLabel = new JLabel("니방내방");
+		titleLabel.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/logo_small.png")));
 		titleLabel.setFont(new Font("야놀자 야체 B", Font.BOLD, 50));
-		titleLabel.setBounds(26, 10, 167, 92);
+		titleLabel.setBounds(20, 15, 187, 67);
 		contentPane.add(titleLabel);
 		
-		JPanel line2 = new JPanel();
-		line2.setBounds(36, 112, 652, 1);
-		contentPane.add(line2);
+		JLabel nameLabel = new JLabel();
+		nameLabel.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/personn.png")));
+		nameLabel.setText(CurrentUser.getName());
+		nameLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
+		nameLabel.setBounds(1220, 20, 250, 60);
+		contentPane.add(nameLabel);
 		
-		JPanel line1 = new JPanel();
-		line1.setLayout(null);
-		line1.setBackground(Color.BLACK);
-		line1.setBounds(209, 60, 1, 20);
-		contentPane.add(line1);
+		JButton moveMail = new JButton();
+		moveMail.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/mail.png")));
+		moveMail.setFocusPainted(false);
+		moveMail.setContentAreaFilled(false);
+		moveMail.setBorderPainted(false);
+		moveMail.setBounds(1490, 20, 75, 60);
+		contentPane.add(moveMail);
 		
-		JButton movePage1 = new JButton("\uB0B4\uBC29 \uC810\uAC80\uD558\uAE30");
+		JButton movePage2 = new JButton("니방 랜덤매칭");
+		movePage2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		movePage2.setFocusPainted(false);
+		movePage2.setContentAreaFilled(false);
+		movePage2.setBorderPainted(false);
+		movePage2.setBackground(Color.LIGHT_GRAY);
+		movePage2.setBounds(700, 20, 200, 60);
+		contentPane.add(movePage2);
+		
+		JButton movePage3 = new JButton("니방 찾아보기");
+		movePage3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		movePage3.setFocusPainted(false);
+		movePage3.setContentAreaFilled(false);
+		movePage3.setBorderPainted(false);
+		movePage3.setBackground(Color.LIGHT_GRAY);
+		movePage3.setBounds(900, 20, 200, 60);
+		contentPane.add(movePage3);
+		
+		JButton movePage1 = new JButton("내방 점검하기");
 		movePage1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				roomCheck r = new roomCheck();
 				r.setVisible(true);
-				setVisible(false); 
+				setVisible(false);
 			}
 		});
 		movePage1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
@@ -102,44 +126,29 @@ public class randomMatching extends JFrame {
 		movePage1.setContentAreaFilled(false);
 		movePage1.setBorderPainted(false);
 		movePage1.setBackground(Color.BLUE);
-		movePage1.setBounds(213, 30, 195, 72);
+		movePage1.setBounds(300, 20, 200, 60);
 		contentPane.add(movePage1);
 		
-		JButton movePage4 = new JButton("\uB0B4\uBC29 \uC18C\uAC1C\uD558\uAE30");
+		JButton movePage4 = new JButton("내방 소개하기");
+		movePage4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				uploadMyroomUI u = new uploadMyroomUI();
+				u.setVisible(true);
+				setVisible(false);
+			}
+		});
 		movePage4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		movePage4.setFocusPainted(false);
 		movePage4.setContentAreaFilled(false);
 		movePage4.setBorderPainted(false);
 		movePage4.setBackground(Color.LIGHT_GRAY);
-		movePage4.setBounds(393, 24, 209, 72);
+		movePage4.setBounds(500, 20, 200, 60);
 		contentPane.add(movePage4);
 		
-		JButton movePage2 = new JButton("\uB2C8\uBC29 \uB79C\uB364\uB9E4\uCE6D");
-		movePage2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		movePage2.setFocusPainted(false);
-		movePage2.setContentAreaFilled(false);
-		movePage2.setBorderPainted(false);
-		movePage2.setBackground(Color.LIGHT_GRAY);
-		movePage2.setBounds(600, 23, 195, 72);
-		contentPane.add(movePage2);
-		
-		JButton movePage3 = new JButton("\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30");
-		movePage3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		movePage3.setFocusPainted(false);
-		movePage3.setContentAreaFilled(false);
-		movePage3.setBorderPainted(false);
-		movePage3.setBackground(Color.LIGHT_GRAY);
-		movePage3.setBounds(794, 30, 195, 72);
-		contentPane.add(movePage3);
-		
-		JButton moveMail = new JButton("");
-		moveMail.setBackground(Color.LIGHT_GRAY);
-		moveMail.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/mail.png")));
-		moveMail.setFocusPainted(false);
-		moveMail.setContentAreaFilled(false);
-		moveMail.setBorderPainted(false);
-		moveMail.setBounds(1474, 26, 70, 70);
-		contentPane.add(moveMail);
+		JPanel line2 = new JPanel();
+		line2.setBackground(Color.BLACK);
+		line2.setBounds(0, 96, 1600, 1);
+		contentPane.add(line2);
 		
 		panel0.setLayout(null);
 		panel0.setBounds(138, 123, 1000, 600);

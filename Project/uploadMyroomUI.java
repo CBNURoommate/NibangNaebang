@@ -38,7 +38,7 @@ public class uploadMyroomUI extends JFrame {
 	 * Create the frame.
 	 */
 	public uploadMyroomUI() {
-		String temp = null;
+		String temp = "";
 		
 		setTitle("니방내방 - 내방 소개하기");
 		
@@ -130,6 +130,13 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(moveMail);
 		
 		JButton btnNewButton = new JButton("수정하기");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				roomCheck r = new roomCheck();
+				r.setVisible(true);
+				setVisible(false);
+			}
+		});
 		btnNewButton.setBounds(637, 505, 97, 23);
 		contentPane.add(btnNewButton);
 		
@@ -296,12 +303,12 @@ public class uploadMyroomUI extends JFrame {
 		if(CurrentUser.getJamb1() == 1)
 			temp = "이갈이";
 		if(CurrentUser.getJamb2() == 1) {
-			if(temp != null)
+			if(temp != "")
 				temp += ", ";
 			temp += "잠꼬대";
 		}
 		if(CurrentUser.getJamb3() == 1) {
-			if(temp != null)
+			if(temp != "")
 				temp += ", ";
 			temp += "코골이";
 		}
