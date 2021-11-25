@@ -156,7 +156,7 @@ public class MainBoardUI {
             }
         });
 
-        // 회원 검색
+        // 회원 검색1
         btn5.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent arg0) {
