@@ -2,6 +2,7 @@ package Project;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -17,17 +18,25 @@ public class Controller {
             conn = DriverManager.getConnection("jdbc:mysql://database-1.clbujp5dtees.ap-northeast-2.rds.amazonaws.com/", "admin",
                     "singapore");
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); 
         }
     }
 
 
-    // íšŒì› ì¶”ê°€
+    // È¸¿ø Ãß°¡
     public void insertMember(Model model) {
         try {
-            st = conn.createStatement();
-            int stmt = st.executeUpdate(
-                    "insert into member values ('" + model.name + "', '" + model.birth + "', '" + model.tel + "');");
+        	
+        	String sql="insert into Test.mainboard values(?,?,?,?)";
+        	PreparedStatement pstmt=conn.prepareStatement(sql);
+        	
+            /*int stmt = st.executeUpdate(
+                    "insert into member values ('" + model.name + "', '" + model.birth + "', '" + model.tel + "');");*/
+        	
+        	pstmt.setString(1,model.getName());
+			pstmt.setString(2,model.getBirth());
+			pstmt.setString(3,model.getTel());
+			
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -39,7 +48,7 @@ public class Controller {
         }
     }
 
-    // íšŒì› ëª©ë¡ ì¶œë ¥
+    // È¸¿ø ¸ñ·Ï Ãâ·Â
     public ArrayList<Model> readMember() {
         ArrayList<Model> arr = new ArrayList<Model>();
         System.out.println(arr);
@@ -61,12 +70,11 @@ public class Controller {
         return arr;
     }
 
-    // íšŒì› ìˆ˜ì •
+    // È¸¿ø¼öÁ¤
     public void updateMember(String name, String tel) {
         try {
             st = conn.createStatement();
-            int stmt = st
-                    .executeUpdate("update mainboard set tel = '" + tel + "' where name = '" + name + "';");
+            int stmt = st.executeUpdate("update mainboard set tel = '" + tel + "' where name = '" + name + "';");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -78,7 +86,7 @@ public class Controller {
         }
     }
 
-    // íšŒì› ì‚­ì œ
+    // È¸¿ø»èÁ¦
     public void deleteMember(String name) {
         try {
             st = conn.createStatement();
@@ -94,7 +102,7 @@ public class Controller {
         }
     }
 
-    // íšŒì› ê²€ìƒ‰
+    // È¸¿ø °Ë»ö
     public ArrayList<Model> searchMember(String content) {
         ArrayList<Model> arr = new ArrayList<Model>();
         System.out.println(arr);
