@@ -22,7 +22,7 @@ public class Controller {
     }
 
 
-    // ȸ�� �߰�
+    // 회원 추가
     public void insertMember(Model model) {
         try {
             st = conn.createStatement();
@@ -39,7 +39,7 @@ public class Controller {
         }
     }
 
-    // ȸ�� ��� ���
+    // 회원 목록 출력
     public ArrayList<Model> readMember() {
         ArrayList<Model> arr = new ArrayList<Model>();
         System.out.println(arr);
@@ -61,7 +61,7 @@ public class Controller {
         return arr;
     }
 
-    // ȸ������
+    // 회원 수정
     public void updateMember(String name, String tel) {
         try {
             st = conn.createStatement();
@@ -78,7 +78,7 @@ public class Controller {
         }
     }
 
-    // ȸ������
+    // 회원 삭제
     public void deleteMember(String name) {
         try {
             st = conn.createStatement();
@@ -94,7 +94,7 @@ public class Controller {
         }
     }
 
-    // ȸ�� �˻�
+    // 회원 검색
     public ArrayList<Model> searchMember(String content) {
         ArrayList<Model> arr = new ArrayList<Model>();
         System.out.println(arr);
