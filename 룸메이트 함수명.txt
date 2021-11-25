@@ -4,8 +4,8 @@
 이름		name	텍스트 String으로												
 성별		gender			남자	여자										
 기숙사		dom			개성재	계영원	양성재	양진재	양현재							
-생년		age	Int 4자릿수	1996~2003											
 학번		hakbun	Int 그대로	14~21											
+생년		age	Int 4자릿수	1996~2003											
 단과		department		인문	사과	자과	경영	공과	전정	농생	사범	생과	수의	의과	자율
 취침시간		sleep			22	23	0	1	2	3						
 기상시간		wake			7	8	9	10	11	오후						
