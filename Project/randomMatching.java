@@ -25,6 +25,15 @@ import java.awt.event.ActionEvent;
 import javax.swing.JSpinner;
 import javax.swing.JComboBox;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.JSlider;
+import javax.swing.SwingConstants;
+import javax.swing.JToggleButton;
+import javax.swing.SpinnerNumberModel;
+import javax.swing.JFormattedTextField;
+import javax.swing.JSeparator;
+import javax.swing.JList;
+import javax.swing.AbstractListModel;
+import javax.swing.ListSelectionModel;
 
 public class randomMatching extends JFrame {
 
@@ -193,7 +202,7 @@ public class randomMatching extends JFrame {
 		btn1_1.setBounds(600, 450, 97, 23);
 		panel1.add(btn1_1);
 		
-		JLabel Label2_1_1 = new JLabel("□ 여러 항목을 선택할 수 있어요");
+		JLabel Label2_1_1 = new JLabel("□ 범위를 선택하세요.");
 		Label2_1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		Label2_1_1.setBounds(170, 360, 400, 40);
 		panel1.add(Label2_1_1);
@@ -203,53 +212,31 @@ public class randomMatching extends JFrame {
 		Label1_2.setBounds(10, 10, 195, 60);
 		panel1.add(Label1_2);
 		
-		JCheckBox checkbtn1_1 = new JCheckBox(" 96");
-		checkbtn1_1.setBackground(Color.WHITE);
-		checkbtn1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn1_1.setBounds(170, 120, 160, 60);
-		panel1.add(checkbtn1_1);
+		JList list1_1 = new JList();
+		list1_1.setBounds(249, 125, 87, 148);
+		panel1.add(list1_1);
+		list1_1.setModel(new AbstractListModel() {
+			String[] values = new String[] {"96", "97", "98", "99", "00", "01", "02", "03"};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
 		
-		JCheckBox checkbtn1_2 = new JCheckBox(" 97");
-		checkbtn1_2.setBackground(Color.WHITE);
-		checkbtn1_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn1_2.setBounds(370, 120, 160, 60);
-		panel1.add(checkbtn1_2);
-		
-		JCheckBox checkbtn1_3 = new JCheckBox(" 98");
-		checkbtn1_3.setBackground(Color.WHITE);
-		checkbtn1_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn1_3.setBounds(570, 120, 160, 60);
-		panel1.add(checkbtn1_3);
-		
-		JCheckBox checkbtn1_4 = new JCheckBox(" 99");
-		checkbtn1_4.setBackground(Color.WHITE);
-		checkbtn1_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn1_4.setBounds(770, 120, 160, 60);
-		panel1.add(checkbtn1_4);
-		
-		JCheckBox checkbtn1_5 = new JCheckBox(" 00");
-		checkbtn1_5.setBackground(Color.WHITE);
-		checkbtn1_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn1_5.setBounds(170, 240, 160, 60);
-		panel1.add(checkbtn1_5);
-		
-		JCheckBox checkbtn1_6 = new JCheckBox(" 01");
-		checkbtn1_6.setBackground(Color.WHITE);
-		checkbtn1_6.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn1_6.setBounds(370, 240, 160, 60);
-		panel1.add(checkbtn1_6);
-		
-		JCheckBox checkbtn1_7 = new JCheckBox(" 02");
-		checkbtn1_7.setBackground(Color.WHITE);
-		checkbtn1_7.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn1_7.setBounds(570, 240, 160, 60);
-		panel1.add(checkbtn1_7);
-		
-		JCheckBox checkbtn1_8 = new JCheckBox(" 03");
-		checkbtn1_8.setBackground(Color.WHITE);
-		checkbtn1_8.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn1_8.setBounds(770, 240, 160, 60);
-		panel1.add(checkbtn1_8);
+		JList list1_2 = new JList();
+		list1_2.setBounds(483, 125, 87, 148);
+		panel1.add(list1_2);
+		list1_2.setModel(new AbstractListModel() {
+			String[] values = new String[] {"96", "97", "98", "99", "00", "01", "02", "03"};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
 		
 		panel2.setLayout(null);
 		panel2.setBounds(145, 290, 915, 530);
@@ -265,7 +252,7 @@ public class randomMatching extends JFrame {
 		btn2_1.setBounds(600, 450, 97, 23);
 		panel2.add(btn2_1);
 		
-		JLabel Label2_1 = new JLabel("□ 여러 항목을 선택할 수 있어요");
+		JLabel Label2_1 = new JLabel("□ 범위를 선택하세요.");
 		Label2_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		Label2_1.setBounds(170, 360, 400, 40);
 		panel2.add(Label2_1);
@@ -275,53 +262,31 @@ public class randomMatching extends JFrame {
 		Label2_2.setBounds(10, 10, 195, 60);
 		panel2.add(Label2_2);
 		
-		JCheckBox checkbtn2_1 = new JCheckBox(" 14");
-		checkbtn2_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn2_1.setBackground(Color.WHITE);
-		checkbtn2_1.setBounds(170, 120, 160, 60);
-		panel2.add(checkbtn2_1);
+		JList list2_1 = new JList();
+		list2_1.setModel(new AbstractListModel() {
+			String[] values = new String[] {"14", "15", "16", "17", "18", "19", "20", "21"};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
+		list2_1.setBounds(198, 124, 181, 191);
+		panel2.add(list2_1);
 		
-		JCheckBox checkbtn2_2 = new JCheckBox(" 15");
-		checkbtn2_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn2_2.setBackground(Color.WHITE);
-		checkbtn2_2.setBounds(370, 120, 160, 60);
-		panel2.add(checkbtn2_2);
-		
-		JCheckBox checkbtn2_3 = new JCheckBox(" 16");
-		checkbtn2_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn2_3.setBackground(Color.WHITE);
-		checkbtn2_3.setBounds(570, 120, 160, 60);
-		panel2.add(checkbtn2_3);
-		
-		JCheckBox checkbtn2_4 = new JCheckBox(" 17");
-		checkbtn2_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn2_4.setBackground(Color.WHITE);
-		checkbtn2_4.setBounds(770, 120, 160, 60);
-		panel2.add(checkbtn2_4);
-		
-		JCheckBox checkbtn2_5 = new JCheckBox(" 18");
-		checkbtn2_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn2_5.setBackground(Color.WHITE);
-		checkbtn2_5.setBounds(170, 240, 160, 60);
-		panel2.add(checkbtn2_5);
-		
-		JCheckBox checkbtn2_6 = new JCheckBox(" 19");
-		checkbtn2_6.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn2_6.setBackground(Color.WHITE);
-		checkbtn2_6.setBounds(370, 240, 160, 60);
-		panel2.add(checkbtn2_6);
-		
-		JCheckBox checkbtn2_7 = new JCheckBox(" 20");
-		checkbtn2_7.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn2_7.setBackground(Color.WHITE);
-		checkbtn2_7.setBounds(570, 240, 160, 60);
-		panel2.add(checkbtn2_7);
-		
-		JCheckBox checkbtn2_8 = new JCheckBox(" 21");
-		checkbtn2_8.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		checkbtn2_8.setBackground(Color.WHITE);
-		checkbtn2_8.setBounds(770, 240, 160, 60);
-		panel2.add(checkbtn2_8);
+		JList list2_2 = new JList();
+		list2_2.setModel(new AbstractListModel() {
+			String[] values = new String[] {"14", "15", "16", "17", "18", "19", "20", "21"};
+			public int getSize() {
+				return values.length;
+			}
+			public Object getElementAt(int index) {
+				return values[index];
+			}
+		});
+		list2_2.setBounds(439, 124, 195, 197);
+		panel2.add(list2_2);
 		
 		panel3.setLayout(null);
 		panel3.setBounds(145, 290, 915, 530);
