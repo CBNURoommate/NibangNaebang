@@ -11,7 +11,7 @@
 기상시간		wake			7	8	9	10	11	오후						
 샤워소요시간	showertime		5	10	15	20	25	30+						
 샤워시간		whenshower		아침	저녁	유동적									
-잠귀		sensitive		어두움	보통	밝음									
+잠귀		sensitives		어두움	보통	밝음									
 이갈이		jamb1			없음	있음										
 잠꼬대		jamb2			없음	있음										
 코골이		jamb2			없음	있음										
@@ -27,11 +27,11 @@
 기숙사식		eatbob			같이	따로										
 공부		studytype		기숙사	도서관	유동적									
 향수		perfume			미사용	사용										
-향민감도		smellwell			민감	상관없음										
+향민감도		smellwell		민감	상관없음										
 컴퓨터게임	game			안함	가끔	충북대페이커									
 야식		yasick			안먹음	가끔먹음	자주먹음									
 술		sool			안먹음	가끔먹음	자주먹음									
-실내취식		silnaeeat		불가	냄새안나면 가능	가능									
+실내취식		silnaeeat		불가	냄새x	가능									
 벌레		insect			혐오	못잡음	중간	잡음	파브르							
 															
 															
