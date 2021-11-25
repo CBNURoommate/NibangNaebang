@@ -19,11 +19,10 @@ class ModifyUser {
 		}
 		try
 		{
-<<<<<<< HEAD
+
 			String sql="update Test.user set name=?, gender=?, hakbun=?, age=?, dom=?, department=?, showertime=?, sensitives=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?, whenshower=?,sleep=?,wake=? where id=?";
-=======
-			String sql="update Test.users set name=?, gender=?, dom=?, hakbun=?, age=?, department=?, sleep=?, wake=?, showertime=?, whenshower=?, sensitive=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alarmhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?";
->>>>>>> 15b181c2641400ee70903f1c2e918a463f9c2f69
+
+
 			PreparedStatement pstmt=con.prepareStatement(sql);
 		 
 			pstmt.setString(1,CurrentUser.getName());
@@ -55,7 +54,7 @@ class ModifyUser {
 			pstmt.setInt(27, CurrentUser.getSmellwell());	
 			pstmt.setInt(28, CurrentUser.getGame());
 			
-<<<<<<< HEAD
+
 			pstmt.setInt(26, CurrentUser.getYasick());	
 			pstmt.setInt(27, CurrentUser.getSool());	
 			pstmt.setInt(28, CurrentUser.getSilnaeeat());	
@@ -64,19 +63,19 @@ class ModifyUser {
 			pstmt.setInt(31, CurrentUser.getSleep());
 			pstmt.setInt(32, CurrentUser.getWake());
 			pstmt.setString(33, CurrentUser.getId());	
-=======
+
 			pstmt.setInt(29, CurrentUser.getYasick());	
 			pstmt.setInt(30, CurrentUser.getSool());	
 			pstmt.setInt(31, CurrentUser.getSilnaeeat());	
 			pstmt.setInt(32, CurrentUser.getInsect());	
 				
->>>>>>> 15b181c2641400ee70903f1c2e918a463f9c2f69
+
 			pstmt.executeUpdate();
-			System.out.println("ë³€ê²½ì„±ê³µ");
+			System.out.println("¼º°ø");
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("ì‹¤íŒ¨");
+			System.out.println("½ÇÆÐ");
 		}
 		 
 	}

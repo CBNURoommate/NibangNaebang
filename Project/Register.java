@@ -64,12 +64,12 @@ public class Register{
 			pstmt.setInt(34, -1);	
 		
 			pstmt.executeUpdate();
-			System.out.println("°¡ÀÔ¼º°ø");
+			System.out.println("ê°€ì… ì„±ê³µ");
 			return 0;
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("Áßº¹µÈ id°¡ ÀÖ½À´Ï´Ù");
+			System.out.println("ì¤‘ë³µëœ id ì¡´ì¬");
 			return 1;
 			
 		}
