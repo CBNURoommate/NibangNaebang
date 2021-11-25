@@ -1,6 +1,6 @@
 package Project;
 
-import javax.swing.*;
+import javax.swing.*;// 메인보드 ui
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.util.ArrayList;
