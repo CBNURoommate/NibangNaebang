@@ -1,34 +1,42 @@
-아이디		id
-비번		passwd
-이름		name
-성별		gender
-기숙사		dom
-생년		age
-학번		hakbun
-단과		department
-취침시간		sleep
-기상시간		wake
-샤워소요시간	showertime
-샤워시간		whenshower
-잠귀		sensitive
-이갈이		jamb1
-잠꼬대		jamb2
-코골이		jamb2
-수면등		sleeplight
-알람		alarmhear
-청소		clean
-더위		heat
-추위		cold
-소리		soundgigi
-흡연여부		smoking
-실내통화		silnaecall
-친구초대		friendinvite
-기숙사식		eatbob
-공부		studytype
-향수		perfume
-향민감도		smellwell
-컴퓨터게임	game
-야식		yasick
-술		sool
-실내취식		silnaeeat
-벌레		insect
+아이디		id			
+비번		passwd			
+이름		name			
+성별		gender		1 남자 2여자	
+기숙사		dom		넘버만 같으면 ㅇㅋ	
+생년		age		agehigh	
+학번		hakbun		hakbun high	
+단과		department	같으면 1	
+취침시간		sleep		10~03	
+기상시간		wake		7~12	
+샤워소요시간	showertime	5 10 15 20 25 30+	
+샤워시간		whenshower	아침 저녁 유동적	
+잠귀		sensitive		어두움 보통 밝음	
+이갈이		jamb1		0 1	
+잠꼬대		jamb2		0 1	
+코골이		jamb2		0 1	
+수면등		sleeplight	안씀 형광등 스탠드 무드드	
+알람		alarmhear	못듣 중간 잘듣	
+청소		clean		자주 보통 한버	
+더위		heat		적게 보통 많이	
+추위		cold		적게 보통 많이	
+소리		soundgigi	이어폰 스피커 유동	
+흡연여부		smoking		흡연 비흡연	
+실내통화		silnaecall		반대 상관없 찬성 간단용무	
+친구초대		friendinvite	가능 불가	
+기숙사식		eatbob		같이 따로	
+공부		studytype	기숙사 도서관 유동적	
+향수		perfume		미사용 사용	
+향민감도		smellwell		민감 상관없음	
+컴퓨터게임	game		안함 가끔 자주	
+야식		yasick		안먹음 가끔 자주 	
+술		sool		안마심 가끔 자주	
+실내취식		silnaeeat		불가 냄새x 가능	
+벌레		insect		혐오 못잡음 중간 잡음 귀여움	
+룸메생년상한	roomagehigh	96~03	
+룸메생년하한	roomagelow	96~03	
+룸메학번상한	roomhakbunhigh	14~21	
+룸메학번하한	roomhakbunlow	14~21	
+룸메흡연여부	roomsmoking	흡연 비흡연 무관	boolean
+룸메단과대	roomdepartment	같은과 다른과 무관	equal nonequal
+룸메소리		roomsoundgigi	이어폰 스피커 무관	1-3 높은순 정렬
+룸메향수		roomperfume	사용 미사용	boolean
