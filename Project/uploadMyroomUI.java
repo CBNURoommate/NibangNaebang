@@ -35,7 +35,7 @@ public class uploadMyroomUI extends JFrame {
 	}
 
 	/**
-	 * Create the frame.
+	 * Create the frame. test
 	 */
 	public uploadMyroomUI() {
 		String temp = null;
