@@ -9,13 +9,11 @@ public class CurrentUser{
 	private static int dom;
 	private static int hakbun;
 	private static int age;
-	
 	private static int department;
 	private static int sleep;
 	private static int wake;
 	private static int showertime;
 	private static int whenshower;
-	
 	private static int sensitive;
 	private static int jamb1;
 	private static int jamb2;
@@ -39,7 +37,71 @@ public class CurrentUser{
 	private static int silnaeeat;
 	private static int insect;
 
+
+	public static String getId() {
+		return id;
+	}
+
+	public static void setId(String id) {
+		CurrentUser.id = id;
+	}
+
+	public static String getPasswd() {
+		return passwd;
+	}
+
+	public static void setPasswd(String passwd) {
+		CurrentUser.passwd = passwd;
+	}
+
+	public static String getName() {
+		return name;
+	}
+
+	public static void setName(String name) {
+		CurrentUser.name = name;
+	}
+
+	public static int getGender() {
+		return gender;
+	}
+
+	public static void setGender(int gender) {
+		CurrentUser.gender = gender;
+	}
+
+	public static int getDom() {
+		return dom;
+	}
+
+	public static void setDom(int dom) {
+		CurrentUser.dom = dom;
+	}
+
+	public static int getAge() {
+		return age;
+	}
+
+	public static void setAge(int age) {
+		CurrentUser.age = age;
+	}
 	
+	public static int getHakbun() {
+		return hakbun;
+	}
+
+	public static void setHakbun(int hakbun) {
+		CurrentUser.hakbun = hakbun;
+	}
+
+	public static int getDepartment() {
+		return department;
+	}
+
+	public static void setDepartment(int department) {
+		CurrentUser.department = department;
+	}
+
 	public static int getSleep() {
 		return sleep;
 	}
@@ -71,39 +133,6 @@ public class CurrentUser{
 	public static void setWhenshower(int whenshower) {
 		CurrentUser.whenshower = whenshower;
 	}
-
-	public static int getHakbun() {
-		return hakbun;
-	}
-
-	public static void setHakbun(int hakbun) {
-		CurrentUser.hakbun = hakbun;
-	}
-
-	public static int getAge() {
-		return age;
-	}
-
-	public static void setAge(int age) {
-		CurrentUser.age = age;
-	}
-
-	public static int getDom() {
-		return dom;
-	}
-
-	public static void setDom(int dom) {
-		CurrentUser.dom = dom;
-	}
-
-	public static int getDepartment() {
-		return department;
-	}
-
-	public static void setDepartment(int department) {
-		CurrentUser.department = department;
-	}
-
 
 	public static int getSensitive() {
 		return sensitive;
@@ -281,37 +310,6 @@ public class CurrentUser{
 		CurrentUser.insect = insect;
 	}
 
-	public static String getId() {
-		return id;
-	}
-
-	public static void setId(String id) {
-		CurrentUser.id = id;
-	}
-
-	public static String getPasswd() {
-		return passwd;
-	}
-
-	public static void setPasswd(String passwd) {
-		CurrentUser.passwd = passwd;
-	}
-
-	public static String getName() {
-		return name;
-	}
-
-	public static void setName(String name) {
-		CurrentUser.name = name;
-	}
-
-	public static int getGender() {
-		return gender;
-	}
-
-	public static void setGender(int gender) {
-		CurrentUser.gender = gender;
-	}
 
 	
 	

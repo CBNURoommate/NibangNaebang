@@ -7,12 +7,11 @@ public class Member {
 	private String name;
 	private int gender;
 	private int dom;
-	private int hakbun;
 	private int age;
+	private int hakbun;
 	private int department;
 	private int sleep;
 	private int wake;
-	
 	private int showertime;
 	private int whenshower;
 	private int sensitive;
@@ -37,8 +36,55 @@ public class Member {
 	private int sool;
 	private int silnaeeat;
 	private int insect;
-	
-	
+
+	public String getId() {
+		return id;
+	}
+	public void setId(String id) {
+		this.id = id;
+	}
+	public String getPasswd() {
+		return passwd;
+	}
+	public void setPasswd(String passwd) {
+		this.passwd = passwd;
+	}
+	public String getName() {
+		return name;
+	}
+	public void setName(String name) {
+		this.name = name;
+	}
+	public int getGender() {
+		return gender;
+	}
+	public void setGender(int gender) {
+		this.gender = gender;
+	}
+	public int getDom() {
+		return dom;
+	}
+	public void setDom(int dom) {
+		this.dom = dom;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	public int getHakbun() {
+		return hakbun;
+	}
+	public void setHakbun(int hakbun) {
+		this.hakbun = hakbun;
+	}
+	public int getDepartment() {
+		return department;
+	}
+	public void setDepartment(int department) {
+		this.department = department;
+	}
 	public int getSleep() {
 		return sleep;
 	}
@@ -63,31 +109,6 @@ public class Member {
 	public void setWhenshower(int whenshower) {
 		this.whenshower = whenshower;
 	}
-	public int getHakbun() {
-		return hakbun;
-	}
-	public void setHakbun(int hakbun) {
-		this.hakbun = hakbun;
-	}
-	public int getAge() {
-		return age;
-	}
-	public void setAge(int age) {
-		this.age = age;
-	}
-	public int getDom() {
-		return dom;
-	}
-	public void setDom(int dom) {
-		this.dom = dom;
-	}
-	public int getDepartment() {
-		return department;
-	}
-	public void setDepartment(int department) {
-		this.department = department;
-	}
-	
 	public int getSensitive() {
 		return sensitive;
 	}
@@ -219,30 +240,6 @@ public class Member {
 	}
 	public void setInsect(int insect) {
 		this.insect = insect;
-	}
-	public String getName() {
-		return name;
-	}
-	public void setName(String name) {
-		this.name = name;
-	}
-	public int getGender() {
-		return gender;
-	}
-	public void setGender(int gender) {
-		this.gender = gender;
-	}
-	public String getId() {
-		return id;
-	}
-	public void setId(String id) {
-		this.id = id;
-	}
-	public String getPasswd() {
-		return passwd;
-	}
-	public void setPasswd(String passwd) {
-		this.passwd = passwd;
 	}
 	
 }

@@ -54,7 +54,7 @@ public class RegisterUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29 \uD68C\uC6D0\uAC00\uC785");
-		titleLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.BOLD, 100));
+		titleLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.BOLD, 100));
 		titleLabel.setBounds(507, 45, 560, 138);
 		contentPane.add(titleLabel);
 		
@@ -77,33 +77,33 @@ public class RegisterUI extends JFrame {
 		nicknameField.setColumns(10);
 		
 		JLabel idLabel = new JLabel("\uC544\uC774\uB514");
-		idLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 45));
+		idLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 45));
 		idLabel.setBounds(455, 197, 97, 63);
 		contentPane.add(idLabel);
 		
 		JLabel password2Label = new JLabel("\uBE44\uBC00\uBC88\uD638 \uD655\uC778");
-		password2Label.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 45));
+		password2Label.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 45));
 		password2Label.setBounds(391, 374, 191, 63);
 		contentPane.add(password2Label);
 		
 		JLabel passwordLabel = new JLabel("\uBE44\uBC00\uBC88\uD638");
-		passwordLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 45));
+		passwordLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 45));
 		passwordLabel.setBounds(441, 294, 127, 63);
 		contentPane.add(passwordLabel);
 		
 		JLabel nicknameLabel = new JLabel("\uB2C9\uB124\uC784");
-		nicknameLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 45));
+		nicknameLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 45));
 		nicknameLabel.setBounds(455, 471, 97, 63);
 		contentPane.add(nicknameLabel);
 		
 		JLabel idErrorLabel = new JLabel("\uC874\uC7AC\uD558\uB294 \uC544\uC774\uB514\uC785\uB2C8\uB2E4.");
-		idErrorLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 30));
+		idErrorLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 30));
 		idErrorLabel.setBounds(944, 206, 230, 55);
 		contentPane.add(idErrorLabel);
 		idErrorLabel.setVisible(false);
 		
 		JLabel pwErrorLabel = new JLabel("\uBE44\uBC00\uBC88\uD638\uAC00 \uC77C\uCE58\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.");
-		pwErrorLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 30));
+		pwErrorLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 30));
 		pwErrorLabel.setBounds(944, 396, 463, 63);
 		contentPane.add(pwErrorLabel);
 		pwErrorLabel.setVisible(false);
@@ -116,7 +116,7 @@ public class RegisterUI extends JFrame {
 				
 				if(!(passwordField.getText().equals(password2Field.getText())))
 				{
-					System.out.println("ºñ¹Ğ¹øÈ£ È®ÀÎ Æ²¸²");
+					System.out.println("ë¹„ë°€ë²ˆí˜¸ í™•ì¸ í‹€ë¦¼");
 					pwErrorLabel.setVisible(true);
 					return;
 				
@@ -142,7 +142,7 @@ public class RegisterUI extends JFrame {
 			}
 		});
 		registerButton.setForeground(Color.BLACK);
-		registerButton.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 20));
+		registerButton.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 20));
 		registerButton.setBackground(Color.WHITE);
 		registerButton.setBounds(610, 551, 139, 33);
 		registerButton.setBorderPainted(false);
@@ -160,7 +160,7 @@ public class RegisterUI extends JFrame {
 			}
 		});
 		cancelButton.setForeground(Color.BLACK);
-		cancelButton.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 20));
+		cancelButton.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 20));
 		cancelButton.setBackground(Color.WHITE);
 		cancelButton.setBounds(783, 551, 139, 33);
 		cancelButton.setBorderPainted(false);

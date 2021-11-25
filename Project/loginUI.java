@@ -7,6 +7,9 @@ import java.awt.Graphics;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Project.Login;
+
 import java.awt.Toolkit;
 import java.awt.GridLayout;
 import java.awt.Image;
@@ -30,7 +33,6 @@ import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 
 public class loginUI extends JFrame {
-
 	private JPanel contentPane;
 	private JPasswordField passwordField;
 	private JTextField idField;
@@ -65,45 +67,47 @@ public class loginUI extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
-		titleLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.BOLD, 100));
-		titleLabel.setBounds(442, 121, 367, 138);
+		titleLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.BOLD, 120));
+		titleLabel.setBounds(770, 239, 320, 135);
 		contentPane.add(titleLabel);
 		
 		idField = new JTextField();
-		idField.setBounds(467, 332, 300, 40);
+		idField.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 40));
+		idField.setBounds(742, 399, 300, 50);
 		contentPane.add(idField);
 		idField.setColumns(10);
 		
 		JLabel idLabel = new JLabel("\uC544\uC774\uB514");
-		idLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 45));
-		idLabel.setBounds(274, 321, 97, 63);
+		idLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 60));
+		idLabel.setBounds(570, 389, 160, 70);
 		contentPane.add(idLabel);
 		
 		JLabel passwordLabel = new JLabel("\uBE44\uBC00\uBC88\uD638");
-		passwordLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 45));
-		passwordLabel.setBounds(284, 385, 186, 58);
+		passwordLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 60));
+		passwordLabel.setBounds(570, 479, 160, 70);
 		contentPane.add(passwordLabel);
 		
 		passwordField = new JPasswordField();
-		passwordField.setBounds(467, 405, 300, 40);
+		passwordField.setEchoChar('*');
+		passwordField.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 40));
+		passwordField.setBounds(742, 489, 300, 50);
 		contentPane.add(passwordField);
 		
 		JLabel iderrorLabel = new JLabel("\uC544\uC774\uB514\uAC00 \uC874\uC7AC\uD558\uC9C0 \uC54A\uC2B5\uB2C8\uB2E4.");
-        iderrorLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 30));
-        iderrorLabel.setBounds(386, 530, 463, 63);
-        contentPane.add(iderrorLabel);
+		iderrorLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
+		iderrorLabel.setBounds(600, 679, 430, 60);
+		contentPane.add(iderrorLabel);
         iderrorLabel.setVisible(false);
 
         JLabel pwerrorLabel = new JLabel("\uBE44\uBC00\uBC88\uD638\uAC00 \uD2C0\uB838\uC2B5\uB2C8\uB2E4.");
-        pwerrorLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 30));
-        pwerrorLabel.setBounds(392, 528, 463, 63);
-        contentPane.add(pwerrorLabel);
+		pwerrorLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 50));
+		pwerrorLabel.setBounds(630, 679, 340, 60);
+		contentPane.add(pwerrorLabel);
         pwerrorLabel.setVisible(false);
 		
 		JButton loginButton = new JButton("\uB85C\uADF8\uC778");
 		loginButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
 				Login l=new Login();
 				try {
 					int k=l.login(idField.getText(),passwordField.getText());
@@ -133,8 +137,9 @@ public class loginUI extends JFrame {
 				}
 			}
 		});
-		loginButton.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 20));
-		loginButton.setBounds(465, 468, 139, 33);
+
+		loginButton.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 50));
+		loginButton.setBounds(620, 582, 160, 50);
 		loginButton.setBorderPainted(false);
 		loginButton.setContentAreaFilled(false);
 		loginButton.setFocusPainted(false);
@@ -150,25 +155,21 @@ public class loginUI extends JFrame {
 				
 			}
 		});
-		registerButton.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 20));
-		registerButton.setBounds(631, 468, 136, 33);
+		registerButton.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 50));
+		registerButton.setBounds(821, 582, 160, 50);
 		registerButton.setBorderPainted(false);
 		registerButton.setContentAreaFilled(false);
 		registerButton.setFocusPainted(false);
 		contentPane.add(registerButton);
 		
-		
-		
-		JPanel logoPanel = new JPanel();
-		logoPanel.setBounds(192, 81, 216, 177);
-		contentPane.add(logoPanel);
+		JLabel imageLabel = new JLabel(new ImageIcon(loginUI.class.getResource("/Project/logo.png")));
+		imageLabel.setSize(250, 250);
+		imageLabel.setLocation(445, 130);
+		contentPane.add(imageLabel);
 		
 		JLabel lblNewLabel = new JLabel("\uCDA9\uBD81\uB300 \uB8F8\uBA54\uC774\uD2B8 \uAC80\uC0C9 \uD504\uB85C\uADF8\uB7A8");
-		lblNewLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ Bold", Font.PLAIN, 35));
-		lblNewLabel.setBounds(446, 96, 311, 33);
+		lblNewLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ Bold", Font.PLAIN, 50));
+		lblNewLabel.setBounds(707, 178, 460, 70);
 		contentPane.add(lblNewLabel);
-		
-		
-		
 	}
 }

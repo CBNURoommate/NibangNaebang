@@ -6,6 +6,10 @@ import java.awt.EventQueue;
 import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
+
+import Project.randomMatching;
+import Project.roomCheck;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import java.awt.Color;
@@ -14,6 +18,8 @@ import javax.swing.JTextPane;
 import javax.swing.JRadioButton;
 import javax.swing.JCheckBox;
 import javax.swing.ButtonGroup;
+import javax.swing.ImageIcon;
+
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
@@ -69,7 +75,7 @@ public class randomMatching extends JFrame {
 		panel6.setVisible(false); 
 		
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
-		titleLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.BOLD, 50));
+		titleLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.BOLD, 50));
 		titleLabel.setBounds(26, 10, 167, 92);
 		contentPane.add(titleLabel);
 		
@@ -84,7 +90,14 @@ public class randomMatching extends JFrame {
 		contentPane.add(line1);
 		
 		JButton movePage1 = new JButton("\uB0B4\uBC29 \uC810\uAC80\uD558\uAE30");
-		movePage1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
+		movePage1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				roomCheck r = new roomCheck();
+				r.setVisible(true);
+				setVisible(false); 
+			}
+		});
+		movePage1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
 		movePage1.setFocusPainted(false);
 		movePage1.setContentAreaFilled(false);
 		movePage1.setBorderPainted(false);
@@ -93,7 +106,7 @@ public class randomMatching extends JFrame {
 		contentPane.add(movePage1);
 		
 		JButton movePage4 = new JButton("\uB0B4\uBC29 \uC18C\uAC1C\uD558\uAE30");
-		movePage4.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
+		movePage4.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
 		movePage4.setFocusPainted(false);
 		movePage4.setContentAreaFilled(false);
 		movePage4.setBorderPainted(false);
@@ -102,7 +115,7 @@ public class randomMatching extends JFrame {
 		contentPane.add(movePage4);
 		
 		JButton movePage2 = new JButton("\uB2C8\uBC29 \uB79C\uB364\uB9E4\uCE6D");
-		movePage2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
+		movePage2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
 		movePage2.setFocusPainted(false);
 		movePage2.setContentAreaFilled(false);
 		movePage2.setBorderPainted(false);
@@ -111,13 +124,22 @@ public class randomMatching extends JFrame {
 		contentPane.add(movePage2);
 		
 		JButton movePage3 = new JButton("\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30");
-		movePage3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
+		movePage3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
 		movePage3.setFocusPainted(false);
 		movePage3.setContentAreaFilled(false);
 		movePage3.setBorderPainted(false);
 		movePage3.setBackground(Color.LIGHT_GRAY);
 		movePage3.setBounds(794, 30, 195, 72);
 		contentPane.add(movePage3);
+		
+		JButton moveMail = new JButton("");
+		moveMail.setBackground(Color.LIGHT_GRAY);
+		moveMail.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/mail.png")));
+		moveMail.setFocusPainted(false);
+		moveMail.setContentAreaFilled(false);
+		moveMail.setBorderPainted(false);
+		moveMail.setBounds(1474, 26, 70, 70);
+		contentPane.add(moveMail);
 		
 		panel0.setLayout(null);
 		panel0.setBounds(138, 123, 1000, 600);
@@ -134,7 +156,7 @@ public class randomMatching extends JFrame {
 		panel0.add(btn0_1);
 		
 		JLabel Label0_1 = new JLabel("\uB2C8\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574 \uBCFC\uAE4C\uC694?");
-		Label0_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label0_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label0_1.setBounds(12, 18, 429, 49);
 		panel0.add(Label0_1);
 		
@@ -153,17 +175,17 @@ public class randomMatching extends JFrame {
 		panel1.add(btn1_1);
 		
 		JLabel Label1_1 = new JLabel("\uB2C8\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574 \uBCFC\uAE4C\uC694?");
-		Label1_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label1_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label1_1.setBounds(12, 18, 429, 49);
 		panel1.add(Label1_1);
 		
 		JLabel Label1_2 = new JLabel("\uC0DD\uB144");
-		Label1_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label1_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label1_2.setBounds(44, 77, 115, 49);
 		panel1.add(Label1_2);
 		
 		JLabel Label1_3 = new JLabel("1 / ?");
-		Label1_3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label1_3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label1_3.setBounds(228, 93, 115, 49);
 		panel1.add(Label1_3);
 		
@@ -214,17 +236,17 @@ public class randomMatching extends JFrame {
 		panel2.add(btn2_1);
 		
 		JLabel Label2_1 = new JLabel("\uB2C8\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574 \uBCFC\uAE4C\uC694?");
-		Label2_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label2_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label2_1.setBounds(12, 18, 429, 49);
 		panel2.add(Label2_1);
 		
 		JLabel Label2_2 = new JLabel("\uD559\uBC88");
-		Label2_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label2_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label2_2.setBounds(44, 77, 115, 49);
 		panel2.add(Label2_2);
 		
 		JLabel Label2_3 = new JLabel("2 / ?");
-		Label2_3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label2_3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label2_3.setBounds(228, 93, 115, 49);
 		panel2.add(Label2_3);
 		
@@ -275,17 +297,17 @@ public class randomMatching extends JFrame {
 		panel3.add(btn3_1);
 		
 		JLabel Label3_1 = new JLabel("\uB2C8\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574 \uBCFC\uAE4C\uC694?");
-		Label3_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label3_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label3_1.setBounds(12, 18, 429, 49);
 		panel3.add(Label3_1);
 		
 		JLabel Label3_2 = new JLabel("\uD761\uC5F0\uC5EC\uBD80");
-		Label3_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label3_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label3_2.setBounds(44, 77, 157, 49);
 		panel3.add(Label3_2);
 		
 		JLabel Label3_3 = new JLabel("3 / ?");
-		Label3_3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label3_3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label3_3.setBounds(228, 93, 115, 49);
 		panel3.add(Label3_3);
 		
@@ -319,17 +341,17 @@ public class randomMatching extends JFrame {
 		panel4.add(btn4_1);
 		
 		JLabel Label4_1 = new JLabel("\uB2C8\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574 \uBCFC\uAE4C\uC694?");
-		Label4_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label4_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label4_1.setBounds(12, 18, 429, 49);
 		panel4.add(Label4_1);
 		
 		JLabel Label4_2 = new JLabel("\uB2E8\uACFC");
-		Label4_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label4_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label4_2.setBounds(44, 77, 157, 49);
 		panel4.add(Label4_2);
 		
 		JLabel Label4_3 = new JLabel("4 / ?");
-		Label4_3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label4_3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label4_3.setBounds(228, 93, 115, 49);
 		panel4.add(Label4_3);
 		
@@ -363,17 +385,17 @@ public class randomMatching extends JFrame {
 		panel5.add(btn5_1);
 		
 		JLabel Label5_1 = new JLabel("\uB2C8\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574 \uBCFC\uAE4C\uC694?");
-		Label5_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label5_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label5_1.setBounds(12, 18, 429, 49);
 		panel5.add(Label5_1);
 		
 		JLabel Label5_2 = new JLabel("\uC18C\uB9AC");
-		Label5_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label5_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label5_2.setBounds(44, 77, 157, 49);
 		panel5.add(Label5_2);
 		
 		JLabel Label5_3 = new JLabel("5 / ?");
-		Label5_3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label5_3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label5_3.setBounds(228, 93, 115, 49);
 		panel5.add(Label5_3);
 		
@@ -406,17 +428,17 @@ public class randomMatching extends JFrame {
 		panel6.add(btn6_1);
 		
 		JLabel Label6_1 = new JLabel("\uB2C8\uBC29 \uC870\uAC74\uC744 \uC124\uC815\uD574 \uBCFC\uAE4C\uC694?");
-		Label6_1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label6_1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label6_1.setBounds(12, 18, 429, 49);
 		panel6.add(Label6_1);
 		
 		JLabel Label6_2 = new JLabel("\uD5A5\uC218");
-		Label6_2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label6_2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label6_2.setBounds(44, 77, 157, 49);
 		panel6.add(Label6_2);
 		
 		JLabel Label6_3 = new JLabel("6 / ?");
-		Label6_3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 50));
+		Label6_3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 50));
 		Label6_3.setBounds(228, 93, 115, 49);
 		panel6.add(Label6_3);
 		
@@ -431,7 +453,7 @@ public class randomMatching extends JFrame {
 		panel6.add(rdbtn6_2);
 		
 		JLabel Label = new JLabel("\uC870\uAC74\uC5D0 \uB9DE\uB294 \uB2C8\uBC29 \uB9E4\uCE6D\uC911...");
-		Label.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 45));
+		Label.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 45));
 		Label.setBounds(412, 378, 441, 63);
 		contentPane.add(Label);
 	}
