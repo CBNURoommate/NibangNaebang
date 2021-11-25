@@ -208,6 +208,13 @@ public class roomCheck extends JFrame {
 		contentPane.add(movePage1);
 		
 		JButton movePage2 = new JButton("\uB2C8\uBC29 \uB79C\uB364\uB9E4\uCE6D");
+		movePage2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				randomMatching r = new randomMatching();
+				r.setVisible(true);
+				setVisible(false);
+			}
+		});
 		movePage2.setBounds(621, 13, 195, 72);
 		movePage2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		movePage2.setFocusPainted(false);
