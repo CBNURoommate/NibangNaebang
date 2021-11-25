@@ -11,7 +11,7 @@
 기상시간		wake			7	8	9	10	11	오후						
 샤워소요시간	showertime		5	10	15	20	25	30+						
 샤워시간		whenshower		아침	저녁	유동적									
-잠귀		sensitive			어두움	보통	밝음									
+잠귀		sensitive		어두움	보통	밝음									
 이갈이		jamb1			없음	있음										
 잠꼬대		jamb2			없음	있음										
 코골이		jamb2			없음	있음										
@@ -22,7 +22,7 @@
 추위		cold			적게탐	보통	많이탐									
 소리		soundgigi		이어폰	스피커	유동									
 흡연여부		smoking			흡연	비흡연										
-실내통화		silnaecall			반대	상관없음	찬성	간단한용무								
+실내통화		silnaecall		반대	상관없음	찬성	간단한용무								
 친구초대		friendinvite		가능	불가										
 기숙사식		eatbob			같이	따로										
 공부		studytype		기숙사	도서관	유동적									
@@ -31,7 +31,7 @@
 컴퓨터게임	game			안함	가끔	충북대페이커									
 야식		yasick			안먹음	가끔먹음	자주먹음									
 술		sool			안먹음	가끔먹음	자주먹음									
-실내취식		silnaeeat			불가	냄새안나면 가능	가능									
+실내취식		silnaeeat		불가	냄새안나면 가능	가능									
 벌레		insect			혐오	못잡음	중간	잡음	파브르							
 															
 															
