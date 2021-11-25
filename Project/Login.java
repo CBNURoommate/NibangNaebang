@@ -37,6 +37,39 @@ public class Login {
 					CurrentUser.setId(rs.getString("id"));
 					CurrentUser.setPasswd(rs.getString("passwd"));
 					CurrentUser.setName(rs.getString("name"));
+					CurrentUser.setGender(rs.getInt("gender"));
+					CurrentUser.setDom(rs.getInt("dom"));
+					CurrentUser.setAge(rs.getInt("age"));
+					CurrentUser.setHakbun(rs.getInt("hakbun"));
+					CurrentUser.setDepartment(rs.getInt("department"));
+					CurrentUser.setSleep(rs.getInt("sleep"));
+					CurrentUser.setWake(rs.getInt("wake"));
+					CurrentUser.setShowertime(rs.getInt("showertime"));
+					CurrentUser.setWhenshower(rs.getInt("whenshower"));
+					CurrentUser.setSensitives(rs.getInt("sensitives"));
+					CurrentUser.setJamb1(rs.getInt("jamb1"));
+					CurrentUser.setJamb2(rs.getInt("jamb2"));
+					CurrentUser.setJamb3(rs.getInt("jamb3"));
+					CurrentUser.setSleeplight(rs.getInt("sleeplight"));
+					CurrentUser.setAlarmhear(rs.getInt("alramhear"));
+					CurrentUser.setClean(rs.getInt("clean"));
+					CurrentUser.setHeat(rs.getInt("heat"));
+					CurrentUser.setCold(rs.getInt("cold"));
+					CurrentUser.setSoundgigi(rs.getInt("soundgigi"));
+					CurrentUser.setSmoking(rs.getInt("smoking"));
+					CurrentUser.setSilnaecall(rs.getInt("silnaecall"));
+					CurrentUser.setFriendinvite(rs.getInt("friendinvite"));
+					CurrentUser.setEatbob(rs.getInt("eatbob"));
+					CurrentUser.setStudytype(rs.getInt("studytype"));
+					CurrentUser.setPerfume(rs.getInt("perfume"));
+					CurrentUser.setSmellwell(rs.getInt("smellwell"));
+					CurrentUser.setGame(rs.getInt("game"));
+					CurrentUser.setYasick(rs.getInt("yasick"));
+					CurrentUser.setSool(rs.getInt("sool"));
+					CurrentUser.setSilnaeeat(rs.getInt("silnaeeat"));
+					CurrentUser.setInsect(rs.getInt("insect"));
+					
+					
 					return 0;
 
 				} else {

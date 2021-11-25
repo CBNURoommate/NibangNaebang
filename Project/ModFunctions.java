@@ -42,9 +42,9 @@ class ModFunctions {
 	{
 		CurrentUser.setWhenshower(whenshower);
 	}
-	public void ModSensitive(int sensitive)
+	public void ModSensitives(int sensitives)
 	{
-		CurrentUser.setSensitive(sensitive);
+		CurrentUser.setSensitives(sensitives);
 	}
 	public void ModJamb1(int jamb1)
 	{

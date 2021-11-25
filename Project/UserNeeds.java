@@ -3,14 +3,14 @@ package Project;
 public class UserNeeds{
 	
 	private static String name;
-	private static int gender;
-	private static int dom;
-	private static int hakbun;
-	private static int age;
-	private static int department;
+	private static int gender;//easy
+	private static int dom;//easy
+	private static int hakbun;//dial
+	private static int age;//dial
+	private static int department;//nomatter
 	private static int sleep;
 	private static int wake;
-	private static int showertime;
+	private static int showertime;//
 	private static int whenshower;
 	private static int sensitive;
 	private static int jamb1;
