@@ -366,7 +366,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_15.setBounds(331, 322, 57, 15);
 		contentPane.add(myLable_15);
 		
-		JLabel myLable_16 = new JLabel("New label");
+		JLabel myLable_16 = new JLabel();
 		if(CurrentUser.getHeat() == 1)
 			myLable_16.setText("적게탐");
 		else if(CurrentUser.getHeat() == 2)
@@ -378,7 +378,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_16.setBounds(331, 347, 57, 15);
 		contentPane.add(myLable_16);
 		
-		JLabel myLable_17 = new JLabel("New label");
+		JLabel myLable_17 = new JLabel();
 		if(CurrentUser.getCold() == 1)
 			myLable_17.setText("적게탐");
 		else if(CurrentUser.getCold() == 2)
@@ -390,7 +390,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_17.setBounds(331, 376, 57, 15);
 		contentPane.add(myLable_17);
 		
-		JLabel myLable_18 = new JLabel("New label");
+		JLabel myLable_18 = new JLabel();
 		if(CurrentUser.getCold() == 1)
 			myLable_18.setText("이어폰");
 		else if(CurrentUser.getCold() == 2)
@@ -402,7 +402,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_18.setBounds(331, 401, 57, 15);
 		contentPane.add(myLable_18);
 		
-		JLabel myLable_19 = new JLabel("New label");
+		JLabel myLable_19 = new JLabel();
 		if(CurrentUser.getSmoking() == 1)
 			 myLable_19.setText("흡연");
 		else if(CurrentUser.getSmoking() == 2)
@@ -412,7 +412,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_19.setBounds(331, 426, 57, 15);
 		contentPane.add(myLable_19);
 		
-		JLabel myLable_20 = new JLabel("New label");
+		JLabel myLable_20 = new JLabel();
 		if(CurrentUser.getSilnaecall() == 1)
 			myLable_20.setText("반대");
 		else if(CurrentUser.getSilnaecall() == 2)
@@ -426,7 +426,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_20.setBounds(331, 451, 57, 15);
 		contentPane.add(myLable_20);
 		
-		JLabel myLable_21 = new JLabel("New label");
+		JLabel myLable_21 = new JLabel();
 		if(CurrentUser.getFriendinvite() == 1)
 			 myLable_21.setText("찬성");
 		else if(CurrentUser.getFriendinvite() == 2)
@@ -436,7 +436,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_21.setBounds(430, 222, 57, 15);
 		contentPane.add(myLable_21);
 		
-		JLabel myLable_22 = new JLabel("New label");
+		JLabel myLable_22 = new JLabel();
 		if(CurrentUser.getEatbob() == 1)
 			 myLable_22.setText("같이");
 		else if(CurrentUser.getEatbob() == 2)
@@ -446,7 +446,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_22.setBounds(430, 247, 57, 15);
 		contentPane.add(myLable_22);
 		
-		JLabel myLable_23 = new JLabel("New label");
+		JLabel myLable_23 = new JLabel();
 		if(CurrentUser.getStudytype() == 1)
 			myLable_23.setText("기숙사");
 		else if(CurrentUser.getStudytype() == 2)
@@ -458,7 +458,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_23.setBounds(430, 272, 57, 15);
 		contentPane.add(myLable_23);
 		
-		JLabel myLable_24 = new JLabel("New label");
+		JLabel myLable_24 = new JLabel();
 		if(CurrentUser.getPerfume() == 1)
 			 myLable_24.setText("미사용");
 		else if(CurrentUser.getPerfume() == 2)
@@ -468,7 +468,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_24.setBounds(430, 297, 57, 15);
 		contentPane.add(myLable_24);
 		
-		JLabel myLable_25 = new JLabel("New label");
+		JLabel myLable_25 = new JLabel();
 		if(CurrentUser.getSmellwell() == 1)
 			 myLable_25.setText("민감");
 		else if(CurrentUser.getSmellwell() == 2)
@@ -478,7 +478,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_25.setBounds(430, 322, 57, 15);
 		contentPane.add(myLable_25);
 		
-		JLabel myLable_26 = new JLabel("New label");
+		JLabel myLable_26 = new JLabel();
 		if(CurrentUser.getGame() == 1)
 			 myLable_26.setText("안함");
 		else if(CurrentUser.getGame() == 2)
@@ -490,7 +490,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_26.setBounds(430, 347, 57, 15);
 		contentPane.add(myLable_26);
 		
-		JLabel myLable_27 = new JLabel("New label");
+		JLabel myLable_27 = new JLabel();
 		if(CurrentUser.getYasick() == 1)
 			 myLable_27.setText("안먹음");
 		else if(CurrentUser.getYasick() == 2)
@@ -502,7 +502,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_27.setBounds(554, 197, 57, 15);
 		contentPane.add(myLable_27);
 		
-		JLabel myLable_28 = new JLabel("New label");
+		JLabel myLable_28 = new JLabel();
 		if(CurrentUser.getSool() == 1)
 			 myLable_28.setText("안마심");
 		else if(CurrentUser.getSool() == 2)
@@ -514,7 +514,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_28.setBounds(554, 222, 57, 15);
 		contentPane.add(myLable_28);
 		
-		JLabel myLable_29 = new JLabel("New label");
+		JLabel myLable_29 = new JLabel();
 		if(CurrentUser.getSilnaeeat() == 1)
 			 myLable_29.setText("불가");
 		else if(CurrentUser.getSilnaeeat() == 2)
@@ -526,7 +526,7 @@ public class uploadMyroomUI extends JFrame {
 		myLable_29.setBounds(554, 247, 57, 15);
 		contentPane.add(myLable_29);
 		
-		JLabel myLable_30 = new JLabel("New label");
+		JLabel myLable_30 = new JLabel();
 		if(CurrentUser.getInsect() == 1)
 			 myLable_30.setText("혐오");
 		else if(CurrentUser.getInsect() == 2)
@@ -542,21 +542,29 @@ public class uploadMyroomUI extends JFrame {
 		myLable_30.setBounds(554, 272, 57, 15);
 		contentPane.add(myLable_30);
 		
-		JLabel myLable_31 = new JLabel("New label");
+		JLabel myLable_31 = new JLabel();
 		myLable_31.setBounds(554, 297, 57, 15);
 		contentPane.add(myLable_31);
 		
-		JLabel myLable_32 = new JLabel("New label");
+		JLabel myLable_32 = new JLabel();
 		myLable_32.setBounds(554, 322, 57, 15);
 		contentPane.add(myLable_32);
 		
-		JLabel myLable_33 = new JLabel("New label");
+		JLabel myLable_33 = new JLabel();
 		myLable_33.setBounds(554, 347, 57, 15);
 		contentPane.add(myLable_33);
 		
-		JLabel myLable_34 = new JLabel("New label");
+		JLabel myLable_34 = new JLabel();
 		myLable_34.setBounds(554, 376, 57, 15);
 		contentPane.add(myLable_34);
+		
+		JLabel myLable_35 = new JLabel();
+		myLable_35.setBounds(554, 401, 57, 15);
+		contentPane.add(myLable_35);
+		
+		JLabel myLable_36 = new JLabel();
+		myLable_36.setBounds(554, 426, 57, 15);
+		contentPane.add(myLable_36);
 	}
 }
 
