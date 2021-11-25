@@ -40,7 +40,7 @@ public class uploadMyroomUI extends JFrame {
 	public uploadMyroomUI() {
 		String temp = null;
 		
-		setTitle("ë‹ˆë°©ë‚´ë°© - ë‚´ë°© ì†Œê°œí•˜ê¸°");
+		setTitle("´Ï¹æ³»¹æ - ³»¹æ ¼Ò°³ÇÏ±â");
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);
@@ -53,7 +53,7 @@ public class uploadMyroomUI extends JFrame {
 		JLabel titleLabel = new JLabel("\uB2C8\uBC29\uB0B4\uBC29");
 		titleLabel.setIcon(new ImageIcon(uploadMyroomUI.class.getResource("/Project/logo_small.png")));
 		titleLabel.setBounds(20, 15, 187, 67);
-		titleLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.BOLD, 50));
+		titleLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.BOLD, 50));
 		contentPane.add(titleLabel);
 		
 		JPanel line2 = new JPanel();
@@ -80,7 +80,7 @@ public class uploadMyroomUI extends JFrame {
 		line2_2.setBounds(82, 494, 652, 1);
 		contentPane.add(line2_2);
 		movePage1.setBounds(300, 20, 200, 60);
-		movePage1.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
+		movePage1.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
 		movePage1.setFocusPainted(false);
 		movePage1.setContentAreaFilled(false);
 		movePage1.setBorderPainted(false);
@@ -96,7 +96,7 @@ public class uploadMyroomUI extends JFrame {
 			}
 		});
 		movePage2.setBounds(700, 20, 200, 60);
-		movePage2.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
+		movePage2.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
 		movePage2.setFocusPainted(false);
 		movePage2.setContentAreaFilled(false);
 		movePage2.setBorderPainted(false);
@@ -105,7 +105,7 @@ public class uploadMyroomUI extends JFrame {
 		
 		JButton movePage3 = new JButton("\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30");
 		movePage3.setBounds(900, 20, 200, 60);
-		movePage3.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
+		movePage3.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
 		movePage3.setFocusPainted(false);
 		movePage3.setContentAreaFilled(false);
 		movePage3.setBorderPainted(false);
@@ -114,7 +114,7 @@ public class uploadMyroomUI extends JFrame {
 		
 		JButton movePage4 = new JButton("\uB0B4\uBC29 \uC18C\uAC1C\uD558\uAE30");
 		movePage4.setBounds(500, 20, 200, 60);
-		movePage4.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 40));
+		movePage4.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 40));
 		movePage4.setFocusPainted(false);
 		movePage4.setContentAreaFilled(false);
 		movePage4.setBorderPainted(false);
@@ -129,49 +129,49 @@ public class uploadMyroomUI extends JFrame {
 		moveMail.setBorderPainted(false);
 		contentPane.add(moveMail);
 		
-		JButton btnNewButton = new JButton("ìˆ˜ì •í•˜ê¸°");
+		JButton btnNewButton = new JButton("¼öÁ¤ÇÏ±â");
 		btnNewButton.setBounds(637, 505, 97, 23);
 		contentPane.add(btnNewButton);
 		
-		JButton btnNewButton2 = new JButton("ì—…ë¡œë“œí•˜ê¸°");
+		JButton btnNewButton2 = new JButton("¾÷·ÎµåÇÏ±â");
 		btnNewButton2.setBounds(375, 596, 97, 23);
 		contentPane.add(btnNewButton2);
 		
 		JLabel nameLabel = new JLabel();
 		nameLabel.setText(CurrentUser.getName());
-		nameLabel.setFont(new Font("ì•¼ë†€ì ì•¼ì²´ B", Font.PLAIN, 30));
+		nameLabel.setFont(new Font("¾ß³îÀÚ ¾ßÃ¼ B", Font.PLAIN, 30));
 		nameLabel.setIcon(new ImageIcon(uploadMyroomUI.class.getResource("/Project/personn.png")));
 		nameLabel.setBounds(1220, 20, 250, 60);
 		contentPane.add(nameLabel);
 		
-		JLabel infoLabel1 = new JLabel("ë‚´ë°© í˜„í™©");
+		JLabel infoLabel1 = new JLabel("³»¹æ ÇöÈ²");
 		infoLabel1.setBounds(60, 136, 57, 15);
 		contentPane.add(infoLabel1);
 		
 		JLabel myLable_1 = new JLabel();
 		myLable_1.setBounds(154, 222, 57, 15);
 		if(CurrentUser.getGender() == 1)
-			 myLable_1.setText("ë‚¨ì");
+			 myLable_1.setText("³²ÀÚ");
 		else if(CurrentUser.getGender() == 2)
-			 myLable_1.setText("ì—¬ì");
+			 myLable_1.setText("¿©ÀÚ");
 		else
-			myLable_1.setText("ì •ë³´ ì—†ìŒ");
+			myLable_1.setText("Á¤º¸ ¾øÀ½");
 		contentPane.add(myLable_1);
 		
 		JLabel myLable_2 = new JLabel();
 		myLable_2.setBounds(154, 247, 57, 15);
 		if(CurrentUser.getDom() == 1)
-			 myLable_2.setText("ê°œì„±ì¬");
+			 myLable_2.setText("°³¼ºÀç");
 		else if(CurrentUser.getDom() == 2)
-			 myLable_2.setText("ê³„ì˜ì›");
+			 myLable_2.setText("°è¿µ¿ø");
 		else if(CurrentUser.getDom() == 3)
-			 myLable_2.setText("ì–‘ì„±ì¬");
+			 myLable_2.setText("¾ç¼ºÀç");
 		else if(CurrentUser.getDom() == 4)
-			 myLable_2.setText("ì–‘ì§„ì¬");
+			 myLable_2.setText("¾çÁøÀç");
 		else if(CurrentUser.getDom() == 5)
-			 myLable_2.setText("ì–‘í˜„ì¬");
+			 myLable_2.setText("¾çÇöÀç");
 		else
-			myLable_2.setText("ì •ë³´ ì—†ìŒ");
+			myLable_2.setText("Á¤º¸ ¾øÀ½");
 		contentPane.add(myLable_2);
 		
 		JLabel myLable_3 = new JLabel();
@@ -186,124 +186,124 @@ public class uploadMyroomUI extends JFrame {
 		
 		JLabel myLable_5 = new JLabel();
 		if(CurrentUser.getDepartment() == 1)
-			 myLable_5.setText("ì¸ë¬¸");
+			 myLable_5.setText("ÀÎ¹®");
 		else if(CurrentUser.getDepartment() == 2)
-			 myLable_5.setText("ì‚¬ê³¼");
+			 myLable_5.setText("»ç°ú");
 		else if(CurrentUser.getDepartment() == 3)
-			 myLable_5.setText("ìê³¼");
+			 myLable_5.setText("ÀÚ°ú");
 		else if(CurrentUser.getDepartment() == 4)
-			 myLable_5.setText("ê²½ì˜");
+			 myLable_5.setText("°æ¿µ");
 		else if(CurrentUser.getDepartment() == 5)
-			 myLable_5.setText("ê³µê³¼");
+			 myLable_5.setText("°ø°ú");
 		else if(CurrentUser.getDepartment() == 6)
-			 myLable_5.setText("ì „ì •");
+			 myLable_5.setText("ÀüÁ¤");
 		else if(CurrentUser.getDepartment() == 7)
-			 myLable_5.setText("ë†ìƒ");
+			 myLable_5.setText("³ó»ı");
 		else if(CurrentUser.getDepartment() == 8)
-			 myLable_5.setText("ì‚¬ë²”");
+			 myLable_5.setText("»ç¹ü");
 		else if(CurrentUser.getDepartment() == 9)
-			 myLable_5.setText("ìƒê³¼");
+			 myLable_5.setText("»ı°ú");
 		else if(CurrentUser.getDepartment() == 10)
-			 myLable_5.setText("ìˆ˜ì˜ê³¼");
+			 myLable_5.setText("¼öÀÇ°ú");
 		else if(CurrentUser.getDepartment() == 11)
-			 myLable_5.setText("ì˜ê³¼");
+			 myLable_5.setText("ÀÇ°ú");
 		else if(CurrentUser.getDepartment() == 12)
-			 myLable_5.setText("ììœ¨");
+			 myLable_5.setText("ÀÚÀ²");
 		else
-			myLable_5.setText("ì •ë³´ ì—†ìŒ");
+			myLable_5.setText("Á¤º¸ ¾øÀ½");
 		myLable_5.setBounds(154, 322, 57, 15);
 		contentPane.add(myLable_5);
 		
 		JLabel myLable_6 = new JLabel();
 		if(CurrentUser.getSleep() == 1)
-			 myLable_6.setText("10ì‹œ");
+			 myLable_6.setText("10½Ã");
 		else if(CurrentUser.getSleep() == 2)
-			 myLable_6.setText("11ì‹œ");
+			 myLable_6.setText("11½Ã");
 		else if(CurrentUser.getSleep() == 3)
-			 myLable_6.setText("12ì‹œ");
+			 myLable_6.setText("12½Ã");
 		else if(CurrentUser.getSleep() == 4)
-			 myLable_6.setText("1ì‹œ");
+			 myLable_6.setText("1½Ã");
 		else if(CurrentUser.getSleep() == 5)
-			 myLable_6.setText("2ì‹œ");
+			 myLable_6.setText("2½Ã");
 		else if(CurrentUser.getSleep() == 6)
-			 myLable_6.setText("3ì‹œ ì´í›„");
+			 myLable_6.setText("3½Ã ÀÌÈÄ");
 		else
-			myLable_6.setText("ì •ë³´ ì—†ìŒ");
+			myLable_6.setText("Á¤º¸ ¾øÀ½");
 		myLable_6.setBounds(154, 347, 57, 15);
 		contentPane.add(myLable_6);
 		
 		JLabel myLable_7 = new JLabel();
 		if(CurrentUser.getWake() == 1)
-			 myLable_7.setText("7ì‹œ");
+			 myLable_7.setText("7½Ã");
 		else if(CurrentUser.getWake() == 2)
-			 myLable_7.setText("8ì‹œ");
+			 myLable_7.setText("8½Ã");
 		else if(CurrentUser.getWake() == 3)
-			 myLable_7.setText("9ì‹œ");
+			 myLable_7.setText("9½Ã");
 		else if(CurrentUser.getWake() == 4)
-			 myLable_7.setText("10ì‹œ");
+			 myLable_7.setText("10½Ã");
 		else if(CurrentUser.getWake() == 5)
-			 myLable_7.setText("11ì‹œ");
+			 myLable_7.setText("11½Ã");
 		else if(CurrentUser.getWake() == 6)
-			 myLable_7.setText("ì˜¤í›„");
+			 myLable_7.setText("¿ÀÈÄ");
 		else
-			myLable_7.setText("ì •ë³´ ì—†ìŒ");
+			myLable_7.setText("Á¤º¸ ¾øÀ½");
 		myLable_7.setBounds(154, 376, 57, 15);
 		contentPane.add(myLable_7);
 		
 		JLabel myLable_8 = new JLabel();
 		if(CurrentUser.getShowertime() == 1)
-			 myLable_8.setText("5ë¶„");
+			 myLable_8.setText("5ºĞ");
 		else if(CurrentUser.getShowertime() == 2)
-			 myLable_8.setText("10ë¶„");
+			 myLable_8.setText("10ºĞ");
 		else if(CurrentUser.getShowertime() == 3)
-			 myLable_8.setText("15ë¶„");
+			 myLable_8.setText("15ºĞ");
 		else if(CurrentUser.getShowertime() == 4)
-			 myLable_8.setText("20ë¶„");
+			 myLable_8.setText("20ºĞ");
 		else if(CurrentUser.getShowertime() == 5)
-			 myLable_8.setText("25ë¶„");
+			 myLable_8.setText("25ºĞ");
 		else if(CurrentUser.getShowertime() == 6)
-			 myLable_8.setText("30ë¶„");
+			 myLable_8.setText("30ºĞ");
 		else
-			myLable_8.setText("ì •ë³´ ì—†ìŒ");
+			myLable_8.setText("Á¤º¸ ¾øÀ½");
 		myLable_8.setBounds(154, 401, 57, 15);
 		contentPane.add(myLable_8);
 		
 		JLabel myLable_9 = new JLabel();
 		if(CurrentUser.getWhenshower() == 1)
-			 myLable_9.setText("ì•„ì¹¨");
+			 myLable_9.setText("¾ÆÄ§");
 		else if(CurrentUser.getWhenshower() == 2)
-			 myLable_9.setText("ì €ë…");
+			 myLable_9.setText("Àú³á");
 		else if(CurrentUser.getWhenshower() == 3)
-			 myLable_9.setText("ìœ ë™ì ");
+			 myLable_9.setText("À¯µ¿Àû");
 		else
-			myLable_9.setText("ì •ë³´ ì—†ìŒ");
+			myLable_9.setText("Á¤º¸ ¾øÀ½");
 		myLable_9.setBounds(154, 426, 57, 15);
 		contentPane.add(myLable_9);
 		
 		JLabel myLable_10 = new JLabel();
 		if(CurrentUser.getSensitives() == 1)
-			 myLable_10.setText("ì–´ë‘ì›€");
+			 myLable_10.setText("¾îµÎ¿ò");
 		else if(CurrentUser.getSensitives() == 2)
-			 myLable_10.setText("ë³´í†µ");
+			 myLable_10.setText("º¸Åë");
 		else if(CurrentUser.getSensitives() == 3)
-			 myLable_10.setText("ë°ìŒ");
+			 myLable_10.setText("¹àÀ½");
 		else
-			myLable_10.setText("ì •ë³´ ì—†ìŒ");
+			myLable_10.setText("Á¤º¸ ¾øÀ½");
 		myLable_10.setBounds(154, 451, 57, 15);
 		contentPane.add(myLable_10);
 		
 		JLabel myLable_11 = new JLabel();
 		if(CurrentUser.getJamb1() == 1)
-			temp = "ì´ê°ˆì´";
+			temp = "ÀÌ°¥ÀÌ";
 		if(CurrentUser.getJamb2() == 1) {
 			if(temp != null)
 				temp += ", ";
-			temp += "ì ê¼¬ëŒ€";
+			temp += "Àá²¿´ë";
 		}
 		if(CurrentUser.getJamb3() == 1) {
 			if(temp != null)
 				temp += ", ";
-			temp += "ì½”ê³¨ì´";
+			temp += "ÄÚ°ñÀÌ";
 		}
 		myLable_11.setText(temp);
 		myLable_11.setBounds(331, 222, 57, 15);
@@ -311,51 +311,51 @@ public class uploadMyroomUI extends JFrame {
 		
 		JLabel myLable_12 = new JLabel();
 		if(CurrentUser.getSleeplight() == 1)
-			 myLable_12.setText("ì‚¬ìš©ì•ˆí•¨");
+			 myLable_12.setText("»ç¿ë¾ÈÇÔ");
 		else if(CurrentUser.getSleeplight() == 2)
-			 myLable_12.setText("í˜•ê´‘ë“±");
+			 myLable_12.setText("Çü±¤µî");
 		else if(CurrentUser.getSleeplight() == 3)
-			 myLable_12.setText("ìŠ¤íƒ ë“œ");
+			 myLable_12.setText("½ºÅÄµå");
 		else if(CurrentUser.getSleeplight() == 4)
-			 myLable_12.setText("ë¬´ë“œë“±");
+			 myLable_12.setText("¹«µåµî");
 		else
-			myLable_12.setText("ì •ë³´ ì—†ìŒ");
+			myLable_12.setText("Á¤º¸ ¾øÀ½");
 		myLable_12.setBounds(331, 247, 57, 15);
 		contentPane.add(myLable_12);
 		
 		JLabel myLable_13 = new JLabel();
 		if(CurrentUser.getAlarmhear() == 1)
-			 myLable_13.setText("ëª»ë“¤ì–´ìš”");
+			 myLable_13.setText("¸øµé¾î¿ä");
 		else if(CurrentUser.getAlarmhear() == 2)
-			 myLable_13.setText("ì¤‘ê°„");
+			 myLable_13.setText("Áß°£");
 		else if(CurrentUser.getAlarmhear() == 3)
-			 myLable_13.setText("ì˜ë“¤ì–´ìš”");
+			 myLable_13.setText("Àßµé¾î¿ä");
 		else
-			myLable_13.setText("ì •ë³´ ì—†ìŒ");
+			myLable_13.setText("Á¤º¸ ¾øÀ½");
 		myLable_13.setBounds(331, 272, 57, 15);
 		contentPane.add(myLable_13);
 		
 		JLabel myLable_14 = new JLabel();
 		if(CurrentUser.getClean() == 1)
-			 myLable_14.setText("ìì£¼");
+			 myLable_14.setText("ÀÚÁÖ");
 		else if(CurrentUser.getClean() == 2)
-			 myLable_14.setText("ë³´í†µ");
+			 myLable_14.setText("º¸Åë");
 		else if(CurrentUser.getClean() == 3)
-			 myLable_14.setText("í•œë²ˆì—");
+			 myLable_14.setText("ÇÑ¹ø¿¡");
 		else
-			myLable_14.setText("ì •ë³´ ì—†ìŒ");
+			myLable_14.setText("Á¤º¸ ¾øÀ½");
 		myLable_14.setBounds(331, 297, 57, 15);
 		contentPane.add(myLable_14);
 		
 		JLabel myLable_15 = new JLabel();
 		if(CurrentUser.getClean() == 1)
-			 myLable_14.setText("ìì£¼");
+			 myLable_14.setText("ÀÚÁÖ");
 		else if(CurrentUser.getClean() == 2)
-			 myLable_14.setText("ë³´í†µ");
+			 myLable_14.setText("º¸Åë");
 		else if(CurrentUser.getClean() == 3)
-			 myLable_14.setText("í•œë²ˆì—");
+			 myLable_14.setText("ÇÑ¹ø¿¡");
 		else
-			myLable_14.setText("ì •ë³´ ì—†ìŒ");
+			myLable_14.setText("Á¤º¸ ¾øÀ½");
 		myLable_15.setBounds(331, 322, 57, 15);
 		contentPane.add(myLable_15);
 		
