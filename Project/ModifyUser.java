@@ -35,7 +35,7 @@ class ModifyUser {
 			pstmt.setInt(8, CurrentUser.getWake());
 			pstmt.setInt(9, CurrentUser.getShowertime());	
 			pstmt.setInt(10, CurrentUser.getWhenshower());
-			pstmt.setInt(11, CurrentUser.getSensitive());	
+			pstmt.setInt(11, CurrentUser.getSensitives());	
 			pstmt.setInt(12, CurrentUser.getJamb1());
 			pstmt.setInt(13, CurrentUser.getJamb2());	
 			pstmt.setInt(14, CurrentUser.getJamb3());	

@@ -14,7 +14,7 @@ public class Member {
 	private int wake;
 	private int showertime;
 	private int whenshower;
-	private int sensitive;
+	private int sensitives;
 	private int jamb1;
 	private int jamb2;
 	private int jamb3;
@@ -109,11 +109,11 @@ public class Member {
 	public void setWhenshower(int whenshower) {
 		this.whenshower = whenshower;
 	}
-	public int getSensitive() {
-		return sensitive;
+	public int getSensitives() {
+		return sensitives;
 	}
-	public void setSensitive(int sensitive) {
-		this.sensitive = sensitive;
+	public void setSensitives(int sensitives) {
+		this.sensitives = sensitives;
 	}
 	public int getJamb1() {
 		return jamb1;

@@ -14,7 +14,7 @@ public class CurrentUser{
 	private static int wake;
 	private static int showertime;
 	private static int whenshower;
-	private static int sensitive;
+	private static int sensitives;
 	private static int jamb1;
 	private static int jamb2;
 	private static int jamb3;
@@ -134,12 +134,12 @@ public class CurrentUser{
 		CurrentUser.whenshower = whenshower;
 	}
 
-	public static int getSensitive() {
-		return sensitive;
+	public static int getSensitives() {
+		return sensitives;
 	}
 
-	public static void setSensitive(int sensitive) {
-		CurrentUser.sensitive = sensitive;
+	public static void setSensitives(int sensitives) {
+		CurrentUser.sensitives = sensitives;
 	}
 
 	public static int getJamb1() {
