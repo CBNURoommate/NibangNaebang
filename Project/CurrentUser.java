@@ -8,7 +8,7 @@ public class CurrentUser{
 	private static int gender;
 	private static int dom;
 	private static int hakbun;
-	private static int age;
+	static int age;
 	private static int department;
 	private static int sleep;
 	private static int wake;
