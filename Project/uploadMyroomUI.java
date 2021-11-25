@@ -38,6 +38,8 @@ public class uploadMyroomUI extends JFrame {
 	 * Create the frame.
 	 */
 	public uploadMyroomUI() {
+		String temp = null;
+		
 		setTitle("니방내방 - 내방 소개하기");
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -156,59 +158,204 @@ public class uploadMyroomUI extends JFrame {
 			myLable_1.setText("정보 없음");
 		contentPane.add(myLable_1);
 		
-		JLabel myLable_2 = new JLabel("New label");
+		JLabel myLable_2 = new JLabel();
 		myLable_2.setBounds(154, 247, 57, 15);
+		if(CurrentUser.getDom() == 1)
+			 myLable_2.setText("개성재");
+		else if(CurrentUser.getDom() == 2)
+			 myLable_2.setText("계영원");
+		else if(CurrentUser.getDom() == 3)
+			 myLable_2.setText("양성재");
+		else if(CurrentUser.getDom() == 4)
+			 myLable_2.setText("양진재");
+		else if(CurrentUser.getDom() == 5)
+			 myLable_2.setText("양현재");
+		else
+			myLable_2.setText("정보 없음");
 		contentPane.add(myLable_2);
 		
-		JLabel myLable_3 = new JLabel("New label");
+		JLabel myLable_3 = new JLabel();
 		myLable_3.setBounds(154, 272, 57, 15);
+		myLable_3.setText(String.valueOf(CurrentUser.getAge()));
 		contentPane.add(myLable_3);
 		
-		JLabel myLable_4 = new JLabel("New label");
+		JLabel myLable_4 = new JLabel();
 		myLable_4.setBounds(154, 297, 57, 15);
+		myLable_4.setText(String.valueOf(CurrentUser.getHakbun()));
 		contentPane.add(myLable_4);
 		
-		JLabel myLable_5 = new JLabel("New label");
+		JLabel myLable_5 = new JLabel();
+		if(CurrentUser.getDepartment() == 1)
+			 myLable_5.setText("인문");
+		else if(CurrentUser.getDepartment() == 2)
+			 myLable_5.setText("사과");
+		else if(CurrentUser.getDepartment() == 3)
+			 myLable_5.setText("자과");
+		else if(CurrentUser.getDepartment() == 4)
+			 myLable_5.setText("경영");
+		else if(CurrentUser.getDepartment() == 5)
+			 myLable_5.setText("공과");
+		else if(CurrentUser.getDepartment() == 6)
+			 myLable_5.setText("전정");
+		else if(CurrentUser.getDepartment() == 7)
+			 myLable_5.setText("농생");
+		else if(CurrentUser.getDepartment() == 8)
+			 myLable_5.setText("사범");
+		else if(CurrentUser.getDepartment() == 9)
+			 myLable_5.setText("생과");
+		else if(CurrentUser.getDepartment() == 10)
+			 myLable_5.setText("수의과");
+		else if(CurrentUser.getDepartment() == 11)
+			 myLable_5.setText("의과");
+		else if(CurrentUser.getDepartment() == 12)
+			 myLable_5.setText("자율");
+		else
+			myLable_5.setText("정보 없음");
 		myLable_5.setBounds(154, 322, 57, 15);
 		contentPane.add(myLable_5);
 		
-		JLabel myLable_6 = new JLabel("New label");
+		JLabel myLable_6 = new JLabel();
+		if(CurrentUser.getSleep() == 1)
+			 myLable_6.setText("10시");
+		else if(CurrentUser.getSleep() == 2)
+			 myLable_6.setText("11시");
+		else if(CurrentUser.getSleep() == 3)
+			 myLable_6.setText("12시");
+		else if(CurrentUser.getSleep() == 4)
+			 myLable_6.setText("1시");
+		else if(CurrentUser.getSleep() == 5)
+			 myLable_6.setText("2시");
+		else if(CurrentUser.getSleep() == 6)
+			 myLable_6.setText("3시 이후");
+		else
+			myLable_6.setText("정보 없음");
 		myLable_6.setBounds(154, 347, 57, 15);
 		contentPane.add(myLable_6);
 		
-		JLabel myLable_7 = new JLabel("New label");
+		JLabel myLable_7 = new JLabel();
+		if(CurrentUser.getWake() == 1)
+			 myLable_7.setText("7시");
+		else if(CurrentUser.getWake() == 2)
+			 myLable_7.setText("8시");
+		else if(CurrentUser.getWake() == 3)
+			 myLable_7.setText("9시");
+		else if(CurrentUser.getWake() == 4)
+			 myLable_7.setText("10시");
+		else if(CurrentUser.getWake() == 5)
+			 myLable_7.setText("11시");
+		else if(CurrentUser.getWake() == 6)
+			 myLable_7.setText("오후");
+		else
+			myLable_7.setText("정보 없음");
 		myLable_7.setBounds(154, 376, 57, 15);
 		contentPane.add(myLable_7);
 		
-		JLabel myLable_8 = new JLabel("New label");
+		JLabel myLable_8 = new JLabel();
+		if(CurrentUser.getShowertime() == 1)
+			 myLable_8.setText("5분");
+		else if(CurrentUser.getShowertime() == 2)
+			 myLable_8.setText("10분");
+		else if(CurrentUser.getShowertime() == 3)
+			 myLable_8.setText("15분");
+		else if(CurrentUser.getShowertime() == 4)
+			 myLable_8.setText("20분");
+		else if(CurrentUser.getShowertime() == 5)
+			 myLable_8.setText("25분");
+		else if(CurrentUser.getShowertime() == 6)
+			 myLable_8.setText("30분");
+		else
+			myLable_8.setText("정보 없음");
 		myLable_8.setBounds(154, 401, 57, 15);
 		contentPane.add(myLable_8);
 		
-		JLabel myLable_9 = new JLabel("New label");
+		JLabel myLable_9 = new JLabel();
+		if(CurrentUser.getWhenshower() == 1)
+			 myLable_9.setText("아침");
+		else if(CurrentUser.getWhenshower() == 2)
+			 myLable_9.setText("저녁");
+		else if(CurrentUser.getWhenshower() == 3)
+			 myLable_9.setText("유동적");
+		else
+			myLable_9.setText("정보 없음");
 		myLable_9.setBounds(154, 426, 57, 15);
 		contentPane.add(myLable_9);
 		
-		JLabel myLable_10 = new JLabel("New label");
+		JLabel myLable_10 = new JLabel();
+		if(CurrentUser.getSensitives() == 1)
+			 myLable_10.setText("어두움");
+		else if(CurrentUser.getSensitives() == 2)
+			 myLable_10.setText("보통");
+		else if(CurrentUser.getSensitives() == 3)
+			 myLable_10.setText("밝음");
+		else
+			myLable_10.setText("정보 없음");
 		myLable_10.setBounds(154, 451, 57, 15);
 		contentPane.add(myLable_10);
 		
-		JLabel myLable_11 = new JLabel("New label");
+		JLabel myLable_11 = new JLabel();
+		if(CurrentUser.getJamb1() == 1)
+			temp = "이갈이";
+		if(CurrentUser.getJamb2() == 1) {
+			if(temp != null)
+				temp += ", ";
+			temp += "잠꼬대";
+		}
+		if(CurrentUser.getJamb3() == 1) {
+			if(temp != null)
+				temp += ", ";
+			temp += "코골이";
+		}
+		myLable_11.setText(temp);
 		myLable_11.setBounds(331, 222, 57, 15);
 		contentPane.add(myLable_11);
 		
-		JLabel myLable_12 = new JLabel("New label");
+		JLabel myLable_12 = new JLabel();
+		if(CurrentUser.getSleeplight() == 1)
+			 myLable_12.setText("사용안함");
+		else if(CurrentUser.getSleeplight() == 2)
+			 myLable_12.setText("형광등");
+		else if(CurrentUser.getSleeplight() == 3)
+			 myLable_12.setText("스탠드");
+		else if(CurrentUser.getSleeplight() == 4)
+			 myLable_12.setText("무드등");
+		else
+			myLable_12.setText("정보 없음");
 		myLable_12.setBounds(331, 247, 57, 15);
 		contentPane.add(myLable_12);
 		
-		JLabel myLable_13 = new JLabel("New label");
+		JLabel myLable_13 = new JLabel();
+		if(CurrentUser.getAlarmhear() == 1)
+			 myLable_13.setText("못들어요");
+		else if(CurrentUser.getAlarmhear() == 2)
+			 myLable_13.setText("중간");
+		else if(CurrentUser.getAlarmhear() == 3)
+			 myLable_13.setText("잘들어요");
+		else
+			myLable_13.setText("정보 없음");
 		myLable_13.setBounds(331, 272, 57, 15);
 		contentPane.add(myLable_13);
 		
-		JLabel myLable_14 = new JLabel("New label");
+		JLabel myLable_14 = new JLabel();
+		if(CurrentUser.getClean() == 1)
+			 myLable_14.setText("자주");
+		else if(CurrentUser.getClean() == 2)
+			 myLable_14.setText("보통");
+		else if(CurrentUser.getClean() == 3)
+			 myLable_14.setText("한번에");
+		else
+			myLable_14.setText("정보 없음");
 		myLable_14.setBounds(331, 297, 57, 15);
 		contentPane.add(myLable_14);
 		
-		JLabel myLable_15 = new JLabel("New label");
+		JLabel myLable_15 = new JLabel();
+		if(CurrentUser.getClean() == 1)
+			 myLable_14.setText("자주");
+		else if(CurrentUser.getClean() == 2)
+			 myLable_14.setText("보통");
+		else if(CurrentUser.getClean() == 3)
+			 myLable_14.setText("한번에");
+		else
+			myLable_14.setText("정보 없음");
 		myLable_15.setBounds(331, 322, 57, 15);
 		contentPane.add(myLable_15);
 		
