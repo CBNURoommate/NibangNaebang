@@ -63,11 +63,11 @@ class ModifyUser {
 				
 			pstmt.setString(33, CurrentUser.getId());
 			pstmt.executeUpdate();
-			System.out.println("¼º°ø");
+			System.out.println("ê°€ì… ì„±ê³µ");
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("½ÇÆĞ");
+			System.out.println("ì¤‘ë³µëœ id ì¡´ì¬");
 		}
 		 
 	}
