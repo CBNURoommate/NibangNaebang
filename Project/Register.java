@@ -25,7 +25,7 @@ public class Register{
 		}
 		try
 		{
-			String sql="insert into Test.user values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+			String sql="insert into Test.user values(?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
 			PreparedStatement pstmt=con.prepareStatement(sql);
 		 
 			pstmt.setString(1,id);
@@ -59,6 +59,10 @@ public class Register{
 			pstmt.setInt(29, -1);	
 			pstmt.setInt(30, -1);	
 			pstmt.setInt(31, -1);	
+			pstmt.setInt(32, -1);	
+			pstmt.setInt(33, -1);	
+			pstmt.setInt(34, -1);	
+		
 			pstmt.executeUpdate();
 			System.out.println("가입성공");
 			return 0;

@@ -39,9 +39,9 @@ class ModFunctions {
 	{
 		CurrentUser.setShowertime(showertime);
 	}
-	public void ModWhenshowertime(int whenshowertime)
+	public void ModWhenshower(int whenshower)
 	{
-		CurrentUser.setWhenshower(whenshowertime);
+		CurrentUser.setWhenshower(whenshower);
 	}
 	public void ModSensitive(int sensitive)
 	{

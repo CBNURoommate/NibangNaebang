@@ -19,7 +19,7 @@ class ModifyUser {
 		}
 		try
 		{
-			String sql="update Test.users set name=?, gender=?, hakbun=?, age=?, dom=?, department=?, showertime=?, sensitive=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?,whenshower=?,sleep=?,wake=?";
+			String sql="update Test.user set name=?, gender=?, hakbun=?, age=?, dom=?, department=?, showertime=?, sensitives=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?, whenshower=?,sleep=?,wake=? where id=?";
 			PreparedStatement pstmt=con.prepareStatement(sql);
 		 
 			pstmt.setString(1,CurrentUser.getName());
@@ -55,7 +55,7 @@ class ModifyUser {
 			pstmt.setInt(30, CurrentUser.getWhenshower());
 			pstmt.setInt(31, CurrentUser.getSleep());
 			pstmt.setInt(32, CurrentUser.getWake());
-				
+			pstmt.setString(33, CurrentUser.getId());	
 			pstmt.executeUpdate();
 			System.out.println("변경성공");
 		}
