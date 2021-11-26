@@ -19,7 +19,11 @@ public class MustSatisfy {
 			System.out.println("fail");
 		}
 		
-	
+		matchingResultUI.roomagehigh=roomagehigh;
+		matchingResultUI.roomagelow=roomagelow;
+		matchingResultUI.roomhakbunhigh=roomhakbunhigh;
+		matchingResultUI.roomhakbunlow=roomhakbunlow;
+		
 		String sql = "select * from Test.user where gender=? and dom=? and age between ? and ? and hakbun between ? and ? and ";
 		if(roomsmoking==3)
 		{

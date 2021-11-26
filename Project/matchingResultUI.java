@@ -20,6 +20,7 @@ import java.awt.event.ActionEvent;
 public class matchingResultUI extends JFrame {
 
 	private JPanel contentPane;
+	public static int roomagelow,roomagehigh,roomhakbunlow,roomhakbunhigh;
 	public static Member ranMem;
 	/**
 	 * Launch the application.
@@ -527,7 +528,7 @@ public class matchingResultUI extends JFrame {
 				ResultSet rs;
 				try {
 					MustSatisfy ms=new MustSatisfy();
-					rs = ms.Satisfy(ranMem.getAge(), ranMem.getAge(),ranMem.getHakbun(), ranMem.getHakbun(), ranMem.getSmoking(), ranMem.getDepartment(), ranMem.getSoundgigi(), ranMem.getPerfume());
+					rs = ms.Satisfy(roomagehigh, roomagelow,roomhakbunhigh, roomhakbunlow, ranMem.getSmoking(), ranMem.getDepartment(), ranMem.getSoundgigi(), ranMem.getPerfume());
 					rs.next();
 					ranmatch rm=new ranmatch();
 					Member fm=rm.match(rs);
