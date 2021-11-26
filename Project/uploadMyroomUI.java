@@ -541,30 +541,6 @@ public class uploadMyroomUI extends JFrame {
 			myLable_30.setText("정보 없음");
 		myLable_30.setBounds(554, 272, 57, 15);
 		contentPane.add(myLable_30);
-		
-		JLabel myLable_31 = new JLabel();
-		myLable_31.setBounds(554, 297, 57, 15);
-		contentPane.add(myLable_31);
-		
-		JLabel myLable_32 = new JLabel();
-		myLable_32.setBounds(554, 322, 57, 15);
-		contentPane.add(myLable_32);
-		
-		JLabel myLable_33 = new JLabel();
-		myLable_33.setBounds(554, 347, 57, 15);
-		contentPane.add(myLable_33);
-		
-		JLabel myLable_34 = new JLabel();
-		myLable_34.setBounds(554, 376, 57, 15);
-		contentPane.add(myLable_34);
-		
-		JLabel myLable_35 = new JLabel();
-		myLable_35.setBounds(554, 401, 57, 15);
-		contentPane.add(myLable_35);
-		
-		JLabel myLable_36 = new JLabel();
-		myLable_36.setBounds(554, 426, 57, 15);
-		contentPane.add(myLable_36);
 	}
 }
 

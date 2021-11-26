@@ -44,8 +44,6 @@ public class matchingResultUI extends JFrame {
 	 */
 	public matchingResultUI() {
 		String temp = "";
-	    // 매칭된 무작위 상대를 넣을 멤버
-
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);
@@ -522,35 +520,10 @@ public class matchingResultUI extends JFrame {
 			myLable_30.setText("정보 없음");
 		myLable_30.setBounds(720, 310, 57, 15);
 		contentPane.add(myLable_30);
-
-		JLabel myLable_31 = new JLabel();
-		myLable_31.setBounds(720, 335, 57, 15);
-		contentPane.add(myLable_31);
-
-		JLabel myLable_32 = new JLabel();
-		myLable_32.setBounds(720, 360, 57, 15);
-		contentPane.add(myLable_32);
-
-		JLabel myLable_33 = new JLabel();
-		myLable_33.setBounds(720, 385, 57, 15);
-		contentPane.add(myLable_33);
-
-		JLabel myLable_34 = new JLabel();
-		myLable_34.setBounds(720, 414, 57, 15);
-		contentPane.add(myLable_34);
-
-		JLabel myLable_35 = new JLabel();
-		myLable_35.setBounds(720, 439, 57, 15);
-		contentPane.add(myLable_35);
-
-		JLabel myLable_36 = new JLabel();
-		myLable_36.setBounds(720, 464, 57, 15);
-		contentPane.add(myLable_36);
-
+		
 		JButton btnNewButton = new JButton("다시매칭");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-			
 				ResultSet rs;
 				try {
 					MustSatisfy ms=new MustSatisfy();
@@ -562,13 +535,10 @@ public class matchingResultUI extends JFrame {
 					matchingResultUI mui=new matchingResultUI();
 					mui.setVisible(true);
 					setVisible(false);
-				
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
-				
 			}
 		});
 		btnNewButton.setBounds(803, 574, 97, 23);
