@@ -20,8 +20,7 @@ class ModifyUser {
 		try
 		{
 
-			String sql="update Test.user set name=?, gender=?, hakbun=?, age=?, dom=?, department=?, showertime=?, sensitives=?, jamb1=?, jamb2=?, jamb3=?, sleeplight=?, alramhear=?, clean=?, heat=?, cold=?, soundgigi=?, smoking=?, silnaecall=?, friendinvite=?, eatbob=?, studytype=?, perfume=?, smellwell=?, game=?, yasick=?,sool=?,silnaeeat=?,insect=?, whenshower=?,sleep=?,wake=? where id=?";
-
+			String sql="update Test.user set name=?, gender=?, dom=?, hakbun=?,age=?,department=?,sleep=?,wake=?,showertime=?,whenshower=?,sensitives=?,jamb1=?,jamb2=?,jamb3=?,sleeplight=?,alramhear=?,clean=?,heat=?,cold=?,soundgigi=?,smoking=?,silnaecall=?,friendinvite=?,eatbob=?,studytype=?,perfume=?,smellwell=?,game=?,yasick=?,sool=?,silnaeeat=?,insect=? where id=?";
 
 			PreparedStatement pstmt=con.prepareStatement(sql);
 		 
@@ -53,21 +52,22 @@ class ModifyUser {
 			pstmt.setInt(26, CurrentUser.getPerfume());	
 			pstmt.setInt(27, CurrentUser.getSmellwell());	
 			pstmt.setInt(28, CurrentUser.getGame());
-			
+
 
 			pstmt.setInt(29, CurrentUser.getYasick());	
 			pstmt.setInt(30, CurrentUser.getSool());	
 			pstmt.setInt(31, CurrentUser.getSilnaeeat());	
 			pstmt.setInt(32, CurrentUser.getInsect());	
-			pstmt.setString(33, CurrentUser.getId());	
-				
 
+			pstmt.setString(33, CurrentUser.getId());
+		
+			
 			pstmt.executeUpdate();
-			System.out.println("가입 성공");
+			System.out.println("성공");
 		}
 		catch(java.sql.SQLIntegrityConstraintViolationException d)
 		{
-			System.out.println("중복된 id 존재");
+			System.out.println("실패");
 		}
 		 
 	}

@@ -12,12 +12,15 @@ import javax.swing.JButton;
 import java.awt.Color;
 import javax.swing.ImageIcon;
 import java.awt.event.ActionListener;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 
 public class matchingResultUI extends JFrame {
 
 	private JPanel contentPane;
-
+	public static Member ranMem;
 	/**
 	 * Launch the application.
 	 */
@@ -25,6 +28,7 @@ public class matchingResultUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
+					
 					matchingResultUI frame = new matchingResultUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -34,13 +38,15 @@ public class matchingResultUI extends JFrame {
 		});
 	}
 
+	
 	/**
 	 * Create the frame.
 	 */
 	public matchingResultUI() {
 		String temp = "";
-		Member ranMem = new Member();	// 매칭된 무작위 상대를 넣을 멤버
+	    // 매칭된 무작위 상대를 넣을 멤버
 
+		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);
 		contentPane = new JPanel();
@@ -48,7 +54,8 @@ public class matchingResultUI extends JFrame {
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
-
+		
+		
 		JLabel titleLabel = new JLabel("니방내방");
 		titleLabel.setIcon(new ImageIcon(matchingResultUI.class.getResource("/Project/logo_small.png")));
 		titleLabel.setFont(new Font("야놀자 야체 B", Font.BOLD, 50));
@@ -71,6 +78,10 @@ public class matchingResultUI extends JFrame {
 		contentPane.add(moveMail);
 
 		JButton movePage2 = new JButton("니방 랜덤매칭");
+		movePage2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		movePage2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		movePage2.setFocusPainted(false);
 		movePage2.setContentAreaFilled(false);
@@ -539,6 +550,25 @@ public class matchingResultUI extends JFrame {
 		JButton btnNewButton = new JButton("다시매칭");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+			
+				ResultSet rs;
+				try {
+					MustSatisfy ms=new MustSatisfy();
+					rs = ms.Satisfy(ranMem.getAge(), ranMem.getAge(),ranMem.getHakbun(), ranMem.getHakbun(), ranMem.getSmoking(), ranMem.getDepartment(), ranMem.getSoundgigi(), ranMem.getPerfume());
+					rs.next();
+					ranmatch rm=new ranmatch();
+					Member fm=rm.match(rs);
+					matchingResultUI.ranMem=fm;
+					matchingResultUI mui=new matchingResultUI();
+					mui.setVisible(true);
+					setVisible(false);
+				
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+				
 			}
 		});
 		btnNewButton.setBounds(803, 574, 97, 23);

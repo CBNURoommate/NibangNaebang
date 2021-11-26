@@ -2,7 +2,6 @@ package Project;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -19,7 +18,7 @@ public class Controller {
             conn = DriverManager.getConnection("jdbc:mysql://database-1.clbujp5dtees.ap-northeast-2.rds.amazonaws.com", "admin",
                     "singapore");
         } catch (Exception e) {
-            e.printStackTrace(); 
+            e.printStackTrace();
         }
     }
 
@@ -27,15 +26,19 @@ public class Controller {
     // 회원 추가
     public void insertMember(Model model) {
         try {
+
+            st = conn.createStatement();
+            int stmt = st.executeUpdate(
+                    "insert into member values ('" + model.name + "', '" + model.birth + "', '" + model.tel + "');");
+
         
         	st = conn.createStatement();
             rs = st.executeQuery("select * from Test.mainboard;");
         	
-            int stmt = st.executeUpdate(
-                "insert into member values ('" + model.name + "', '" + model.birth + "', '" + model.tel + "');");
-        	
+         
         	
 			
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -70,11 +73,13 @@ public class Controller {
     }
 
 
+
     // 회원수정
     public void updateMember(String name, String tel) {
         try {
             st = conn.createStatement();
             int stmt = st.executeUpdate("update Test.mainboard set tel = '" + tel + "' where name = '" + name + "';");
+
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -86,7 +91,11 @@ public class Controller {
         }
     }
 
+
+    // 회원 삭제
+
     // 회원삭제
+
     public void deleteMember(String name) {
         try {
             st = conn.createStatement();

@@ -1,5 +1,10 @@
 package Project;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.awt.BorderLayout;
 import java.awt.EventQueue;
 
@@ -216,7 +221,7 @@ public class randomMatching extends JFrame {
 		list1_1.setBounds(249, 125, 87, 148);
 		panel1.add(list1_1);
 		list1_1.setModel(new AbstractListModel() {
-			String[] values = new String[] {"96", "97", "98", "99", "00", "01", "02", "03"};
+			String[] values = new String[] {"1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"};
 			public int getSize() {
 				return values.length;
 			}
@@ -229,7 +234,7 @@ public class randomMatching extends JFrame {
 		list1_2.setBounds(483, 125, 87, 148);
 		panel1.add(list1_2);
 		list1_2.setModel(new AbstractListModel() {
-			String[] values = new String[] {"96", "97", "98", "99", "00", "01", "02", "03"};
+			String[] values = new String[] {"1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"};
 			public int getSize() {
 				return values.length;
 			}
@@ -455,8 +460,73 @@ public class randomMatching extends JFrame {
 		line2.setBounds(80, 230, 1400, 1);
 		contentPane.add(line2);
 		
+		
+		
 		JButton btnNewButton = new JButton("랜덤매칭");
 		btnNewButton.setBounds(745, 740, 97, 23);
 		contentPane.add(btnNewButton);
+		btnNewButton.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e){
+				// TODO Auto-generated method stub
+				MustSatisfy ms=new MustSatisfy();
+				int f3;
+				int f4;
+				int f5;
+				int f6;
+				if(rdbtn3_1.isSelected())
+					f3=1;
+				else if(rdbtn3_2.isSelected())
+					f3=2;
+				else if(rdbtn3_3.isSelected())
+					f3=3;
+				else
+					f3=-1;
+				
+				if(rdbtn4_1.isSelected())
+					f4=1;
+				else if(rdbtn4_2.isSelected())
+					f4=2;
+				else if(rdbtn4_3.isSelected())
+					f4=3;
+				else
+					f4=-1;
+				
+				if(rdbtn5_1.isSelected())
+					f5=1;
+				else if(rdbtn5_2.isSelected())
+					f5=2;
+				else if(rdbtn5_3.isSelected())
+					f5=3;
+				else
+					f5=-1;
+				
+				if(rdbtn6_1.isSelected())
+					f6=2;
+				else if(rdbtn6_2.isSelected())
+					f6=1;
+				else
+					f6=-1;
+				
+				ResultSet rs;
+				try {
+					rs = ms.Satisfy(Integer.parseInt((list1_2.getSelectedValue().toString())), Integer.parseInt((list1_1.getSelectedValue().toString())),Integer.parseInt(list2_2.getSelectedValue().toString()), Integer.parseInt(list2_1.getSelectedValue().toString()), f3, f4, f5, f6);
+					ranmatch rm=new ranmatch();
+					Member fm=rm.match(rs);
+					matchingResultUI.ranMem=fm;
+					matchingResultUI mui=new matchingResultUI();
+					mui.setVisible(true);
+					setVisible(false);
+				
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
+			
+				
+			}
+		});
 	}
 }
