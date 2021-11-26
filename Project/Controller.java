@@ -2,6 +2,7 @@ package Project;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
@@ -18,7 +19,7 @@ public class Controller {
             conn = DriverManager.getConnection("jdbc:mysql://database-1.clbujp5dtees.ap-northeast-2.rds.amazonaws.com", "admin",
                     "singapore");
         } catch (Exception e) {
-            e.printStackTrace();
+            e.printStackTrace(); 
         }
     }
 
@@ -26,19 +27,15 @@ public class Controller {
     // 회원 추가
     public void insertMember(Model model) {
         try {
-
-            st = conn.createStatement();
-            int stmt = st.executeUpdate(
-                    "insert into member values ('" + model.name + "', '" + model.birth + "', '" + model.tel + "');");
-
         
         	st = conn.createStatement();
             rs = st.executeQuery("select * from Test.mainboard;");
         	
-         
+            int stmt = st.executeUpdate(
+                "insert into member values ('" + model.name + "', '" + model.birth + "', '" + model.tel + "');");
+        	
         	
 			
-
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -56,9 +53,9 @@ public class Controller {
         System.out.println(arr);
         try {
             st = conn.createStatement();
-            rs = st.executeQuery("select * from Test.mainboard;");
+            rs = st.executeQuery("select * from Test.user;");
             while (rs.next()) {
-                arr.add(new Model(rs.getString(1), rs.getString(2), rs.getString(3)));
+                arr.add(new Model(rs.getString(1), rs.getString(2), rs.getString(3), rs.getString(4), rs.getString(5), rs.getString(6), rs.getString(7)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -73,13 +70,11 @@ public class Controller {
     }
 
 
-
     // 회원수정
     public void updateMember(String name, String tel) {
         try {
             st = conn.createStatement();
-            int stmt = st.executeUpdate("update Test.mainboard set tel = '" + tel + "' where name = '" + name + "';");
-
+            int stmt = st.executeUpdate("update Test.user set tel = '" + tel + "' where name = '" + name + "';");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -91,15 +86,11 @@ public class Controller {
         }
     }
 
-
-    // 회원 삭제
-
     // 회원삭제
-
     public void deleteMember(String name) {
         try {
             st = conn.createStatement();
-            int stmt = st.executeUpdate("delete from Test.mainboard where name = '" + name + "';");
+            int stmt = st.executeUpdate("delete from Test.user where id = '" + name + "';");
         } catch (SQLException e) {
             e.printStackTrace();
         } finally {
@@ -117,9 +108,9 @@ public class Controller {
         System.out.println(arr);
         try {
             st = conn.createStatement();
-            rs = st.executeQuery("select * from Test.mainboard where name like '%" + content + "%';");
+            rs = st.executeQuery("select * from Test.user where id like '%" + content + "%';");
             while (rs.next()) {
-                arr.add(new Model(rs.getString(1), rs.getString(2), rs.getString(3)));
+                arr.add(new Model(rs.getString(1), rs.getString(2), rs.getString(3),rs.getString(4),rs.getString(5),rs.getString(6),rs.getString(7)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
