@@ -207,10 +207,10 @@ public class randomMatching extends JFrame {
 		btn1_1.setBounds(600, 450, 97, 23);
 		panel1.add(btn1_1);
 		
-		JLabel Label2_1_1 = new JLabel("□ 범위를 선택하세요.");
-		Label2_1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		Label2_1_1.setBounds(170, 360, 400, 40);
-		panel1.add(Label2_1_1);
+		JLabel Label1_1 = new JLabel("□ 범위를 선택하세요.");
+		Label1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		Label1_1.setBounds(170, 360, 400, 40);
+		panel1.add(Label1_1);
 		
 		JLabel Label1_2 = new JLabel("Q1. 생년");
 		Label1_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
@@ -462,10 +462,21 @@ public class randomMatching extends JFrame {
 		
 		
 		
-		JButton btnNewButton = new JButton("랜덤매칭");
-		btnNewButton.setBounds(745, 740, 97, 23);
-		contentPane.add(btnNewButton);
-		btnNewButton.addActionListener(new ActionListener() {
+		JButton ranMatButton = new JButton("랜덤매칭");
+		ranMatButton.setBounds(745, 740, 97, 23);
+		contentPane.add(ranMatButton);
+		
+		JButton skipButton = new JButton("바로매칭");
+		skipButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				matchingResultUI m = new matchingResultUI();
+				m.setVisible(true);
+				setVisible(false);
+			}
+		});
+		skipButton.setBounds(1373, 190, 97, 23);
+		contentPane.add(skipButton);
+		ranMatButton.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e){
