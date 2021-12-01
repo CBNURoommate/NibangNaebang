@@ -226,7 +226,7 @@ public class randomMatching extends JFrame {
 		
 		JLabel Label1_1 = new JLabel("□ 범위를 선택하세요.");
 		Label1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		Label1_1.setBounds(170, 360, 400, 40);
+		Label1_1.setBounds(500, 335, 300, 40);
 		panel1.add(Label1_1);
 		
 		JLabel Label1_2 = new JLabel("Q1. 생년");
@@ -236,12 +236,12 @@ public class randomMatching extends JFrame {
 		
 		JLabel Label1_3 = new JLabel("~");
 		Label1_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		Label1_3.setBounds(285, 210, 40, 40);
+		Label1_3.setBounds(285, 230, 40, 40);
 		panel1.add(Label1_3);
 		
 		JList list1_1 = new JList();
 		list1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
-		list1_1.setBounds(170, 120, 80, 225);
+		list1_1.setBounds(170, 120, 80, 260);
 		panel1.add(list1_1);
 		list1_1.setModel(new AbstractListModel() {
 			String[] values = new String[] {"1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"};
@@ -255,7 +255,7 @@ public class randomMatching extends JFrame {
 		
 		JList list1_2 = new JList();
 		list1_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
-		list1_2.setBounds(370, 120, 80, 225);
+		list1_2.setBounds(370, 120, 80, 260);
 		panel1.add(list1_2);
 		list1_2.setModel(new AbstractListModel() {
 			String[] values = new String[] {"1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"};
@@ -288,7 +288,7 @@ public class randomMatching extends JFrame {
 		
 		JLabel Label2_1 = new JLabel("□ 범위를 선택하세요.");
 		Label2_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		Label2_1.setBounds(170, 360, 400, 40);
+		Label2_1.setBounds(500, 335, 300, 40);
 		panel2.add(Label2_1);
 		
 		JLabel Label2_2 = new JLabel("Q2. 학번");
@@ -298,7 +298,7 @@ public class randomMatching extends JFrame {
 		
 		JLabel Label2_3 = new JLabel("~");
 		Label2_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
-		Label2_3.setBounds(285, 210, 40, 40);
+		Label2_3.setBounds(285, 230, 40, 40);
 		panel2.add(Label2_3);
 		
 		JList list2_1 = new JList();
@@ -312,7 +312,7 @@ public class randomMatching extends JFrame {
 				return values[index];
 			}
 		});
-		list2_1.setBounds(170, 120, 80, 225);
+		list2_1.setBounds(170, 120, 80, 260);
 		panel2.add(list2_1);
 		
 		JList list2_2 = new JList();
@@ -326,7 +326,7 @@ public class randomMatching extends JFrame {
 				return values[index];
 			}
 		});
-		list2_2.setBounds(370, 120, 80, 225);
+		list2_2.setBounds(370, 120, 80, 260);
 		panel2.add(list2_2);
 		
 		panel3.setLayout(null);
