@@ -1,37 +1,90 @@
 package Project;
 
 public class Model {
+    String id;
     String name;
-    String birth;
-    String tel;
+    String gender;
+    String dom;
+    int hakbun;
+    int age;
+    String smoking;
+    
 
-    public Model(String name, String birth, String tel) {
-        this.birth = birth;
+    public Model(String id, String name, int gender ,int dom, int hakbun, int age, int smoking) {
+        this.id = id;
         this.name = name;
-        this.tel = tel;
+
+        
+        switch(gender) {
+            case 1:
+            	this.gender="남자";
+            	break;
+            case 2:
+                this.gender="여자";
+                break;
+        }
+        
+        switch(dom) {
+           case 1:
+        	    this.dom="개성재";
+        	    break;
+           case 2:
+                this.dom="계영원";
+                break;
+           case 3:
+                this.dom="양성재";
+                break;
+           case 4:
+                this.dom="양진재";
+                break;
+           case 5:
+                this.dom="양현재";
+                break;
+        }
+        
+        switch(smoking) {
+        case 1:
+     	    this.smoking="흡연";
+     	    break;
+        case 2:
+            this.smoking="비흡연";
+            break;
+        
+     }
+        
+        this.hakbun=hakbun;
+        this.age=age;
+
+        
+    }
+
+    public String getID() {
+        return id;
     }
 
     public String getName() {
         return name;
     }
-
-    public String getBirth() {
-        return birth;
+    
+    public String getGender() {
+        return gender;
     }
 
-    public String getTel() {
-        return tel;
+    public String getDom() {
+        return dom;
+    }
+    
+    public int getHakbun() {
+        return hakbun;
+    }
+    
+    public int getAge() {
+        return age;
+    }
+    
+    public String getSmoking() {
+        return smoking;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public void setBirth(String birth) {
-        this.birth = birth;
-    }
-
-    public void setTel(String tel) {
-        this.tel = tel;
-    }
+    
 }
