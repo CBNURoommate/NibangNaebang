@@ -170,6 +170,12 @@ public class randomMatching extends JFrame {
 		movePage4.setBounds(500, 20, 200, 60);
 		contentPane.add(movePage4);
 		
+		JPanel pointPanel = new JPanel();
+		pointPanel.setForeground(new Color(0, 102, 102));
+		pointPanel.setBackground(new Color(0, 102, 102));
+		pointPanel.setBounds(715, 87, 175, 10);
+		contentPane.add(pointPanel);
+		
 		JPanel line1 = new JPanel();
 		line1.setBackground(Color.BLACK);
 		line1.setBounds(0, 96, 1600, 1);
@@ -180,13 +186,18 @@ public class randomMatching extends JFrame {
 		contentPane.add(panel0);
 		
 		JButton btn0_1 = new JButton("\uC124\uC815\uC2DC\uC791");
+		btn0_1.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/searchH.png")));
+		btn0_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		btn0_1.setFocusPainted(false);
+		btn0_1.setContentAreaFilled(false);
+		btn0_1.setBorderPainted(false);
 		btn0_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel0.setVisible(false); 
 				panel1.setVisible(true); 
 			}
 		});
-		btn0_1.setBounds(600, 450, 97, 23);
+		btn0_1.setBounds(547, 450, 200, 60);
 		panel0.add(btn0_1);
 		
 		JLabel lblNewLabel = new JLabel("매칭 전, 매칭에 필요한 니방의 조건을 필수적으로 설정해야해요.");
@@ -199,13 +210,18 @@ public class randomMatching extends JFrame {
 		contentPane.add(panel1);
 		
 		JButton btn1_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
+		btn1_1.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/searchH.png")));
+		btn1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		btn1_1.setFocusPainted(false);
+		btn1_1.setContentAreaFilled(false);
+		btn1_1.setBorderPainted(false);
 		btn1_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel1.setVisible(false); 
 				panel2.setVisible(true); 
 			}
 		});
-		btn1_1.setBounds(600, 450, 97, 23);
+		btn1_1.setBounds(547, 450, 200, 60);
 		panel1.add(btn1_1);
 		
 		JLabel Label1_1 = new JLabel("□ 범위를 선택하세요.");
@@ -218,8 +234,14 @@ public class randomMatching extends JFrame {
 		Label1_2.setBounds(10, 10, 195, 60);
 		panel1.add(Label1_2);
 		
+		JLabel Label1_3 = new JLabel("~");
+		Label1_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label1_3.setBounds(285, 210, 40, 40);
+		panel1.add(Label1_3);
+		
 		JList list1_1 = new JList();
-		list1_1.setBounds(249, 125, 87, 148);
+		list1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
+		list1_1.setBounds(170, 120, 80, 225);
 		panel1.add(list1_1);
 		list1_1.setModel(new AbstractListModel() {
 			String[] values = new String[] {"1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"};
@@ -232,7 +254,8 @@ public class randomMatching extends JFrame {
 		});
 		
 		JList list1_2 = new JList();
-		list1_2.setBounds(483, 125, 87, 148);
+		list1_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
+		list1_2.setBounds(370, 120, 80, 225);
 		panel1.add(list1_2);
 		list1_2.setModel(new AbstractListModel() {
 			String[] values = new String[] {"1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"};
@@ -249,13 +272,18 @@ public class randomMatching extends JFrame {
 		contentPane.add(panel2);
 		
 		JButton btn2_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
+		btn2_1.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/searchH.png")));
+		btn2_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		btn2_1.setFocusPainted(false);
+		btn2_1.setContentAreaFilled(false);
+		btn2_1.setBorderPainted(false);
 		btn2_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel2.setVisible(false); 
 				panel3.setVisible(true); 
 			}
 		});
-		btn2_1.setBounds(600, 450, 97, 23);
+		btn2_1.setBounds(547, 450, 200, 60);
 		panel2.add(btn2_1);
 		
 		JLabel Label2_1 = new JLabel("□ 범위를 선택하세요.");
@@ -268,7 +296,13 @@ public class randomMatching extends JFrame {
 		Label2_2.setBounds(10, 10, 195, 60);
 		panel2.add(Label2_2);
 		
+		JLabel Label2_3 = new JLabel("~");
+		Label2_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label2_3.setBounds(285, 210, 40, 40);
+		panel2.add(Label2_3);
+		
 		JList list2_1 = new JList();
+		list2_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
 		list2_1.setModel(new AbstractListModel() {
 			String[] values = new String[] {"14", "15", "16", "17", "18", "19", "20", "21"};
 			public int getSize() {
@@ -278,10 +312,11 @@ public class randomMatching extends JFrame {
 				return values[index];
 			}
 		});
-		list2_1.setBounds(198, 124, 181, 191);
+		list2_1.setBounds(170, 120, 80, 225);
 		panel2.add(list2_1);
 		
 		JList list2_2 = new JList();
+		list2_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
 		list2_2.setModel(new AbstractListModel() {
 			String[] values = new String[] {"14", "15", "16", "17", "18", "19", "20", "21"};
 			public int getSize() {
@@ -291,7 +326,7 @@ public class randomMatching extends JFrame {
 				return values[index];
 			}
 		});
-		list2_2.setBounds(439, 124, 195, 197);
+		list2_2.setBounds(370, 120, 80, 225);
 		panel2.add(list2_2);
 		
 		panel3.setLayout(null);
@@ -299,13 +334,18 @@ public class randomMatching extends JFrame {
 		contentPane.add(panel3);
 		
 		JButton btn3_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
+		btn3_1.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/searchH.png")));
+		btn3_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		btn3_1.setFocusPainted(false);
+		btn3_1.setContentAreaFilled(false);
+		btn3_1.setBorderPainted(false);
 		btn3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel3.setVisible(false); 
 				panel4.setVisible(true); 
 			}
 		});
-		btn3_1.setBounds(600, 450, 97, 23);
+		btn3_1.setBounds(547, 450, 200, 60);
 		panel3.add(btn3_1);
 		
 		JLabel Label3_2 = new JLabel("Q3. 흡연여부");
@@ -339,13 +379,18 @@ public class randomMatching extends JFrame {
 		contentPane.add(panel4);
 		
 		JButton btn4_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
+		btn4_1.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/searchH.png")));
+		btn4_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		btn4_1.setFocusPainted(false);
+		btn4_1.setContentAreaFilled(false);
+		btn4_1.setBorderPainted(false);
 		btn4_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel4.setVisible(false); 
 				panel5.setVisible(true); 
 			}
 		});
-		btn4_1.setBounds(600, 450, 97, 23);
+		btn4_1.setBounds(547, 450, 200, 60);
 		panel4.add(btn4_1);
 		
 		JLabel Label4_2 = new JLabel("Q4. 단과");
@@ -379,13 +424,18 @@ public class randomMatching extends JFrame {
 		contentPane.add(panel5);
 		
 		JButton btn5_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
+		btn5_1.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/searchH.png")));
+		btn5_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		btn5_1.setFocusPainted(false);
+		btn5_1.setContentAreaFilled(false);
+		btn5_1.setBorderPainted(false);
 		btn5_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel5.setVisible(false); 
 				panel6.setVisible(true); 
 			}
 		});
-		btn5_1.setBounds(600, 450, 97, 23);
+		btn5_1.setBounds(547, 450, 200, 60);
 		panel5.add(btn5_1);
 		
 		JLabel Label5_2 = new JLabel("Q5. 소리");
@@ -419,12 +469,17 @@ public class randomMatching extends JFrame {
 		contentPane.add(panel6);
 		
 		JButton btn6_1 = new JButton("\uC124\uBB38\uC644\uB8CC");
+		btn6_1.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/searchH.png")));
+		btn6_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		btn6_1.setFocusPainted(false);
+		btn6_1.setContentAreaFilled(false);
+		btn6_1.setBorderPainted(false);
 		btn6_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				panel6.setVisible(false); 
 			}
 		});
-		btn6_1.setBounds(600, 450, 97, 23);
+		btn6_1.setBounds(547, 450, 200, 60);
 		panel6.add(btn6_1);
 		
 		JLabel Label6_2 = new JLabel("Q6. 향수");
@@ -462,10 +517,15 @@ public class randomMatching extends JFrame {
 		contentPane.add(line2);
 		
 		JButton ranMatButton = new JButton("랜덤매칭");
-		ranMatButton.setBounds(745, 740, 97, 23);
+		ranMatButton.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/searchH.png")));
+		ranMatButton.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		ranMatButton.setFocusPainted(false);
+		ranMatButton.setContentAreaFilled(false);
+		ranMatButton.setBorderPainted(false);
+		ranMatButton.setBounds(692, 740, 200, 60);
 		contentPane.add(ranMatButton);
 		
-		JButton skipButton = new JButton("바로매칭");
+		JButton skipButton = new JButton("");
 		skipButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				matchingResultUI m = new matchingResultUI();
@@ -473,8 +533,12 @@ public class randomMatching extends JFrame {
 				setVisible(false);
 			}
 		});
-		skipButton.setBounds(1373, 190, 97, 23);
+		skipButton.setBounds(1487, 838, 97, 23);
+		skipButton.setFocusPainted(false);
+		skipButton.setContentAreaFilled(false);
+		skipButton.setBorderPainted(false);
 		contentPane.add(skipButton);
+		
 		ranMatButton.addActionListener(new ActionListener() {
 			
 			@Override

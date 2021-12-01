@@ -66,6 +66,12 @@ public class RegisterUI extends JFrame {
 		idLabel_1.setBounds(718, 15, 170, 70);
 		contentPane.add(idLabel_1);
 		
+		JPanel pointPanel = new JPanel();
+		pointPanel.setForeground(new Color(0, 102, 102));
+		pointPanel.setBackground(new Color(0, 102, 102));
+		pointPanel.setBounds(707, 87, 175, 10);
+		contentPane.add(pointPanel);
+		
 		JPanel line1 = new JPanel();
 		line1.setBackground(Color.BLACK);
 		line1.setBounds(0, 96, 1600, 1);

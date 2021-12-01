@@ -1959,7 +1959,9 @@ public class roomCheck extends JFrame {
 		contentPane.add(line2);
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(791, 800, 1, 179);
+		panel.setForeground(new Color(0, 102, 102));
+		panel.setBackground(new Color(0, 102, 102));
+		panel.setBounds(313, 87, 175, 10);
 		contentPane.add(panel);
 
 		btn28_1.addActionListener(new ActionListener() {

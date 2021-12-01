@@ -14,6 +14,7 @@ import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import javax.swing.ImageIcon;
 import javax.swing.JSplitPane;
+import javax.swing.UIManager;
 
 public class uploadMyroomUI extends JFrame {
 
@@ -56,6 +57,12 @@ public class uploadMyroomUI extends JFrame {
 		titleLabel.setBounds(20, 15, 187, 67);
 		titleLabel.setFont(new Font("야놀자 야체 B", Font.BOLD, 50));
 		contentPane.add(titleLabel);
+		
+		JPanel pointPanel = new JPanel();
+		pointPanel.setBackground(new Color(0, 102, 102));
+		pointPanel.setForeground(new Color(0, 102, 102));
+		pointPanel.setBounds(512, 87, 175, 10);
+		contentPane.add(pointPanel);
 
 		JPanel line1 = new JPanel();
 		line1.setBackground(Color.BLACK);
@@ -168,6 +175,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(infoLabel1);
 
 		JLabel myLable_1 = new JLabel();
+		myLable_1.setForeground(new Color(0, 102, 102));
 		myLable_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_1.setBounds(270, 270, 160, 40);
 		if (CurrentUser.getGender() == 1)
@@ -179,6 +187,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_1);
 
 		JLabel myLable_2 = new JLabel();
+		myLable_2.setForeground(new Color(0, 102, 102));
 		myLable_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_2.setBounds(270, 320, 160, 40);
 		if (CurrentUser.getDom() == 1)
@@ -196,18 +205,21 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_2);
 
 		JLabel myLable_3 = new JLabel();
+		myLable_3.setForeground(new Color(0, 102, 102));
 		myLable_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_3.setBounds(270, 370, 160, 40);
 		myLable_3.setText(String.valueOf(CurrentUser.getAge()));
 		contentPane.add(myLable_3);
 
 		JLabel myLable_4 = new JLabel();
+		myLable_4.setForeground(new Color(0, 102, 102));
 		myLable_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_4.setBounds(270, 420, 160, 40);
 		myLable_4.setText(String.valueOf(CurrentUser.getHakbun()));
 		contentPane.add(myLable_4);
 
 		JLabel myLable_5 = new JLabel();
+		myLable_5.setForeground(new Color(0, 102, 102));
 		myLable_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getDepartment() == 1)
 			myLable_5.setText("인문");
@@ -239,6 +251,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_5);
 
 		JLabel myLable_6 = new JLabel();
+		myLable_6.setForeground(new Color(0, 102, 102));
 		myLable_6.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSleep() == 1)
 			myLable_6.setText("10시");
@@ -258,6 +271,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_6);
 
 		JLabel myLable_7 = new JLabel();
+		myLable_7.setForeground(new Color(0, 102, 102));
 		myLable_7.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getWake() == 1)
 			myLable_7.setText("7시");
@@ -277,6 +291,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_7);
 
 		JLabel myLable_8 = new JLabel();
+		myLable_8.setForeground(new Color(0, 102, 102));
 		myLable_8.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getShowertime() == 1)
 			myLable_8.setText("5분");
@@ -296,6 +311,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_8);
 
 		JLabel myLable_9 = new JLabel();
+		myLable_9.setForeground(new Color(0, 102, 102));
 		myLable_9.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getWhenshower() == 1)
 			myLable_9.setText("아침");
@@ -309,6 +325,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_9);
 
 		JLabel myLable_10 = new JLabel();
+		myLable_10.setForeground(new Color(0, 102, 102));
 		myLable_10.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSensitives() == 1)
 			myLable_10.setText("어두움");
@@ -322,6 +339,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_10);
 
 		JLabel myLable_11 = new JLabel();
+		myLable_11.setForeground(new Color(0, 102, 102));
 		myLable_11.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getJamb1() != 0 || CurrentUser.getJamb2() != 0 || CurrentUser.getJamb3() != 0) {
 			temp = "";
@@ -344,6 +362,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_11);
 
 		JLabel myLable_12 = new JLabel();
+		myLable_12.setForeground(new Color(0, 102, 102));
 		myLable_12.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSleeplight() == 1)
 			myLable_12.setText("사용안함");
@@ -359,6 +378,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_12);
 
 		JLabel myLable_13 = new JLabel();
+		myLable_13.setForeground(new Color(0, 102, 102));
 		myLable_13.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getAlarmhear() == 1)
 			myLable_13.setText("못들어요");
@@ -372,6 +392,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_13);
 
 		JLabel myLable_14 = new JLabel();
+		myLable_14.setForeground(new Color(0, 102, 102));
 		myLable_14.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getClean() == 1)
 			myLable_14.setText("자주");
@@ -385,6 +406,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_14);
 
 		JLabel myLable_16 = new JLabel();
+		myLable_16.setForeground(new Color(0, 102, 102));
 		myLable_16.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getHeat() == 1)
 			myLable_16.setText("적게탐");
@@ -398,6 +420,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_16);
 
 		JLabel myLable_17 = new JLabel();
+		myLable_17.setForeground(new Color(0, 102, 102));
 		myLable_17.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getCold() == 1)
 			myLable_17.setText("적게탐");
@@ -411,6 +434,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_17);
 
 		JLabel myLable_18 = new JLabel();
+		myLable_18.setForeground(new Color(0, 102, 102));
 		myLable_18.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSoundgigi() == 1)
 			myLable_18.setText("이어폰");
@@ -424,6 +448,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_18);
 
 		JLabel myLable_19 = new JLabel();
+		myLable_19.setForeground(new Color(0, 102, 102));
 		myLable_19.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSmoking() == 1)
 			myLable_19.setText("흡연");
@@ -435,6 +460,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_19);
 
 		JLabel myLable_20 = new JLabel();
+		myLable_20.setForeground(new Color(0, 102, 102));
 		myLable_20.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSilnaecall() == 1)
 			myLable_20.setText("반대");
@@ -450,6 +476,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_20);
 
 		JLabel myLable_21 = new JLabel();
+		myLable_21.setForeground(new Color(0, 102, 102));
 		myLable_21.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getFriendinvite() == 1)
 			myLable_21.setText("찬성");
@@ -461,6 +488,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_21);
 
 		JLabel myLable_22 = new JLabel();
+		myLable_22.setForeground(new Color(0, 102, 102));
 		myLable_22.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getEatbob() == 1)
 			myLable_22.setText("같이");
@@ -472,6 +500,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_22);
 
 		JLabel myLable_23 = new JLabel();
+		myLable_23.setForeground(new Color(0, 102, 102));
 		myLable_23.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getStudytype() == 1)
 			myLable_23.setText("기숙사");
@@ -485,6 +514,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_23);
 
 		JLabel myLable_24 = new JLabel();
+		myLable_24.setForeground(new Color(0, 102, 102));
 		myLable_24.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getPerfume() == 1)
 			myLable_24.setText("미사용");
@@ -496,6 +526,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_24);
 
 		JLabel myLable_25 = new JLabel();
+		myLable_25.setForeground(new Color(0, 102, 102));
 		myLable_25.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSmellwell() == 1)
 			myLable_25.setText("민감");
@@ -507,6 +538,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_25);
 
 		JLabel myLable_26 = new JLabel();
+		myLable_26.setForeground(new Color(0, 102, 102));
 		myLable_26.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getGame() == 1)
 			myLable_26.setText("안함");
@@ -520,6 +552,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_26);
 
 		JLabel myLable_27 = new JLabel();
+		myLable_27.setForeground(new Color(0, 102, 102));
 		myLable_27.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getYasick() == 1)
 			myLable_27.setText("안먹음");
@@ -533,6 +566,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_27);
 
 		JLabel myLable_28 = new JLabel();
+		myLable_28.setForeground(new Color(0, 102, 102));
 		myLable_28.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSool() == 1)
 			myLable_28.setText("안마심");
@@ -546,6 +580,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_28);
 
 		JLabel myLable_29 = new JLabel();
+		myLable_29.setForeground(new Color(0, 102, 102));
 		myLable_29.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getSilnaeeat() == 1)
 			myLable_29.setText("불가");
@@ -559,6 +594,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_29);
 
 		JLabel myLable_30 = new JLabel();
+		myLable_30.setForeground(new Color(0, 102, 102));
 		myLable_30.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		if (CurrentUser.getInsect() == 1)
 			myLable_30.setText("혐오");
@@ -576,174 +612,203 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_30);
 
 		JLabel myLable_info_1 = new JLabel();
+		myLable_info_1.setForeground(Color.BLACK);
 		myLable_info_1.setText("성별");
 		myLable_info_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_1.setBounds(100, 270, 120, 40);
 		contentPane.add(myLable_info_1);
 
 		JLabel myLable_info_2 = new JLabel();
+		myLable_info_2.setForeground(Color.BLACK);
 		myLable_info_2.setText("기숙사");
 		myLable_info_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_2.setBounds(100, 320, 120, 40);
 		contentPane.add(myLable_info_2);
 
 		JLabel myLable_info_3 = new JLabel();
+		myLable_info_3.setForeground(Color.BLACK);
 		myLable_info_3.setText("학번");
 		myLable_info_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_3.setBounds(100, 370, 120, 40);
 		contentPane.add(myLable_info_3);
 
 		JLabel myLable_info_4 = new JLabel();
+		myLable_info_4.setForeground(Color.BLACK);
 		myLable_info_4.setText("생년");
 		myLable_info_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_4.setBounds(100, 420, 120, 40);
 		contentPane.add(myLable_info_4);
 
 		JLabel myLable_info_5 = new JLabel();
+		myLable_info_5.setForeground(Color.BLACK);
 		myLable_info_5.setText("단과");
 		myLable_info_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_5.setBounds(100, 470, 120, 40);
 		contentPane.add(myLable_info_5);
 
 		JLabel myLable_info_6 = new JLabel();
+		myLable_info_6.setForeground(Color.BLACK);
 		myLable_info_6.setText("취침시간");
 		myLable_info_6.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_6.setBounds(100, 520, 120, 40);
 		contentPane.add(myLable_info_6);
 
 		JLabel myLable_info_7 = new JLabel();
+		myLable_info_7.setForeground(Color.BLACK);
 		myLable_info_7.setText("기상시간");
 		myLable_info_7.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_7.setBounds(100, 570, 120, 40);
 		contentPane.add(myLable_info_7);
 
 		JLabel myLable_info_8 = new JLabel();
+		myLable_info_8.setForeground(Color.BLACK);
 		myLable_info_8.setText("샤워소요시간");
 		myLable_info_8.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_8.setBounds(100, 620, 160, 40);
 		contentPane.add(myLable_info_8);
 
 		JLabel myLable_info_9 = new JLabel();
+		myLable_info_9.setForeground(Color.BLACK);
 		myLable_info_9.setText("샤워시간");
 		myLable_info_9.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_9.setBounds(440, 270, 160, 40);
 		contentPane.add(myLable_info_9);
 
 		JLabel myLable_info_10 = new JLabel();
+		myLable_info_10.setForeground(Color.BLACK);
 		myLable_info_10.setText("잠귀");
 		myLable_info_10.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_10.setBounds(440, 320, 160, 40);
 		contentPane.add(myLable_info_10);
 
 		JLabel myLable_info_11 = new JLabel();
+		myLable_info_11.setForeground(Color.BLACK);
 		myLable_info_11.setText("잠버릇");
 		myLable_info_11.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_11.setBounds(780, 520, 160, 40);
 		contentPane.add(myLable_info_11);
 
 		JLabel myLable_info_12 = new JLabel();
+		myLable_info_12.setForeground(Color.BLACK);
 		myLable_info_12.setText("수면등");
 		myLable_info_12.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_12.setBounds(440, 370, 160, 40);
 		contentPane.add(myLable_info_12);
 
 		JLabel myLable_info_13 = new JLabel();
+		myLable_info_13.setForeground(Color.BLACK);
 		myLable_info_13.setText("알람");
 		myLable_info_13.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_13.setBounds(440, 420, 160, 40);
 		contentPane.add(myLable_info_13);
 
 		JLabel myLable_info_14 = new JLabel();
+		myLable_info_14.setForeground(Color.BLACK);
 		myLable_info_14.setText("청소");
 		myLable_info_14.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_14.setBounds(440, 470, 160, 40);
 		contentPane.add(myLable_info_14);
 
 		JLabel myLable_info_15 = new JLabel();
+		myLable_info_15.setForeground(Color.BLACK);
 		myLable_info_15.setText("더위");
 		myLable_info_15.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_15.setBounds(440, 520, 160, 40);
 		contentPane.add(myLable_info_15);
 
 		JLabel myLable_info_16 = new JLabel();
+		myLable_info_16.setForeground(Color.BLACK);
 		myLable_info_16.setText("추위");
 		myLable_info_16.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_16.setBounds(440, 570, 160, 40);
 		contentPane.add(myLable_info_16);
 
 		JLabel myLable_info_17 = new JLabel();
+		myLable_info_17.setForeground(Color.BLACK);
 		myLable_info_17.setText("소리");
 		myLable_info_17.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_17.setBounds(440, 620, 160, 40);
 		contentPane.add(myLable_info_17);
 
 		JLabel myLable_info_18 = new JLabel();
+		myLable_info_18.setForeground(Color.BLACK);
 		myLable_info_18.setText("흡연여부");
 		myLable_info_18.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_18.setBounds(780, 270, 160, 40);
 		contentPane.add(myLable_info_18);
 
 		JLabel myLable_info_19 = new JLabel();
+		myLable_info_19.setForeground(Color.BLACK);
 		myLable_info_19.setText("실내통화");
 		myLable_info_19.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_19.setBounds(780, 570, 160, 40);
 		contentPane.add(myLable_info_19);
 
 		JLabel myLable_info_20 = new JLabel();
+		myLable_info_20.setForeground(Color.BLACK);
 		myLable_info_20.setText("친구초대");
 		myLable_info_20.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_20.setBounds(780, 320, 160, 40);
 		contentPane.add(myLable_info_20);
 
 		JLabel myLable_info_21 = new JLabel();
+		myLable_info_21.setForeground(Color.BLACK);
 		myLable_info_21.setText("기숙사식");
 		myLable_info_21.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_21.setBounds(780, 370, 160, 40);
 		contentPane.add(myLable_info_21);
 
 		JLabel myLable_info_22 = new JLabel();
+		myLable_info_22.setForeground(Color.BLACK);
 		myLable_info_22.setText("공부");
 		myLable_info_22.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_22.setBounds(780, 420, 160, 40);
 		contentPane.add(myLable_info_22);
 
 		JLabel myLable_info_23 = new JLabel();
+		myLable_info_23.setForeground(Color.BLACK);
 		myLable_info_23.setText("향수");
 		myLable_info_23.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_23.setBounds(780, 470, 160, 40);
 		contentPane.add(myLable_info_23);
 
 		JLabel myLable_info_24 = new JLabel();
+		myLable_info_24.setForeground(Color.BLACK);
 		myLable_info_24.setText("향 민감도");
 		myLable_info_24.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_24.setBounds(1120, 420, 160, 40);
 		contentPane.add(myLable_info_24);
 
 		JLabel myLable_info_25 = new JLabel();
+		myLable_info_25.setForeground(Color.BLACK);
 		myLable_info_25.setText("컴퓨터 게임");
 		myLable_info_25.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_25.setBounds(1120, 270, 160, 40);
 		contentPane.add(myLable_info_25);
 
 		JLabel myLable_info_26 = new JLabel();
+		myLable_info_26.setForeground(Color.BLACK);
 		myLable_info_26.setText("야식");
 		myLable_info_26.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_26.setBounds(1120, 320, 160, 40);
 		contentPane.add(myLable_info_26);
 
 		JLabel myLable_info_27 = new JLabel();
+		myLable_info_27.setForeground(Color.BLACK);
 		myLable_info_27.setText("술");
 		myLable_info_27.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_27.setBounds(1120, 370, 160, 40);
 		contentPane.add(myLable_info_27);
 
 		JLabel myLable_info_28 = new JLabel();
+		myLable_info_28.setForeground(Color.BLACK);
 		myLable_info_28.setText("실내취식");
 		myLable_info_28.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_28.setBounds(780, 620, 160, 40);
 		contentPane.add(myLable_info_28);
 
 		JLabel myLable_info_29 = new JLabel();
+		myLable_info_29.setForeground(Color.BLACK);
 		myLable_info_29.setText("벌레");
 		myLable_info_29.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_29.setBounds(1120, 470, 160, 40);
