@@ -24,7 +24,7 @@ public class Controller {
     }
 
 
-    // 회원 추가
+    /*// 회원 추가
     public void insertMember(Model model) {
         try {
         
@@ -43,9 +43,9 @@ public class Controller {
                 st.close();
             } catch (SQLException e) {
                 e.printStackTrace();
-            }*/
+            }
         }
-    }
+    }  */
 
     // 회원 목록 출력
     public ArrayList<Model> readMember() {
@@ -55,7 +55,7 @@ public class Controller {
             st = conn.createStatement();
             rs = st.executeQuery("select * from Test.user;");
             while (rs.next()) {
-                arr.add(new Model(rs.getString(1), rs.getString(2), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7)));
+                arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -110,7 +110,7 @@ public class Controller {
             st = conn.createStatement();
             rs = st.executeQuery("select * from Test.user where id like '%" + content + "%';");
             while (rs.next()) {
-                arr.add(new Model(rs.getString(1), rs.getString(2), rs.getString(3),rs.getInt(4),rs.getInt(5),rs.getInt(6),rs.getInt(7)));
+            	arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
