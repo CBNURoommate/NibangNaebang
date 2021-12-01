@@ -8,9 +8,11 @@ public class Model {
     int hakbun;
     int age;
     String smoking;
+    String jam;
+    String dpt;
     
 
-    public Model(String id, String name, int gender ,int dom, int hakbun, int age, int smoking) {
+    public Model(String id, String name, int gender ,int dom, int hakbun, int age, int smoking,int jam, int dpt) {
         this.id = id;
         this.name = name;
 
@@ -50,10 +52,58 @@ public class Model {
             this.smoking="비흡연";
             break;
         
-     }
+        }
         
         this.hakbun=hakbun;
         this.age=age;
+        
+        switch(jam) {
+        case 0:
+     	    this.jam="x";
+     	    break;
+        case 1:
+            this.jam="o";
+            break;      
+        }
+        
+        switch(dpt) {
+        case 1:
+     	    this.dpt="인문대";
+     	    break;
+        case 2:
+            this.dpt="사과대";
+            break;  
+        case 3:
+     	    this.dpt="자과대";
+     	    break;
+        case 4:
+     	    this.dpt="경영대";
+     	    break;
+        case 5:
+     	    this.dpt="공과대";
+     	    break;
+        case 6:
+     	    this.dpt="전정대";
+     	    break;
+        case 7:
+     	    this.dpt="농생대";
+     	    break;
+        case 8:
+     	    this.dpt="사범대";
+     	    break;
+        case 9:
+     	    this.dpt="생과대";
+     	    break;
+        case 10:
+     	    this.dpt="수의대";
+     	    break;
+        case 11:
+     	    this.dpt="의과대";
+     	    break;
+        case 12:
+     	    this.dpt="자율대";
+     	    break; 
+        }
 
         
     }
@@ -84,6 +134,14 @@ public class Model {
     
     public String getSmoking() {
         return smoking;
+    }
+    
+    public String getJam() {
+        return jam;
+    }
+
+    public String getDpt() {
+        return dpt;
     }
 
     
