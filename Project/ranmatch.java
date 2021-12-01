@@ -52,7 +52,11 @@ public class ranmatch {
 				m.setInsect(rs.getInt("insect"));
 				arr.add(m);
 			}
-			
+			if(arr.size()==0)
+			{
+				System.out.println("데이터 0개");
+				return null;
+			}
 			Member rmem=arr.get((int)(Math.random()*arr.size()));
 			return rmem;
 		} catch (SQLException e) {

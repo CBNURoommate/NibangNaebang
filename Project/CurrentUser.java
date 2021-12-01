@@ -36,14 +36,7 @@ public class CurrentUser{
 	private static int sool;
 	private static int silnaeeat;
 	private static int insect;
-	private static int roomagehigh;
-	private static int roomagelow;
-	private static int roomhakbunhigh;
-	private static int roomhakbunlow;
-	private static int roomsmoking;
-	private static int roomdepartment;
-	private static int roomsoundgigi;
-	private static int roomperfume;
+	
 
 
 	public static String getId() {
@@ -318,70 +311,7 @@ public class CurrentUser{
 		CurrentUser.insect = insect;
 	}
 	
-	public static int getRoomagehigh() {
-		return roomagehigh;
-	}
-
-	public static void setRoomagehigh(int roomagehigh) {
-		CurrentUser.roomagehigh = roomagehigh;
-	}
 	
-	public static int getRoomagelow() {
-		return roomagelow;
-	}
-
-	public static void setRoomagelow(int roomagelow) {
-		CurrentUser.roomagelow = roomagelow;
-	}
-	
-	public static int getRoomhakbunhigh() {
-		return roomhakbunhigh;
-	}
-
-	public static void setRoomhakbunhigh(int roomhakbunhigh) {
-		CurrentUser.roomhakbunhigh = roomhakbunhigh;
-	}
-
-	public static int getRoomhakbunlow() {
-		return roomhakbunlow;
-	}
-	
-	public static void setRoomhakbunlow(int roomhakbunlow) {
-		CurrentUser.roomhakbunlow = roomhakbunlow;
-	}
-
-	public static int getRoomsmoking() {
-		return roomsmoking;
-	}
-	
-	public static void setRoomsmoking(int roomsmoking) {
-		CurrentUser.roomsmoking = roomsmoking;
-	}
-
-	public static int getRoomdepartment() {
-		return roomdepartment;
-	}
-	
-	public static void setRoomdepartment(int roomdepartment) {
-		CurrentUser.roomdepartment = roomdepartment;
-	}
-
-	public static int getRoomsoundgigi() {
-		return roomsoundgigi;
-	}
-	
-	public static void setRoomsoundgigi(int roomsoundgigi) {
-		CurrentUser.roomsoundgigi = roomsoundgigi;
-	}
-	
-	public static int getRoomperfume() {
-		return roomperfume;
-	}
-	
-	public static void setRoomperfume(int roomperfume) {
-		CurrentUser.roomperfume = roomperfume;
-	}
-
 	
 	
 }
