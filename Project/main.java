@@ -20,6 +20,9 @@ import javax.swing.JSplitPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
+import javax.swing.JTable;
+import javax.swing.JScrollBar;
+import javax.swing.SwingConstants;
 
 public class main extends JFrame {
 
@@ -54,12 +57,6 @@ public class main extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JTextPane textPane = new JTextPane();
-		textPane.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		textPane.setText("\uB2C8\uBC29\uB0B4\uBC29\uC758 \uAE30\uBCF8\uC124\uBA85\r\n\r\n\uB0B4\uBC29 \uC810\uAC80\uD558\uAE30\uC5D0\uC120 \uC790\uC2E0\uC758 \uC815\uBCF4\uB97C \uC785\uB825\uD560 \uC218 \uC788\uC5B4\uC694.\r\n\uB0B4\uBC29 \uC18C\uAC1C\uD558\uAE30\uC5D0\uC120 \uC790\uC2E0\uC758 \uC815\uBCF4\uB97C \uD64D\uBCF4\uD560 \uC218 \uC788\uC5B4\uC694.\r\n\uB2C8\uBC29 \uB79C\uB364\uB9E4\uCE6D\uC5D0\uC120 \uC0C1\uB300\uC758 \uC815\uBCF4\uB97C \uAE30\uBC18\uC73C\uB85C \uB9E4\uCE6D\uC744 \uD560 \uC218 \uC788\uC5B4\uC694.\r\n\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30\uC5D0\uC120 \uB2E4\uB978 \uC0AC\uB78C\uB4E4\uC774 \uC62C\uB9B0 \uB0B4\uBC29\uC744 \uBCFC \uC218 \uC788\uC5B4\uC694.");
-		textPane.setBounds(85, 155, 846, 393);
-		contentPane.add(textPane);
-		
 		JLabel nameLabel = new JLabel();
 		nameLabel.setIcon(new ImageIcon(main.class.getResource("/Project/personn.png")));
 		nameLabel.setText(CurrentUser.getName());
@@ -73,10 +70,10 @@ public class main extends JFrame {
 		titleLabel.setBounds(20, 15, 187, 67);
 		contentPane.add(titleLabel);
 		
-		JPanel line2 = new JPanel();
-		line2.setBackground(Color.BLACK);
-		line2.setBounds(0, 96, 1600, 1);
-		contentPane.add(line2);
+		JPanel line = new JPanel();
+		line.setBackground(Color.BLACK);
+		line.setBounds(0, 96, 1600, 1);
+		contentPane.add(line);
 		
 		JButton movePage1 = new JButton("내방 점검하기");
 		movePage1.addActionListener(new ActionListener() {
@@ -142,5 +139,73 @@ public class main extends JFrame {
 		moveMail.setBorderPainted(false);
 		moveMail.setBounds(1490, 20, 75, 60);
 		contentPane.add(moveMail);
+		
+		JPanel pointPanel1 = new JPanel();
+		pointPanel1.setForeground(new Color(0, 102, 102));
+		pointPanel1.setBackground(new Color(0, 102, 102));
+		pointPanel1.setBounds(220, 300, 250, 10);
+		contentPane.add(pointPanel1);
+		
+		JPanel pointPanel2 = new JPanel();
+		pointPanel2.setForeground(new Color(0, 102, 102));
+		pointPanel2.setBackground(new Color(0, 102, 102));
+		pointPanel2.setBounds(520, 300, 250, 10);
+		contentPane.add(pointPanel2);
+		
+		JPanel pointPanel3 = new JPanel();
+		pointPanel3.setForeground(new Color(0, 102, 102));
+		pointPanel3.setBackground(new Color(0, 102, 102));
+		pointPanel3.setBounds(820, 300, 250, 10);
+		contentPane.add(pointPanel3);
+		
+		JPanel pointPanel4 = new JPanel();
+		pointPanel4.setForeground(new Color(0, 102, 102));
+		pointPanel4.setBackground(new Color(0, 102, 102));
+		pointPanel4.setBounds(1120, 300, 250, 10);
+		contentPane.add(pointPanel4);
+		
+		JLabel infoLabel1 = new JLabel("내방 점검하기");
+		infoLabel1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 45));
+		infoLabel1.setBounds(220, 320, 250, 50);
+		contentPane.add(infoLabel1);
+		
+		JLabel infoLabel2 = new JLabel("내방 소개하기");
+		infoLabel2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 45));
+		infoLabel2.setBounds(520, 320, 250, 50);
+		contentPane.add(infoLabel2);
+		
+		JLabel infoLabel3 = new JLabel("니방 랜덤매칭");
+		infoLabel3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 45));
+		infoLabel3.setBounds(820, 320, 250, 50);
+		contentPane.add(infoLabel3);
+		
+		JLabel infoLabel4 = new JLabel("니방 찾아보기");
+		infoLabel4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 45));
+		infoLabel4.setBounds(1120, 320, 250, 50);
+		contentPane.add(infoLabel4);
+		
+		JTextPane textPane1 = new JTextPane();
+		textPane1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		textPane1.setText("룸메이트에게 소개할\r\n자신의 생활 정보를\r\n설정할 수 있어요.");
+		textPane1.setBounds(220, 400, 250, 150);
+		contentPane.add(textPane1);
+		
+		JTextPane textPane2 = new JTextPane();
+		textPane2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		textPane2.setText("점검한 자신의 방을\r\n모든 룸메이트에게\r\n홍보할 수 있어요.");
+		textPane2.setBounds(520, 400, 250, 150);
+		contentPane.add(textPane2);
+		
+		JTextPane textPane3 = new JTextPane();
+		textPane3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		textPane3.setText("원하는 룸메이트의 \r\n조건을 설정하여\r\n무작위로 매칭할 수 \r\n있어요.");
+		textPane3.setBounds(820, 400, 250, 228);
+		contentPane.add(textPane3);
+		
+		JTextPane textPane4 = new JTextPane();
+		textPane4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		textPane4.setText("모든 룸메이트들이\r\n소개한 방의 조건을\r\n확인할 수 있어요.");
+		textPane4.setBounds(1120, 400, 250, 150);
+		contentPane.add(textPane4);
 	}
 }
