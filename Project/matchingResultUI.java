@@ -156,6 +156,15 @@ public class matchingResultUI extends JFrame {
 		reMatching.setContentAreaFilled(false);
 		reMatching.setBorderPainted(false);
 		contentPane.add(reMatching);
+		
+		JButton goMatching = new JButton("연락하기");
+		goMatching.setEnabled(false);
+		goMatching.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		goMatching.setFocusPainted(false);
+		goMatching.setContentAreaFilled(false);
+		goMatching.setBorderPainted(false);
+		goMatching.setBounds(960, 750, 250, 60);
+		contentPane.add(goMatching);
 
 		JPanel line1 = new JPanel();
 		line1.setBackground(Color.BLACK);
