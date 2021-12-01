@@ -159,7 +159,7 @@ public class uploadMyroomUI extends JFrame {
 		
 		JLabel myLable_1 = new JLabel();
 		myLable_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_1.setBounds(250, 259, 120, 40);
+		myLable_1.setBounds(250, 259, 160, 40);
 		if(CurrentUser.getGender() == 1)
 			 myLable_1.setText("남자");
 		else if(CurrentUser.getGender() == 2)
@@ -170,7 +170,7 @@ public class uploadMyroomUI extends JFrame {
 		
 		JLabel myLable_2 = new JLabel();
 		myLable_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_2.setBounds(250, 309, 120, 40);
+		myLable_2.setBounds(250, 309, 160, 40);
 		if(CurrentUser.getDom() == 1)
 			 myLable_2.setText("개성재");
 		else if(CurrentUser.getDom() == 2)
@@ -187,13 +187,13 @@ public class uploadMyroomUI extends JFrame {
 		
 		JLabel myLable_3 = new JLabel();
 		myLable_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_3.setBounds(250, 359, 120, 40);
+		myLable_3.setBounds(250, 359, 160, 40);
 		myLable_3.setText(String.valueOf(CurrentUser.getAge()));
 		contentPane.add(myLable_3);
 		
 		JLabel myLable_4 = new JLabel();
 		myLable_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_4.setBounds(250, 409, 120, 40);
+		myLable_4.setBounds(250, 409, 160, 40);
 		myLable_4.setText(String.valueOf(CurrentUser.getHakbun()));
 		contentPane.add(myLable_4);
 		
@@ -225,7 +225,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_5.setText("자율");
 		else
 			myLable_5.setText("정보 없음");
-		myLable_5.setBounds(250, 459, 120, 40);
+		myLable_5.setBounds(250, 459, 160, 40);
 		contentPane.add(myLable_5);
 		
 		JLabel myLable_6 = new JLabel();
@@ -244,7 +244,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_6.setText("3시 이후");
 		else
 			myLable_6.setText("정보 없음");
-		myLable_6.setBounds(250, 509, 120, 40);
+		myLable_6.setBounds(250, 509, 160, 40);
 		contentPane.add(myLable_6);
 		
 		JLabel myLable_7 = new JLabel();
@@ -263,7 +263,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_7.setText("오후");
 		else
 			myLable_7.setText("정보 없음");
-		myLable_7.setBounds(250, 559, 120, 40);
+		myLable_7.setBounds(250, 559, 160, 40);
 		contentPane.add(myLable_7);
 		
 		JLabel myLable_8 = new JLabel();
@@ -282,7 +282,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_8.setText("30분");
 		else
 			myLable_8.setText("정보 없음");
-		myLable_8.setBounds(250, 609, 120, 40);
+		myLable_8.setBounds(250, 609, 160, 40);
 		contentPane.add(myLable_8);
 		
 		JLabel myLable_9 = new JLabel();
@@ -434,7 +434,7 @@ public class uploadMyroomUI extends JFrame {
 			myLable_20.setText("간단한 용무만");
 		else
 			myLable_20.setText("정보 없음");
-		myLable_20.setBounds(1010, 360, 120, 40);
+		myLable_20.setBounds(1010, 359, 120, 40);
 		contentPane.add(myLable_20);
 		
 		JLabel myLable_21 = new JLabel();
@@ -445,7 +445,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_21.setText("반대");
 		else
 			myLable_21.setText("정보 없음");
-		myLable_21.setBounds(1020, 410, 120, 40);
+		myLable_21.setBounds(1020, 409, 120, 40);
 		contentPane.add(myLable_21);
 		
 		JLabel myLable_22 = new JLabel();
@@ -456,7 +456,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_22.setText("따로");
 		else
 			myLable_22.setText("정보 없음");
-		myLable_22.setBounds(1000, 460, 120, 40);
+		myLable_22.setBounds(1000, 459, 120, 40);
 		contentPane.add(myLable_22);
 		
 		JLabel myLable_23 = new JLabel();
@@ -469,7 +469,7 @@ public class uploadMyroomUI extends JFrame {
 			myLable_23.setText("유동적");
 		else
 			myLable_23.setText("정보 없음");
-		myLable_23.setBounds(1000, 503, 120, 40);
+		myLable_23.setBounds(1000, 509, 120, 40);
 		contentPane.add(myLable_23);
 		
 		JLabel myLable_24 = new JLabel();
@@ -480,7 +480,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_24.setText("사용");
 		else
 			myLable_24.setText("정보 없음");
-		myLable_24.setBounds(1000, 548, 120, 40);
+		myLable_24.setBounds(1000, 559, 120, 40);
 		contentPane.add(myLable_24);
 		
 		JLabel myLable_25 = new JLabel();
@@ -491,7 +491,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_25.setText("상관없음");
 		else
 			myLable_25.setText("정보 없음");
-		myLable_25.setBounds(1010, 590, 120, 40);
+		myLable_25.setBounds(1010, 609, 120, 40);
 		contentPane.add(myLable_25);
 		
 		JLabel myLable_26 = new JLabel();
@@ -517,7 +517,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_27.setText("자주먹음");
 		else
 			myLable_27.setText("정보 없음");
-		myLable_27.setBounds(1315, 307, 120, 40);
+		myLable_27.setBounds(1315, 309, 120, 40);
 		contentPane.add(myLable_27);
 		
 		JLabel myLable_28 = new JLabel();
@@ -530,7 +530,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_28.setText("자주마심");
 		else
 			myLable_28.setText("정보 없음");
-		myLable_28.setBounds(1315, 352, 120, 40);
+		myLable_28.setBounds(1315, 359, 120, 40);
 		contentPane.add(myLable_28);
 		
 		JLabel myLable_29 = new JLabel();
@@ -543,7 +543,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_29.setText("가능");
 		else
 			myLable_29.setText("정보 없음");
-		myLable_29.setBounds(1304, 402, 120, 40);
+		myLable_29.setBounds(1304, 409, 120, 40);
 		contentPane.add(myLable_29);
 		
 		JLabel myLable_30 = new JLabel();
@@ -560,7 +560,7 @@ public class uploadMyroomUI extends JFrame {
 			 myLable_30.setText("귀여움");
 		else
 			myLable_30.setText("정보 없음");
-		myLable_30.setBounds(1304, 460, 120, 40);
+		myLable_30.setBounds(1304, 459, 120, 40);
 		contentPane.add(myLable_30);
 		
 		JLabel myLable_info_1 = new JLabel();
@@ -576,13 +576,13 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(myLable_info_2);
 		
 		JLabel myLable_info_3 = new JLabel();
-		myLable_info_3.setText("생년");
+		myLable_info_3.setText("학번");
 		myLable_info_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_3.setBounds(80, 359, 120, 40);
 		contentPane.add(myLable_info_3);
 		
 		JLabel myLable_info_4 = new JLabel();
-		myLable_info_4.setText("학번");
+		myLable_info_4.setText("생년");
 		myLable_info_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_4.setBounds(80, 409, 120, 40);
 		contentPane.add(myLable_info_4);
@@ -614,49 +614,49 @@ public class uploadMyroomUI extends JFrame {
 		JLabel myLable_info_9 = new JLabel();
 		myLable_info_9.setText("샤워시간");
 		myLable_info_9.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_9.setBounds(483, 259, 160, 40);
+		myLable_info_9.setBounds(420, 259, 160, 40);
 		contentPane.add(myLable_info_9);
 		
 		JLabel myLable_info_10 = new JLabel();
 		myLable_info_10.setText("잠귀");
 		myLable_info_10.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_10.setBounds(483, 309, 160, 40);
+		myLable_info_10.setBounds(420, 309, 160, 40);
 		contentPane.add(myLable_info_10);
 		
 		JLabel myLable_info_11 = new JLabel();
 		myLable_info_11.setText("잠버릇");
 		myLable_info_11.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_11.setBounds(483, 359, 160, 40);
+		myLable_info_11.setBounds(420, 359, 160, 40);
 		contentPane.add(myLable_info_11);
 		
 		JLabel myLable_info_12 = new JLabel();
 		myLable_info_12.setText("수면등");
 		myLable_info_12.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_12.setBounds(483, 409, 160, 40);
+		myLable_info_12.setBounds(420, 409, 160, 40);
 		contentPane.add(myLable_info_12);
 		
 		JLabel myLable_info_13 = new JLabel();
 		myLable_info_13.setText("알람");
 		myLable_info_13.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_13.setBounds(483, 459, 160, 40);
+		myLable_info_13.setBounds(420, 459, 160, 40);
 		contentPane.add(myLable_info_13);
 		
 		JLabel myLable_info_14 = new JLabel();
 		myLable_info_14.setText("청소");
 		myLable_info_14.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_14.setBounds(483, 509, 160, 40);
+		myLable_info_14.setBounds(420, 509, 160, 40);
 		contentPane.add(myLable_info_14);
 		
 		JLabel myLable_info_15 = new JLabel();
 		myLable_info_15.setText("더위");
 		myLable_info_15.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_15.setBounds(483, 559, 160, 40);
+		myLable_info_15.setBounds(420, 559, 160, 40);
 		contentPane.add(myLable_info_15);
 		
 		JLabel myLable_info_16 = new JLabel();
 		myLable_info_16.setText("추위");
 		myLable_info_16.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_16.setBounds(483, 609, 160, 40);
+		myLable_info_16.setBounds(420, 609, 160, 40);
 		contentPane.add(myLable_info_16);
 		
 		JLabel myLable_info_17 = new JLabel();
@@ -722,19 +722,19 @@ public class uploadMyroomUI extends JFrame {
 		JLabel myLable_info_27 = new JLabel();
 		myLable_info_27.setText("술");
 		myLable_info_27.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_27.setBounds(1132, 357, 160, 40);
+		myLable_info_27.setBounds(1132, 359, 160, 40);
 		contentPane.add(myLable_info_27);
 		
 		JLabel myLable_info_28 = new JLabel();
 		myLable_info_28.setText("실내취식");
 		myLable_info_28.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_28.setBounds(1132, 402, 160, 40);
+		myLable_info_28.setBounds(1132, 409, 160, 40);
 		contentPane.add(myLable_info_28);
 		
 		JLabel myLable_info_29 = new JLabel();
 		myLable_info_29.setText("벌레");
 		myLable_info_29.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		myLable_info_29.setBounds(1132, 452, 160, 40);
+		myLable_info_29.setBounds(1132, 459, 160, 40);
 		contentPane.add(myLable_info_29);
 		
 	}
