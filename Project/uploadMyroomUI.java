@@ -304,7 +304,7 @@ public class uploadMyroomUI extends JFrame {
 		else if (CurrentUser.getShowertime() == 5)
 			myLable_8.setText("25분");
 		else if (CurrentUser.getShowertime() == 6)
-			myLable_8.setText("30분");
+			myLable_8.setText("30분 이상");
 		else
 			myLable_8.setText("정보 없음");
 		myLable_8.setBounds(270, 620, 160, 40);
