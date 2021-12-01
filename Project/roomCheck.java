@@ -2022,7 +2022,6 @@ public class roomCheck extends JFrame {
 
 				m.setVisible(true);
 				setVisible(false);
-
 			}
 		});
 	}
