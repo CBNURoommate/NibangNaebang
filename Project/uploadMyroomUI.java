@@ -736,5 +736,6 @@ public class uploadMyroomUI extends JFrame {
 		myLable_info_29.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_info_29.setBounds(1132, 452, 160, 40);
 		contentPane.add(myLable_info_29);
+		
 	}
 }
