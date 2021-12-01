@@ -62,7 +62,7 @@ public class matchingResultUI extends JFrame {
 
 		JLabel nameLabel = new JLabel();
 		nameLabel.setIcon(new ImageIcon(matchingResultUI.class.getResource("/Project/personn.png")));
-		nameLabel.setText((String) null);
+		nameLabel.setText(CurrentUser.getName());
 		nameLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
 		nameLabel.setBounds(1220, 20, 250, 60);
 		contentPane.add(nameLabel);
