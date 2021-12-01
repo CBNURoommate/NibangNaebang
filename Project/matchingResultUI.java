@@ -29,7 +29,6 @@ public class matchingResultUI extends JFrame {
 		EventQueue.invokeLater(new Runnable() {
 			public void run() {
 				try {
-					
 					matchingResultUI frame = new matchingResultUI();
 					frame.setVisible(true);
 				} catch (Exception e) {
@@ -38,12 +37,12 @@ public class matchingResultUI extends JFrame {
 			}
 		});
 	}
-
 	
 	/**
 	 * Create the frame.
 	 */
 	public matchingResultUI() {
+		setTitle("니방내방 - 니방 랜덤매칭");
 		String temp = "";
 		
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -99,6 +98,13 @@ public class matchingResultUI extends JFrame {
 		contentPane.add(movePage3);
 
 		JButton movePage1 = new JButton("내방 점검하기");
+		movePage1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				roomCheck r = new roomCheck();
+				r.setVisible(true);
+				setVisible(false);
+			}
+		});
 		movePage1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		movePage1.setFocusPainted(false);
 		movePage1.setContentAreaFilled(false);
@@ -108,6 +114,13 @@ public class matchingResultUI extends JFrame {
 		contentPane.add(movePage1);
 
 		JButton movePage4 = new JButton("내방 소개하기");
+		movePage4.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				uploadMyroomUI u = new uploadMyroomUI();
+				u.setVisible(true);
+				setVisible(false);
+			}
+		});
 		movePage4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		movePage4.setFocusPainted(false);
 		movePage4.setContentAreaFilled(false);

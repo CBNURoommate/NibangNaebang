@@ -127,35 +127,66 @@ public class roomCheck extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
-		JPanel panel = new JPanel();
+		JPanel panel0 = new JPanel();
+		panel0.setBackground(Color.WHITE);
+		JPanel panel1 = new JPanel();
+		panel1.setBackground(Color.WHITE);
 		JPanel panel2 = new JPanel();
+		panel2.setBackground(Color.WHITE);
 		JPanel panel3 = new JPanel();
+		panel3.setBackground(Color.WHITE);
 		JPanel panel4 = new JPanel();
+		panel4.setBackground(Color.WHITE);
 		JPanel panel5 = new JPanel();
+		panel5.setBackground(Color.WHITE);
 		JPanel panel6 = new JPanel();
+		panel6.setBackground(Color.WHITE);
 		JPanel panel7 = new JPanel();
+		panel7.setBackground(Color.WHITE);
 		JPanel panel8 = new JPanel();
+		panel8.setBackground(Color.WHITE);
 		JPanel panel9 = new JPanel();
+		panel9.setBackground(Color.WHITE);
 		JPanel panel10 = new JPanel();
+		panel10.setBackground(Color.WHITE);
 		JPanel panel11 = new JPanel();
+		panel11.setBackground(Color.WHITE);
 		JPanel panel12 = new JPanel();
+		panel12.setBackground(Color.WHITE);
 		JPanel panel13 = new JPanel();
+		panel13.setBackground(Color.WHITE);
 		JPanel panel14 = new JPanel();
+		panel14.setBackground(Color.WHITE);
 		JPanel panel15 = new JPanel();
+		panel15.setBackground(Color.WHITE);
 		JPanel panel16 = new JPanel();
+		panel16.setBackground(Color.WHITE);
 		JPanel panel17 = new JPanel();
+		panel17.setBackground(Color.WHITE);
 		JPanel panel18 = new JPanel();
+		panel18.setBackground(Color.WHITE);
 		JPanel panel19 = new JPanel();
+		panel19.setBackground(Color.WHITE);
 		JPanel panel20 = new JPanel();
+		panel20.setBackground(Color.WHITE);
 		JPanel panel21 = new JPanel();
+		panel21.setBackground(Color.WHITE);
 		JPanel panel22 = new JPanel();
+		panel22.setBackground(Color.WHITE);
 		JPanel panel23 = new JPanel();
+		panel23.setBackground(Color.WHITE);
 		JPanel panel24 = new JPanel();
+		panel24.setBackground(Color.WHITE);
 		JPanel panel25 = new JPanel();
+		panel25.setBackground(Color.WHITE);
 		JPanel panel26 = new JPanel();
+		panel26.setBackground(Color.WHITE);
 		JPanel panel27 = new JPanel();
+		panel27.setBackground(Color.WHITE);
 		JPanel panel28 = new JPanel();
+		panel28.setBackground(Color.WHITE);
 
+		panel1.setVisible(false);
 		panel2.setVisible(false); 
 		panel3.setVisible(false); 
 		panel4.setVisible(false); 
@@ -255,42 +286,61 @@ public class roomCheck extends JFrame {
 		moveMail.setBounds(1490, 20, 75, 60);
 		contentPane.add(moveMail);
 		
-		JPanel line2 = new JPanel();
-		line2.setBackground(Color.BLACK);
-		line2.setBounds(0, 96, 1600, 1);
-		contentPane.add(line2);
+		JPanel line1 = new JPanel();
+		line1.setBackground(Color.BLACK);
+		line1.setBounds(0, 96, 1600, 1);
+		contentPane.add(line1);
 		
-		panel.setBounds(572, 104, 1000, 600);
-		contentPane.add(panel);
-		panel.setLayout(null);
+		panel0.setLayout(null);
+		panel0.setBackground(Color.WHITE);
+		panel0.setBounds(145, 290, 1000, 500);
+		contentPane.add(panel0);
+		
+		JButton btn0_1 = new JButton("점검시작");
+		btn0_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				panel0.setVisible(false); 
+				panel1.setVisible(true); 
+			}
+		});
+		btn0_1.setBounds(600, 450, 97, 23);
+		panel0.add(btn0_1);
+		
+		JLabel Label0_1 = new JLabel("룸메이트들에게 소개할 내방 상태를 점검해볼까요?");
+		Label0_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label0_1.setBounds(10, 10, 900, 60);
+		panel0.add(Label0_1);
+		
+		panel1.setBounds(145, 290, 1000, 500);
+		contentPane.add(panel1);
+		panel1.setLayout(null);
 		
 		JButton btn1_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn1_1.setBounds(386, 221, 97, 23);
-		panel.add(btn1_1);
+		btn1_1.setBounds(600, 450, 97, 23);
+		panel1.add(btn1_1);
 		
-		JLabel Label1_1 = new JLabel("\uC131\uBCC4");
-		Label1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label1_1.setBounds(38, 28, 115, 49);
-		panel.add(Label1_1);
+		JLabel Label1_1 = new JLabel("Q1. 성별");
+		Label1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label1_1.setBounds(10, 10, 195, 60);
+		panel1.add(Label1_1);
 		
-		JLabel Label1_2 = new JLabel("1 / ?");
-		Label1_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label1_2.setBounds(163, 202, 115, 49);
-		panel.add(Label1_2);
-		
-		JRadioButton rdbtn1_1 = new JRadioButton("\uB0A8\uC790");
+		JRadioButton rdbtn1_1 = new JRadioButton(" 남자");
+		rdbtn1_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn1_1.setBackground(Color.WHITE);
 		buttonGroup1.add(rdbtn1_1);
-		rdbtn1_1.setBounds(87, 125, 121, 23);
-		panel.add(rdbtn1_1);
+		rdbtn1_1.setBounds(170, 120, 160, 60);
+		panel1.add(rdbtn1_1);
 		
-		JRadioButton rdbtn1_2 = new JRadioButton("\uC5EC\uC790");
+		JRadioButton rdbtn1_2 = new JRadioButton(" 여자");
+		rdbtn1_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn1_2.setBackground(Color.WHITE);
 		buttonGroup1.add(rdbtn1_2);
-		rdbtn1_2.setBounds(245, 125, 121, 23);
-		panel.add(rdbtn1_2);
+		rdbtn1_2.setBounds(370, 120, 160, 60);
+		panel1.add(rdbtn1_2);
 		
 		panel2.setLayout(null);
-		panel2.setBounds(555, 107, 1000, 600);
+		panel2.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel2);
 		
 		btn1_1.addActionListener(new ActionListener() {
@@ -308,52 +358,57 @@ public class roomCheck extends JFrame {
 				{
 					gender=-1;
 				}
-				panel.setVisible(false); 
+				panel1.setVisible(false); 
 				panel2.setVisible(true); 
 			}
 		});
 		JButton btn2_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn2_1.setBounds(386, 221, 97, 23);
+		btn2_1.setBounds(600, 450, 97, 23);
 		panel2.add(btn2_1);
 		
-		JLabel Label2_1 = new JLabel("\uAE30\uC219\uC0AC");
-		Label2_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label2_1.setBounds(38, 28, 115, 49);
+		JLabel Label2_1 = new JLabel("Q2. 기숙사");
+		Label2_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label2_1.setBounds(10, 10, 210, 60);
 		panel2.add(Label2_1);
 		
-		JLabel Label2_2 = new JLabel("2 / ?");
-		Label2_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label2_2.setBounds(242, 125, 115, 49);
-		panel2.add(Label2_2);
-		
-		JRadioButton rdbtn2_1 = new JRadioButton("개성재");
+		JRadioButton rdbtn2_1 = new JRadioButton(" 개성재");
+		rdbtn2_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn2_1.setBackground(Color.WHITE);
 		buttonGroup2.add(rdbtn2_1);
-		rdbtn2_1.setBounds(38, 99, 121, 23);
+		rdbtn2_1.setBounds(170, 120, 160, 60);
 		panel2.add(rdbtn2_1);
 		
-		JRadioButton rdbtn2_2 = new JRadioButton("계영원");
+		JRadioButton rdbtn2_2 = new JRadioButton(" 계영원");
+		rdbtn2_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn2_2.setBackground(Color.WHITE);
 		buttonGroup2.add(rdbtn2_2);
-		rdbtn2_2.setBounds(48, 124, 121, 23);
+		rdbtn2_2.setBounds(370, 120, 160, 60);
 		panel2.add(rdbtn2_2);
 		
-		JRadioButton rdbtn2_3 = new JRadioButton("양성재");
+		JRadioButton rdbtn2_3 = new JRadioButton(" 양성재");
+		rdbtn2_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn2_3.setBackground(Color.WHITE);
 		buttonGroup2.add(rdbtn2_3);
-		rdbtn2_3.setBounds(58, 149, 121, 23);
+		rdbtn2_3.setBounds(570, 120, 160, 60);
 		panel2.add(rdbtn2_3);
 		
-		JRadioButton rdbtn2_4 = new JRadioButton("양진재");
+		JRadioButton rdbtn2_4 = new JRadioButton(" 양진재");
+		rdbtn2_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn2_4.setBackground(Color.WHITE);
 		buttonGroup2.add(rdbtn2_4);
-		rdbtn2_4.setBounds(68, 174, 121, 23);
+		rdbtn2_4.setBounds(170, 240, 160, 60);
 		panel2.add(rdbtn2_4);
 		
-		JRadioButton rdbtn2_5 = new JRadioButton("양현재");
+		JRadioButton rdbtn2_5 = new JRadioButton(" 양현재");
+		rdbtn2_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn2_5.setBackground(Color.WHITE);
 		buttonGroup2.add(rdbtn2_5);
-		rdbtn2_5.setBounds(78, 199, 121, 23);
+		rdbtn2_5.setBounds(370, 240, 160, 60);
 		panel2.add(rdbtn2_5);
 	
 		panel3.setLayout(null);
-		panel3.setBounds(540, 117, 1000, 600);
+		panel3.setBounds(145, 290, 1100, 500);
 		contentPane.add(panel3);
 		
 		btn2_1.addActionListener(new ActionListener() {
@@ -388,38 +443,40 @@ public class roomCheck extends JFrame {
 		});
 		JButton btn3_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn3_1.setBounds(386, 221, 97, 23);
+		btn3_1.setBounds(600, 450, 97, 23);
 		panel3.add(btn3_1);
 		
-		JLabel Label3_1 = new JLabel("\uC0DD\uB144 & \uD559\uBC88");
-		Label3_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label3_1.setBounds(38, 28, 200, 49);
+		JLabel Label3_1 = new JLabel("Q3. 생년 & 학번");
+		Label3_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label3_1.setBounds(10, 10, 340, 60);
 		panel3.add(Label3_1);
 		
-		JLabel Label3_2 = new JLabel("3 / ?");
+		JLabel Label3_2 = new JLabel("생년은 4자리, 학번은 2자리로 입력해주세요.  ex) 1999, 18");
 		Label3_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label3_2.setBounds(163, 202, 115, 49);
+		Label3_2.setBounds(170, 360, 1000, 60);
 		panel3.add(Label3_2);
 		
-		JLabel Label3_3 = new JLabel("\uC0DD\uB144");
-		Label3_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
-		Label3_3.setBounds(163, 131, 51, 49);
+		JLabel Label3_3 = new JLabel("생년");
+		Label3_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label3_3.setBounds(170, 120, 160, 60);
 		panel3.add(Label3_3);
 		
 		JLabel Label3_4 = new JLabel("\uD559\uBC88");
-		Label3_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
-		Label3_4.setBounds(163, 88, 51, 49);
+		Label3_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label3_4.setBounds(170, 240, 160, 60);
 		panel3.add(Label3_4);
 		
 		textField3_1 = new JTextField();
-		textField3_1.setBounds(240, 107, 116, 21);
+		textField3_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
+		textField3_1.setBounds(370, 120, 160, 60);
 		panel3.add(textField3_1);
-		textField3_1.setColumns(10);
+		textField3_1.setColumns(4);
 		
 		textField3_2 = new JTextField();
-		textField3_2.setBounds(240, 150, 116, 21);
+		textField3_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
+		textField3_2.setBounds(370, 240, 160, 60);
 		panel3.add(textField3_2);
-		textField3_2.setColumns(10);
+		textField3_2.setColumns(2);
 		
 		btn3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -431,82 +488,101 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel4.setLayout(null);
-		panel4.setBounds(526, 127, 1000, 600);
+		panel4.setBounds(145, 290, 1400, 500);
 		contentPane.add(panel4);
 		
 		JButton btn4_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn4_1.setBounds(381, 243, 97, 23);
+		btn4_1.setBounds(600, 450, 97, 23);
 		panel4.add(btn4_1);
 		
-		JLabel Label4_1 = new JLabel("\uC131\uBCC4");
-		Label4_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label4_1.setBounds(38, 28, 115, 49);
+		JLabel Label4_1 = new JLabel("Q4. 단과");
+		Label4_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label4_1.setBounds(10, 10, 195, 60);
 		panel4.add(Label4_1);
 		
-		JLabel Label4_2 = new JLabel("4 / ?");
-		Label4_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label4_2.setBounds(140, 239, 115, 49);
-		panel4.add(Label4_2);
-		
-		JRadioButton rdbtn4_1 = new JRadioButton("\uC778\uBB38");
+		JRadioButton rdbtn4_1 = new JRadioButton(" 인문");
+		rdbtn4_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_1.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_1);
-		rdbtn4_1.setBounds(48, 83, 121, 23);
+		rdbtn4_1.setBounds(170, 120, 160, 60);
 		panel4.add(rdbtn4_1);
 		
-		JRadioButton rdbtn4_2 = new JRadioButton("\uC0AC\uACFC");
+		JRadioButton rdbtn4_2 = new JRadioButton(" 사과");
+		rdbtn4_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_2.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_2);
-		rdbtn4_2.setBounds(183, 83, 121, 23);
+		rdbtn4_2.setBounds(370, 120, 160, 60);
 		panel4.add(rdbtn4_2);
 		
-		JRadioButton rdbtn4_3 = new JRadioButton("\uC790\uACFC");
+		JRadioButton rdbtn4_3 = new JRadioButton(" 자과");
+		rdbtn4_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_3.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_3);
-		rdbtn4_3.setBounds(58, 108, 121, 23);
+		rdbtn4_3.setBounds(570, 120, 160, 60);
 		panel4.add(rdbtn4_3);
 		
-		JRadioButton rdbtn4_4 = new JRadioButton("\uACBD\uC601");
+		JRadioButton rdbtn4_4 = new JRadioButton(" 경영");
+		rdbtn4_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_4.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_4);
-		rdbtn4_4.setBounds(193, 108, 121, 23);
+		rdbtn4_4.setBounds(770, 120, 160, 60);
 		panel4.add(rdbtn4_4);
 		
-		JRadioButton rdbtn4_5 = new JRadioButton("\uACF5\uACFC");
+		JRadioButton rdbtn4_5 = new JRadioButton(" 공과");
+		rdbtn4_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_5.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_5);
-		rdbtn4_5.setBounds(68, 133, 121, 23);
+		rdbtn4_5.setBounds(970, 120, 160, 60);
 		panel4.add(rdbtn4_5);
 		
-		JRadioButton rdbtn4_6 = new JRadioButton("\uC804\uC815");
+		JRadioButton rdbtn4_6 = new JRadioButton(" 전정");
+		rdbtn4_6.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_6.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_6);
-		rdbtn4_6.setBounds(203, 133, 121, 23);
+		rdbtn4_6.setBounds(1170, 120, 160, 60);
 		panel4.add(rdbtn4_6);
 		
-		JRadioButton rdbtn4_7 = new JRadioButton("\uB18D\uC0DD");
+		JRadioButton rdbtn4_7 = new JRadioButton(" 농생");
+		rdbtn4_7.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_7.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_7);
-		rdbtn4_7.setBounds(78, 158, 121, 23);
+		rdbtn4_7.setBounds(170, 240, 160, 60);
 		panel4.add(rdbtn4_7);
 		
-		JRadioButton rdbtn4_8 = new JRadioButton("\uC0AC\uBC94");
+		JRadioButton rdbtn4_8 = new JRadioButton(" 사범");
+		rdbtn4_8.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_8.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_8);
-		rdbtn4_8.setBounds(213, 158, 121, 23);
+		rdbtn4_8.setBounds(370, 240, 160, 60);
 		panel4.add(rdbtn4_8);
 		
-		JRadioButton rdbtn4_9 = new JRadioButton("\uC0DD\uACFC");
+		JRadioButton rdbtn4_9 = new JRadioButton(" 생과");
+		rdbtn4_9.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_9.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_9);
-		rdbtn4_9.setBounds(88, 183, 121, 23);
+		rdbtn4_9.setBounds(570, 240, 160, 60);
 		panel4.add(rdbtn4_9);
 		
-		JRadioButton rdbtn4_10 = new JRadioButton("\uC218\uC758\uB300");
+		JRadioButton rdbtn4_10 = new JRadioButton(" 수의대");
+		rdbtn4_10.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_10.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_10);
-		rdbtn4_10.setBounds(223, 183, 121, 23);
+		rdbtn4_10.setBounds(770, 240, 160, 60);
 		panel4.add(rdbtn4_10);
 		
-		JRadioButton rdbtn4_11 = new JRadioButton("\uC758\uACFC");
+		JRadioButton rdbtn4_11 = new JRadioButton(" 의과");
+		rdbtn4_11.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_11.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_11);
-		rdbtn4_11.setBounds(98, 208, 121, 23);
+		rdbtn4_11.setBounds(970, 240, 160, 60);
 		panel4.add(rdbtn4_11);
 		
-		JRadioButton rdbtn4_12 = new JRadioButton("\uC790\uC728");
+		JRadioButton rdbtn4_12 = new JRadioButton(" 자율");
+		rdbtn4_12.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn4_12.setBackground(Color.WHITE);
 		buttonGroup3.add(rdbtn4_12);
-		rdbtn4_12.setBounds(233, 208, 121, 23);
+		rdbtn4_12.setBounds(1170, 240, 160, 60);
 		panel4.add(rdbtn4_12);
 		
 		btn4_1.addActionListener(new ActionListener() {
@@ -568,52 +644,59 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel5.setLayout(null);
-		panel5.setBounds(515, 137, 1000, 600);
+		panel5.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel5);
 		
 		JButton btn5_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn5_1.setBounds(386, 221, 97, 23);
+		btn5_1.setBounds(600, 450, 97, 23);
 		panel5.add(btn5_1);
 		
-		JLabel Label5_1 = new JLabel("\uCDE8\uCE68\uC2DC\uAC04");
-		Label5_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label5_1.setBounds(38, 28, 137, 49);
+		JLabel Label5_1 = new JLabel("Q5. 취침시간");
+		Label5_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label5_1.setBounds(10, 10, 250, 60);
 		panel5.add(Label5_1);
 		
-		JLabel Label5_2 = new JLabel("5 / ?");
-		Label5_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label5_2.setBounds(246, 108, 115, 49);
-		panel5.add(Label5_2);
-		
-		JRadioButton rdbtn5_1 = new JRadioButton("10\uC2DC");
+		JRadioButton rdbtn5_1 = new JRadioButton(" 10시");
+		rdbtn5_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn5_1.setBackground(Color.WHITE);
 		buttonGroup4.add(rdbtn5_1);
-		rdbtn5_1.setBounds(26, 83, 121, 23);
+		rdbtn5_1.setBounds(170, 120, 160, 60);
 		panel5.add(rdbtn5_1);
 		
-		JRadioButton rdbtn5_2 = new JRadioButton("11\uC2DC");
+		JRadioButton rdbtn5_2 = new JRadioButton(" 11시");
+		rdbtn5_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn5_2.setBackground(Color.WHITE);
 		buttonGroup4.add(rdbtn5_2);
-		rdbtn5_2.setBounds(38, 108, 121, 23);
+		rdbtn5_2.setBounds(370, 120, 160, 60);
 		panel5.add(rdbtn5_2);
 		
-		JRadioButton rdbtn5_3 = new JRadioButton("12\uC2DC");
+		JRadioButton rdbtn5_3 = new JRadioButton(" 12시");
+		rdbtn5_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn5_3.setBackground(Color.WHITE);
 		buttonGroup4.add(rdbtn5_3);
-		rdbtn5_3.setBounds(54, 133, 121, 23);
+		rdbtn5_3.setBounds(570, 120, 160, 60);
 		panel5.add(rdbtn5_3);
 		
-		JRadioButton rdbtn5_4 = new JRadioButton("1\uC2DC");
+		JRadioButton rdbtn5_4 = new JRadioButton(" 1시");
+		rdbtn5_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn5_4.setBackground(Color.WHITE);
 		buttonGroup4.add(rdbtn5_4);
-		rdbtn5_4.setBounds(64, 158, 121, 23);
+		rdbtn5_4.setBounds(170, 240, 160, 60);
 		panel5.add(rdbtn5_4);
 		
-		JRadioButton rdbtn5_5 = new JRadioButton("2\uC2DC");
+		JRadioButton rdbtn5_5 = new JRadioButton(" 2시");
+		rdbtn5_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn5_5.setBackground(Color.WHITE);
 		buttonGroup4.add(rdbtn5_5);
-		rdbtn5_5.setBounds(74, 183, 121, 23);
+		rdbtn5_5.setBounds(370, 240, 160, 60);
 		panel5.add(rdbtn5_5);
 		
-		JRadioButton rdbtn5_6 = new JRadioButton("3\uC2DC \uC774\uD6C4");
+		JRadioButton rdbtn5_6 = new JRadioButton(" 3시 이후");
+		rdbtn5_6.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn5_6.setBackground(Color.WHITE);
 		buttonGroup4.add(rdbtn5_6);
-		rdbtn5_6.setBounds(94, 208, 121, 23);
+		rdbtn5_6.setBounds(570, 240, 320, 60);
 		panel5.add(rdbtn5_6);
 		
 		btn5_1.addActionListener(new ActionListener() {
@@ -646,52 +729,59 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel6.setLayout(null);
-		panel6.setBounds(501, 147, 1000, 600);
+		panel6.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel6);
 		
 		JButton btn6_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn6_1.setBounds(386, 221, 97, 23);
+		btn6_1.setBounds(600, 450, 97, 23);
 		panel6.add(btn6_1);
 		
-		JLabel Label6_1 = new JLabel("\uAE30\uC0C1\uC2DC\uAC04");
-		Label6_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label6_1.setBounds(38, 28, 137, 49);
+		JLabel Label6_1 = new JLabel("Q6. 기상시간");
+		Label6_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label6_1.setBounds(10, 10, 260, 60);
 		panel6.add(Label6_1);
 		
-		JLabel Label6_2 = new JLabel("6 / ?");
-		Label6_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label6_2.setBounds(313, 147, 115, 49);
-		panel6.add(Label6_2);
-		
-		JRadioButton rdbtn6_1 = new JRadioButton("7\uC2DC");
+		JRadioButton rdbtn6_1 = new JRadioButton(" 7시");
+		rdbtn6_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn6_1.setBackground(Color.WHITE);
 		buttonGroup5.add(rdbtn6_1);
-		rdbtn6_1.setBounds(42, 96, 121, 23);
+		rdbtn6_1.setBounds(170, 120, 160, 60);
 		panel6.add(rdbtn6_1);
 		
-		JRadioButton rdbtn6_2 = new JRadioButton("8\uC2DC");
+		JRadioButton rdbtn6_2 = new JRadioButton(" 8시");
+		rdbtn6_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn6_2.setBackground(Color.WHITE);
 		buttonGroup5.add(rdbtn6_2);
-		rdbtn6_2.setBounds(54, 121, 121, 23);
+		rdbtn6_2.setBounds(370, 120, 160, 60);
 		panel6.add(rdbtn6_2);
 		
-		JRadioButton rdbtn6_3 = new JRadioButton("9\uC2DC");
+		JRadioButton rdbtn6_3 = new JRadioButton(" 9시");
+		rdbtn6_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn6_3.setBackground(Color.WHITE);
 		buttonGroup5.add(rdbtn6_3);
-		rdbtn6_3.setBounds(64, 146, 121, 23);
+		rdbtn6_3.setBounds(570, 120, 160, 60);
 		panel6.add(rdbtn6_3);
 		
-		JRadioButton rdbtn6_4 = new JRadioButton("10\uC2DC");
+		JRadioButton rdbtn6_4 = new JRadioButton(" 10시");
+		rdbtn6_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn6_4.setBackground(Color.WHITE);
 		buttonGroup5.add(rdbtn6_4);
-		rdbtn6_4.setBounds(74, 171, 121, 23);
+		rdbtn6_4.setBounds(170, 240, 160, 60);
 		panel6.add(rdbtn6_4);
 		
-		JRadioButton rdbtn6_5 = new JRadioButton("11\uC2DC");
+		JRadioButton rdbtn6_5 = new JRadioButton(" 11시");
+		rdbtn6_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn6_5.setBackground(Color.WHITE);
 		buttonGroup5.add(rdbtn6_5);
-		rdbtn6_5.setBounds(84, 196, 121, 23);
+		rdbtn6_5.setBounds(370, 240, 160, 60);
 		panel6.add(rdbtn6_5);
 		
-		JRadioButton rdbtn6_6 = new JRadioButton("\uC624\uD6C4");
+		JRadioButton rdbtn6_6 = new JRadioButton(" 오후");
+		rdbtn6_6.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn6_6.setBackground(Color.WHITE);
 		buttonGroup5.add(rdbtn6_6);
-		rdbtn6_6.setBounds(94, 221, 121, 23);
+		rdbtn6_6.setBounds(570, 240, 160, 60);
 		panel6.add(rdbtn6_6);
 		
 		btn6_1.addActionListener(new ActionListener() {
@@ -715,52 +805,59 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel7.setLayout(null);
-		panel7.setBounds(486, 158, 1000, 600);
+		panel7.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel7);
 		
 		JButton btn7_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn7_1.setBounds(386, 221, 97, 23);
+		btn7_1.setBounds(600, 450, 97, 23);
 		panel7.add(btn7_1);
 		
-		JLabel Label7_1 = new JLabel("\uC0E4\uC6CC\uC18C\uC694\uC2DC\uAC04");
-		Label7_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label7_1.setBounds(38, 28, 196, 49);
+		JLabel Label7_1 = new JLabel("Q7. 샤워소요시간");
+		Label7_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label7_1.setBounds(10, 10, 320, 60);
 		panel7.add(Label7_1);
 		
-		JLabel Label7_2 = new JLabel("7 / ?");
-		Label7_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label7_2.setBounds(312, 162, 115, 49);
-		panel7.add(Label7_2);
-		
-		JRadioButton rdbtn7_1 = new JRadioButton("5\uBD84");
+		JRadioButton rdbtn7_1 = new JRadioButton(" 5분");
+		rdbtn7_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn7_1.setBackground(Color.WHITE);
 		buttonGroup6.add(rdbtn7_1);
-		rdbtn7_1.setBounds(62, 95, 121, 23);
+		rdbtn7_1.setBounds(170, 120, 160, 60);
 		panel7.add(rdbtn7_1);
 		
-		JRadioButton rdbtn7_2 = new JRadioButton("10\uBD84");
+		JRadioButton rdbtn7_2 = new JRadioButton(" 10분");
+		rdbtn7_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn7_2.setBackground(Color.WHITE);
 		buttonGroup6.add(rdbtn7_2);
-		rdbtn7_2.setBounds(74, 120, 121, 23);
+		rdbtn7_2.setBounds(370, 120, 160, 60);
 		panel7.add(rdbtn7_2);
 		
-		JRadioButton rdbtn7_3 = new JRadioButton("15\uBD84");
+		JRadioButton rdbtn7_3 = new JRadioButton(" 15분");
+		rdbtn7_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn7_3.setBackground(Color.WHITE);
 		buttonGroup6.add(rdbtn7_3);
-		rdbtn7_3.setBounds(84, 145, 121, 23);
+		rdbtn7_3.setBounds(570, 120, 160, 60);
 		panel7.add(rdbtn7_3);
 		
-		JRadioButton rdbtn7_4 = new JRadioButton("20\uBD84");
+		JRadioButton rdbtn7_4 = new JRadioButton(" 20분");
+		rdbtn7_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn7_4.setBackground(Color.WHITE);
 		buttonGroup6.add(rdbtn7_4);
-		rdbtn7_4.setBounds(94, 170, 121, 23);
+		rdbtn7_4.setBounds(170, 240, 160, 60);
 		panel7.add(rdbtn7_4);
 		
-		JRadioButton rdbtn7_5 = new JRadioButton("25\uBD84");
+		JRadioButton rdbtn7_5 = new JRadioButton(" 25분");
+		rdbtn7_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn7_5.setBackground(Color.WHITE);
 		buttonGroup6.add(rdbtn7_5);
-		rdbtn7_5.setBounds(104, 195, 121, 23);
+		rdbtn7_5.setBounds(370, 240, 160, 60);
 		panel7.add(rdbtn7_5);
 		
-		JRadioButton rdbtn7_6 = new JRadioButton("30\uBD84 \uC774\uC0C1");
+		JRadioButton rdbtn7_6 = new JRadioButton(" 30분 이상");
+		rdbtn7_6.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn7_6.setBackground(Color.WHITE);
 		buttonGroup6.add(rdbtn7_6);
-		rdbtn7_6.setBounds(114, 221, 121, 23);
+		rdbtn7_6.setBounds(570, 240, 240, 60);
 		panel7.add(rdbtn7_6);
 		
 		btn7_1.addActionListener(new ActionListener() {
@@ -784,37 +881,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel8.setLayout(null);
-		panel8.setBounds(469, 168, 1000, 600);
+		panel8.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel8);
 		
 		JButton btn8_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn8_1.setBounds(386, 221, 97, 23);
+		btn8_1.setBounds(600, 450, 97, 23);
 		panel8.add(btn8_1);
 		
-		JLabel Label8_1 = new JLabel("\uC0E4\uC6CC\uC2DC\uAC04");
-		Label8_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label8_1.setBounds(38, 28, 136, 49);
+		JLabel Label8_1 = new JLabel("Q8. 샤워시간");
+		Label8_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label8_1.setBounds(10, 10, 260, 60);
 		panel8.add(Label8_1);
 		
-		JLabel Label8_2 = new JLabel("8 / ?");
-		Label8_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label8_2.setBounds(178, 195, 115, 49);
-		panel8.add(Label8_2);
-		
-		JRadioButton rdbtn8_1 = new JRadioButton("\uC544\uCE68");
+		JRadioButton rdbtn8_1 = new JRadioButton(" 아침");
+		rdbtn8_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn8_1.setBackground(Color.WHITE);
 		buttonGroup7.add(rdbtn8_1);
-		rdbtn8_1.setBounds(62, 95, 121, 23);
+		rdbtn8_1.setBounds(170, 120, 160, 60);
 		panel8.add(rdbtn8_1);
 		
-		JRadioButton rdbtn8_2 = new JRadioButton("\uC800\uB141");
+		JRadioButton rdbtn8_2 = new JRadioButton(" 저녁");
+		rdbtn8_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn8_2.setBackground(Color.WHITE);
 		buttonGroup7.add(rdbtn8_2);
-		rdbtn8_2.setBounds(74, 120, 121, 23);
+		rdbtn8_2.setBounds(370, 120, 160, 60);
 		panel8.add(rdbtn8_2);
 		
-		JRadioButton rdbtn8_3 = new JRadioButton("\uC720\uB3D9\uC801");
+		JRadioButton rdbtn8_3 = new JRadioButton(" 유동적");
+		rdbtn8_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn8_3.setBackground(Color.WHITE);
 		buttonGroup7.add(rdbtn8_3);
-		rdbtn8_3.setBounds(84, 145, 121, 23);
+		rdbtn8_3.setBounds(570, 120, 160, 60);
 		panel8.add(rdbtn8_3);
 		btn8_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -832,37 +930,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel9.setLayout(null);
-		panel9.setBounds(451, 179, 1000, 600);
+		panel9.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel9);
 		
 		JButton btn9_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn9_1.setBounds(386, 221, 97, 23);
+		btn9_1.setBounds(600, 450, 97, 23);
 		panel9.add(btn9_1);
 		
-		JLabel Label9_1 = new JLabel("\uC7A0\uADC0");
-		Label9_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label9_1.setBounds(38, 28, 136, 49);
+		JLabel Label9_1 = new JLabel("Q9. 잠귀");
+		Label9_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label9_1.setBounds(10, 10, 195, 60);
 		panel9.add(Label9_1);
 		
-		JLabel Label9_2 = new JLabel("9 / ?");
-		Label9_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label9_2.setBounds(178, 195, 115, 49);
-		panel9.add(Label9_2);
-		
-		JRadioButton rdbtn9_1 = new JRadioButton("\uC5B4\uB450\uC6C0");
+		JRadioButton rdbtn9_1 = new JRadioButton(" 어두움");
+		rdbtn9_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn9_1.setBackground(Color.WHITE);
 		buttonGroup8.add(rdbtn9_1);
-		rdbtn9_1.setBounds(62, 95, 121, 23);
+		rdbtn9_1.setBounds(170, 120, 160, 60);
 		panel9.add(rdbtn9_1);
 		
-		JRadioButton rdbtn9_2 = new JRadioButton("\uBCF4\uD1B5");
+		JRadioButton rdbtn9_2 = new JRadioButton(" 보통");
+		rdbtn9_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn9_2.setBackground(Color.WHITE);
 		buttonGroup8.add(rdbtn9_2);
-		rdbtn9_2.setBounds(74, 120, 121, 23);
+		rdbtn9_2.setBounds(370, 120, 160, 60);
 		panel9.add(rdbtn9_2);
 		
-		JRadioButton rdbtn9_3 = new JRadioButton("\uBC1D\uC74C");
+		JRadioButton rdbtn9_3 = new JRadioButton(" 밝음");
+		rdbtn9_3.setBackground(Color.WHITE);
+		rdbtn9_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
 		buttonGroup8.add(rdbtn9_3);
-		rdbtn9_3.setBounds(84, 145, 121, 23);
+		rdbtn9_3.setBounds(570, 120, 160, 60);
 		panel9.add(rdbtn9_3);
 		
 		btn9_1.addActionListener(new ActionListener() {
@@ -881,38 +980,41 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel10.setLayout(null);
-		panel10.setBounds(438, 190, 1000, 600);
+		panel10.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel10);
 		
 		JButton btn10_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn10_1.setBounds(386, 221, 97, 23);
+		btn10_1.setBounds(600, 450, 97, 23);
 		panel10.add(btn10_1);
 		
-		JLabel Label10_1 = new JLabel("\uC7A0\uBC84\uB987");
-		Label10_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label10_1.setBounds(38, 28, 136, 49);
+		JLabel Label10_1 = new JLabel("Q10. 잠버릇");
+		Label10_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label10_1.setBounds(10, 10, 230, 60);
 		panel10.add(Label10_1);
 		
-		JLabel Label10_2 = new JLabel("10 / ?");
-		Label10_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label10_2.setBounds(178, 195, 115, 49);
-		panel10.add(Label10_2);
-		
-		JCheckBox checkbtn10_1 = new JCheckBox("\uC5C6\uC74C");
-		checkbtn10_1.setBounds(59, 94, 115, 23);
+		JCheckBox checkbtn10_1 = new JCheckBox(" 없음");
+		checkbtn10_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		checkbtn10_1.setBackground(Color.WHITE);
+		checkbtn10_1.setBounds(170, 120, 160, 60);
 		panel10.add(checkbtn10_1);
 		
-		JCheckBox checkbtn10_2 = new JCheckBox("\uC774\uAC08\uC774");
-		checkbtn10_2.setBounds(190, 94, 115, 23);
+		JCheckBox checkbtn10_2 = new JCheckBox(" 이갈이");
+		checkbtn10_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		checkbtn10_2.setBackground(Color.WHITE);
+		checkbtn10_2.setBounds(170, 240, 160, 60);
 		panel10.add(checkbtn10_2);
 		
-		JCheckBox checkbtn10_3 = new JCheckBox("\uC7A0\uAF2C\uB300");
-		checkbtn10_3.setBounds(200, 119, 115, 23);
+		JCheckBox checkbtn10_3 = new JCheckBox(" 잠꼬대");
+		checkbtn10_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		checkbtn10_3.setBackground(Color.WHITE);
+		checkbtn10_3.setBounds(370, 240, 160, 60);
 		panel10.add(checkbtn10_3);
 		
-		JCheckBox checkbtn10_4 = new JCheckBox("\uCF54\uACE8\uC774");
-		checkbtn10_4.setBounds(210, 144, 115, 23);
+		JCheckBox checkbtn10_4 = new JCheckBox(" 코골이");
+		checkbtn10_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		checkbtn10_4.setBackground(Color.WHITE);
+		checkbtn10_4.setBounds(570, 240, 160, 60);
 		panel10.add(checkbtn10_4);
 		btn10_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -936,42 +1038,45 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel11.setLayout(null);
-		panel11.setBounds(430, 200, 1000, 600);
+		panel11.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel11);
 		
 		JButton btn11_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn11_1.setBounds(386, 221, 97, 23);
+		btn11_1.setBounds(600, 450, 97, 23);
 		panel11.add(btn11_1);
 		
-		JLabel Label11_1 = new JLabel("\uC218\uBA74\uB4F1");
-		Label11_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label11_1.setBounds(38, 28, 136, 49);
+		JLabel Label11_1 = new JLabel("Q11. 수면등");
+		Label11_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label11_1.setBounds(10, 10, 230, 60);
 		panel11.add(Label11_1);
 		
-		JLabel Label11_2 = new JLabel("11 / ?");
-		Label11_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label11_2.setBounds(178, 195, 115, 49);
-		panel11.add(Label11_2);
-		
-		JRadioButton rdbtn11_1 = new JRadioButton("\uC548\uC500");
+		JRadioButton rdbtn11_1 = new JRadioButton(" 안씀");
+		rdbtn11_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn11_1.setBackground(Color.WHITE);
 		buttonGroup9.add(rdbtn11_1);
-		rdbtn11_1.setBounds(62, 95, 121, 23);
+		rdbtn11_1.setBounds(170, 120, 160, 60);
 		panel11.add(rdbtn11_1);
 		
-		JRadioButton rdbtn11_2 = new JRadioButton("\uD615\uAD11\uB4F1");
+		JRadioButton rdbtn11_2 = new JRadioButton(" 형광등");
+		rdbtn11_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn11_2.setBackground(Color.WHITE);
 		buttonGroup9.add(rdbtn11_2);
-		rdbtn11_2.setBounds(74, 120, 121, 23);
+		rdbtn11_2.setBounds(170, 240, 160, 60);
 		panel11.add(rdbtn11_2);
 		
-		JRadioButton rdbtn11_3 = new JRadioButton("\uC2A4\uD0E0\uB4DC");
+		JRadioButton rdbtn11_3 = new JRadioButton(" 스탠드");
+		rdbtn11_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn11_3.setBackground(Color.WHITE);
 		buttonGroup9.add(rdbtn11_3);
-		rdbtn11_3.setBounds(84, 145, 121, 23);
+		rdbtn11_3.setBounds(370, 240, 160, 60);
 		panel11.add(rdbtn11_3);
 		
-		JRadioButton rdbtn11_4 = new JRadioButton("\uBB34\uB4DC\uB4F1");
+		JRadioButton rdbtn11_4 = new JRadioButton(" 무드등");
+		rdbtn11_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn11_4.setBackground(Color.WHITE);
 		buttonGroup9.add(rdbtn11_4);
-		rdbtn11_4.setBounds(94, 170, 121, 23);
+		rdbtn11_4.setBounds(570, 240, 160, 60);
 		panel11.add(rdbtn11_4);
 		btn11_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -991,37 +1096,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel12.setLayout(null);
-		panel12.setBounds(409, 212, 1000, 600);
+		panel12.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel12);
 		
 		JButton btn12_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn12_1.setBounds(386, 221, 97, 23);
+		btn12_1.setBounds(600, 450, 97, 23);
 		panel12.add(btn12_1);
 		
-		JLabel Label12_1 = new JLabel("\uC54C\uB78C");
-		Label12_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label12_1.setBounds(38, 28, 136, 49);
+		JLabel Label12_1 = new JLabel("Q12. 알람");
+		Label12_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label12_1.setBounds(10, 10, 195, 60);
 		panel12.add(Label12_1);
 		
-		JLabel Label12_2 = new JLabel("12 / ?");
-		Label12_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label12_2.setBounds(178, 195, 115, 49);
-		panel12.add(Label12_2);
-		
-		JRadioButton rdbtn12_1 = new JRadioButton("\uBABB\uB4E4\uC5B4\uC694");
+		JRadioButton rdbtn12_1 = new JRadioButton(" 못들어요");
+		rdbtn12_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn12_1.setBackground(Color.WHITE);
 		buttonGroup10.add(rdbtn12_1);
-		rdbtn12_1.setBounds(62, 95, 121, 23);
+		rdbtn12_1.setBounds(170, 120, 200, 60);
 		panel12.add(rdbtn12_1);
 		
-		JRadioButton rdbtn12_2 = new JRadioButton("\uC911\uAC04");
+		JRadioButton rdbtn12_2 = new JRadioButton(" 중간");
+		rdbtn12_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn12_2.setBackground(Color.WHITE);
 		buttonGroup10.add(rdbtn12_2);
-		rdbtn12_2.setBounds(74, 120, 121, 23);
+		rdbtn12_2.setBounds(370, 120, 160, 60);
 		panel12.add(rdbtn12_2);
 		
-		JRadioButton rdbtn12_3 = new JRadioButton("\uC798\uB4E4\uC5B4\uC694");
+		JRadioButton rdbtn12_3 = new JRadioButton(" 잘들어요");
+		rdbtn12_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn12_3.setBackground(Color.WHITE);
 		buttonGroup10.add(rdbtn12_3);
-		rdbtn12_3.setBounds(84, 145, 121, 23);
+		rdbtn12_3.setBounds(570, 120, 200, 60);
 		panel12.add(rdbtn12_3);
 		btn12_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1038,37 +1144,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel13.setLayout(null);
-		panel13.setBounds(393, 216, 1000, 600);
+		panel13.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel13);
 		
 		JButton btn13_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn13_1.setBounds(386, 221, 97, 23);
+		btn13_1.setBounds(600, 450, 97, 23);
 		panel13.add(btn13_1);
 		
-		JLabel Label13_1 = new JLabel("\uCCAD\uC18C");
-		Label13_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label13_1.setBounds(38, 28, 136, 49);
+		JLabel Label13_1 = new JLabel("Q13. 청소");
+		Label13_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label13_1.setBounds(10, 10, 195, 60);
 		panel13.add(Label13_1);
 		
-		JLabel Label13_2 = new JLabel("13 / ?");
-		Label13_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label13_2.setBounds(178, 195, 115, 49);
-		panel13.add(Label13_2);
-		
-		JRadioButton rdbtn13_1 = new JRadioButton("\uC790\uC8FC");
+		JRadioButton rdbtn13_1 = new JRadioButton(" 자주");
+		rdbtn13_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn13_1.setBackground(Color.WHITE);
 		buttonGroup11.add(rdbtn13_1);
-		rdbtn13_1.setBounds(62, 95, 121, 23);
+		rdbtn13_1.setBounds(170, 120, 160, 60);
 		panel13.add(rdbtn13_1);
 		
-		JRadioButton rdbtn13_2 = new JRadioButton("\uBCF4\uD1B5");
+		JRadioButton rdbtn13_2 = new JRadioButton(" 보통");
+		rdbtn13_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn13_2.setBackground(Color.WHITE);
 		buttonGroup11.add(rdbtn13_2);
-		rdbtn13_2.setBounds(74, 120, 121, 23);
+		rdbtn13_2.setBounds(370, 120, 160, 60);
 		panel13.add(rdbtn13_2);
 		
-		JRadioButton rdbtn13_3 = new JRadioButton("\uD55C\uBC88\uC5D0");
+		JRadioButton rdbtn13_3 = new JRadioButton(" 한번에");
+		rdbtn13_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn13_3.setBackground(Color.WHITE);
 		buttonGroup11.add(rdbtn13_3);
-		rdbtn13_3.setBounds(84, 145, 121, 23);
+		rdbtn13_3.setBounds(570, 120, 160, 60);
 		panel13.add(rdbtn13_3);
 		btn13_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1086,37 +1193,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel14.setLayout(null);
-		panel14.setBounds(378, 221, 1000, 600);
+		panel14.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel14);
 		
 		JButton btn14_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn14_1.setBounds(386, 221, 97, 23);
+		btn14_1.setBounds(600, 450, 97, 23);
 		panel14.add(btn14_1);
 		
-		JLabel Label14_1 = new JLabel("\uB354\uC704");
-		Label14_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label14_1.setBounds(38, 28, 136, 49);
+		JLabel Label14_1 = new JLabel("Q14. 더위");
+		Label14_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label14_1.setBounds(10, 10, 195, 60);
 		panel14.add(Label14_1);
 		
-		JLabel Label14_2 = new JLabel("14 / ?");
-		Label14_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label14_2.setBounds(178, 195, 115, 49);
-		panel14.add(Label14_2);
-		
-		JRadioButton rdbtn14_1 = new JRadioButton("\uC801\uAC8C\uD0D0");
+		JRadioButton rdbtn14_1 = new JRadioButton(" 적게탐");
+		rdbtn14_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn14_1.setBackground(Color.WHITE);
 		buttonGroup12.add(rdbtn14_1);
-		rdbtn14_1.setBounds(62, 95, 121, 23);
+		rdbtn14_1.setBounds(170, 120, 160, 60);
 		panel14.add(rdbtn14_1);
 		
-		JRadioButton rdbtn14_2 = new JRadioButton("\uBCF4\uD1B5");
+		JRadioButton rdbtn14_2 = new JRadioButton(" 보통");
+		rdbtn14_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn14_2.setBackground(Color.WHITE);
 		buttonGroup12.add(rdbtn14_2);
-		rdbtn14_2.setBounds(74, 120, 121, 23);
+		rdbtn14_2.setBounds(370, 120, 160, 60);
 		panel14.add(rdbtn14_2);
 		
-		JRadioButton rdbtn14_3 = new JRadioButton("\uB9CE\uC774\uD0D0");
+		JRadioButton rdbtn14_3 = new JRadioButton(" 많이탐");
+		rdbtn14_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn14_3.setBackground(Color.WHITE);
 		buttonGroup12.add(rdbtn14_3);
-		rdbtn14_3.setBounds(84, 145, 121, 23);
+		rdbtn14_3.setBounds(570, 120, 160, 60);
 		panel14.add(rdbtn14_3);
 		btn14_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1133,37 +1241,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel15.setLayout(null);
-		panel15.setBounds(362, 225, 1000, 600);
+		panel15.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel15);
 		
 		JButton btn15_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn15_1.setBounds(386, 221, 97, 23);
+		btn15_1.setBounds(600, 450, 97, 23);
 		panel15.add(btn15_1);
 		
-		JLabel Label15_1 = new JLabel("\uCD94\uC704");
-		Label15_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label15_1.setBounds(38, 28, 136, 49);
+		JLabel Label15_1 = new JLabel("Q15. 추위");
+		Label15_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label15_1.setBounds(10, 10, 195, 60);
 		panel15.add(Label15_1);
 		
-		JLabel Label15_2 = new JLabel("15 / ?");
-		Label15_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label15_2.setBounds(178, 195, 115, 49);
-		panel15.add(Label15_2);
-		
-		JRadioButton rdbtn15_1 = new JRadioButton("\uC801\uAC8C\uD0D0");
+		JRadioButton rdbtn15_1 = new JRadioButton(" 적게탐");
+		rdbtn15_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn15_1.setBackground(Color.WHITE);
 		buttonGroup13.add(rdbtn15_1);
-		rdbtn15_1.setBounds(62, 95, 121, 23);
+		rdbtn15_1.setBounds(170, 120, 160, 60);
 		panel15.add(rdbtn15_1);
 		
-		JRadioButton rdbtn15_2 = new JRadioButton("\uBCF4\uD1B5");
+		JRadioButton rdbtn15_2 = new JRadioButton(" 보통");
+		rdbtn15_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn15_2.setBackground(Color.WHITE);
 		buttonGroup13.add(rdbtn15_2);
-		rdbtn15_2.setBounds(74, 120, 121, 23);
+		rdbtn15_2.setBounds(370, 120, 160, 60);
 		panel15.add(rdbtn15_2);
 		
-		JRadioButton rdbtn15_3 = new JRadioButton("\uB9CE\uC774\uD0D0");
+		JRadioButton rdbtn15_3 = new JRadioButton(" 많이탐");
+		rdbtn15_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn15_3.setBackground(Color.WHITE);
 		buttonGroup13.add(rdbtn15_3);
-		rdbtn15_3.setBounds(84, 145, 121, 23);
+		rdbtn15_3.setBounds(570, 120, 160, 60);
 		panel15.add(rdbtn15_3);
 		btn15_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1180,37 +1289,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel16.setLayout(null);
-		panel16.setBounds(350, 230, 1000, 600);
+		panel16.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel16);
 		
 		JButton btn16_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn16_1.setBounds(386, 221, 97, 23);
+		btn16_1.setBounds(600, 450, 97, 23);
 		panel16.add(btn16_1);
 		
-		JLabel Label16_1 = new JLabel("\uC18C\uB9AC");
-		Label16_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label16_1.setBounds(38, 28, 136, 49);
+		JLabel Label16_1 = new JLabel("Q16. 소리");
+		Label16_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label16_1.setBounds(10, 10, 195, 60);
 		panel16.add(Label16_1);
 		
-		JLabel Label16_2 = new JLabel("16 / ?");
-		Label16_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label16_2.setBounds(178, 195, 115, 49);
-		panel16.add(Label16_2);
-		
-		JRadioButton rdbtn16_1 = new JRadioButton("\uC774\uC5B4\uD3F0");
+		JRadioButton rdbtn16_1 = new JRadioButton(" 이어폰");
+		rdbtn16_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn16_1.setBackground(Color.WHITE);
 		buttonGroup14.add(rdbtn16_1);
-		rdbtn16_1.setBounds(62, 95, 121, 23);
+		rdbtn16_1.setBounds(170, 120, 160, 60);
 		panel16.add(rdbtn16_1);
 		
-		JRadioButton rdbtn16_2 = new JRadioButton("\uC2A4\uD53C\uCEE4");
+		JRadioButton rdbtn16_2 = new JRadioButton(" 스피커");
+		rdbtn16_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn16_2.setBackground(Color.WHITE);
 		buttonGroup14.add(rdbtn16_2);
-		rdbtn16_2.setBounds(74, 120, 121, 23);
+		rdbtn16_2.setBounds(370, 120, 160, 60);
 		panel16.add(rdbtn16_2);
 		
-		JRadioButton rdbtn16_3 = new JRadioButton("\uC720\uB3D9\uC801");
+		JRadioButton rdbtn16_3 = new JRadioButton(" 유동적");
+		rdbtn16_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn16_3.setBackground(Color.WHITE);
 		buttonGroup14.add(rdbtn16_3);
-		rdbtn16_3.setBounds(84, 145, 121, 23);
+		rdbtn16_3.setBounds(570, 120, 160, 60);
 		panel16.add(rdbtn16_3);
 		btn16_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1227,32 +1337,31 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel17.setLayout(null);
-		panel17.setBounds(330, 238, 1000, 600);
+		panel17.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel17);
 		
 		JButton btn17_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn17_1.setBounds(386, 221, 97, 23);
+		btn17_1.setBounds(600, 450, 97, 23);
 		panel17.add(btn17_1);
 		
-		JLabel Label17_1 = new JLabel("\uD761\uC5F0\uC5EC\uBD80");
-		Label17_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label17_1.setBounds(38, 28, 136, 49);
+		JLabel Label17_1 = new JLabel("Q17. 흡연여부");
+		Label17_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label17_1.setBounds(10, 10, 260, 60);
 		panel17.add(Label17_1);
 		
-		JLabel Label17_2 = new JLabel("17 / ?");
-		Label17_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label17_2.setBounds(178, 195, 115, 49);
-		panel17.add(Label17_2);
-		
-		JRadioButton rdbtn17_1 = new JRadioButton("\uD761\uC5F0");
+		JRadioButton rdbtn17_1 = new JRadioButton(" 흡연");
+		rdbtn17_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn17_1.setBackground(Color.WHITE);
 		buttonGroup15.add(rdbtn17_1);
-		rdbtn17_1.setBounds(62, 95, 121, 23);
+		rdbtn17_1.setBounds(170, 120, 160, 60);
 		panel17.add(rdbtn17_1);
 		
-		JRadioButton rdbtn17_2 = new JRadioButton("\uBE44\uD761\uC5F0");
+		JRadioButton rdbtn17_2 = new JRadioButton(" 비흡연");
+		rdbtn17_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn17_2.setBackground(Color.WHITE);
 		buttonGroup15.add(rdbtn17_2);
-		rdbtn17_2.setBounds(74, 120, 121, 23);
+		rdbtn17_2.setBounds(370, 120, 160, 60);
 		panel17.add(rdbtn17_2);
 		btn17_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1268,42 +1377,45 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel18.setLayout(null);
-		panel18.setBounds(311, 240, 1000, 600);
+		panel18.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel18);
 		
 		JButton btn18_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn18_1.setBounds(386, 221, 97, 23);
+		btn18_1.setBounds(600, 450, 97, 23);
 		panel18.add(btn18_1);
 		
-		JLabel Label18_1 = new JLabel("\uD761\uC5F0\uC5EC\uBD80");
-		Label18_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label18_1.setBounds(38, 28, 136, 49);
+		JLabel Label18_1 = new JLabel("Q18. 실내통화");
+		Label18_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label18_1.setBounds(10, 10, 260, 60);
 		panel18.add(Label18_1);
 		
-		JLabel Label18_2 = new JLabel("18 / ?");
-		Label18_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label18_2.setBounds(178, 195, 115, 49);
-		panel18.add(Label18_2);
-		
-		JRadioButton rdbtn18_1 = new JRadioButton("\uBC18\uB300");
+		JRadioButton rdbtn18_1 = new JRadioButton(" 반대");
+		rdbtn18_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn18_1.setBackground(Color.WHITE);
 		buttonGroup16.add(rdbtn18_1);
-		rdbtn18_1.setBounds(62, 95, 121, 23);
+		rdbtn18_1.setBounds(170, 120, 160, 60);
 		panel18.add(rdbtn18_1);
 		
-		JRadioButton rdbtn18_2 = new JRadioButton("\uC0C1\uAD00\uC5C6\uC74C");
+		JRadioButton rdbtn18_2 = new JRadioButton(" 상관없음");
+		rdbtn18_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn18_2.setBackground(Color.WHITE);
 		buttonGroup16.add(rdbtn18_2);
-		rdbtn18_2.setBounds(74, 120, 121, 23);
+		rdbtn18_2.setBounds(370, 240, 280, 60);
 		panel18.add(rdbtn18_2);
 		
-		JRadioButton rdbtn18_3 = new JRadioButton("\uCC2C\uC131");
+		JRadioButton rdbtn18_3 = new JRadioButton(" 찬성");
+		rdbtn18_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn18_3.setBackground(Color.WHITE);
 		buttonGroup16.add(rdbtn18_3);
-		rdbtn18_3.setBounds(84, 145, 121, 23);
+		rdbtn18_3.setBounds(170, 240, 160, 60);
 		panel18.add(rdbtn18_3);
 		
-		JRadioButton rdbtn18_4 = new JRadioButton("\uAC04\uB2E8\uD55C \uC6A9\uBB34\uB9CC");
+		JRadioButton rdbtn18_4 = new JRadioButton(" 간단한 용무만");
+		rdbtn18_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn18_4.setBackground(Color.WHITE);
 		buttonGroup16.add(rdbtn18_4);
-		rdbtn18_4.setBounds(94, 170, 121, 23);
+		rdbtn18_4.setBounds(370, 120, 300, 60);
 		panel18.add(rdbtn18_4);
 		btn18_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1322,32 +1434,31 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel19.setLayout(null);
-		panel19.setBounds(301, 251, 1000, 600);
+		panel19.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel19);
 		
 		JButton btn19_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn19_1.setBounds(386, 221, 97, 23);
+		btn19_1.setBounds(600, 450, 97, 23);
 		panel19.add(btn19_1);
 		
-		JLabel Label19_1 = new JLabel("\uCE5C\uAD6C\uCD08\uB300");
-		Label19_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label19_1.setBounds(38, 28, 136, 49);
+		JLabel Label19_1 = new JLabel("Q19. 친구초대");
+		Label19_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label19_1.setBounds(10, 10, 280, 60);
 		panel19.add(Label19_1);
 		
-		JLabel Label19_2 = new JLabel("19 / ?");
-		Label19_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label19_2.setBounds(178, 195, 115, 49);
-		panel19.add(Label19_2);
-		
-		JRadioButton rdbtn19_1 = new JRadioButton("\uAC00\uB2A5");
+		JRadioButton rdbtn19_1 = new JRadioButton(" 가능");
+		rdbtn19_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn19_1.setBackground(Color.WHITE);
 		buttonGroup17.add(rdbtn19_1);
-		rdbtn19_1.setBounds(62, 95, 121, 23);
+		rdbtn19_1.setBounds(170, 120, 160, 60);
 		panel19.add(rdbtn19_1);
 		
-		JRadioButton rdbtn19_2 = new JRadioButton("\uBD88\uAC00");
+		JRadioButton rdbtn19_2 = new JRadioButton(" 불가");
+		rdbtn19_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn19_2.setBackground(Color.WHITE);
 		buttonGroup17.add(rdbtn19_2);
-		rdbtn19_2.setBounds(74, 120, 121, 23);
+		rdbtn19_2.setBounds(370, 120, 160, 60);
 		panel19.add(rdbtn19_2);
 		btn19_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1362,32 +1473,31 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel20.setLayout(null);
-		panel20.setBounds(288, 261, 1000, 600);
+		panel20.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel20);
 		
 		JButton btn20_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn20_1.setBounds(386, 221, 97, 23);
+		btn20_1.setBounds(600, 450, 97, 23);
 		panel20.add(btn20_1);
 		
-		JLabel Label20_1 = new JLabel("\uAE30\uC219\uC0AC\uC2DD");
-		Label20_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label20_1.setBounds(38, 28, 136, 49);
+		JLabel Label20_1 = new JLabel("Q20. 기숙사식");
+		Label20_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label20_1.setBounds(10, 10, 280, 60);
 		panel20.add(Label20_1);
 		
-		JLabel Label20_2 = new JLabel("20 / ?");
-		Label20_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label20_2.setBounds(178, 195, 115, 49);
-		panel20.add(Label20_2);
-		
-		JRadioButton rdbtn20_1 = new JRadioButton("\uAC19\uC774");
+		JRadioButton rdbtn20_1 = new JRadioButton(" 같이");
+		rdbtn20_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn20_1.setBackground(Color.WHITE);
 		buttonGroup18.add(rdbtn20_1);
-		rdbtn20_1.setBounds(62, 95, 121, 23);
+		rdbtn20_1.setBounds(170, 120, 160, 60);
 		panel20.add(rdbtn20_1);
 		
-		JRadioButton rdbtn20_2 = new JRadioButton("\uB530\uB85C");
+		JRadioButton rdbtn20_2 = new JRadioButton(" 따로");
+		rdbtn20_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn20_2.setBackground(Color.WHITE);
 		buttonGroup18.add(rdbtn20_2);
-		rdbtn20_2.setBounds(74, 120, 121, 23);
+		rdbtn20_2.setBounds(370, 120, 160, 60);
 		panel20.add(rdbtn20_2);
 		btn20_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1402,37 +1512,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel21.setLayout(null);
-		panel21.setBounds(270, 272, 1000, 600);
+		panel21.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel21);
 		
 		JButton btn21_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn21_1.setBounds(386, 221, 97, 23);
+		btn21_1.setBounds(600, 450, 97, 23);
 		panel21.add(btn21_1);
 		
-		JLabel Label21_1 = new JLabel("\uACF5\uBD80");
-		Label21_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label21_1.setBounds(38, 28, 136, 49);
+		JLabel Label21_1 = new JLabel("Q21. 공부");
+		Label21_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label21_1.setBounds(10, 10, 195, 60);
 		panel21.add(Label21_1);
 		
-		JLabel Label21_2 = new JLabel("21 / ?");
-		Label21_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label21_2.setBounds(178, 195, 115, 49);
-		panel21.add(Label21_2);
-		
-		JRadioButton rdbtn21_1 = new JRadioButton("\uAE30\uC219\uC0AC");
+		JRadioButton rdbtn21_1 = new JRadioButton(" 기숙사");
+		rdbtn21_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn21_1.setBackground(Color.WHITE);
 		buttonGroup19.add(rdbtn21_1);
-		rdbtn21_1.setBounds(62, 95, 121, 23);
+		rdbtn21_1.setBounds(170, 120, 160, 60);
 		panel21.add(rdbtn21_1);
 		
-		JRadioButton rdbtn21_2 = new JRadioButton("\uB3C4\uC11C\uAD00");
+		JRadioButton rdbtn21_2 = new JRadioButton(" 도서관");
+		rdbtn21_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn21_2.setBackground(Color.WHITE);
 		buttonGroup19.add(rdbtn21_2);
-		rdbtn21_2.setBounds(74, 120, 121, 23);
+		rdbtn21_2.setBounds(370, 120, 160, 60);
 		panel21.add(rdbtn21_2);
 		
-		JRadioButton rdbtn21_3 = new JRadioButton("\uC720\uB3D9\uC801");
+		JRadioButton rdbtn21_3 = new JRadioButton(" 유동적");
+		rdbtn21_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn21_3.setBackground(Color.WHITE);
 		buttonGroup19.add(rdbtn21_3);
-		rdbtn21_3.setBounds(84, 145, 121, 23);
+		rdbtn21_3.setBounds(570, 120, 160, 60);
 		panel21.add(rdbtn21_3);
 		btn21_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1449,32 +1560,31 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel22.setLayout(null);
-		panel22.setBounds(249, 283, 1000, 600);
+		panel22.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel22);
 		
 		JButton btn22_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 	
-		btn22_1.setBounds(386, 221, 97, 23);
+		btn22_1.setBounds(600, 450, 97, 23);
 		panel22.add(btn22_1);
 		
-		JLabel Label22_1 = new JLabel("\uD5A5\uC218");
-		Label22_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label22_1.setBounds(38, 28, 136, 49);
+		JLabel Label22_1 = new JLabel("Q22. 향수");
+		Label22_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label22_1.setBounds(10, 10, 195, 60);
 		panel22.add(Label22_1);
 		
-		JLabel Label22_2 = new JLabel("22 / ?");
-		Label22_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label22_2.setBounds(178, 195, 115, 49);
-		panel22.add(Label22_2);
-		
-		JRadioButton rdbtn22_1 = new JRadioButton("\uBBF8\uC0AC\uC6A9");
+		JRadioButton rdbtn22_1 = new JRadioButton(" 미사용");
+		rdbtn22_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn22_1.setBackground(Color.WHITE);
 		buttonGroup20.add(rdbtn22_1);
-		rdbtn22_1.setBounds(62, 95, 121, 23);
+		rdbtn22_1.setBounds(170, 120, 160, 60);
 		panel22.add(rdbtn22_1);
 		
-		JRadioButton rdbtn22_2 = new JRadioButton("\uC0AC\uC6A9");
+		JRadioButton rdbtn22_2 = new JRadioButton(" 사용");
+		rdbtn22_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn22_2.setBackground(Color.WHITE);
 		buttonGroup20.add(rdbtn22_2);
-		rdbtn22_2.setBounds(74, 120, 121, 23);
+		rdbtn22_2.setBounds(370, 120, 160, 60);
 		panel22.add(rdbtn22_2);
 		btn22_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1489,32 +1599,31 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel23.setLayout(null);
-		panel23.setBounds(234, 291, 1000, 600);
+		panel23.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel23);
 		
 		JButton btn23_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn23_1.setBounds(386, 221, 97, 23);
+		btn23_1.setBounds(600, 450, 97, 23);
 		panel23.add(btn23_1);
 		
-		JLabel Label23_1 = new JLabel("\uD5A5 \uBBFC\uAC10\uB3C4");
-		Label23_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label23_1.setBounds(38, 28, 174, 49);
+		JLabel Label23_1 = new JLabel("Q23. 향 민감도");
+		Label23_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label23_1.setBounds(10, 10, 300, 60);
 		panel23.add(Label23_1);
 		
-		JLabel Label23_2 = new JLabel("23 / ?");
-		Label23_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label23_2.setBounds(178, 195, 115, 49);
-		panel23.add(Label23_2);
-		
-		JRadioButton rdbtn23_1 = new JRadioButton("\uBBFC\uAC10");
+		JRadioButton rdbtn23_1 = new JRadioButton(" 민감");
+		rdbtn23_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn23_1.setBackground(Color.WHITE);
 		buttonGroup21.add(rdbtn23_1);
-		rdbtn23_1.setBounds(62, 95, 121, 23);
+		rdbtn23_1.setBounds(170, 120, 160, 60);
 		panel23.add(rdbtn23_1);
 		
-		JRadioButton rdbtn23_2 = new JRadioButton("\uC0C1\uAD00\uC5C6\uC74C");
+		JRadioButton rdbtn23_2 = new JRadioButton(" 상관없음");
+		rdbtn23_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn23_2.setBackground(Color.WHITE);
 		buttonGroup21.add(rdbtn23_2);
-		rdbtn23_2.setBounds(74, 120, 121, 23);
+		rdbtn23_2.setBounds(370, 120, 200, 60);
 		panel23.add(rdbtn23_2);
 		btn23_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1529,37 +1638,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel24.setLayout(null);
-		panel24.setBounds(223, 295, 1000, 600);
+		panel24.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel24);
 		
 		JButton btn24_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn24_1.setBounds(386, 221, 97, 23);
+		btn24_1.setBounds(600, 450, 97, 23);
 		panel24.add(btn24_1);
 		
-		JLabel Label24_1 = new JLabel("\uCEF4\uD4E8\uD130 \uAC8C\uC784");
-		Label24_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label24_1.setBounds(38, 28, 188, 49);
+		JLabel Label24_1 = new JLabel("Q24. 컴퓨터 게임");
+		Label24_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label24_1.setBounds(10, 10, 340, 60);
 		panel24.add(Label24_1);
 		
-		JLabel Label24_2 = new JLabel("24 / ?");
-		Label24_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label24_2.setBounds(178, 195, 115, 49);
-		panel24.add(Label24_2);
-		
-		JRadioButton rdbtn24_1 = new JRadioButton("\uC548\uD568");
+		JRadioButton rdbtn24_1 = new JRadioButton(" 안함");
+		rdbtn24_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn24_1.setBackground(Color.WHITE);
 		buttonGroup22.add(rdbtn24_1);
-		rdbtn24_1.setBounds(62, 95, 121, 23);
+		rdbtn24_1.setBounds(170, 120, 160, 60);
 		panel24.add(rdbtn24_1);
 		
-		JRadioButton rdbtn24_2 = new JRadioButton("\uAC00\uB054");
+		JRadioButton rdbtn24_2 = new JRadioButton(" 가끔");
+		rdbtn24_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn24_2.setBackground(Color.WHITE);
 		buttonGroup22.add(rdbtn24_2);
-		rdbtn24_2.setBounds(74, 120, 121, 23);
+		rdbtn24_2.setBounds(370, 120, 160, 60);
 		panel24.add(rdbtn24_2);
 		
-		JRadioButton rdbtn24_3 = new JRadioButton("\uC790\uC8FC");
+		JRadioButton rdbtn24_3 = new JRadioButton(" 자주");
+		rdbtn24_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn24_3.setBackground(Color.WHITE);
 		buttonGroup22.add(rdbtn24_3);
-		rdbtn24_3.setBounds(84, 145, 121, 23);
+		rdbtn24_3.setBounds(570, 120, 160, 60);
 		panel24.add(rdbtn24_3);
 		btn24_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1576,37 +1686,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel25.setLayout(null);
-		panel25.setBounds(206, 298, 1000, 600);
+		panel25.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel25);
 		
 		JButton btn25_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn25_1.setBounds(386, 221, 97, 23);
+		btn25_1.setBounds(600, 450, 97, 23);
 		panel25.add(btn25_1);
 		
-		JLabel Label25_1 = new JLabel("\uC57C\uC2DD");
-		Label25_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label25_1.setBounds(38, 28, 86, 49);
+		JLabel Label25_1 = new JLabel("Q25. 야식");
+		Label25_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label25_1.setBounds(10, 10, 200, 60);
 		panel25.add(Label25_1);
 		
-		JLabel Label25_2 = new JLabel("25 / ?");
-		Label25_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label25_2.setBounds(178, 195, 115, 49);
-		panel25.add(Label25_2);
-		
-		JRadioButton rdbtn25_1 = new JRadioButton("\uC548\uBA39\uC74C");
+		JRadioButton rdbtn25_1 = new JRadioButton(" 안먹음");
+		rdbtn25_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn25_1.setBackground(Color.WHITE);
 		buttonGroup23.add(rdbtn25_1);
-		rdbtn25_1.setBounds(62, 95, 121, 23);
+		rdbtn25_1.setBounds(170, 120, 160, 60);
 		panel25.add(rdbtn25_1);
 		
-		JRadioButton rdbtn25_2 = new JRadioButton("\uAC00\uB054");
+		JRadioButton rdbtn25_2 = new JRadioButton(" 가끔");
+		rdbtn25_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn25_2.setBackground(Color.WHITE);
 		buttonGroup23.add(rdbtn25_2);
-		rdbtn25_2.setBounds(74, 120, 121, 23);
+		rdbtn25_2.setBounds(370, 120, 160, 60);
 		panel25.add(rdbtn25_2);
 		
-		JRadioButton rdbtn25_3 = new JRadioButton("\uC790\uC8FC");
+		JRadioButton rdbtn25_3 = new JRadioButton(" 자주");
+		rdbtn25_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn25_3.setBackground(Color.WHITE);
 		buttonGroup23.add(rdbtn25_3);
-		rdbtn25_3.setBounds(84, 145, 121, 23);
+		rdbtn25_3.setBounds(570, 120, 160, 60);
 		panel25.add(rdbtn25_3);
 		btn25_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1624,37 +1735,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel26.setLayout(null);
-		panel26.setBounds(187, 302, 1000, 600);
+		panel26.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel26);
 		
 		JButton btn26_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn26_1.setBounds(386, 221, 97, 23);
+		btn26_1.setBounds(600, 450, 97, 23);
 		panel26.add(btn26_1);
 		
-		JLabel Label26_1 = new JLabel("\uC220");
-		Label26_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label26_1.setBounds(38, 28, 86, 49);
+		JLabel Label26_1 = new JLabel("Q26. 술");
+		Label26_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label26_1.setBounds(10, 10, 200, 60);
 		panel26.add(Label26_1);
 		
-		JLabel Label26_2 = new JLabel("26 / ?");
-		Label26_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label26_2.setBounds(178, 195, 115, 49);
-		panel26.add(Label26_2);
-		
-		JRadioButton rdbtn26_1 = new JRadioButton("\uC548\uB9C8\uC2EC");
+		JRadioButton rdbtn26_1 = new JRadioButton(" 안마심");
+		rdbtn26_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn26_1.setBackground(Color.WHITE);
 		buttonGroup24.add(rdbtn26_1);
-		rdbtn26_1.setBounds(62, 95, 121, 23);
+		rdbtn26_1.setBounds(170, 120, 160, 60);
 		panel26.add(rdbtn26_1);
 		
-		JRadioButton rdbtn26_2 = new JRadioButton("\uAC00\uB054");
+		JRadioButton rdbtn26_2 = new JRadioButton(" 가끔");
+		rdbtn26_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn26_2.setBackground(Color.WHITE);
 		buttonGroup24.add(rdbtn26_2);
-		rdbtn26_2.setBounds(74, 120, 121, 23);
+		rdbtn26_2.setBounds(370, 120, 160, 60);
 		panel26.add(rdbtn26_2);
 		
-		JRadioButton rdbtn26_3 = new JRadioButton("\uC790\uC8FC");
+		JRadioButton rdbtn26_3 = new JRadioButton(" 자주");
+		rdbtn26_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn26_3.setBackground(Color.WHITE);
 		buttonGroup24.add(rdbtn26_3);
-		rdbtn26_3.setBounds(84, 145, 121, 23);
+		rdbtn26_3.setBounds(570, 120, 160, 60);
 		panel26.add(rdbtn26_3);
 		btn26_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1671,37 +1783,38 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel27.setLayout(null);
-		panel27.setBounds(174, 306, 1000, 600);
+		panel27.setBounds(145, 290, 1000, 500);
 		contentPane.add(panel27);
 		
 		JButton btn27_1 = new JButton("\uB2E4\uC74C\uC9C8\uBB38");
 		
-		btn27_1.setBounds(386, 221, 97, 23);
+		btn27_1.setBounds(600, 450, 97, 23);
 		panel27.add(btn27_1);
 		
-		JLabel Label27_1 = new JLabel("\uC2E4\uB0B4\uCDE8\uC2DD");
-		Label27_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label27_1.setBounds(38, 28, 145, 49);
+		JLabel Label27_1 = new JLabel("Q27. 실내취식");
+		Label27_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label27_1.setBounds(10, 10, 300, 60);
 		panel27.add(Label27_1);
 		
-		JLabel Label27_2 = new JLabel("27 / ?");
-		Label27_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label27_2.setBounds(178, 195, 115, 49);
-		panel27.add(Label27_2);
-		
-		JRadioButton rdbtn27_1 = new JRadioButton("\uBD88\uAC00");
+		JRadioButton rdbtn27_1 = new JRadioButton(" 불가");
+		rdbtn27_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn27_1.setBackground(Color.WHITE);
 		buttonGroup25.add(rdbtn27_1);
-		rdbtn27_1.setBounds(62, 95, 121, 23);
+		rdbtn27_1.setBounds(170, 120, 160, 60);
 		panel27.add(rdbtn27_1);
 		
-		JRadioButton rdbtn27_2 = new JRadioButton("\uB0C4\uC0C8 \uC548\uB098\uB294 \uC74C\uC2DD\uB9CC");
+		JRadioButton rdbtn27_2 = new JRadioButton(" 냄새 안나는 음식만");
+		rdbtn27_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn27_2.setBackground(Color.WHITE);
 		buttonGroup25.add(rdbtn27_2);
-		rdbtn27_2.setBounds(74, 120, 167, 23);
+		rdbtn27_2.setBounds(370, 240, 380, 60);
 		panel27.add(rdbtn27_2);
 		
-		JRadioButton rdbtn27_3 = new JRadioButton("\uAC00\uB2A5");
+		JRadioButton rdbtn27_3 = new JRadioButton(" 가능");
+		rdbtn27_3.setBackground(Color.WHITE);
+		rdbtn27_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
 		buttonGroup25.add(rdbtn27_3);
-		rdbtn27_3.setBounds(84, 145, 121, 23);
+		rdbtn27_3.setBounds(170, 240, 160, 60);
 		panel27.add(rdbtn27_3);
 		btn27_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -1718,48 +1831,63 @@ public class roomCheck extends JFrame {
 			}
 		});
 		panel28.setLayout(null);
-		panel28.setBounds(154, 317, 1000, 600);
+		panel28.setBounds(145, 290, 1200, 500);
 		contentPane.add(panel28);
 		
 		JButton btn28_1 = new JButton("\uC124\uBB38\uC644\uB8CC");
 		
-		btn28_1.setBounds(386, 221, 97, 23);
+		btn28_1.setBounds(600, 450, 97, 23);
 		panel28.add(btn28_1);
 		
-		JLabel Label28_1 = new JLabel("\uBC8C\uB808");
-		Label28_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label28_1.setBounds(38, 28, 136, 49);
+		JLabel Label28_1 = new JLabel("Q28. 벌레");
+		Label28_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		Label28_1.setBounds(10, 10, 200, 60);
 		panel28.add(Label28_1);
 		
-		JLabel Label28_2 = new JLabel("28 / ?");
-		Label28_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		Label28_2.setBounds(248, 145, 115, 49);
-		panel28.add(Label28_2);
-		
-		JRadioButton rdbtn28_1 = new JRadioButton("\uD610\uC624");
+		JRadioButton rdbtn28_1 = new JRadioButton(" 혐오");
+		rdbtn28_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn28_1.setBackground(Color.WHITE);
 		buttonGroup26.add(rdbtn28_1);
-		rdbtn28_1.setBounds(62, 95, 121, 23);
+		rdbtn28_1.setBounds(170, 120, 160, 60);
 		panel28.add(rdbtn28_1);
 		
-		JRadioButton rdbtn28_2 = new JRadioButton("\uBABB\uC7A1\uC74C");
+		JRadioButton rdbtn28_2 = new JRadioButton(" 못잡음");
+		rdbtn28_2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn28_2.setBackground(Color.WHITE);
 		buttonGroup26.add(rdbtn28_2);
-		rdbtn28_2.setBounds(74, 120, 121, 23);
+		rdbtn28_2.setBounds(370, 120, 160, 60);
 		panel28.add(rdbtn28_2);
 		
-		JRadioButton rdbtn28_3 = new JRadioButton("\uC911\uAC04");
+		JRadioButton rdbtn28_3 = new JRadioButton(" 중간");
+		rdbtn28_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn28_3.setBackground(Color.WHITE);
 		buttonGroup26.add(rdbtn28_3);
-		rdbtn28_3.setBounds(84, 145, 121, 23);
+		rdbtn28_3.setBounds(570, 120, 160, 60);
 		panel28.add(rdbtn28_3);
 		
-		JRadioButton rdbtn28_4 = new JRadioButton("\uC7A1\uC74C");
+		JRadioButton rdbtn28_4 = new JRadioButton(" 잡음");
+		rdbtn28_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn28_4.setBackground(Color.WHITE);
 		buttonGroup26.add(rdbtn28_4);
-		rdbtn28_4.setBounds(94, 170, 121, 23);
+		rdbtn28_4.setBounds(770, 120, 160, 60);
 		panel28.add(rdbtn28_4);
 		
-		JRadioButton rdbtn28_5 = new JRadioButton("\uADC0\uC5EC\uC6C0");
+		JRadioButton rdbtn28_5 = new JRadioButton(" 파브르");
+		rdbtn28_5.setFont(new Font("야놀자 야체 B", Font.PLAIN, 60));
+		rdbtn28_5.setBackground(Color.WHITE);
 		buttonGroup26.add(rdbtn28_5);
-		rdbtn28_5.setBounds(104, 195, 121, 23);
+		rdbtn28_5.setBounds(970, 120, 160, 60);
 		panel28.add(rdbtn28_5);
+		
+		JLabel infoLabel_1 = new JLabel("내방 점검하기");
+		infoLabel_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
+		infoLabel_1.setBounds(80, 150, 280, 80);
+		contentPane.add(infoLabel_1);
+		
+		JPanel line2 = new JPanel();
+		line2.setBackground(Color.LIGHT_GRAY);
+		line2.setBounds(80, 230, 1400, 1);
+		contentPane.add(line2);
 		
 		btn28_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

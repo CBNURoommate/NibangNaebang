@@ -68,6 +68,7 @@ public class randomMatching extends JFrame {
 	 * Create the frame.
 	 */
 	public randomMatching() {
+		setTitle("니방내방 - 니방 랜덤매칭");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);
 		contentPane = new JPanel();
@@ -460,8 +461,6 @@ public class randomMatching extends JFrame {
 		line2.setBounds(80, 230, 1400, 1);
 		contentPane.add(line2);
 		
-		
-		
 		JButton ranMatButton = new JButton("랜덤매칭");
 		ranMatButton.setBounds(745, 740, 97, 23);
 		contentPane.add(ranMatButton);
@@ -534,9 +533,6 @@ public class randomMatching extends JFrame {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
 				}
-				
-			
-				
 			}
 		});
 	}
