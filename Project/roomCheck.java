@@ -858,7 +858,7 @@ public class roomCheck extends JFrame {
 					showertime = 4;
 				else if (rdbtn7_5.isSelected())
 					showertime = 5;
-				else if (rdbtn7_5.isSelected())
+				else if (rdbtn7_6.isSelected())
 					showertime = 6;
 				else
 					showertime = -1;
@@ -1016,18 +1016,17 @@ public class roomCheck extends JFrame {
 		panel10.add(checkbtn10_4);
 		btn10_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-
-				if (checkbtn10_1.isSelected())
+				if (checkbtn10_2.isSelected())
 					jamb1 = 1;
 				else
 					jamb1 = 0;
 
-				if (checkbtn10_2.isSelected())
+				if (checkbtn10_3.isSelected())
 					jamb2 = 1;
 				else
 					jamb2 = 0;
 
-				if (checkbtn10_3.isSelected())
+				if (checkbtn10_4.isSelected())
 					jamb3 = 1;
 				else
 					jamb3 = 0;
