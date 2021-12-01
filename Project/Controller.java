@@ -55,7 +55,7 @@ public class Controller {
             st = conn.createStatement();
             rs = st.executeQuery("select * from Test.user;");
             while (rs.next()) {
-                arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23)));
+                arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23),rs.getInt(15),rs.getInt(8)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -110,7 +110,7 @@ public class Controller {
             st = conn.createStatement();
             rs = st.executeQuery("select * from Test.user where id like '%" + content + "%';");
             while (rs.next()) {
-            	arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23)));
+            	arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23), rs.getInt(15),rs.getInt(8)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
