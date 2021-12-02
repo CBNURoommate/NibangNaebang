@@ -15,6 +15,7 @@ import javax.swing.border.EmptyBorder;
 import javax.swing.ImageIcon;
 import javax.swing.JSplitPane;
 import javax.swing.UIManager;
+import java.awt.Toolkit;
 
 public class uploadMyroomUI extends JFrame {
 
@@ -40,6 +41,7 @@ public class uploadMyroomUI extends JFrame {
 	 * Create the frame.
 	 */
 	public uploadMyroomUI() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(uploadMyroomUI.class.getResource("/Project/searchH.png")));
 		String temp = "없음";
 
 		setTitle("니방내방 - 내방 소개하기");

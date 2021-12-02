@@ -57,6 +57,7 @@ public class loginUI extends JFrame {
 	 * Create the frame.
 	 */
 	public loginUI() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(loginUI.class.getResource("/Project/searchH.png")));
 		setTitle("\uB2C8\uBC29\uB0B4\uBC29 - \uB85C\uADF8\uC778");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);

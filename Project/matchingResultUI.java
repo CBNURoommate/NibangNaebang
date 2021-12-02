@@ -16,6 +16,7 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.awt.event.ActionEvent;
+import java.awt.Toolkit;
 
 public class matchingResultUI extends JFrame {
 
@@ -42,6 +43,7 @@ public class matchingResultUI extends JFrame {
 	 * Create the frame.
 	 */
 	public matchingResultUI() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(matchingResultUI.class.getResource("/Project/searchH.png")));
 		setTitle("니방내방 - 니방 랜덤매칭");
 		String temp = "없음";
 		

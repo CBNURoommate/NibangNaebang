@@ -39,6 +39,7 @@ import javax.swing.JSeparator;
 import javax.swing.JList;
 import javax.swing.AbstractListModel;
 import javax.swing.ListSelectionModel;
+import java.awt.Toolkit;
 
 public class randomMatching extends JFrame {
 
@@ -68,6 +69,7 @@ public class randomMatching extends JFrame {
 	 * Create the frame.
 	 */
 	public randomMatching() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(randomMatching.class.getResource("/Project/searchH.png")));
 		setTitle("니방내방 - 니방 랜덤매칭");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);

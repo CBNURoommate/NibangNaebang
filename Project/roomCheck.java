@@ -31,6 +31,7 @@ import javax.swing.AbstractAction;
 import javax.swing.Action;
 import javax.swing.JPasswordField;
 import javax.swing.ImageIcon;
+import java.awt.Toolkit;
 
 public class roomCheck extends JFrame {
 
@@ -119,6 +120,7 @@ public class roomCheck extends JFrame {
 	 * Create the frame.
 	 */
 	public roomCheck() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(roomCheck.class.getResource("/Project/searchH.png")));
 		setTitle("\uB2C8\uBC29\uB0B4\uBC29 - \uB0B4\uBC29 \uC810\uAC80\uD558\uAE30");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);

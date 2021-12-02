@@ -17,6 +17,7 @@ import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.SwingConstants;
+import java.awt.Toolkit;
 
 public class RegisterUI extends JFrame {
 
@@ -46,6 +47,7 @@ public class RegisterUI extends JFrame {
 	 * Create the frame.
 	 */
 	public RegisterUI() {
+		setIconImage(Toolkit.getDefaultToolkit().getImage(RegisterUI.class.getResource("/Project/searchH.png")));
 		setTitle("\uB2C8\uBC29\uB0B4\uBC29 - \uD68C\uC6D0\uAC00\uC785");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);
