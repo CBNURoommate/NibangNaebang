@@ -211,6 +211,8 @@ public class MainBoardUI {
                 	hakbun_a = "20";
                  else if(hakbunBox.getSelectedItem() == "21")
                 	hakbun_a = "21";
+                 else if(hakbunBox.getSelectedItem() == "전체")
+                 	hakbun_a = "21";
                
                if(ageBox.getSelectedItem() == "1996")
                 	 age_a = "1996";
@@ -248,44 +250,55 @@ public class MainBoardUI {
                      else
                         jam_a=arr.get(i).jam;
                      
+                     if(hakbunBox.getSelectedItem() == "14")
+                     	hakbun_a = "14";
+                     else if(hakbunBox.getSelectedItem() == "15")
+                     	hakbun_a = "15";
+                     else if(hakbunBox.getSelectedItem() == "16")
+                     	hakbun_a = "16";
+                     else if(hakbunBox.getSelectedItem() == "17")
+                     	hakbun_a = "17";
+                     else if(hakbunBox.getSelectedItem() == "18")
+                     	hakbun_a = "18";
+                     else if(hakbunBox.getSelectedItem() == "19")
+                     	hakbun_a = "19";
+                     else if(hakbunBox.getSelectedItem() == "20")
+                     	hakbun_a = "20";
+                     else if(hakbunBox.getSelectedItem() == "21")
+                     	hakbun_a = "21";
+                     else if(hakbunBox.getSelectedItem() == "전체")
+                      	hakbun_a = arr.get(i).hakbun;
                      
-                    
-                     if(dptbox.getSelectedItem() == "전체" && hakbunBox.getSelectedItem() == "전체" && ageBox.getSelectedItem() == "전체") {
-                    	 if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a)
-               		    	 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
-                   		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
-                    	 
-                     }
+                     
+                     if(ageBox.getSelectedItem() == "1996")
+                    	 age_a = "1996";
+                     else if(ageBox.getSelectedItem() == "1997")
+                    	 age_a = "1997";
+                     else if(ageBox.getSelectedItem() == "1998")
+                    	 age_a = "1998";
+                     else if(ageBox.getSelectedItem() == "1999")
+                    	 age_a = "1999";
+                     else if(ageBox.getSelectedItem() == "2000")
+                    	 age_a = "2000";
+                     else if(ageBox.getSelectedItem() == "2001")
+                    	 age_a = "2001";
+                     else if(ageBox.getSelectedItem() == "2002")
+                    	 age_a = "2002";
+                     else if(ageBox.getSelectedItem() == "2003")
+                    	 age_a = "2003";
+                     else if(ageBox.getSelectedItem() == "전체")
+                    	 age_a = arr.get(i).age;
                      
                      
-                     else if(dptbox.getSelectedItem() == "전체") {
-                    	 if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a && arr.get(i).getHakbun() == hakbun_a && arr.get(i).getAge() == age_a)
-               		    	 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
-                   		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
-                    	 
-                     }
-                     
-                     else if(hakbunBox.getSelectedItem() == "전체") {
-                    	 if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a && arr.get(i).getDpt() == dptbox.getSelectedItem() && arr.get(i).getAge() == age_a)
-               		    	 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
-                   		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
-                    	 
-                     }
-                     
-                     else if(ageBox.getSelectedItem() == "전체") {
-                    	 if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a && arr.get(i).getDpt() == dptbox.getSelectedItem() && arr.get(i).getHakbun() == hakbun_a)
-               		    	 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
-                   		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
-                    	 
-                     }
-                     
-                    
-                     
-                	
-                	                  	               	 
-                     else if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a && arr.get(i).getDpt() == dptbox.getSelectedItem() && arr.get(i).getHakbun() == hakbun_a && arr.get(i).getAge() == age_a)
-           		    	 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
-               		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
+                    if(dptbox.getSelectedItem() == "전체") {
+                        if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a && arr.get(i).getHakbun() == hakbun_a && arr.get(i).getAge() == age_a)
+            		    	 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
+                    }
+                    else
+                    	if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a && arr.get(i).getDpt() == dptbox.getSelectedItem() && arr.get(i).getHakbun() == hakbun_a && arr.get(i).getAge() == age_a)
+           		    	   ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+               		        + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
                 	               		    
            		    
            		              		   
