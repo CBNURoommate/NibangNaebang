@@ -150,6 +150,11 @@ public class mailInboxUI extends JFrame {
 		contentPane.add(movePage4);
 		
 		JButton resetButton = new JButton(" 새로고침");
+		resetButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+			}
+		});
 		resetButton.setIcon(new ImageIcon(mailInboxUI.class.getResource("/Project/reset.png")));
 		resetButton.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		resetButton.setFocusPainted(false);
@@ -380,9 +385,12 @@ public class mailInboxUI extends JFrame {
 		mailInbox mi=new mailInbox();
 		ResultSet rs=mi.getbox();
 		
+		String[] temp = new String[100];
+		
 		if(rs!=null)
 		{
 			int i=1;
+
 			while(rs.next())
 			{
 				Object[] d=new Object[4];
@@ -399,6 +407,7 @@ public class mailInboxUI extends JFrame {
 				}
 				d[3]=rs.getString("constext");
 				m.insertRow(i-1, d);
+				temp[i-1] = rs.getString("sendtime");
 				i++;
 			}
 		}
@@ -409,6 +418,7 @@ public class mailInboxUI extends JFrame {
 				int rowNum = messageTable.getSelectedRow();	// save selected row line number
 				idLabel.setText((String) messageTable.getModel().getValueAt(rowNum, 2));
 				msgPanel.setText((String) messageTable.getModel().getValueAt(rowNum, 3));
+				timeLabel.setText((String) temp[rowNum]);
 			}
 		});
 		
