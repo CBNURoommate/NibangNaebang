@@ -87,6 +87,7 @@ public class MainBoardUI {
         dptbox.setBounds(860, 332, 111, 25);
         
         jpanel.add(dptbox);
+        dptbox.addItem("전체");
         dptbox.addItem("인문대");
         dptbox.addItem("사회과학대");
         dptbox.addItem("자연과학대");
@@ -99,7 +100,6 @@ public class MainBoardUI {
         dptbox.addItem("수의대");
         dptbox.addItem("의과대");
         dptbox.addItem("자율");
-        dptbox.addItem("전체");
         scrollPane.setVisible(true); 
         btn5.setBounds(262, 618, 60, 40);
         
@@ -191,6 +191,14 @@ public class MainBoardUI {
                 		        + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
                 		 
                 	 }
+                	 
+                	 else if(!smokecheckbox.isSelected() && !jamcheckbox.isSelected() && arr.get(i).getDpt() == dptbox.getSelectedItem()) {
+                		 if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a )
+                 		    ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                              + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
+                		 
+                	 }
+                		 
                 	 
                      else                    	               	 
                          if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a && arr.get(i).getDpt() == dptbox.getSelectedItem())
