@@ -249,7 +249,7 @@ public class mailInboxUI extends JFrame {
 		JLabel timeLabel = new JLabel("메세지 전송 시간");
 		timeLabel.setForeground(Color.GRAY);
 		timeLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-		timeLabel.setBounds(305, 80, 230, 35);
+		timeLabel.setBounds(345, 80, 190, 35);
 		messagePanel.add(timeLabel);
 		
 		JScrollPane outputPanel1 = new JScrollPane();
