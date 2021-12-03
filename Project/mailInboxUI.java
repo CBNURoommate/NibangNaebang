@@ -57,8 +57,8 @@ public class mailInboxUI extends JFrame {
 		setTitle("니방내방 - 메세지 박스");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(mailInboxUI.class.getResource("/Project/searchH.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		
 		setBounds(100, 100, 1600, 900);
+		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
@@ -244,13 +244,6 @@ public class mailInboxUI extends JFrame {
 		contentPane.add(outputPanel1);
 		
 		messageTable = new JTable();
-		messageTable.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent e) {
-				int rowNum = messageTable.getSelectedRow();	// save selected row line number
-				System.out.println(rowNum + " clicked");
-			}
-		});
 		outputPanel1.setViewportView(messageTable);
 		messageTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		messageTable.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
@@ -408,8 +401,17 @@ public class mailInboxUI extends JFrame {
 				m.insertRow(i-1, d);
 				i++;
 			}
-			
 		}
+		
+		messageTable.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				int rowNum = messageTable.getSelectedRow();	// save selected row line number
+				idLabel.setText((String) messageTable.getModel().getValueAt(rowNum, 2));
+				msgPanel.setText((String) messageTable.getModel().getValueAt(rowNum, 3));
+			}
+		});
+		
 		JLabel infoLabel1 = new JLabel("메세지");
 		infoLabel1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
 		infoLabel1.setBounds(80, 150, 220, 80);

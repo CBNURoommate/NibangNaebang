@@ -43,12 +43,13 @@ public class matchingResultUI extends JFrame {
 	 * Create the frame.
 	 */
 	public matchingResultUI() {
-		setIconImage(Toolkit.getDefaultToolkit().getImage(matchingResultUI.class.getResource("/Project/searchH.png")));
-		setTitle("니방내방 - 니방 랜덤매칭");
 		String temp = "없음";
 		
+		setIconImage(Toolkit.getDefaultToolkit().getImage(matchingResultUI.class.getResource("/Project/searchH.png")));
+		setTitle("니방내방 - 니방 랜덤매칭");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		setBounds(100, 100, 1600, 900);
+		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
 		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
