@@ -21,6 +21,8 @@ import javax.swing.JTextPane;
 import javax.swing.JScrollPane;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 public class mailInboxUI extends JFrame {
 
@@ -144,6 +146,22 @@ public class mailInboxUI extends JFrame {
 		resetButton.setBounds(565, 750, 200, 60);
 		contentPane.add(resetButton);
 		
+		JButton sendButton = new JButton(" 작성하기");
+		sendButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				sendMessageUI s = new sendMessageUI();
+				s.setVisible(true);
+				setVisible(false);
+			}
+		});
+		sendButton.setIcon(new ImageIcon(mailInboxUI.class.getResource("/Project/send.png")));
+		sendButton.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		sendButton.setFocusPainted(false);
+		sendButton.setContentAreaFilled(false);
+		sendButton.setBorderPainted(false);
+		sendButton.setBounds(820, 750, 200, 60);
+		contentPane.add(sendButton);
+		
 		JPanel line1 = new JPanel();
 		line1.setBackground(Color.BLACK);
 		line1.setBounds(0, 96, 1600, 1);
@@ -216,6 +234,13 @@ public class mailInboxUI extends JFrame {
 		contentPane.add(scrollPane);
 		
 		messageTable = new JTable();
+		messageTable.addMouseListener(new MouseAdapter() {
+			@Override
+			public void mouseClicked(MouseEvent e) {
+				int rowNum = messageTable.getSelectedRow();	// save selected row line number
+				System.out.println(rowNum + " clicked");
+			}
+		});
 		scrollPane.setViewportView(messageTable);
 		messageTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		messageTable.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
@@ -255,22 +280,6 @@ public class mailInboxUI extends JFrame {
 				return columnEditables[column];
 			}
 		});
-		
-		JButton resetButton_1 = new JButton(" 작성하기");
-		resetButton_1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				sendMessageUI s = new sendMessageUI();
-				s.setVisible(true);
-				setVisible(false);
-			}
-		});
-		resetButton_1.setIcon(new ImageIcon(mailInboxUI.class.getResource("/Project/send.png")));
-		resetButton_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		resetButton_1.setFocusPainted(false);
-		resetButton_1.setContentAreaFilled(false);
-		resetButton_1.setBorderPainted(false);
-		resetButton_1.setBounds(820, 750, 200, 60);
-		contentPane.add(resetButton_1);
 		messageTable.getColumnModel().getColumn(0).setResizable(false);
 		messageTable.getColumnModel().getColumn(0).setPreferredWidth(80);
 		messageTable.getColumnModel().getColumn(0).setMinWidth(80);
