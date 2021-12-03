@@ -55,7 +55,7 @@ public class Controller {
             st = conn.createStatement();
             rs = st.executeQuery("select * from Test.user;");
             while (rs.next()) {
-                arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23),rs.getInt(15),rs.getInt(8)));
+                arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23),rs.getInt(15),rs.getInt(8),rs.getInt(20),rs.getInt(21),rs.getInt(9),rs.getInt(10),rs.getInt(12),rs.getInt(24),rs.getInt(33),rs.getInt(32)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
@@ -110,7 +110,7 @@ public class Controller {
             st = conn.createStatement();
             rs = st.executeQuery("select * from Test.user where id like '%" + content + "%';");
             while (rs.next()) {
-            	arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23), rs.getInt(15),rs.getInt(8)));
+                arr.add(new Model(rs.getString(1), rs.getString(3), rs.getInt(4), rs.getInt(5), rs.getInt(6), rs.getInt(7), rs.getInt(23),rs.getInt(15),rs.getInt(8),rs.getInt(20),rs.getInt(21),rs.getInt(9),rs.getInt(10),rs.getInt(12),rs.getInt(24),rs.getInt(33),rs.getInt(32)));
             }
         } catch (SQLException e) {
             e.printStackTrace();
