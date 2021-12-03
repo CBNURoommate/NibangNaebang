@@ -24,7 +24,7 @@ public class SendMessage {
 
 		
 		Date now = Calendar.getInstance().getTime();
-		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+		SimpleDateFormat formatter = new SimpleDateFormat("yy.MM.dd HH:mm");
 		
 		String formatedNow = formatter.format(now);
 		
