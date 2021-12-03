@@ -5,12 +5,12 @@ public class Model {
     String name;
     String gender;
     String dom;
-    int hakbun;
-    int age;
+    String hakbun;
+    String age;
     String smoking;
     String jam;
     String dpt;
-    
+
 
     public Model(String id, String name, int gender ,int dom, int hakbun, int age, int smoking,int jam, int dpt) {
         this.id = id;
@@ -54,8 +54,65 @@ public class Model {
         
         }
         
-        this.hakbun=hakbun;
-        this.age=age;
+        switch(hakbun) {
+        case 14:
+     	    this.hakbun="14";
+     	    break;
+        case 15:
+     	    this.hakbun="15";
+     	    break;
+        case 16:
+     	    this.hakbun="16";
+     	    break;
+        case 17:
+     	    this.hakbun="17";
+     	    break;
+        case 18:
+     	    this.hakbun="18";
+     	    break;
+        case 19:
+     	    this.hakbun="19";
+     	    break;
+        case 20:
+     	    this.hakbun="20";
+     	    break;
+        case 21:
+     	    this.hakbun="21";
+     	    break;
+     	default:
+     		break;
+       }
+        
+        switch(age) {
+        case 1996:
+     	    this.age="1996";
+     	    break;
+        case 1997:
+     	    this.age="1997";
+     	    break;
+        case 1998:
+     	    this.age="1998";
+     	    break;
+        case 1999:
+     	    this.age="1999";
+     	    break;
+        case 2000:
+     	    this.age="2000";
+     	    break;
+        case 2001:
+     	    this.age="2001";
+     	    break;
+        case 2002:
+     	    this.age="2002";
+     	    break;
+        case 2003:
+     	    this.age="2003";
+     	    break;
+     	default:
+     		break;
+       }
+        
+       
         
         switch(jam) {
         case 0:
@@ -71,10 +128,10 @@ public class Model {
      	    this.dpt="인문대";
      	    break;
         case 2:
-            this.dpt="사과대";
+            this.dpt="사회과학대";
             break;  
         case 3:
-     	    this.dpt="자과대";
+     	    this.dpt="자연과학대";
      	    break;
         case 4:
      	    this.dpt="경영대";
@@ -83,7 +140,7 @@ public class Model {
      	    this.dpt="공과대";
      	    break;
         case 6:
-     	    this.dpt="전정대";
+     	    this.dpt="전자정보대";
      	    break;
         case 7:
      	    this.dpt="농생대";
@@ -101,7 +158,7 @@ public class Model {
      	    this.dpt="의과대";
      	    break;
         case 12:
-     	    this.dpt="자율대";
+     	    this.dpt="자율";
      	    break; 
         }
 
@@ -124,11 +181,11 @@ public class Model {
         return dom;
     }
     
-    public int getHakbun() {
+    public String getHakbun() {
         return hakbun;
     }
     
-    public int getAge() {
+    public String getAge() {
         return age;
     }
     
