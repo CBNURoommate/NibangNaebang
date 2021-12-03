@@ -206,5 +206,4 @@ public class sendMessageUI extends JFrame {
 		textPane.setBounds(12, 10, 776, 235);
 		inputPanel.add(textPane);
 	}
-
 }
