@@ -358,11 +358,11 @@ public class MainBoardUI {
                      
                      if(coldBox.getSelectedItem() == "적게탐")
                     	 cold_a = "적게탐";
-                     else if(heatBox.getSelectedItem() == "보통")
+                     else if(coldBox.getSelectedItem() == "보통")
                     	 cold_a = "보통";
-                     else if(heatBox.getSelectedItem() == "많이탐")
+                     else if(coldBox.getSelectedItem() == "많이탐")
                     	 cold_a = "많이탐";
-                     else if(heatBox.getSelectedItem() == "전체")
+                     else if(coldBox.getSelectedItem() == "전체")
                     	 cold_a = arr.get(i).cold;
                     
                      if(sleepBox.getSelectedItem() == "22시")
