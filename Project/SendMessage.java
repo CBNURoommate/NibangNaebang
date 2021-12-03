@@ -18,23 +18,10 @@ import java.util.Calendar;
 import java.util.Date;
 public class SendMessage {
 
-	 public static void main(String[] args) throws SQLException {
-	//public int send(String ReceiverID) throws SQLException {
+	 
+	public int send(String ReceiverID,String text) throws SQLException {
 		Connection con = null;
 
-		//CurrentUser user = new CurrentUser();
-		//String sendId = user.getId();
-		//String receiveId = ReceiverID;
-		
-		String sendId = "1234";
-		String receiveId = "5678";
-		
-	
-		Scanner sc = new Scanner(System.in);
-
-		System.out.println("한 줄 최대 500자 인풋(엔터시 넘어감)");
-		String text = sc.nextLine();
-		System.out.println("");
 		
 		Date now = Calendar.getInstance().getTime();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
@@ -49,26 +36,25 @@ public class SendMessage {
 		} catch (ClassNotFoundException e) {
 			System.out.println("fail");
 			//return -1;
-			return;
+			return -1;
 		}
 		try {
 			String sql = "insert into Test.msgtable values(?,?,?,?,?)";
 			PreparedStatement pstmt = con.prepareStatement(sql);
 
-			pstmt.setString(1, receiveId);
-			pstmt.setString(2, sendId);
+			pstmt.setString(1, ReceiverID);
+			pstmt.setString(2, CurrentUser.getId());
 			pstmt.setString(3, formatedNow);
 			pstmt.setString(4, text);
 			pstmt.setInt(5, -1);
-
 			pstmt.executeUpdate();
 			System.out.println("쪽지 전송 완료");
 			//return 0;
-			return;
+			return 0;
 		} catch (java.sql.SQLIntegrityConstraintViolationException d) {
-			System.out.println("중복된 id 존재");
+			System.out.println("실패");
 			//return 1;
-			return;
+			return 1;
 		}
 
 	}

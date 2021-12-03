@@ -16,6 +16,7 @@ import javax.swing.JTextField;
 import javax.swing.JTextPane;
 import javax.swing.border.EtchedBorder;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 
 public class sendMessageUI extends JFrame {
@@ -139,6 +140,7 @@ public class sendMessageUI extends JFrame {
 		contentPane.add(movePage4);
 		
 		JButton sendMessage = new JButton(" 전송하기");
+		
 		sendMessage.setIcon(new ImageIcon(sendMessageUI.class.getResource("/Project/send.png")));
 		sendMessage.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		sendMessage.setFocusPainted(false);
@@ -146,6 +148,7 @@ public class sendMessageUI extends JFrame {
 		sendMessage.setBorderPainted(false);
 		sendMessage.setBounds(691, 750, 200, 60);
 		contentPane.add(sendMessage);
+		
 		
 		JPanel pointPanel = new JPanel();
 		pointPanel.setForeground(new Color(0, 102, 102));
@@ -205,5 +208,18 @@ public class sendMessageUI extends JFrame {
 		textPane.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		textPane.setBounds(12, 10, 776, 235);
 		inputPanel.add(textPane);
+		
+		sendMessage.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				
+				SendMessage sm=new SendMessage();
+				try {
+					sm.send(idField.getText(), textPane.getText());
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+			}
+		});
 	}
 }
