@@ -12,9 +12,9 @@
 샤워소요시간	showertime		5	10	15	20	25	30+						
 샤워시간		whenshower		아침	저녁	유동적									
 잠귀		sensitives		어두움	보통	밝음									
-이갈이		jamb1			없음	있음										
-잠꼬대		jamb2			없음	있음										
-코골이		jamb2			없음	있음										
+이갈이		jamb1		0 없음	1 있음										
+잠꼬대		jamb2		0 없음	1 있음										
+코골이		jamb2		0 없음	1 있음										
 수면등		sleeplight		안씀	형광등	스탠드	무드등								
 알람		alarmhear		못듣	중간	잘듣									
 청소		clean			자주	보통	한번에									
