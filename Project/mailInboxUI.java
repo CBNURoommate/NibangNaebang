@@ -259,8 +259,8 @@ public class mailInboxUI extends JFrame {
 		JButton resetButton_1 = new JButton(" 작성하기");
 		resetButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				mailInboxUI m = new mailInboxUI();
-				m.setVisible(true);
+				sendMessageUI s = new sendMessageUI();
+				s.setVisible(true);
 				setVisible(false);
 			}
 		});
