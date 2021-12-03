@@ -152,7 +152,15 @@ public class mailInboxUI extends JFrame {
 		JButton resetButton = new JButton(" 새로고침");
 		resetButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				
+				mailInboxUI m;
+				try {
+					m = new mailInboxUI();
+					m.setVisible(true);
+					setVisible(false);
+				} catch (SQLException e2) {
+					// TODO Auto-generated catch block
+					e2.printStackTrace();
+				}
 			}
 		});
 		resetButton.setIcon(new ImageIcon(mailInboxUI.class.getResource("/Project/reset.png")));
