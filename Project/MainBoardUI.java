@@ -183,7 +183,7 @@ public class MainBoardUI {
                 for (int i = 0; i < arr.size(); i++) {
                 	
                 	 if(!smokecheckbox.isSelected() && !jamcheckbox.isSelected()) {
-                		 if(arr.get(i).getGender() == gender_a)
+                		 if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a)
                 		 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
                          + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
                 	 }
