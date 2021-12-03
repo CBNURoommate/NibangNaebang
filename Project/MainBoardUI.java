@@ -135,6 +135,7 @@ public class MainBoardUI {
 
                 for (int i = 0; i < arr.size(); i++) {
                 	 
+                	//흡연 체크 박스 선택 됐을때
                 	 if(smokecheckbox.isSelected()) {
                 		 if(mancheckbox.isSelected()) {
                 		     if(arr.get(i).getSmoking() == "비흡연" && arr.get(i).getGender()=="남자" )
@@ -154,6 +155,8 @@ public class MainBoardUI {
                         		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt() + "\n");		 
                 		    	 
                 	 }
+                	 
+                	 //남자 체크 박스 선택됐을때
                 	 else if(mancheckbox.isSelected()) {
                 		 if(girlcheckbox.isSelected()) {
                 			 ta.append("\t 성별을 잘못 선택하셨습니다.\n");
@@ -162,11 +165,13 @@ public class MainBoardUI {
                 		  ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
                             + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
                 	 }
+                	 
                 	 else if(girlcheckbox.isSelected()) {
                 		 if(arr.get(i).getGender()=="여자")
                 		  ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
                             + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
                 	 }
+                	 
                 	 
                 	 else if(smokecheckbox.isSelected()) {
                 		 if(mancheckbox.isSelected()) {
@@ -176,7 +181,7 @@ public class MainBoardUI {
                 			 }
                 			 
                 		 }
-                	 }
+                	 } 
                 	 
                 	 else if(jamcheckbox.isSelected()) {
                 		 if(arr.get(i).getJam()=="x")
@@ -319,3 +324,4 @@ public class MainBoardUI {
         });
     }
 }
+
