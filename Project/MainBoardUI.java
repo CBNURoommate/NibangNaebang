@@ -31,6 +31,8 @@ public class MainBoardUI {
     JButton  btn2, btn5;
     JLabel ㅣ4 = new JLabel("ID \uAC80\uC0C9");
     public JScrollPane scrollPane = new JScrollPane(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS,JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+    private final JRadioButton mancheckbox = new JRadioButton("\uB0A8\uC790");
+    private final JRadioButton girlcheckbox = new JRadioButton("\uC5EC\uC790");
     private final JRadioButton jamcheckbox = new JRadioButton("\uCF54\uACE8\uC774x");
     private final JComboBox dptbox = new JComboBox();
 
@@ -77,14 +79,24 @@ public class MainBoardUI {
         smokecheckbox.setBackground(Color.WHITE);
         smokecheckbox.setBounds(856, 103, 121, 23);
         jpanel.add(smokecheckbox);
+        mancheckbox.setFont(new Font("나눔고딕", Font.BOLD, 16));
+        mancheckbox.setBackground(Color.WHITE);
+        mancheckbox.setBounds(856, 129, 121, 23);
+        
+        jpanel.add(mancheckbox);
+        girlcheckbox.setFont(new Font("나눔고딕", Font.BOLD, 16));
+        girlcheckbox.setBackground(Color.WHITE);
+        girlcheckbox.setBounds(856, 154, 121, 23);
+        
+        jpanel.add(girlcheckbox);
         jamcheckbox.setFont(new Font("나눔고딕", Font.BOLD, 16));
         jamcheckbox.setBackground(Color.WHITE);
-        jamcheckbox.setBounds(856, 128, 121, 23);
+        jamcheckbox.setBounds(856, 179, 121, 23);
         
         jpanel.add(jamcheckbox);
         dptbox.setToolTipText("sss");
         dptbox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        dptbox.setBounds(860, 332, 111, 25);
+        dptbox.setBounds(860, 208, 111, 25);
         
         jpanel.add(dptbox);
         dptbox.addItem("인문대");
@@ -120,81 +132,169 @@ public class MainBoardUI {
                 ta.append( "id" + "\t" + "이름" + "\t" + "성별"+ "\t" + "기숙사"+ "\t" + "학번"+ "\t" + "나이"+ "\t" + "흡연여부"+ "\t" + "코골이"+ "\t" + "단과대\n");
                 ta.append( "------------------------------------------------------------------------------------------------------------------------------------"
                 		+ "-----------------------------------------------------\n");
-         
-                
-                String gender_a="a";
-                String dom_a="a";
-                String smoking_a="a";
-                String jam_a="a";
-                
-                
-                switch(CurrentUser.getGender()) {
-                       case 1:
-                    	   gender_a="남자";
-                    	   break;
-                       case 2:
-                    	   gender_a="여자";
-                    	   break;
-                       default:
-                    	   break;
-                }
-                
-                switch(CurrentUser.getDom()) {
-                
-                      case 1:
-             	         dom_a="개성재";
-             	         break;
-                      case 2:
-                         dom_a="계영원";
-             	         break;
-                      case 3:
-                         dom_a="양성재";
-              	         break;
-                      case 4:
-                         dom_a="양진재";
-              	         break;
-                      case 5:
-                        dom_a="양현재";
-              	        break;
-                      default:
-             	        break;
-                }
-                
-                if(smokecheckbox.isSelected())
-                   smoking_a="비흡연";
-                else
-                   smoking_a="흡연";
-               
-                
-                if(jamcheckbox.isSelected())
-                   jam_a="x";
-                else
-                   jam_a="o";
-                	
-               
-                
- 
-               
-                
+
                 for (int i = 0; i < arr.size(); i++) {
-                	
-                	 if(!smokecheckbox.isSelected() && !jamcheckbox.isSelected()) {
-                		 if(arr.get(i).getGender() == gender_a)
-                		 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
-                         + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
+                	 
+                	//흡연 체크 박스 선택 됐을때
+                	 if(smokecheckbox.isSelected()) {
+                		 if(mancheckbox.isSelected()) {
+                		     if(arr.get(i).getSmoking() == "비흡연" && arr.get(i).getGender()=="남자" )
+                                ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                    		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
+                		 }
+                		 
+                		 if(girlcheckbox.isSelected()) {
+                			 if(arr.get(i).getSmoking() == "비흡연" && arr.get(i).getGender()=="여자" )
+                                 ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                     		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()  + "\n");
+                			 
+                		 }
+                		 
+                		 else if(arr.get(i).getSmoking() == "비흡연")
+                			    ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                        		     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt() + "\n");		 
+                		    	 
                 	 }
-                     else
-                        if(arr.get(i).getGender() == gender_a && arr.get(i).getDom() == dom_a && arr.get(i).getSmoking() == smoking_a && arr.get(i).getJam() == jam_a)
-           		    	ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
-               		    + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
-           		    
-           		    
-           		    
-           		   
-           		 }
-                
+                	 
+                	 //남자 체크 박스 선택됐을때
+                	 else if(mancheckbox.isSelected()) {
+                		 if(girlcheckbox.isSelected()) {
+                			 ta.append("\t 성별을 잘못 선택하셨습니다.\n");
+                		 }
+                		 else if(arr.get(i).getGender()=="남자")
+                		  ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                            + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+ "\n");
+                	 }
+                	 
+                	 else if(girlcheckbox.isSelected()) {
+                		 if(arr.get(i).getGender()=="여자")
+                		  ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                            + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+                	 }
+                	 
+                	 
+                	 else if(smokecheckbox.isSelected()) {
+                		 if(mancheckbox.isSelected()) {
+                			 if(girlcheckbox.isSelected()) {
+                				 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                 + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+                			 }
+                			 
+                		 }
+                	 } 
+                	 
+                	 else if(jamcheckbox.isSelected()) {
+                		 if(arr.get(i).getJam()=="x")
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "인문대") {
+                		 if(arr.get(i).getDpt() =="인문대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "사회과학대") {
+                		 if(arr.get(i).getDpt() =="사과대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "자연과학대") {
+                		 if(arr.get(i).getDpt() =="자과대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "경영대") {
+                		 if(arr.get(i).getDpt() =="경영대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "공과대") {
+                		 if(arr.get(i).getDpt() =="공과대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "전자정보대") {
+                		 if(arr.get(i).getDpt() =="전정대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "농생대") {
+                		 if(arr.get(i).getDpt() =="농생대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "사범대") {
+                		 if(arr.get(i).getDpt() =="사범대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "생과대") {
+                		 if(arr.get(i).getDpt() =="생과대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "수의대") {
+                		 if(arr.get(i).getDpt() =="수의대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "의과대") {
+                		 if(arr.get(i).getDpt() =="의과대") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+           
+                		 }
+                	 }
+                	 
+                	 else if(dptbox.getSelectedItem() == "전체") {
+                			 ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                                     + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+          
+                	 }
+                	 
+                	 
+                	 else {
+                		  ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+                         	+ " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking() + " \t " + arr.get(i).getJam()+ " \t " + arr.get(i).getDpt()+ "\n");
+                	 }
+                		                	
                 	
-        }});
+                	
+                     }
+                }
+            
+        });
 
        
 
