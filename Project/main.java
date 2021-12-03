@@ -18,6 +18,7 @@ import javax.swing.JTextPane;
 import java.awt.Window.Type;
 import javax.swing.JSplitPane;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.awt.event.ActionEvent;
 import javax.swing.ImageIcon;
 import javax.swing.JTable;
@@ -141,9 +142,16 @@ public class main extends JFrame {
 		JButton moveMail = new JButton();
 		moveMail.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				mailInboxUI m = new mailInboxUI();
-				m.setVisible(true);
-				setVisible(false);
+				mailInboxUI m;
+				try {
+					m = new mailInboxUI();
+					m.setVisible(true);
+					setVisible(false);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+				
 			}
 		});
 		moveMail.setIcon(new ImageIcon(main.class.getResource("/Project/mail.png")));

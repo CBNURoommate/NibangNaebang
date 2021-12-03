@@ -7,6 +7,8 @@ import javax.swing.JFrame;
 import javax.swing.JPanel;
 import javax.swing.border.EmptyBorder;
 import java.awt.Color;
+import java.awt.Component;
+
 import javax.swing.JLabel;
 import java.awt.Font;
 import javax.swing.JButton;
@@ -24,7 +26,8 @@ import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import javax.swing.JFormattedTextField;
-
+import java.sql.ResultSet;
+import java.sql.SQLException;
 public class mailInboxUI extends JFrame {
 
 	private JPanel contentPane;
@@ -48,11 +51,13 @@ public class mailInboxUI extends JFrame {
 
 	/**
 	 * Create the frame.
+	 * @throws SQLException 
 	 */
-	public mailInboxUI() {
+	public mailInboxUI() throws SQLException {
 		setTitle("니방내방 - 메세지 박스");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(mailInboxUI.class.getResource("/Project/searchH.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		
 		setBounds(100, 100, 1600, 900);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);
@@ -251,7 +256,7 @@ public class mailInboxUI extends JFrame {
 		messageTable.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
 		messageTable.setRowHeight(50);
 		messageTable.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		messageTable.setModel(new DefaultTableModel(
+		DefaultTableModel m=new DefaultTableModel(
 			new Object[][] {
 				{null, null, "", null},
 				{null, null, null, null},
@@ -364,7 +369,8 @@ public class mailInboxUI extends JFrame {
 			public boolean isCellEditable(int row, int column) {
 				return columnEditables[column];
 			}
-		});
+		};
+		messageTable.setModel(m);
 		messageTable.getColumnModel().getColumn(0).setResizable(false);
 		messageTable.getColumnModel().getColumn(0).setPreferredWidth(80);
 		messageTable.getColumnModel().getColumn(0).setMinWidth(80);
@@ -378,7 +384,32 @@ public class mailInboxUI extends JFrame {
 		messageTable.getColumnModel().getColumn(2).setMinWidth(250);
 		messageTable.getColumnModel().getColumn(2).setMaxWidth(250);
 		messageTable.getColumnModel().getColumn(3).setResizable(false);
+		mailInbox mi=new mailInbox();
+		ResultSet rs=mi.getbox();
 		
+		if(rs!=null)
+		{
+			int i=1;
+			while(rs.next())
+			{
+				Object[] d=new Object[4];
+				d[0]=i;
+				if(CurrentUser.getId().equals(rs.getString("senderid")))
+				{
+					d[1]="발신";
+					d[2]=rs.getString("receiverid");
+				}
+				else
+				{
+					d[1]="수신";
+					d[2]=rs.getString("senderid");
+				}
+				d[3]=rs.getString("constext");
+				m.insertRow(i-1, d);
+				i++;
+			}
+			
+		}
 		JLabel infoLabel1 = new JLabel("메세지");
 		infoLabel1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
 		infoLabel1.setBounds(80, 150, 220, 80);
