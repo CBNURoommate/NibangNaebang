@@ -141,7 +141,7 @@ public class mailInboxUI extends JFrame {
 		resetButton.setFocusPainted(false);
 		resetButton.setContentAreaFilled(false);
 		resetButton.setBorderPainted(false);
-		resetButton.setBounds(691, 750, 200, 60);
+		resetButton.setBounds(565, 750, 200, 60);
 		contentPane.add(resetButton);
 		
 		JPanel line1 = new JPanel();
@@ -269,7 +269,7 @@ public class mailInboxUI extends JFrame {
 		resetButton_1.setFocusPainted(false);
 		resetButton_1.setContentAreaFilled(false);
 		resetButton_1.setBorderPainted(false);
-		resetButton_1.setBounds(954, 750, 200, 60);
+		resetButton_1.setBounds(820, 750, 200, 60);
 		contentPane.add(resetButton_1);
 		messageTable.getColumnModel().getColumn(0).setResizable(false);
 		messageTable.getColumnModel().getColumn(0).setPreferredWidth(80);

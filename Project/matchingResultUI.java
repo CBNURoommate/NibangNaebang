@@ -160,7 +160,7 @@ public class matchingResultUI extends JFrame {
 				}
 			}
 		});
-		reMatching.setBounds(666, 750, 250, 60);
+		reMatching.setBounds(495, 750, 250, 60);
 		reMatching.setFocusPainted(false);
 		reMatching.setContentAreaFilled(false);
 		reMatching.setBorderPainted(false);
@@ -180,7 +180,7 @@ public class matchingResultUI extends JFrame {
 		goMatching.setFocusPainted(false);
 		goMatching.setContentAreaFilled(false);
 		goMatching.setBorderPainted(false);
-		goMatching.setBounds(960, 750, 250, 60);
+		goMatching.setBounds(810, 750, 250, 60);
 		contentPane.add(goMatching);
 		
 		JPanel pointPanel = new JPanel();
