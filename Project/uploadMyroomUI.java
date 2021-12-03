@@ -132,6 +132,13 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(movePage4);
 
 		JButton moveMail = new JButton();
+		moveMail.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mailInboxUI m = new mailInboxUI();
+				m.setVisible(true);
+				setVisible(false);
+			}
+		});
 		moveMail.setIcon(new ImageIcon(uploadMyroomUI.class.getResource("/Project/mail.png")));
 		moveMail.setBounds(1490, 20, 75, 60);
 		moveMail.setFocusPainted(false);
@@ -156,6 +163,7 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(checkButton);
 
 		JButton uploadButton = new JButton(" 업로드하기");
+		uploadButton.setEnabled(false);
 		uploadButton.setIcon(new ImageIcon(uploadMyroomUI.class.getResource("/Project/upload.png")));
 		uploadButton.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		uploadButton.setBounds(810, 750, 210, 60);

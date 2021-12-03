@@ -70,6 +70,13 @@ public class matchingResultUI extends JFrame {
 		contentPane.add(nameLabel);
 
 		JButton moveMail = new JButton();
+		moveMail.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mailInboxUI m = new mailInboxUI();
+				m.setVisible(true);
+				setVisible(false);
+			}
+		});
 		moveMail.setIcon(new ImageIcon(matchingResultUI.class.getResource("/Project/mail.png")));
 		moveMail.setFocusPainted(false);
 		moveMail.setContentAreaFilled(false);
@@ -159,7 +166,15 @@ public class matchingResultUI extends JFrame {
 		reMatching.setBorderPainted(false);
 		contentPane.add(reMatching);
 		
-		JButton goMatching = new JButton("연락하기");
+		JButton goMatching = new JButton(" 연락하기");
+		goMatching.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				sendMessageUI s = new sendMessageUI();
+				s.setVisible(true);
+				setVisible(false);
+			}
+		});
+		goMatching.setIcon(new ImageIcon(matchingResultUI.class.getResource("/Project/send.png")));
 		goMatching.setEnabled(false);
 		goMatching.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		goMatching.setFocusPainted(false);

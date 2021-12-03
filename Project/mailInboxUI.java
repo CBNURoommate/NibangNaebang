@@ -159,6 +159,12 @@ public class mailInboxUI extends JFrame {
 		line2_2.setBounds(80, 700, 1400, 1);
 		contentPane.add(line2_2);
 		
+		JPanel pointPanel = new JPanel();
+		pointPanel.setForeground(new Color(0, 102, 102));
+		pointPanel.setBackground(new Color(0, 102, 102));
+		pointPanel.setBounds(1490, 87, 75, 10);
+		contentPane.add(pointPanel);
+		
 		JPanel messagePanel = new JPanel();
 		messagePanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
 		messagePanel.setBackground(Color.WHITE);
@@ -249,6 +255,23 @@ public class mailInboxUI extends JFrame {
 				return columnEditables[column];
 			}
 		});
+		
+		JButton resetButton_1 = new JButton(" 작성하기");
+		resetButton_1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mailInboxUI m = new mailInboxUI();
+				m.setVisible(true);
+				setVisible(false);
+			}
+		});
+		resetButton_1.setEnabled(false);
+		resetButton_1.setIcon(new ImageIcon(mailInboxUI.class.getResource("/Project/send.png")));
+		resetButton_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+		resetButton_1.setFocusPainted(false);
+		resetButton_1.setContentAreaFilled(false);
+		resetButton_1.setBorderPainted(false);
+		resetButton_1.setBounds(954, 750, 200, 60);
+		contentPane.add(resetButton_1);
 		messageTable.getColumnModel().getColumn(0).setResizable(false);
 		messageTable.getColumnModel().getColumn(0).setPreferredWidth(80);
 		messageTable.getColumnModel().getColumn(0).setMinWidth(80);
@@ -263,5 +286,4 @@ public class mailInboxUI extends JFrame {
 		messageTable.getColumnModel().getColumn(2).setMaxWidth(250);
 		messageTable.getColumnModel().getColumn(3).setResizable(false);
 	}
-
 }

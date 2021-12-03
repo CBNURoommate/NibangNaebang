@@ -115,6 +115,13 @@ public class randomMatching extends JFrame {
 		contentPane.add(nameLabel);
 		
 		JButton moveMail = new JButton();
+		moveMail.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				mailInboxUI m = new mailInboxUI();
+				m.setVisible(true);
+				setVisible(false);
+			}
+		});
 		moveMail.setIcon(new ImageIcon(randomMatching.class.getResource("/Project/mail.png")));
 		moveMail.setFocusPainted(false);
 		moveMail.setContentAreaFilled(false);
