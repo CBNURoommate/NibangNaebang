@@ -264,7 +264,6 @@ public class mailInboxUI extends JFrame {
 				setVisible(false);
 			}
 		});
-		resetButton_1.setEnabled(false);
 		resetButton_1.setIcon(new ImageIcon(mailInboxUI.class.getResource("/Project/send.png")));
 		resetButton_1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		resetButton_1.setFocusPainted(false);
