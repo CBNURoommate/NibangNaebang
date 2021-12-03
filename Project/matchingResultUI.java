@@ -181,7 +181,6 @@ public class matchingResultUI extends JFrame {
 			}
 		});
 		goMatching.setIcon(new ImageIcon(matchingResultUI.class.getResource("/Project/send.png")));
-		goMatching.setEnabled(false);
 		goMatching.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		goMatching.setFocusPainted(false);
 		goMatching.setContentAreaFilled(false);

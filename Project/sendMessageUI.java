@@ -18,6 +18,7 @@ import javax.swing.border.EtchedBorder;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
 import java.awt.event.ActionEvent;
+import javax.swing.JScrollPane;
 
 public class sendMessageUI extends JFrame {
 
@@ -199,28 +200,24 @@ public class sendMessageUI extends JFrame {
 		
 		idField = new JTextField();
 		idField.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		idField.setBounds(270, 260, 800, 60);
+		idField.setBounds(270, 260, 1140, 60);
 		contentPane.add(idField);
 		idField.setColumns(10);
 		
-		JPanel inputPanel = new JPanel();
-		inputPanel.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		inputPanel.setBackground(Color.WHITE);
-		inputPanel.setBounds(270, 340, 800, 255);
+		JScrollPane inputPanel = new JScrollPane();
+		inputPanel.setBounds(270, 340, 1140, 255);
 		contentPane.add(inputPanel);
-		inputPanel.setLayout(null);
 		
-		JTextPane textPane = new JTextPane();
-		textPane.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
-		textPane.setBounds(12, 10, 776, 235);
-		inputPanel.add(textPane);
+		JTextPane msgPanel = new JTextPane();
+		inputPanel.setViewportView(msgPanel);
+		msgPanel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		
 		sendMessage.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				
 				SendMessage sm=new SendMessage();
 				try {
-					int s=sm.send(idField.getText(), textPane.getText());
+					int s=sm.send(idField.getText(), msgPanel.getText());
 					mailInboxUI mi=new mailInboxUI();
 					mi.setVisible(true);
 					setVisible(false);

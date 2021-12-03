@@ -197,30 +197,26 @@ public class mailInboxUI extends JFrame {
 		contentPane.add(messagePanel);
 		messagePanel.setLayout(null);
 		
-		JPanel outputPanel1 = new JPanel();
-		outputPanel1.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		outputPanel1.setBackground(Color.WHITE);
-		outputPanel1.setBounds(180, 15, 355, 40);
-		messagePanel.add(outputPanel1);
-		outputPanel1.setLayout(null);
+		JPanel outputPanel2 = new JPanel();
+		outputPanel2.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
+		outputPanel2.setBackground(Color.WHITE);
+		outputPanel2.setBounds(180, 15, 355, 40);
+		messagePanel.add(outputPanel2);
+		outputPanel2.setLayout(null);
 		
 		JLabel idLabel = new JLabel("");
 		idLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		idLabel.setBounds(10, 0, 333, 40);
-		outputPanel1.add(idLabel);
+		outputPanel2.add(idLabel);
 		
-		JPanel outputPanel2 = new JPanel();
-		outputPanel2.setLayout(null);
-		outputPanel2.setBorder(new EtchedBorder(EtchedBorder.LOWERED, null, null));
-		outputPanel2.setBackground(Color.WHITE);
-		outputPanel2.setBounds(20, 120, 515, 280);
-		messagePanel.add(outputPanel2);
+		JScrollPane outputPanel3 = new JScrollPane();
+		outputPanel3.setBounds(20, 120, 515, 280);
+		messagePanel.add(outputPanel3);
 		
-		JTextPane msPane = new JTextPane();
-		msPane.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-		msPane.setEditable(false);
-		msPane.setBounds(12, 10, 491, 260);
-		outputPanel2.add(msPane);
+		JTextPane msgPanel = new JTextPane();
+		outputPanel3.setViewportView(msgPanel);
+		msgPanel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
+		msgPanel.setEditable(false);
 		
 		JLabel infoLabel2 = new JLabel("수신/발신인");
 		infoLabel2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
@@ -232,20 +228,15 @@ public class mailInboxUI extends JFrame {
 		infoLabel3.setBounds(20, 70, 150, 40);
 		messagePanel.add(infoLabel3);
 		
-		JLabel lblNewLabel = new JLabel("메세지 전송 시간");
-		lblNewLabel.setForeground(Color.GRAY);
-		lblNewLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-		lblNewLabel.setBounds(305, 80, 230, 35);
-		messagePanel.add(lblNewLabel);
+		JLabel timeLabel = new JLabel("메세지 전송 시간");
+		timeLabel.setForeground(Color.GRAY);
+		timeLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
+		timeLabel.setBounds(305, 80, 230, 35);
+		messagePanel.add(timeLabel);
 		
-		JLabel infoLabel1 = new JLabel("메세지");
-		infoLabel1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
-		infoLabel1.setBounds(80, 150, 220, 80);
-		contentPane.add(infoLabel1);
-		
-		JScrollPane scrollPane = new JScrollPane();
-		scrollPane.setBounds(100, 255, 785, 420);
-		contentPane.add(scrollPane);
+		JScrollPane outputPanel1 = new JScrollPane();
+		outputPanel1.setBounds(100, 255, 785, 420);
+		contentPane.add(outputPanel1);
 		
 		messageTable = new JTable();
 		messageTable.addMouseListener(new MouseAdapter() {
@@ -255,7 +246,7 @@ public class mailInboxUI extends JFrame {
 				System.out.println(rowNum + " clicked");
 			}
 		});
-		scrollPane.setViewportView(messageTable);
+		outputPanel1.setViewportView(messageTable);
 		messageTable.setSelectionMode(ListSelectionModel.SINGLE_SELECTION);
 		messageTable.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
 		messageTable.setRowHeight(50);
@@ -263,6 +254,86 @@ public class mailInboxUI extends JFrame {
 		messageTable.setModel(new DefaultTableModel(
 			new Object[][] {
 				{null, null, "", null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
+				{null, null, null, null},
 				{null, null, null, null},
 				{null, null, null, null},
 				{null, null, null, null},
@@ -307,5 +378,10 @@ public class mailInboxUI extends JFrame {
 		messageTable.getColumnModel().getColumn(2).setMinWidth(250);
 		messageTable.getColumnModel().getColumn(2).setMaxWidth(250);
 		messageTable.getColumnModel().getColumn(3).setResizable(false);
+		
+		JLabel infoLabel1 = new JLabel("메세지");
+		infoLabel1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
+		infoLabel1.setBounds(80, 150, 220, 80);
+		contentPane.add(infoLabel1);
 	}
 }
