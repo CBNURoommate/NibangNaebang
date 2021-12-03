@@ -214,7 +214,10 @@ public class sendMessageUI extends JFrame {
 				
 				SendMessage sm=new SendMessage();
 				try {
-					sm.send(idField.getText(), textPane.getText());
+					int s=sm.send(idField.getText(), textPane.getText());
+					mailInboxUI mi=new mailInboxUI();
+					mi.setVisible(true);
+					setVisible(false);
 				} catch (SQLException e1) {
 					// TODO Auto-generated catch block
 					e1.printStackTrace();
