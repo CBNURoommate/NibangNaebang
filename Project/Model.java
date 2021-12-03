@@ -10,9 +10,19 @@ public class Model {
     String smoking;
     String jam;
     String dpt;
+    String heat;
+    String cold;
+    String sleep;
+    String wake;
+    String shower;
+    String call;
+    String eat;
+    String sool;
 
 
-    public Model(String id, String name, int gender ,int dom, int hakbun, int age, int smoking,int jam, int dpt) {
+    public Model(String id, String name, int gender ,int dom, int hakbun, int age, int smoking,int jam, int dpt, int heat,
+    		int cold, int sleep, int wake, int shower, int call, int eat, int sool) {
+    	
         this.id = id;
         this.name = name;
 
@@ -161,9 +171,131 @@ public class Model {
      	    this.dpt="자율";
      	    break; 
         }
-
         
-    }
+        switch(heat) {
+        case 1:
+     	    this.heat="적게탐";
+     	    break;
+        case 2:
+             this.heat="보통";
+             break;
+        case 3:
+             this.heat="많이탐";
+             break;
+        }
+        
+        switch(cold) {
+             case 1:
+          	    this.cold="적게탐";
+          	    break;
+             case 2:
+                  this.cold="보통";
+                  break;
+             case 3:
+                  this.cold="많이탐";
+                  break;
+        }
+        
+        switch(sleep) {
+        case 1:
+     	    this.sleep="22시";
+     	    break;
+        case 2:
+             this.sleep="23시";
+             break;
+        case 3:
+             this.sleep="24시";
+             break;
+        case 4:
+     	    this.sleep="0시";
+     	    break;
+        case 5:
+             this.sleep="1시";
+             break;
+        case 6:
+             this.sleep="2시";
+             break;
+        case 7:
+        	 this.sleep="3시";
+        	 break;
+        }
+             
+        switch(wake) {
+             case 1:
+          	    this.wake="7시";
+          	    break;
+             case 2:
+                  this.wake="8시";
+                  break;
+             case 3:
+                  this.wake="9시";
+                  break;
+             case 4:
+          	    this.wake="10시";
+          	    break;
+             case 5:
+                  this.wake="11시";
+                  break;
+             case 6:
+                  this.wake="오후";
+                  break;     
+         }
+        
+        switch(shower) {
+        case 1:
+     	    this.shower="아침";
+     	    break;
+        case 2:
+             this.shower="저녁";
+             break;
+        case 3:
+             this.shower="유동적";
+             break;
+        }
+        
+        switch(call) {
+        case 1:
+     	    this.call="반대";
+     	    break;
+        case 2:
+             this.call="상관없음";
+             break;
+        case 3:
+             this.call="찬성";
+             break;
+        case 4:
+            this.call="간단한용무";
+            break;
+        }
+        
+        switch(eat) {
+        case 1:
+     	    this.eat="불가";
+     	    break;
+        case 2:
+             this.eat="냄새x";
+             break;
+        case 3:
+             this.eat="가능";
+             break;
+ 
+         }
+        
+        switch(sool) {
+        case 1:
+     	    this.sool="안먹음";
+     	    break;
+        case 2:
+             this.sool="가끔먹음";
+             break;
+        case 3:
+             this.sool="자주먹음";
+             break;
+ 
+         }
+    
+        
+ }
 
     public String getID() {
         return id;
@@ -199,6 +331,38 @@ public class Model {
 
     public String getDpt() {
         return dpt;
+    }
+    
+    public String getHeat() {
+        return heat;
+    }
+    
+    public String getCold() {
+        return cold;
+    }
+    
+    public String getSleep() {
+        return sleep;
+    }
+    
+    public String getWake() {
+        return wake;
+    }
+    
+    public String getShower() {
+        return shower;
+    }
+    
+    public String getCall() {
+        return call;
+    }
+    
+    public String getEat() {
+        return eat;
+    }
+    
+    public String getSool() {
+        return sool;
     }
 
     
