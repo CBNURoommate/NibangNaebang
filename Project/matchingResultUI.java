@@ -98,6 +98,12 @@ public class matchingResultUI extends JFrame {
 		contentPane.add(movePage2);
 
 		JButton movePage3 = new JButton("니방 찾아보기");
+		movePage3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainBoardUI gui = new MainBoardUI();
+				setVisible(false);
+			}
+		});
 		movePage3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		movePage3.setFocusPainted(false);
 		movePage3.setContentAreaFilled(false);

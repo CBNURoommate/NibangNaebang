@@ -114,6 +114,12 @@ public class uploadMyroomUI extends JFrame {
 		contentPane.add(movePage2);
 
 		JButton movePage3 = new JButton("\uB2C8\uBC29 \uCC3E\uC544\uBCF4\uAE30");
+		movePage3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainBoardUI gui = new MainBoardUI();
+				setVisible(false);
+			}
+		});
 		movePage3.setBounds(900, 20, 200, 60);
 		movePage3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		movePage3.setFocusPainted(false);

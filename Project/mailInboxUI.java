@@ -23,6 +23,7 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import javax.swing.JFormattedTextField;
 
 public class mailInboxUI extends JFrame {
 
@@ -97,6 +98,12 @@ public class mailInboxUI extends JFrame {
 		contentPane.add(movePage2);
 		
 		JButton movePage3 = new JButton("니방 찾아보기");
+		movePage3.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				MainBoardUI gui = new MainBoardUI();
+				setVisible(false);
+			}
+		});
 		movePage3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		movePage3.setFocusPainted(false);
 		movePage3.setContentAreaFilled(false);
@@ -210,6 +217,7 @@ public class mailInboxUI extends JFrame {
 		messagePanel.add(outputPanel2);
 		
 		JTextPane msPane = new JTextPane();
+		msPane.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
 		msPane.setEditable(false);
 		msPane.setBounds(12, 10, 491, 260);
 		outputPanel2.add(msPane);
@@ -223,6 +231,12 @@ public class mailInboxUI extends JFrame {
 		infoLabel3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		infoLabel3.setBounds(20, 70, 150, 40);
 		messagePanel.add(infoLabel3);
+		
+		JLabel lblNewLabel = new JLabel("메세지 전송 시간");
+		lblNewLabel.setForeground(Color.GRAY);
+		lblNewLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
+		lblNewLabel.setBounds(305, 80, 230, 35);
+		messagePanel.add(lblNewLabel);
 		
 		JLabel infoLabel1 = new JLabel("메세지");
 		infoLabel1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 50));
