@@ -64,7 +64,7 @@ public class MainBoardUI {
     }
 
     public void GUI_init() {
-        jframe.setTitle("니방내방 - 니방 찾아보기");
+        jframe.setTitle("회원관리");
         jframe.setBounds(50, 50, 1600, 900);
         jframe.setResizable(false);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -181,8 +181,7 @@ public class MainBoardUI {
         ㅣ4.setBounds(966, 180, 80, 40);
         jpanel.add(ㅣ4);
 
-        jpanel.add(btn2 = new JButton(" 찾아보기"));
-        btn2.setIcon(new ImageIcon(MainBoardUI.class.getResource("/Project/searchH.png")));
+        jpanel.add(btn2 = new JButton("출력하기"));
         btn2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         btn2.setFocusPainted(false);
         btn2.setContentAreaFilled(false);
@@ -212,7 +211,7 @@ public class MainBoardUI {
         jamcheckbox.setBounds(1058, 290, 140, 40);
         
         jpanel.add(jamcheckbox);
-        dptbox.setBackground(new Color(240, 240, 240));
+        dptbox.setBackground(new Color(220, 220, 220));
         dptbox.setModel(new DefaultComboBoxModel(new String[] {"전체", "인문대", "사회과학대", "자연과학대", "경영대", "공과대", "전자정보대", "농생대", "사범대", "생과대", "수의대", "의과대", "자율", "전체", "인문대", "사회과학대", "자연과학대", "경영대", "공과대", "전자정보대", "농생대", "사범대", "생과대", "수의대", "의과대", "자율전공", "전체"}));
         dptbox.setToolTipText("");
         dptbox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
@@ -233,13 +232,13 @@ public class MainBoardUI {
         dptbox.addItem("의과대");
         dptbox.addItem("자율");
         dptbox.addItem("전체");
-        hakbunBox.setBackground(new Color(240, 240, 240));
+        hakbunBox.setBackground(new Color(220, 220, 220));
         
         hakbunBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "14", "15", "16", "17", "18", "19", "20", "21"}));
         hakbunBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));        
         hakbunBox.setBounds(1332, 290, 138, 40);
         jpanel.add(hakbunBox);
-        ageBox.setBackground(new Color(240, 240, 240));
+        ageBox.setBackground(new Color(220, 220, 220));
         
         
         ageBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"}));
@@ -293,49 +292,49 @@ public class MainBoardUI {
         ㅣ4_3_4_2.setBounds(1220, 690, 100, 40);
         
         jpanel.add(ㅣ4_3_4_2);
-        heatBox.setBackground(new Color(240, 240, 240));
+        heatBox.setBackground(new Color(230, 230, 230));
         heatBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC801\uAC8C\uD0D0", "\uBCF4\uD1B5", "\uB9CE\uC774\uD0D0"}));
         heatBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         heatBox.setBounds(1332, 390, 138, 40);
         
         jpanel.add(heatBox);
-        coldBox.setBackground(new Color(240, 240, 240));
+        coldBox.setBackground(new Color(230, 230, 230));
         coldBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC801\uAC8C\uD0D0", "\uBCF4\uD1B5", "\uB9CE\uC774\uD0D0"}));
         coldBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         coldBox.setBounds(1332, 440, 138, 40);
         
         jpanel.add(coldBox);
-        sleepBox.setBackground(new Color(240, 240, 240));
+        sleepBox.setBackground(new Color(230, 230, 230));
         sleepBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         sleepBox.setModel(new DefaultComboBoxModel(new String[] {"전체", "22시", "23시", "0시", "1시", "2시", "3시 이후"}));
         sleepBox.setBounds(1332, 490, 138, 40);
         
         jpanel.add(sleepBox);
-        wakeBox.setBackground(new Color(240, 240, 240));
+        wakeBox.setBackground(new Color(230, 230, 230));
         wakeBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "7\uC2DC", "8\uC2DC", "9\uC2DC", "10\uC2DC", "11\uC2DC", "\uC624\uD6C4"}));
         wakeBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         wakeBox.setBounds(1332, 540, 138, 40);
         
         jpanel.add(wakeBox);
-        showerBox.setBackground(new Color(240, 240, 240));
+        showerBox.setBackground(new Color(230, 230, 230));
         showerBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         showerBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC544\uCE68", "\uC800\uB141", "\uC720\uB3D9\uC801"}));
         showerBox.setBounds(1332, 590, 138, 40);
         
         jpanel.add(showerBox);
-        callBox.setBackground(new Color(240, 240, 240));
+        callBox.setBackground(new Color(230, 230, 230));
         callBox.setModel(new DefaultComboBoxModel(new String[] {"전체", "반대", "상관없음", "찬성\t", "간단용무만"}));
         callBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         callBox.setBounds(1332, 640, 138, 40);
         
         jpanel.add(callBox);
-        eatBox.setBackground(new Color(240, 240, 240));
+        eatBox.setBackground(new Color(230, 230, 230));
         eatBox.setModel(new DefaultComboBoxModel(new String[] {"전체", "불가", "냄새 X", "가능"}));
         eatBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         eatBox.setBounds(1332, 690, 138, 40);
         
         jpanel.add(eatBox);
-        soolBox.setBackground(new Color(240, 240, 240));
+        soolBox.setBackground(new Color(230, 230, 230));
         soolBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC548\uBA39\uC74C", "\uAC00\uB054\uBA39\uC74C", "\uC790\uC8FC\uBA39\uC74C"}));
         soolBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         soolBox.setBounds(1332, 740, 138, 40);

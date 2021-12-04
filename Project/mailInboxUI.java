@@ -32,7 +32,7 @@ public class mailInboxUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTable messageTable;
-
+	
 	/**
 	 * Launch the application.
 	 */
@@ -65,6 +65,7 @@ public class mailInboxUI extends JFrame {
 		setContentPane(contentPane);
 		contentPane.setLayout(null);
 		
+		sendMessageUI.id=null;
 		JLabel titleLabel = new JLabel("니방내방");
 		titleLabel.setIcon(new ImageIcon(mailInboxUI.class.getResource("/Project/logo_small.png")));
 		titleLabel.setFont(new Font("야놀자 야체 B", Font.BOLD, 50));

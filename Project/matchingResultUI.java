@@ -183,6 +183,7 @@ public class matchingResultUI extends JFrame {
 		JButton goMatching = new JButton(" 연락하기");
 		goMatching.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				sendMessageUI.id=matchingResultUI.ranMem.getId();
 				sendMessageUI s = new sendMessageUI();
 				s.setVisible(true);
 				setVisible(false);

@@ -24,7 +24,7 @@ public class sendMessageUI extends JFrame {
 
 	private JPanel contentPane;
 	private JTextField idField;
-
+	static String id;
 	/**
 	 * Launch the application.
 	 */
@@ -44,6 +44,7 @@ public class sendMessageUI extends JFrame {
 	/**
 	 * Create the frame.
 	 */
+	
 	public sendMessageUI() {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(sendMessageUI.class.getResource("/Project/searchH.png")));
 		setTitle("니방내방 - 메세지 전송");
@@ -211,7 +212,8 @@ public class sendMessageUI extends JFrame {
 		idField.setBounds(270, 260, 1140, 60);
 		contentPane.add(idField);
 		idField.setColumns(10);
-		
+		if(sendMessageUI.id!=null)
+			idField.setText(id);
 		JScrollPane inputPanel = new JScrollPane();
 		inputPanel.setBounds(270, 340, 1140, 255);
 		contentPane.add(inputPanel);
