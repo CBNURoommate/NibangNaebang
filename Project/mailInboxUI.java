@@ -57,7 +57,7 @@ public class mailInboxUI extends JFrame {
 		setTitle("니방내방 - 메세지 박스");
 		setIconImage(Toolkit.getDefaultToolkit().getImage(mailInboxUI.class.getResource("/Project/searchH.png")));
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1600, 900);
+		setBounds(50, 50, 1600, 900);
 		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

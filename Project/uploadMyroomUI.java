@@ -47,7 +47,7 @@ public class uploadMyroomUI extends JFrame {
 		setIconImage(Toolkit.getDefaultToolkit().getImage(uploadMyroomUI.class.getResource("/Project/searchH.png")));
 		setTitle("니방내방 - 내방 소개하기");
 		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-		setBounds(100, 100, 1600, 900);
+		setBounds(50, 50, 1600, 900);
 		setResizable(false);
 		contentPane = new JPanel();
 		contentPane.setBackground(Color.WHITE);

@@ -2,6 +2,7 @@ package Project;
 
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.sql.SQLException;
 import java.util.ArrayList;
 
 import javax.swing.JButton;
@@ -20,6 +21,7 @@ import javax.swing.JComboBox;
 import javax.swing.JCheckBox;
 import javax.swing.JTable;
 import javax.swing.DefaultComboBoxModel;
+import javax.swing.ImageIcon;
 
 public class MainBoardUI {
     private static final String String = null;
@@ -60,20 +62,123 @@ public class MainBoardUI {
     public void GUI_init() {
         jframe.setTitle("회원관리");
         jframe.setBounds(50, 50, 1600, 900);
+        jframe.setResizable(false);
         jframe.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         jframe.setVisible(true);
         jpanel.setBackground(Color.WHITE);
         jframe.getContentPane().add(jpanel);
         jpanel.setLayout(null);
-        t4.setBounds(754, 67, 89, 33);
+        
+        JLabel titleLabel = new JLabel("니방내방");
+        titleLabel.setIcon(new ImageIcon(MainBoardUI.class.getResource("/Project/logo_small.png")));
+        titleLabel.setFont(new Font("야놀자 야체 B", Font.BOLD, 50));
+        titleLabel.setBounds(20, 15, 187, 67);
+        jpanel.add(titleLabel);
+        
+        JLabel nameLabel = new JLabel();
+        nameLabel.setIcon(new ImageIcon(MainBoardUI.class.getResource("/Project/personn.png")));
+        nameLabel.setText(CurrentUser.getName());
+        nameLabel.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
+        nameLabel.setBounds(1220, 20, 250, 60);
+        jpanel.add(nameLabel);
+        
+        JButton movePage1 = new JButton("내방 점검하기");
+        movePage1.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		roomCheck r = new roomCheck();
+				r.setVisible(true);
+				jframe.setVisible(false);
+        	}
+        });
+        movePage1.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+        movePage1.setFocusPainted(false);
+        movePage1.setContentAreaFilled(false);
+        movePage1.setBorderPainted(false);
+        movePage1.setBackground(Color.BLUE);
+        movePage1.setBounds(300, 20, 200, 60);
+        jpanel.add(movePage1);
+        
+        JButton movePage2 = new JButton("니방 랜덤매칭");
+        movePage2.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		randomMatching r = new randomMatching();
+				r.setVisible(true);
+				jframe.setVisible(false);
+        	}
+        });
+        movePage2.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+        movePage2.setFocusPainted(false);
+        movePage2.setContentAreaFilled(false);
+        movePage2.setBorderPainted(false);
+        movePage2.setBackground(Color.LIGHT_GRAY);
+        movePage2.setBounds(700, 20, 200, 60);
+        jpanel.add(movePage2);
+        
+        JButton movePage3 = new JButton("니방 찾아보기");
+        movePage3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+        movePage3.setFocusPainted(false);
+        movePage3.setContentAreaFilled(false);
+        movePage3.setBorderPainted(false);
+        movePage3.setBackground(Color.LIGHT_GRAY);
+        movePage3.setBounds(900, 20, 200, 60);
+        jpanel.add(movePage3);
+        
+        JButton movePage4 = new JButton("내방 소개하기");
+        movePage4.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		uploadMyroomUI u = new uploadMyroomUI();
+        		u.setVisible(true);
+        		jframe.setVisible(false);
+        	}
+        });
+        movePage4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
+        movePage4.setFocusPainted(false);
+        movePage4.setContentAreaFilled(false);
+        movePage4.setBorderPainted(false);
+        movePage4.setBackground(Color.LIGHT_GRAY);
+        movePage4.setBounds(500, 20, 200, 60);
+        jpanel.add(movePage4);
+        
+        JButton moveMail = new JButton();
+        moveMail.addActionListener(new ActionListener() {
+        	public void actionPerformed(ActionEvent e) {
+        		mailInboxUI m;
+				try {
+					m = new mailInboxUI();
+					m.setVisible(true);
+					jframe.setVisible(false);
+				} catch (SQLException e1) {
+					// TODO Auto-generated catch block
+					e1.printStackTrace();
+				}
+        	}
+        });
+        moveMail.setIcon(new ImageIcon(MainBoardUI.class.getResource("/Project/mail.png")));
+        moveMail.setFocusPainted(false);
+        moveMail.setContentAreaFilled(false);
+        moveMail.setBorderPainted(false);
+        moveMail.setBounds(1490, 20, 75, 60);
+        jpanel.add(moveMail);
+        
+        JPanel line1 = new JPanel();
+        line1.setBackground(Color.BLACK);
+        line1.setBounds(0, 96, 1600, 1);
+        jpanel.add(line1);
+        
+        JPanel pointPanel = new JPanel();
+        pointPanel.setForeground(new Color(0, 102, 102));
+        pointPanel.setBackground(new Color(0, 102, 102));
+        pointPanel.setBounds(915, 87, 175, 10);
+        jpanel.add(pointPanel);
+        t4.setBounds(982, 222, 89, 33);
         jpanel.add(t4);
         ㅣ4.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4.setBounds(662, 59, 80, 40);
+        ㅣ4.setBounds(890, 214, 80, 40);
         jpanel.add(ㅣ4);
 
         jpanel.add(btn2 = new JButton("현재회원전체출력"));
         btn2.setFont(new Font("나눔고딕", Font.PLAIN, 30));
-        btn2.setBounds(635, 637, 278, 59);
+        btn2.setBounds(863, 792, 278, 59);
 
         jpanel.add(btn5 = new JButton("검색"));
         btn5.setFont(new Font("나눔고딕", Font.BOLD, 12));
@@ -81,12 +186,12 @@ public class MainBoardUI {
         
         JLabel label = new JLabel("회원정보출력");
         label.setFont(new Font("나눔고딕", Font.BOLD, 36));
-        label.setBounds(86, 54, 210, 40);
+        label.setBounds(314, 209, 210, 40);
         jpanel.add(label);
         
         
         
-        scrollPane.setBounds(86,103,827,492);
+        scrollPane.setBounds(314,258,827,492);
         jpanel.add(scrollPane);
         scrollPane.setViewportView(ta);
         ta.setBackground(Color.WHITE);
@@ -94,17 +199,17 @@ public class MainBoardUI {
         JRadioButton smokecheckbox = new JRadioButton("\uBE44\uD761\uC5F0\uC790");
         smokecheckbox.setFont(new Font("나눔고딕", Font.BOLD, 16));
         smokecheckbox.setBackground(Color.WHITE);
-        smokecheckbox.setBounds(824, 608, 89, 23);
+        smokecheckbox.setBounds(1052, 763, 89, 23);
         jpanel.add(smokecheckbox);
         jamcheckbox.setFont(new Font("나눔고딕", Font.BOLD, 16));
         jamcheckbox.setBackground(Color.WHITE);
-        jamcheckbox.setBounds(738, 608, 80, 23);
+        jamcheckbox.setBounds(966, 763, 80, 23);
         
         jpanel.add(jamcheckbox);
         dptbox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC778\uBB38\uB300", "\uC0AC\uD68C\uACFC\uD559\uB300", "\uC790\uC5F0\uACFC\uD559\uB300", "\uACBD\uC601\uB300", "\uACF5\uACFC\uB300", "\uC804\uC790\uC815\uBCF4\uB300", "\uB18D\uC0DD\uB300", "\uC0AC\uBC94\uB300", "\uC0DD\uACFC\uB300", "\uC218\uC758\uB300", "\uC758\uACFC\uB300", "\uC790\uC728"}));
         dptbox.setToolTipText("sss");
         dptbox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        dptbox.setBounds(1062, 104, 111, 25);
+        dptbox.setBounds(1290, 259, 111, 25);
         
         jpanel.add(dptbox);
         dptbox.addItem("전체");
@@ -124,105 +229,105 @@ public class MainBoardUI {
         
         hakbunBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "14", "15", "16", "17", "18", "19", "20", "21"}));
         hakbunBox.setFont(new Font("나눔고딕", Font.BOLD, 12));        
-        hakbunBox.setBounds(1062, 151, 111, 25);
+        hakbunBox.setBounds(1290, 306, 111, 25);
         jpanel.add(hakbunBox);
         
         
         ageBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"}));
         ageBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        ageBox.setBounds(1063, 201, 110, 25);
+        ageBox.setBounds(1291, 356, 110, 25);
         jpanel.add(ageBox);
         
         JLabel ㅣ4_1 = new JLabel("\uB2E8\uACFC\uB300");
-        ㅣ4_1.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_1.setBounds(977, 103, 71, 33);
+        ㅣ4_1.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_1.setBounds(1205, 258, 71, 33);
         jpanel.add(ㅣ4_1);
         
         JLabel ㅣ4_2 = new JLabel("\uD559\uBC88");
-        ㅣ4_2.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_2.setBounds(1000, 151, 51, 33);
+        ㅣ4_2.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_2.setBounds(1228, 306, 51, 33);
         jpanel.add(ㅣ4_2);
         
         JLabel ㅣ4_3 = new JLabel("\uB098\uC774");
-        ㅣ4_3.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3.setBounds(1000, 201, 51, 28);
+        ㅣ4_3.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3.setBounds(1228, 356, 51, 28);
         jpanel.add(ㅣ4_3);
-        ㅣ4_3_1.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3_1.setBounds(959, 345, 89, 23);
+        ㅣ4_3_1.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3_1.setBounds(1187, 500, 89, 23);
         
         jpanel.add(ㅣ4_3_1);
-        ㅣ4_3_2.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3_2.setBounds(959, 393, 89, 23);
+        ㅣ4_3_2.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3_2.setBounds(1187, 548, 89, 23);
         
         jpanel.add(ㅣ4_3_2);
-        ㅣ4_3_3.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3_3.setBounds(1025, 572, 22, 23);
+        ㅣ4_3_3.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3_3.setBounds(1253, 727, 22, 23);
         
         jpanel.add(ㅣ4_3_3);
-        ㅣ4_3_4.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3_4.setBounds(959, 436, 89, 30);
+        ㅣ4_3_4.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3_4.setBounds(1187, 591, 89, 30);
         
         jpanel.add(ㅣ4_3_4);
-        ㅣ4_3_5.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3_5.setBounds(1000, 246, 48, 33);
+        ㅣ4_3_5.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3_5.setBounds(1228, 401, 48, 33);
         
         jpanel.add(ㅣ4_3_5);
-        ㅣ4_3_6.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3_6.setBounds(1000, 299, 51, 23);
+        ㅣ4_3_6.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3_6.setBounds(1228, 454, 51, 23);
         
         jpanel.add(ㅣ4_3_6);
-        ㅣ4_3_4_1.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3_4_1.setBounds(959, 483, 89, 22);
+        ㅣ4_3_4_1.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3_4_1.setBounds(1187, 638, 89, 22);
         
         jpanel.add(ㅣ4_3_4_1);
-        ㅣ4_3_4_2.setFont(new Font("나눔고딕", Font.BOLD, 23));
-        ㅣ4_3_4_2.setBounds(959, 527, 89, 23);
+        ㅣ4_3_4_2.setFont(new Font("야놀자 야체 B", Font.BOLD, 35));
+        ㅣ4_3_4_2.setBounds(1187, 682, 89, 23);
         
         jpanel.add(ㅣ4_3_4_2);
         heatBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC801\uAC8C\uD0D0", "\uBCF4\uD1B5", "\uB9CE\uC774\uD0D0"}));
         heatBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        heatBox.setBounds(1062, 251, 111, 25);
+        heatBox.setBounds(1290, 406, 111, 25);
         
         jpanel.add(heatBox);
         coldBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC801\uAC8C\uD0D0", "\uBCF4\uD1B5", "\uB9CE\uC774\uD0D0"}));
         coldBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        coldBox.setBounds(1062, 297, 111, 25);
+        coldBox.setBounds(1290, 452, 111, 25);
         
         jpanel.add(coldBox);
         sleepBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
         sleepBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "22\uC2DC", "23\uC2DC", "0\uC2DC", "1\uC2DC", "2\uC2DC", "3\uC2DC"}));
-        sleepBox.setBounds(1062, 342, 111, 25);
+        sleepBox.setBounds(1290, 497, 111, 25);
         
         jpanel.add(sleepBox);
         wakeBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "7\uC2DC", "8\uC2DC", "9\uC2DC", "10\uC2DC", "11\uC2DC", "\uC624\uD6C4"}));
         wakeBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        wakeBox.setBounds(1061, 391, 112, 25);
+        wakeBox.setBounds(1289, 546, 112, 25);
         
         jpanel.add(wakeBox);
         showerBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
         showerBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC544\uCE68", "\uC800\uB141", "\uC720\uB3D9\uC801"}));
-        showerBox.setBounds(1062, 436, 111, 25);
+        showerBox.setBounds(1290, 591, 111, 25);
         
         jpanel.add(showerBox);
         callBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uBC18\uB300", "\uC0C1\uAD00\uC5C6\uC74C", "\uCC2C\uC131\t", "\uAC04\uB2E8\uD55C\uC6A9\uBB34"}));
         callBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        callBox.setBounds(1062, 480, 111, 25);
+        callBox.setBounds(1290, 635, 111, 25);
         
         jpanel.add(callBox);
         eatBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uBD88\uAC00", "\uB0C4\uC0C8x", "\uAC00\uB2A5"}));
         eatBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        eatBox.setBounds(1062, 527, 111, 25);
+        eatBox.setBounds(1290, 682, 111, 25);
         
         jpanel.add(eatBox);
         soolBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC548\uBA39\uC74C", "\uAC00\uB054\uBA39\uC74C", "\uC790\uC8FC\uBA39\uC74C"}));
         soolBox.setFont(new Font("나눔고딕", Font.BOLD, 12));
-        soolBox.setBounds(1062, 572, 111, 23);
+        soolBox.setBounds(1290, 727, 111, 23);
         
         jpanel.add(soolBox);
 
         
         scrollPane.setVisible(true); 
-        btn5.setBounds(855, 63, 60, 40);
+        btn5.setBounds(1083, 218, 60, 40);
     
   
 
