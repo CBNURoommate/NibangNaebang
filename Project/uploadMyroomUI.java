@@ -232,14 +232,14 @@ public class uploadMyroomUI extends JFrame {
 		myLable_3.setForeground(new Color(0, 102, 102));
 		myLable_3.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_3.setBounds(270, 370, 160, 40);
-		myLable_3.setText(String.valueOf(CurrentUser.getAge()));
+		myLable_3.setText(String.valueOf(CurrentUser.getHakbun()));
 		contentPane.add(myLable_3);
 
 		JLabel myLable_4 = new JLabel();
 		myLable_4.setForeground(new Color(0, 102, 102));
 		myLable_4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
 		myLable_4.setBounds(270, 420, 160, 40);
-		myLable_4.setText(String.valueOf(CurrentUser.getHakbun()));
+		myLable_4.setText(String.valueOf(CurrentUser.getAge()));
 		contentPane.add(myLable_4);
 
 		JLabel myLable_5 = new JLabel();

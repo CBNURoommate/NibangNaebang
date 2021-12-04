@@ -505,8 +505,8 @@ public class roomCheck extends JFrame {
 
 		btn3_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				hakbun = Integer.parseInt(textField3_1.getText());
-				age = Integer.parseInt(textField3_2.getText());
+				hakbun = Integer.parseInt(textField3_2.getText());
+				age = Integer.parseInt(textField3_1.getText());
 
 				panel3.setVisible(false);
 				panel4.setVisible(true);
