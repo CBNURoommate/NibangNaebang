@@ -174,6 +174,7 @@ public class MainBoardUI {
         pointPanel.setBackground(new Color(0, 102, 102));
         pointPanel.setBounds(915, 87, 175, 10);
         jpanel.add(pointPanel);
+        t4.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         t4.setBounds(1058, 180, 300, 40);
         jpanel.add(t4);
         ㅣ4.setForeground(Color.GRAY);
@@ -197,6 +198,7 @@ public class MainBoardUI {
         
         scrollPane.setBounds(90,244,940,520);
         jpanel.add(scrollPane);
+        ta.setEditable(false);
         ta.setFont(new Font("야놀자 야체 B", Font.PLAIN, 30));
         scrollPane.setViewportView(ta);
         ta.setBackground(Color.WHITE);
