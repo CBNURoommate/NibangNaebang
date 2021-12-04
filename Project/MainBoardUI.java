@@ -604,12 +604,13 @@ public class MainBoardUI {
                 arr = dao.searchMember(content);
                 ta.append("\n");
 
-                ta.append( "ID" + "\t" + "이름" + "\t" + "성별"+ "\t" + "기숙사"+ "\t" + "학번"+ "\t" + "나이"+ "\t" + "흡연여부"+ "\t" + "코골이" + "\t" + "단과대"+ "\t" + "더위"+ "\t" + "추위"+ "\t" + "취침시간"+ "\t" + "기상시간"+ "\t" + "샤워시간"+ "\t" + "실내통화"+ "\t" + "실내취식"+ "\t" + "술\n");
-                ta.append( "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
+                ta.append( "ID" + "\t" + "이름" + "\t" + "성별"+ "\t" + "기숙사"+ "\t" + "학번"+ "\t" + "나이"+ "\t" + "흡연여부"+ "\t" + "코골이" + "\t" + "단과대"+ "\t" + "더위"+ "\t" + "추위"+ "\t" + "취침시간"+ "\t" + "기상시간"+ "\t" + "샤워시간"+ "\t" + "실내통화"+ "\t" + "실내취식"+ "\t" + "술\t\n");
+                ta.append( "---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
+                		+ "---------------------------------------------------------------------------------------------------------------------------\n");
 
                 for (int i = 0; i < arr.size(); i++) {
-                	ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
-                         	+ " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()+ " \t " + arr.get(i).getJam()+" \t " + arr.get(i).getDpt()+ "\n");
+   		    	            ta.append( arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
+              		        + " \t " + arr.get(i).getHakbun() + " \t " + arr.get(i).getAge() + " \t " + arr.get(i).getSmoking()  + " \t " + arr.get(i).getJam() + " \t " + arr.get(i).getDpt()+" \t " + arr.get(i).getHeat() + " \t " + arr.get(i).getCold() + " \t " + arr.get(i).getSleep() + " \t " + arr.get(i).getWake()+  " \t " + arr.get(i).getShower()+" \t " + arr.get(i).getCall() + " \t " + arr.get(i).getEat() + " \t " + arr.get(i).getSool() + "\n");
                 }
 
                
