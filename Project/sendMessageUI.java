@@ -212,8 +212,10 @@ public class sendMessageUI extends JFrame {
 		idField.setBounds(270, 260, 1140, 60);
 		contentPane.add(idField);
 		idField.setColumns(10);
-		if(sendMessageUI.id!=null)
+		if(sendMessageUI.id!=null) {
 			idField.setText(id);
+			idField.setEnabled(false);
+		}
 		JScrollPane inputPanel = new JScrollPane();
 		inputPanel.setBounds(270, 340, 1140, 255);
 		contentPane.add(inputPanel);
