@@ -211,11 +211,11 @@ public class MainBoardUI {
         jamcheckbox.setBounds(1058, 290, 140, 40);
         
         jpanel.add(jamcheckbox);
-        dptbox.setBackground(Color.LIGHT_GRAY);
-        dptbox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC778\uBB38\uB300", "\uC0AC\uD68C\uACFC\uD559\uB300", "\uC790\uC5F0\uACFC\uD559\uB300", "\uACBD\uC601\uB300", "\uACF5\uACFC\uB300", "\uC804\uC790\uC815\uBCF4\uB300", "\uB18D\uC0DD\uB300", "\uC0AC\uBC94\uB300", "\uC0DD\uACFC\uB300", "\uC218\uC758\uB300", "\uC758\uACFC\uB300", "\uC790\uC728"}));
+        dptbox.setBackground(new Color(220, 220, 220));
+        dptbox.setModel(new DefaultComboBoxModel(new String[] {"전체", "인문대", "사회과학대", "자연과학대", "경영대", "공과대", "전자정보대", "농생대", "사범대", "생과대", "수의대", "의과대", "자율", "전체", "인문대", "사회과학대", "자연과학대", "경영대", "공과대", "전자정보대", "농생대", "사범대", "생과대", "수의대", "의과대", "자율전공", "전체"}));
         dptbox.setToolTipText("");
         dptbox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-        dptbox.setBounds(1350, 240, 120, 40);
+        dptbox.setBounds(1332, 240, 138, 40);
         
         jpanel.add(dptbox);
         dptbox.addItem("전체");
@@ -232,18 +232,18 @@ public class MainBoardUI {
         dptbox.addItem("의과대");
         dptbox.addItem("자율");
         dptbox.addItem("전체");
-        hakbunBox.setBackground(Color.LIGHT_GRAY);
+        hakbunBox.setBackground(new Color(220, 220, 220));
         
         hakbunBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "14", "15", "16", "17", "18", "19", "20", "21"}));
         hakbunBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));        
-        hakbunBox.setBounds(1350, 290, 120, 40);
+        hakbunBox.setBounds(1332, 290, 138, 40);
         jpanel.add(hakbunBox);
-        ageBox.setBackground(Color.LIGHT_GRAY);
+        ageBox.setBackground(new Color(220, 220, 220));
         
         
         ageBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "1996", "1997", "1998", "1999", "2000", "2001", "2002", "2003"}));
         ageBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-        ageBox.setBounds(1350, 340, 120, 40);
+        ageBox.setBounds(1332, 340, 138, 40);
         jpanel.add(ageBox);
         
         JLabel ㅣ4_1 = new JLabel("\uB2E8\uACFC\uB300");
@@ -292,52 +292,52 @@ public class MainBoardUI {
         ㅣ4_3_4_2.setBounds(1220, 690, 100, 40);
         
         jpanel.add(ㅣ4_3_4_2);
-        heatBox.setBackground(Color.LIGHT_GRAY);
+        heatBox.setBackground(new Color(230, 230, 230));
         heatBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC801\uAC8C\uD0D0", "\uBCF4\uD1B5", "\uB9CE\uC774\uD0D0"}));
         heatBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-        heatBox.setBounds(1350, 390, 120, 40);
+        heatBox.setBounds(1332, 390, 138, 40);
         
         jpanel.add(heatBox);
-        coldBox.setBackground(Color.LIGHT_GRAY);
+        coldBox.setBackground(new Color(230, 230, 230));
         coldBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC801\uAC8C\uD0D0", "\uBCF4\uD1B5", "\uB9CE\uC774\uD0D0"}));
         coldBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-        coldBox.setBounds(1350, 440, 120, 40);
+        coldBox.setBounds(1332, 440, 138, 40);
         
         jpanel.add(coldBox);
-        sleepBox.setBackground(Color.LIGHT_GRAY);
+        sleepBox.setBackground(new Color(230, 230, 230));
         sleepBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         sleepBox.setModel(new DefaultComboBoxModel(new String[] {"전체", "22시", "23시", "0시", "1시", "2시", "3시 이후"}));
-        sleepBox.setBounds(1350, 490, 120, 40);
+        sleepBox.setBounds(1332, 490, 138, 40);
         
         jpanel.add(sleepBox);
-        wakeBox.setBackground(Color.LIGHT_GRAY);
+        wakeBox.setBackground(new Color(230, 230, 230));
         wakeBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "7\uC2DC", "8\uC2DC", "9\uC2DC", "10\uC2DC", "11\uC2DC", "\uC624\uD6C4"}));
         wakeBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-        wakeBox.setBounds(1350, 540, 120, 40);
+        wakeBox.setBounds(1332, 540, 138, 40);
         
         jpanel.add(wakeBox);
-        showerBox.setBackground(Color.LIGHT_GRAY);
+        showerBox.setBackground(new Color(230, 230, 230));
         showerBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         showerBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC544\uCE68", "\uC800\uB141", "\uC720\uB3D9\uC801"}));
-        showerBox.setBounds(1350, 590, 120, 40);
+        showerBox.setBounds(1332, 590, 138, 40);
         
         jpanel.add(showerBox);
-        callBox.setBackground(Color.LIGHT_GRAY);
+        callBox.setBackground(new Color(230, 230, 230));
         callBox.setModel(new DefaultComboBoxModel(new String[] {"전체", "반대", "상관없음", "찬성\t", "간단용무만"}));
         callBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-        callBox.setBounds(1350, 640, 120, 40);
+        callBox.setBounds(1332, 640, 138, 40);
         
         jpanel.add(callBox);
-        eatBox.setBackground(Color.LIGHT_GRAY);
+        eatBox.setBackground(new Color(230, 230, 230));
         eatBox.setModel(new DefaultComboBoxModel(new String[] {"전체", "불가", "냄새 X", "가능"}));
         eatBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-        eatBox.setBounds(1350, 690, 120, 40);
+        eatBox.setBounds(1332, 690, 138, 40);
         
         jpanel.add(eatBox);
-        soolBox.setBackground(Color.LIGHT_GRAY);
+        soolBox.setBackground(new Color(230, 230, 230));
         soolBox.setModel(new DefaultComboBoxModel(new String[] {"\uC804\uCCB4", "\uC548\uBA39\uC74C", "\uAC00\uB054\uBA39\uC74C", "\uC790\uC8FC\uBA39\uC74C"}));
         soolBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
-        soolBox.setBounds(1350, 740, 120, 40);
+        soolBox.setBounds(1332, 740, 138, 40);
         
         jpanel.add(soolBox);
         line2_1.setBackground(Color.LIGHT_GRAY);
@@ -374,9 +374,8 @@ public class MainBoardUI {
                 ArrayList<Model> arr = new ArrayList<Model>();
                 arr = dao.readMember();
 
-                ta.append( "id" + "\t" + "이름" + "\t" + "성별"+ "\t" + "기숙사"+ "\t" + "학번"+ "\t" + "나이"+ "\t" + "흡연여부"+ "\t" + "코골이" + "\t" + "단과대"+ "\t" + "더위"+ "\t" + "추위"+ "\t" + "취침시간"+ "\t" + "기상시간"+ "\t" + "샤워시간"+ "\t" + "실내통화"+ "\t" + "실내취식"+ "\t" + "술\t\n");
-                ta.append( "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------"
-                		+ "-------------------------------------------------------------------------------------------------------------------\n");
+                ta.append( "ID" + "\t" + "이름" + "\t" + "성별"+ "\t" + "기숙사"+ "\t" + "학번"+ "\t" + "나이"+ "\t" + "흡연여부"+ "\t" + "코골이" + "\t" + "단과대"+ "\t" + "더위"+ "\t" + "추위"+ "\t" + "취침시간"+ "\t" + "기상시간"+ "\t" + "샤워시간"+ "\t" + "실내통화"+ "\t" + "실내취식"+ "\t" + "술\t\n");
+                ta.append( "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
          
                 
                 String gender_a="a";
@@ -549,15 +548,15 @@ public class MainBoardUI {
                     	 call_a = "상관없음";
                      else if(callBox.getSelectedItem() == "찬성")
                     	 call_a = "찬성";
-                     else if(callBox.getSelectedItem() == "간단한용무")
-                    	 call_a = "간단한용무";
+                     else if(callBox.getSelectedItem() == "간단용무만")
+                    	 call_a = "간단한 용무만";
                      else if(callBox.getSelectedItem() == "전체")
                     	 call_a = arr.get(i).call;
                      
                      if(eatBox.getSelectedItem() == "불가")
                     	 eat_a = "불가";
-                     else if(eatBox.getSelectedItem() == "냄새x")
-                    	 eat_a = "냄새x";
+                     else if(eatBox.getSelectedItem() == "냄새 X")
+                    	 eat_a = "냄새 X";
                      else if(eatBox.getSelectedItem() == "가능")
                     	 eat_a = "가능";
                      else if(eatBox.getSelectedItem() == "전체")
@@ -605,9 +604,8 @@ public class MainBoardUI {
                 arr = dao.searchMember(content);
                 ta.append("\n");
 
-                ta.append( "id" + "\t" + "이름" + "\t" + "성별"+ "\t" + "기숙사"+ "\t" + "학번"+ "\t" + "나이"+ "\t" + "흡연여부"+ "\t" + "코골이" + "\t" + "단과대"+ "\t" + "더위"+ "\t" + "추위"+ "\t" + "취침시간"+ "\t" + "기상시간"+ "\t" + "샤워시간"+ "\t" + "실내통화"+ "\t" + "실내취식"+ "\t" + "술\n");
-                ta.append( "-------------------------------------------------------------------------------------------------------------------------------------"
-                		+ "----------------------------------------------------------------------------------------------------\n");
+                ta.append( "ID" + "\t" + "이름" + "\t" + "성별"+ "\t" + "기숙사"+ "\t" + "학번"+ "\t" + "나이"+ "\t" + "흡연여부"+ "\t" + "코골이" + "\t" + "단과대"+ "\t" + "더위"+ "\t" + "추위"+ "\t" + "취침시간"+ "\t" + "기상시간"+ "\t" + "샤워시간"+ "\t" + "실내통화"+ "\t" + "실내취식"+ "\t" + "술\n");
+                ta.append( "--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\n");
 
                 for (int i = 0; i < arr.size(); i++) {
                 	ta.append(arr.get(i).getID() + " \t " + arr.get(i).getName() + " \t " + arr.get(i).getGender()+ "\t " + arr.get(i).getDom()
