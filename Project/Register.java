@@ -9,11 +9,12 @@ public class Register{
 	public int reg(String ID, String PASSWD,String NAME) throws SQLException {
 		 Connection con=null;
 		 Member member =new Member();
+		 passwdSecurity pwSec = new passwdSecurity();
 		 member.setId(ID);
 		 member.setPasswd(PASSWD);
 		 
 		 String id=member.getId();
-		 String passwd=member.getPasswd();
+		 String passwd = pwSec.passwdSecurity(member.getPasswd());
 		 final String URL="jdbc:mysql://database-1.clbujp5dtees.ap-northeast-2.rds.amazonaws.com/";
 		 try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
