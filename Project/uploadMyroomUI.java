@@ -176,7 +176,7 @@ public class uploadMyroomUI extends JFrame {
 		checkButton.setBorderPainted(false);
 		contentPane.add(checkButton);
 
-		JButton uploadButton = new JButton(" 업로드하기");
+		JButton uploadButton = new JButton(" 자동업로드");
 		uploadButton.setEnabled(false);
 		uploadButton.setIcon(new ImageIcon(uploadMyroomUI.class.getResource("/Project/upload.png")));
 		uploadButton.setFont(new Font("야놀자 야체 B", Font.PLAIN, 40));
