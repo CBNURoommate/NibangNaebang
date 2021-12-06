@@ -325,7 +325,7 @@ public class MainBoardUI {
         
         jpanel.add(showerBox);
         callBox.setBackground(new Color(230, 230, 230));
-        callBox.setModel(new DefaultComboBoxModel(new String[] {"전체", "반대", "상관없음", "찬성\t", "간단용무만"}));
+        callBox.setModel(new DefaultComboBoxModel(new String[] {"전체", "반대", "상관없음", "찬성", "간단용무만"}));
         callBox.setFont(new Font("야놀자 야체 B", Font.PLAIN, 35));
         callBox.setBounds(1332, 640, 138, 40);
         
