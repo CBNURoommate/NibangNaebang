@@ -264,7 +264,7 @@ public class Model {
              this.call="찬성";
              break;
         case 4:
-            this.call="간단한용무";
+            this.call="간단한 용무만";
             break;
         }
         
@@ -273,7 +273,7 @@ public class Model {
      	    this.eat="불가";
      	    break;
         case 2:
-             this.eat="냄새x";
+             this.eat="냄새 X";
              break;
         case 3:
              this.eat="가능";
